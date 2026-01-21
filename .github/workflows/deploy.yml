@@ -1,0 +1,29 @@
+name: Deploy to Sprinthost for art-plugin
+on:
+  push:
+    branches:
+      - dev
+jobs:
+  deploy:
+    name: 🚀 Deploy to sprinthost via FTP
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+      - name: 📤 Sync files to sprinthost
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./
+          server-dir: /public_html/wp-content/plugins/art-plugin/
+          exclude: |
+            **/.git*
+            **/node_modules*
+            **/.github/**
+            readme.txt
+            .ftp-deploy-sync-state.json
+            README.md
+            .gitignore
+            .DS_Store
