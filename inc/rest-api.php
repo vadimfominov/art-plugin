@@ -130,6 +130,8 @@ function get_all_custom_posts($request)
 				return null;
 			}
 
+
+			
 			// Получаем атрибуты первого найденного блока
 			$attrs = current($card_block)['attrs'];
 			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
