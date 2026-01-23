@@ -63,7 +63,8 @@ function get_all_custom_posts($request)
 {
 	// Параметры для каждого типа записей
 	$filter = $request->get_param('filter');
-	$sales = $request->get_param('sales');
+	// $sales = $request->get_param('sales');
+	$sales = 'test';
 	$post_types = array();
 
 	if ($filter === 'cources') {
@@ -132,7 +133,7 @@ function get_all_custom_posts($request)
 			// Получаем атрибуты первого найденного блока
 			$attrs = current($card_block)['attrs'];
 			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
-			$inActive = $sales === 'access2' || $attrs['inActive'] || $inActiveOld;
+			$inActive = $sales === 'access' || $attrs['inActive'] || $inActiveOld;
 
 			if (!$inActive) {
 				return null;
