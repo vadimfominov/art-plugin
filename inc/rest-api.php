@@ -129,8 +129,6 @@ function get_all_custom_posts($request)
 			if (empty($card_block)) {
 				return null;
 			}
-
-
 			
 			// Получаем атрибуты первого найденного блока
 			$attrs = current($card_block)['attrs'];
