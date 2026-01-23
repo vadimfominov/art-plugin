@@ -1968,6 +1968,8 @@ window.addEventListener('load', function () {
 		}
 	}
 
+	
+
 	const filterPosts = async () => {
 
 		showPreloader();
