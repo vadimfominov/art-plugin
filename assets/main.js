@@ -1034,6 +1034,11 @@ window.addEventListener('load', function () {
 	});
 
 
+	if (localStorage.getItem('sales') !== null) {
+		localStorage.removeItem('sales');
+		console.log('Ключ "sales" удален из localStorage');
+	}
+
 
 	// Проверяем, есть ли параметр 'sales'
 	if (USE_PARAMS.has('sales')) {
@@ -1578,7 +1583,7 @@ window.addEventListener('load', function () {
 				const active_class = '';
 
 				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
-				
+
 				const card = `
 					<div class="item-card card-${id} ${type}">
 						<div class="top-item-section item-section">
@@ -1968,8 +1973,6 @@ window.addEventListener('load', function () {
 		}
 	}
 
-
-	
 	const filterPosts = async () => {
 
 		showPreloader();

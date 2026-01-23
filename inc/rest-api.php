@@ -63,8 +63,7 @@ function get_all_custom_posts($request)
 {
 	// Параметры для каждого типа записей
 	$filter = $request->get_param('filter');
-	// $sales = $request->get_param('sales');
-	$sales = 'test';
+	$sales = $request->get_param('sales');
 	$post_types = array();
 
 	if ($filter === 'cources') {
@@ -227,8 +226,7 @@ function get_filtered_programs($request)
 		}
 
 		$filter = $request->get_param('filter');
-		// $sales = $request->get_param('sales');
-		$sales = 'test';
+		$sales = $request->get_param('sales');
 
 		if ($filter === 'merch') {
 			$valid_post_types = ['merch-camp'];
