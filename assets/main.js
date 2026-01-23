@@ -1044,6 +1044,8 @@ window.addEventListener('load', function () {
 			// Записываем значение в localStorage
 			localStorage.setItem('sales', 'access');
 
+			
+
 			// Удаляем параметр 'sales' из URL
 			USE_PARAMS.delete('sales'); // Удаляем параметр
 			const newUrl = window.location.pathname + (USE_PARAMS.toString() ? '?' + USE_PARAMS.toString() : ''); // Формируем новый URL
