@@ -1044,7 +1044,7 @@ window.addEventListener('load', function () {
 			// Записываем значение в localStorage
 			localStorage.setItem('sales', 'access');
 
-			
+			// 1768978191
 
 			// Удаляем параметр 'sales' из URL
 			USE_PARAMS.delete('sales'); // Удаляем параметр
