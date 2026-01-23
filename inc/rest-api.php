@@ -227,7 +227,8 @@ function get_filtered_programs($request)
 		}
 
 		$filter = $request->get_param('filter');
-		$sales = $request->get_param('sales');
+		// $sales = $request->get_param('sales');
+		$sales = 'test';
 
 		if ($filter === 'merch') {
 			$valid_post_types = ['merch-camp'];
