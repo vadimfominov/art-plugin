@@ -1282,7 +1282,7 @@ window.addEventListener('load', function () {
 
 	}, 300)
 
-	let allPosts = [];
+	let allPosts = null;
 
 	const currentAllPosts = (posts) => allPosts = posts;
 
@@ -1308,7 +1308,23 @@ window.addEventListener('load', function () {
 			// Combine all posts into a single array
 			const allPosts = Object.values(data).flat();
 
-			currentAllPosts(allPosts)
+			currentAllPosts(allPosts);
+
+			// Инициализация с выбранным первым фильтром
+			// Список ID страниц, на которых должен выполняться запрос
+			const allowedPagesFilter = ["42", "44", "46", "788", "50", "1190"];
+
+			// Проверяем, находится ли текущая страница в списке разрешённых
+			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
+				filterPosts();
+			}
+
+			const randomPostsContainerCatalog = document.getElementById('random-posts-container-catalog');
+			if (randomPostsContainerCatalog) {
+				loadRandomPosts(randomPostsContainerCatalog);
+				randomPostsContainerCatalog.dataset.loaded = 'true';
+			}
+
 			return allPosts;
 		} catch (error) {
 			console.error('Error fetching posts:', error);
@@ -1389,14 +1405,6 @@ window.addEventListener('load', function () {
 	});
 
 	observer.observe(document.body, { childList: true, subtree: true });
-
-	setTimeout(() => {
-		const randomPostsContainerCatalog = document.getElementById('random-posts-container-catalog');
-		if (randomPostsContainerCatalog) {
-			loadRandomPosts(randomPostsContainerCatalog);
-			randomPostsContainerCatalog.dataset.loaded = 'true';
-		}
-	}, 1000);
 
 	function loadRandomPosts(container) {
 
@@ -2067,6 +2075,8 @@ window.addEventListener('load', function () {
 
 			currentPage = 1;
 
+			console.log(posts);
+
 			updatePostsDisplay(posts, filterFormValue);
 
 		} catch (error) {
@@ -2178,13 +2188,9 @@ window.addEventListener('load', function () {
 			return;
 		}
 
-		setTimeout(() => {
-			// currentPosts = allPosts.filter(post => postsIDS.includes(post.id));
-			currentPosts = postsIDS.map(id => allPosts.find(post => post.id === id));
-
-			updatePagination(); // Обновляем пагинацию
-			displayPosts(); // Отображаем посты для текущей страницы
-		}, 300);
+		currentPosts = postsIDS.map(id => allPosts.find(post => post.id === id));
+		updatePagination(); // Обновляем пагинацию
+		displayPosts(); // Отображаем посты для текущей страницы
 
 	}
 
@@ -2625,16 +2631,6 @@ window.addEventListener('load', function () {
 		clearTimeout(timeoutId);
 		timeoutId = setTimeout(filterPosts, 300); // Вызываем фильтр с задержкой
 	});
-
-
-	// Инициализация с выбранным первым фильтром
-	// Список ID страниц, на которых должен выполняться запрос
-	const allowedPagesFilter = ["42", "44", "46", "788", "50", "1190"];
-
-	// Проверяем, находится ли текущая страница в списке разрешённых
-	if (allowedPagesFilter.includes(CURRENT_PAGE)) {
-		filterPosts();
-	}
 
 	const titleBtn = document.querySelector('.filter-title-btn');
 	const filterContainer = document.querySelector('.container-filter-items');
