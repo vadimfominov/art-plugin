@@ -2075,8 +2075,6 @@ window.addEventListener('load', function () {
 
 			currentPage = 1;
 
-			console.log(posts);
-
 			updatePostsDisplay(posts, filterFormValue);
 
 		} catch (error) {
