@@ -91,7 +91,6 @@ function get_all_custom_posts($request)
 		$posts = get_posts($args);
 
 		// Добавляем данные в ответ
-
 		$response[$type] = array_map(function ($post) use ($filter, $sales) {
 			$post_id = $post->ID;
 
@@ -131,8 +130,8 @@ function get_all_custom_posts($request)
 			
 			// Получаем атрибуты первого найденного блока
 			$attrs = current($card_block)['attrs'];
-			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
-			$inActive = $sales === 'access' || $attrs['inActive'] || $inActiveOld;
+			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+			$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 
 			if (!$inActive) {
 				return null;
@@ -265,8 +264,8 @@ function get_filtered_programs($request)
 				);
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
-				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
-				$inActive = $sales === 'access' || $attrs['inActive'] || $inActiveOld;
+				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_season = isset($attrs['selectedShift']) ? $attrs['selectedShift'] : '';
 				$selectedTime = isset($attrs['selectedTime']) ? $attrs['selectedTime'] : '';
 				$daysCount = isset($attrs['titleCount']) ? $attrs['titleCount'] : '';
@@ -291,8 +290,8 @@ function get_filtered_programs($request)
 				);
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
-				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
-				$inActive = $sales === 'access' || $attrs['inActive'] || $inActiveOld;
+				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_place = $attrs['place'];
 				$selected_city = $attrs['city'] ?? '';
 				$selected_size = '';
@@ -323,8 +322,8 @@ function get_filtered_programs($request)
 				);
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
-				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'] && is_user_logged_in();
-				$inActive = $sales === 'access' || $attrs['inActive'] || $inActiveOld;
+				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_place = $attrs['place'] ?: '';
 				$selected_size = isset($attrs['selectedSize']) ? $attrs['selectedSize'] : '';
 				$dateRange =  isset($attrs['dateRange']) ? $attrs['dateRange'] : '';

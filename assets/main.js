@@ -1033,29 +1033,22 @@ window.addEventListener('load', function () {
 		document.body.classList.toggle('active-menu');
 	});
 
-
-	if (localStorage.getItem('sales') !== null) {
-		localStorage.removeItem('sales');
-		console.log('Ключ "sales" удален из localStorage');
-	}
-
+	// if (localStorage.getItem('sales') !== null) {
+	// 	localStorage.removeItem('sales');
+	// 	console.log('Ключ "sales" удален из localStorage');
+	// }
 
 	// Проверяем, есть ли параметр 'sales'
 	if (USE_PARAMS.has('sales')) {
 		const salesValue = USE_PARAMS.get('sales');
 
-		// Проверяем, равно ли значение 'access'
-		if (salesValue === 'access') {
-			// Записываем значение в localStorage
-			localStorage.setItem('sales', 'access');
-
-			// 1768978191
-
-			// Удаляем параметр 'sales' из URL
-			USE_PARAMS.delete('sales'); // Удаляем параметр
-			const newUrl = window.location.pathname + (USE_PARAMS.toString() ? '?' + USE_PARAMS.toString() : ''); // Формируем новый URL
-			window.history.replaceState({}, document.title, newUrl); // Заменяем текущий URL без перезагрузки страницы
-		}
+		localStorage.setItem('sales', salesValue);
+		// Удаляем параметр 'sales' из URL
+		USE_PARAMS.delete('sales');
+		// Формируем новый URL
+		const newUrl = window.location.pathname + (USE_PARAMS.toString() ? '?' + USE_PARAMS.toString() : '');
+		// Заменяем текущий URL без перезагрузки страницы
+		window.history.replaceState({}, document.title, newUrl);
 	}
 
 	const parentContainer = document.querySelector('.page');
@@ -1312,6 +1305,12 @@ window.addEventListener('load', function () {
 
 			// Инициализация с выбранным первым фильтром
 			// Список ID страниц, на которых должен выполняться запрос
+			// 42 – Лагерь профессий
+			// 44 – АРТ Комьюнити
+			// 46 – Академия навыков
+			// 788 – Узная Город
+			// 50 – Курсы
+			// 1190 – Консультация психолога
 			const allowedPagesFilter = ["42", "44", "46", "788", "50", "1190"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
