@@ -131,7 +131,7 @@ function get_all_custom_posts($request)
 			// Получаем атрибуты первого найденного блока
 			$attrs = current($card_block)['attrs'];
 			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
-			$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+			$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 
 			if (!$inActive) {
 				return null;
@@ -265,7 +265,7 @@ function get_filtered_programs($request)
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
 				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
-				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+				$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_season = isset($attrs['selectedShift']) ? $attrs['selectedShift'] : '';
 				$selectedTime = isset($attrs['selectedTime']) ? $attrs['selectedTime'] : '';
 				$daysCount = isset($attrs['titleCount']) ? $attrs['titleCount'] : '';
@@ -291,7 +291,7 @@ function get_filtered_programs($request)
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
 				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
-				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+				$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_place = $attrs['place'];
 				$selected_city = $attrs['city'] ?? '';
 				$selected_size = '';
@@ -323,7 +323,7 @@ function get_filtered_programs($request)
 				// Получаем атрибуты первого найденного блока
 				$attrs = current($card_block)['attrs'];
 				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
-				$inActive = $sales === 'access' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+				$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 				$selected_place = $attrs['place'] ?: '';
 				$selected_size = isset($attrs['selectedSize']) ? $attrs['selectedSize'] : '';
 				$dateRange =  isset($attrs['dateRange']) ? $attrs['dateRange'] : '';

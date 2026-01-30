@@ -1033,11 +1033,6 @@ window.addEventListener('load', function () {
 		document.body.classList.toggle('active-menu');
 	});
 
-	// if (localStorage.getItem('sales') !== null) {
-	// 	localStorage.removeItem('sales');
-	// 	console.log('Ключ "sales" удален из localStorage');
-	// }
-
 	// Проверяем, есть ли параметр 'sales'
 	if (USE_PARAMS.has('sales')) {
 		const salesValue = USE_PARAMS.get('sales');
