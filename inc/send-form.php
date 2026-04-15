@@ -228,13 +228,14 @@ function send_to_telegram($data, $status)
 {
 	$bot_token = '7516088518:AAHfmj9D8vCeLRAbDPBkNCstoZfx0QKuNts';
 	$admin_id = '473096209';
+	$slavyana = '489436484';
 
 	// $viktoriya_id = '244661956';
 	// $anna_id = '728472449';
 	// $olga_id = '516552626';
 	// $sasha_id = '312210776';
 
-	$subscribers = [$admin_id];
+	$subscribers = [$admin_id, $slavyana];
 	// $subscribers = [$admin_id, $viktoriya_id, $anna_id, $olga_id, $sasha_id];
 	$url = "https://api.telegram.org/bot{$bot_token}/sendMessage";
 	$message = format_message_for_telegram($data, $status);
