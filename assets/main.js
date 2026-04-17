@@ -1130,6 +1130,7 @@ window.addEventListener('load', function () {
 
 	}
 
+
 	const testDriveTabs = document.querySelector('.wp-block-fv-test-drive-tabs');
 	if (testDriveTabs) {
 		const testDriveOpenButtons = testDriveTabs.querySelectorAll('.test-drive-open');
@@ -1138,19 +1139,22 @@ window.addEventListener('load', function () {
 			button.addEventListener('click', function (e) {
 				e.preventDefault();
 
-				const formTestDriveModal = testDriveTabs.querySelector('.modal-wrapper');
 
-				// const titleForm = button.getAttribute('data-titleformdrive');
-				// const titleProduct = button.getAttribute('data-titleproduct');
-				// const referer = button.getAttribute('data-referer');
-				// const dateStart = button.getAttribute('data-datestart');
+				const testDriveModal = document.querySelector('.test-drive-modal');
+
+				const formTestDriveModal = testDriveModal.querySelector('.modal-wrapper');
+
+				const titleForm = button.getAttribute('data-titleformdrive');
+				const titleProduct = button.getAttribute('data-titleproduct');
+				const referer = button.getAttribute('data-referer');
+				const dateStart = button.getAttribute('data-datestart');
 
 				if (formTestDriveModal) {
 
-					// formTestDriveModal.querySelector('input[name="titleForm"]').value = titleForm || '';
-					// formTestDriveModal.querySelector('input[name="titleProduct"]').value = titleProduct || '';
-					// formTestDriveModal.querySelector('input[name="referer"]').value = referer || '';
-					// formTestDriveModal.querySelector('input[name="dataStart"]').value = dateStart || '';
+					formTestDriveModal.querySelector('input[name="titleForm"]').value = titleForm || '';
+					formTestDriveModal.querySelector('input[name="titleProduct"]').value = titleProduct || '';
+					formTestDriveModal.querySelector('input[name="referer"]').value = referer || '';
+					formTestDriveModal.querySelector('input[name="dataStart"]').value = dateStart || '';
 
 					formTestDriveModal.style.opacity = '0';
 					formTestDriveModal.style.transition = 'opacity 0.3s ease';
