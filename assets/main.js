@@ -3049,8 +3049,6 @@ window.addEventListener('load', function () {
 
 });
 
-
-// This is code in send-file.js
 window.addEventListener('load', function () {
 
 	document.addEventListener('click', function (event) {
