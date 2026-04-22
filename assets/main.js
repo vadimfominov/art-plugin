@@ -53,15 +53,16 @@ window.addEventListener('load', function () {
 	}
 
 	// Функция для активации города из URL (оставлена без изменений)
-	function getUrlParam(name) {
-		const urlParams = new URLSearchParams(window.location.search);
-		return urlParams.get(name);
-	}
+	// function getUrlParam(name) {
+	// 	const urlParams = new URLSearchParams(window.location.search);
+	// 	return urlParams.get(name);
+	// }
 
 	function activateCityFromUrl() {
-		const cityParam = getUrlParam('city');
+		const slug = getPageSlug();
+		// const cityParam = getUrlParam('city');
 
-		if (!cityParam) {
+		if (slug !== 'professions') {
 			// Если параметра нет - активируем "Все города"
 			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
 			if (allCitiesCheckbox) {
@@ -81,7 +82,7 @@ window.addEventListener('load', function () {
 
 		// Ищем чекбокс по data-city
 		const targetCheckbox = Array.from(cityCheckboxes).find(checkbox => {
-			return checkbox.dataset.city === cityParam;
+			return checkbox.dataset.city === "Москва";
 		});
 
 		if (targetCheckbox) {
