@@ -31,7 +31,7 @@ function handle_form_submission($request)
 	// $action = 'dev';
 
 	// Проверка и санитизация данных
-	$city = sanitize_text_field($params['city'] ?? '');
+	$city = sanitize_text_field($params['city'] ? '(' . $params['city'] . ')' : '');
 
 	$childName1 = sanitize_text_field($params['childName1'] ?? '');
 	$childName2 = sanitize_text_field($params['childName2'] ?? '');
@@ -76,7 +76,7 @@ function handle_form_submission($request)
 	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Телефон</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($resultPhone) . '</td></tr>';
 
 	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Заявка</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($titleForm) . '</td></tr>';
-	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Смена</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($titleProduct) . ' (' . esc_html($city) . ')' . '</td></tr>';
+	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Смена</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($titleProduct) . ' ' . esc_html($city) . '</td></tr>';
 	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Ссылка</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($referer) . '</td></tr>';
 	echo '<tr><td style="border: 1px solid #ddd; padding: 8px;">Дата старта</td><td style="border: 1px solid #ddd; padding: 8px;">' . esc_html($dataStart) . '</td></tr>';
 
@@ -138,7 +138,7 @@ function handle_form_submission($request)
 			'Телефон' => $resultPhone,
 
 			'Заявка' => $titleForm,
-			'Смена' => $titleProduct . ' (' . $city . ')',
+			'Смена' => $titleProduct . ' ' . $city,
 			'Ссылка' => $referer,
 			'Дата старта' => $dataStart,
 		];
@@ -175,7 +175,7 @@ function handle_form_submission($request)
 				"UF_CRM_1673957059" 	=> $resultPhone,					// Phone
 
 				"UF_CRM_1673959882" 	=> $referer,				// Ссылка на страницу откуда пришла заявка
-				"UF_CRM_1673959898" 	=> $titleProduct . ' (' . $city . ')',			// Название карточки товара
+				"UF_CRM_1673959898" 	=> $titleProduct . ' ' . $city,			// Название карточки товара
 				"UF_CRM_1730884015214" 	=> $dataStart,		// Дата старта смены
 			],
 			'params' => array("REGISTER_SONET_EVENT" => "Y")	// Y = произвести регистрацию события добавления лида в живой ленте. Дополнительно будет отправлено уведомление ответственному за лид.	
