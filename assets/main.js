@@ -85,6 +85,9 @@ window.addEventListener('load', function () {
 			return checkbox.dataset.city === "Москва";
 		});
 
+		console.log(targetCheckbox);
+		
+
 		if (targetCheckbox) {
 			targetCheckbox.checked = true;
 			targetCheckbox.closest('.checkbox').classList.add('active');
@@ -99,10 +102,10 @@ window.addEventListener('load', function () {
 	}
 
 	// Запускаем после полной загрузки DOM
-	document.addEventListener('DOMContentLoaded', () => {
+	window.addEventListener('load',  () => {
 		checkProfessionsAndClick();
 		activateCityFromUrl();
-	});
+	})
 
 	// Также запускаем checkProfessionsAndClick при динамической загрузке контента
 	if (typeof MutationObserver !== 'undefined') {
