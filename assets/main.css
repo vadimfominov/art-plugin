@@ -31,6 +31,7 @@
 	width: 270px;
 	border-bottom-left-radius: 0px;
 	margin-bottom: 30px;
+	display: none;
 }
 .label-card-first-block::after,
 .label-card-first-block::before {
