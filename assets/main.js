@@ -60,7 +60,9 @@ window.addEventListener('load', function () {
 
 	function activateCityFromUrl() {
 		const slug = getPageSlug();
-		// const cityParam = getUrlParam('city');
+
+		console.log(slug);
+		
 
 		if (slug !== 'professions') {
 			// Если параметра нет - активируем "Все города"
