@@ -1,9 +1,15 @@
 window.addEventListener('load', function () {
 
-	// Функция для получения GET параметров из URL
-	function getQueryParam(param) {
-		const urlParams = new URLSearchParams(window.location.search);
-		return urlParams.get(param);
+	// Функция для получения slug (первого сегмента после домена)
+	function getPageSlug() {
+		// Получаем путь после домена (например: /professions/doctor, /professions, /en/contact)
+		const path = window.location.pathname;
+
+		// Убираем ведущий слеш и разбиваем на сегменты
+		const segments = path.replace(/^\//, '').split('/');
+
+		// Первый сегмент — это slug
+		return segments[0] || '';
 	}
 
 	// Функция для симуляции клика
@@ -30,12 +36,12 @@ window.addEventListener('load', function () {
 	}
 
 	// Основная функция
-	function checkCityAndClick() {
-		// Получаем значение параметра city
-		const city = getQueryParam('city');
+	function checkProfessionsAndClick() {
+		// Получаем slug текущей страницы
+		const slug = getPageSlug();
 
-		// Проверяем, что city=Москва (с учетом разных вариантов написания)
-		if (city && city.toLowerCase() === 'москва') {
+		// Проверяем, что slug равен "professions"
+		if (slug === 'professions') {
 			// Находим все элементы с data-slug="second"
 			const elements = document.querySelectorAll('[data-slug="second"]');
 
@@ -46,21 +52,7 @@ window.addEventListener('load', function () {
 		}
 	}
 
-	// Запускаем после полной загрузки DOM
-	document.addEventListener('DOMContentLoaded', checkCityAndClick);
-
-	// Также запускаем при динамической загрузке контента
-	if (typeof MutationObserver !== 'undefined') {
-		const observer = new MutationObserver(function (mutations) {
-			checkCityAndClick();
-		});
-
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
-	}
-
+	// Функция для активации города из URL (оставлена без изменений)
 	function getUrlParam(name) {
 		const urlParams = new URLSearchParams(window.location.search);
 		return urlParams.get(name);
@@ -105,8 +97,23 @@ window.addEventListener('load', function () {
 		}
 	}
 
-	// Запускаем при загрузке
-	activateCityFromUrl();
+	// Запускаем после полной загрузки DOM
+	document.addEventListener('DOMContentLoaded', () => {
+		checkProfessionsAndClick();
+		activateCityFromUrl();
+	});
+
+	// Также запускаем checkProfessionsAndClick при динамической загрузке контента
+	if (typeof MutationObserver !== 'undefined') {
+		const observer = new MutationObserver(function (mutations) {
+			checkProfessionsAndClick();
+		});
+
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	}
 
 	const IS_MOBILE = window.innerWidth < 767;
 	const IS_TABLE = window.innerWidth > 767 && window.innerWidth < 1025;
