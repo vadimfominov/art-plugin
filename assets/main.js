@@ -1315,13 +1315,14 @@ window.addEventListener('load', function () {
 
 			// Инициализация с выбранным первым фильтром
 			// Список ID страниц, на которых должен выполняться запрос
-			// 42 – Лагерь профессий
+			// 42 – Лагерь профессий. Москва
+			// 32894 – Лагерь профессий. Санкт-Петербург
 			// 44 – АРТ Комьюнити
 			// 46 – Академия навыков
 			// 788 – Узная Город
 			// 50 – Курсы
 			// 1190 – Консультация психолога
-			const allowedPagesFilter = ["42", "44", "46", "788", "50", "1190"];
+			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1342,7 +1343,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "44", "46", "788"], // Группа для art-community, career-camp и других
+		"group1": ["42", "32894", "44", "46", "788"], // Группа для art-community, career-camp и других
 		"group2": ["50", "1190"],           // Группа для psychologist и skills-courses
 		"group3": ["2363"]                 // Группа для proficiency-testing  "48" - для DEV
 	};
