@@ -36,35 +36,26 @@ window.addEventListener('load', function () {
 	}
 
 	// Основная функция
-	function checkProfessionsAndClick() {
-		// Получаем slug текущей страницы
-		const slug = getPageSlug();
+	// function checkProfessionsAndClick() {
+	// 	// Получаем slug текущей страницы
+	// 	const slug = getPageSlug();
 
-		// Проверяем, что slug равен "professions"
-		if (slug === 'professions') {
-			// Находим все элементы с data-slug="second"
-			const elements = document.querySelectorAll('[data-slug="second"]');
+	// 	// Проверяем, что slug равен "professions"
+	// 	if (slug === 'professions') {
+	// 		// Находим все элементы с data-slug="second"
+	// 		const elements = document.querySelectorAll('[data-slug="second"]');
 
-			// Симулируем клик по каждому элементу
-			elements.forEach((element, index) => {
-				simulateClick(element);
-			});
-		}
-	}
-
-	// Функция для активации города из URL (оставлена без изменений)
-	// function getUrlParam(name) {
-	// 	const urlParams = new URLSearchParams(window.location.search);
-	// 	return urlParams.get(name);
+	// 		// Симулируем клик по каждому элементу
+	// 		elements.forEach((element, index) => {
+	// 			simulateClick(element);
+	// 		});
+	// 	}
 	// }
 
 	function activateCityFromUrl() {
 		const slug = getPageSlug();
 
-		console.log(slug);
-		
-
-		if (slug !== 'professions') {
+		if (slug !== 'professions' || slug !== 'professions-spb') {
 			// Если параметра нет - активируем "Все города"
 			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
 			if (allCitiesCheckbox) {
@@ -84,11 +75,8 @@ window.addEventListener('load', function () {
 
 		// Ищем чекбокс по data-city
 		const targetCheckbox = Array.from(cityCheckboxes).find(checkbox => {
-			return checkbox.dataset.city === "Москва";
+			return checkbox.dataset.city === slug === 'professions' ? "Москва" : "Санкт-Петербург";
 		});
-
-		console.log(targetCheckbox);
-		
 
 		if (targetCheckbox) {
 			targetCheckbox.checked = true;
@@ -104,22 +92,20 @@ window.addEventListener('load', function () {
 	}
 
 	// Запускаем после полной загрузки DOM
-	window.addEventListener('load',  () => {
-		checkProfessionsAndClick();
-		activateCityFromUrl();
-	})
+	// checkProfessionsAndClick();
+	activateCityFromUrl();
 
 	// Также запускаем checkProfessionsAndClick при динамической загрузке контента
-	if (typeof MutationObserver !== 'undefined') {
-		const observer = new MutationObserver(function (mutations) {
-			checkProfessionsAndClick();
-		});
+	// if (typeof MutationObserver !== 'undefined') {
+	// 	const observer = new MutationObserver(function (mutations) {
+	// 		checkProfessionsAndClick();
+	// 	});
 
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
-	}
+	// 	observer.observe(document.body, {
+	// 		childList: true,
+	// 		subtree: true
+	// 	});
+	// }
 
 	const IS_MOBILE = window.innerWidth < 767;
 	const IS_TABLE = window.innerWidth > 767 && window.innerWidth < 1025;
