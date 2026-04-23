@@ -760,6 +760,11 @@ body.active-menu .mask {
 .wp-block-fv-our-destinations .item-tab {
 	display: none;
 }
+.wp-block-fv-our-destinations .container-span {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
 .wp-block-fv-our-destinations .item-tab.active {
 	display: block;
 }
@@ -10958,13 +10963,20 @@ select {
 		width: calc(50% - 20px);
 		margin: 10px;
 		padding-bottom: 40px;
+		display: flex;
+		flex-direction: column;
 	}
 	.wp-block-fv-our-destinations .item > .container-span {
-		position: absolute;
-		bottom: 40px;
-		width: calc(100% - 80px);
-		display: flex;
-		justify-content: space-between;
+		/* position: absolute;
+		bottom: 40px; */
+		width: calc(100% - 0px);
+		flex: 1;
+		align-items: flex-end;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-our-destinations .item > .container-span span {
+		width: 100%;
 	}
 	.wp-block-fv-our-destinations .item > p {
 		margin-bottom: 40px;

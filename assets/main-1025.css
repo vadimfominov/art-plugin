@@ -1,5 +1,12 @@
 /* Для ПК */
 @media (min-width: 1025px) {
+	.wp-block-fv-our-destinations .item > .container-span {
+		justify-content: space-between;
+	}
+	.wp-block-fv-our-destinations .item > .container-span span {
+		width: auto;
+	}
+
 	.label-card-first-block {
 		position: absolute;
 		right: 40px;
