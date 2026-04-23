@@ -36,26 +36,26 @@ window.addEventListener('load', function () {
 	}
 
 	// Основная функция
-	// function checkProfessionsAndClick() {
-	// 	// Получаем slug текущей страницы
-	// 	const slug = getPageSlug();
+	function checkProfessionsAndClick() {
+		// Получаем slug текущей страницы
+		const slug = getPageSlug();
 
-	// 	// Проверяем, что slug равен "professions"
-	// 	if (slug === 'professions') {
-	// 		// Находим все элементы с data-slug="second"
-	// 		const elements = document.querySelectorAll('[data-slug="second"]');
+		// Проверяем, что slug равен "professions"
+		if (slug === 'professions') {
+			// Находим все элементы с data-slug="second"
+			const elements = document.querySelectorAll('[data-slug="second"]');
 
-	// 		// Симулируем клик по каждому элементу
-	// 		elements.forEach((element, index) => {
-	// 			simulateClick(element);
-	// 		});
-	// 	}
-	// }
+			// Симулируем клик по каждому элементу
+			elements.forEach((element, index) => {
+				simulateClick(element);
+			});
+		}
+	}
 
 	function activateCityFromUrl() {
 		const slug = getPageSlug();
 
-		if (slug !== 'professions' || slug !== 'professions-spb') {
+		if (slug !== 'professions' && slug !== 'professions-spb') {
 			// Если параметра нет - активируем "Все города"
 			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
 			if (allCitiesCheckbox) {
@@ -74,8 +74,9 @@ window.addEventListener('load', function () {
 		});
 
 		// Ищем чекбокс по data-city
+		const need = (slug === 'professions') ? "Москва" : "Санкт-Петербург";
 		const targetCheckbox = Array.from(cityCheckboxes).find(checkbox => {
-			return checkbox.dataset.city === slug === 'professions' ? "Москва" : "Санкт-Петербург";
+			return checkbox.dataset.city === need;
 		});
 
 		if (targetCheckbox) {
@@ -92,20 +93,20 @@ window.addEventListener('load', function () {
 	}
 
 	// Запускаем после полной загрузки DOM
-	// checkProfessionsAndClick();
+	checkProfessionsAndClick();
 	activateCityFromUrl();
 
 	// Также запускаем checkProfessionsAndClick при динамической загрузке контента
-	// if (typeof MutationObserver !== 'undefined') {
-	// 	const observer = new MutationObserver(function (mutations) {
-	// 		checkProfessionsAndClick();
-	// 	});
+	if (typeof MutationObserver !== 'undefined') {
+		const observer = new MutationObserver(function (mutations) {
+			checkProfessionsAndClick();
+		});
 
-	// 	observer.observe(document.body, {
-	// 		childList: true,
-	// 		subtree: true
-	// 	});
-	// }
+		observer.observe(document.body, {
+			childList: true,
+			subtree: true
+		});
+	}
 
 	const IS_MOBILE = window.innerWidth < 767;
 	const IS_TABLE = window.innerWidth > 767 && window.innerWidth < 1025;
