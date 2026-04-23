@@ -842,7 +842,7 @@ body.active-menu .mask {
 	background-color: var(--mediumGray);
 }
 .wp-block-fv-our-destinations .item > .container-span a,
-.wp-block-fv-our-destinations .item > span a  {
+.wp-block-fv-our-destinations .item > span a {
 	line-height: 21px;
 	font-size: 14px;
 	font-weight: 700;
@@ -10962,6 +10962,9 @@ select {
 	.wp-block-fv-our-destinations .item > .container-span {
 		position: absolute;
 		bottom: 40px;
+		width: calc(100% - 80px);
+		display: flex;
+		justify-content: space-between;
 	}
 	.wp-block-fv-our-destinations .item > p {
 		margin-bottom: 40px;
