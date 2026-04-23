@@ -554,7 +554,7 @@ a:-webkit-any-link {
 	border-bottom: 1px solid var(--darkGray);
 }
 .modal-wrapper {
-	height: 800px;
+	height: 1000px;
 	position: initial;
 	opacity: 1;
 }
