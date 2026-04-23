@@ -10957,7 +10957,7 @@ select {
 		margin: 10px;
 		padding-bottom: 40px;
 	}
-	.wp-block-fv-our-destinations .item > span {
+	.wp-block-fv-our-destinations .item > .container-span {
 		position: absolute;
 		bottom: 40px;
 	}
