@@ -841,7 +841,8 @@ body.active-menu .mask {
 	top: 9px;
 	background-color: var(--mediumGray);
 }
-.wp-block-fv-our-destinations .item > span a {
+.wp-block-fv-our-destinations .item > .container-span a,
+.wp-block-fv-our-destinations .item > span a  {
 	line-height: 21px;
 	font-size: 14px;
 	font-weight: 700;
@@ -850,6 +851,7 @@ body.active-menu .mask {
 	position: relative;
 	opacity: 0.8;
 }
+.wp-block-fv-our-destinations .item > .container-span a:before,
 .wp-block-fv-our-destinations .item > span a:before {
 	content: "";
 	width: 100%;
