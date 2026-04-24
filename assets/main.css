@@ -513,6 +513,26 @@ body.active-menu .mask {
 	margin: -5px;
 	display: flex;
 	flex-wrap: wrap;
+	position: relative;
+}
+.footer-links .camp-links-container {
+	position: absolute;
+	top: -75px;
+	left: 0;
+	width: 100%;
+	display: flex;
+}
+.footer-links .camp-links-container a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--green);
+	transition: all 0.3s ease;
+	opacity: 1;
+}
+.footer-links .camp-links-container a:hover {
+	opacity: 0.9;
+	transition: all 0.3s ease;
 }
 .footer-links a {
 	font-size: 14px;
@@ -10187,7 +10207,6 @@ select {
 	.wrapper {
 		padding: 0 3%;
 	}
-
 	.simulator-block .right-block .item-block:nth-child(1) span {
 		max-width: 150px;
 	}

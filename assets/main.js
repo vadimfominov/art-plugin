@@ -1,5 +1,76 @@
 window.addEventListener('load', function () {
 
+	let currentLinksContainer = null; // Храним текущий контейнер с ссылками
+
+	// Находим все элементы с классом camp-click
+	const campLinks = document.querySelectorAll('.camp-click');
+
+	campLinks.forEach(function (link) {
+		link.addEventListener('click', function (e) {
+			// Отменяем переход по ссылке
+			e.preventDefault();
+
+			// Получаем href ссылки
+			const originalHref = this.getAttribute('href');
+			if (!originalHref) return;
+
+			// Разбираем URL
+			const url = new URL(originalHref);
+
+			console.log(url);
+			
+			const domain = url.host; // Получаем домен (http://localhost:8888)
+			const pathname = url.pathname; // Получаем хвост после домена (/art.loc/professions/)
+			const protocol = url.protocol;
+
+			// Проверяем, есть ли уже контейнер с ссылками для этой ссылки
+			const existingContainer = this.parentNode.querySelector('.camp-links-container');
+
+			if (existingContainer) {
+				// Если контейнер существует - удаляем его (скрываем)
+				existingContainer.remove();
+				currentLinksContainer = null;
+			} else {
+				// Если контейнера нет - создаём новые ссылки
+
+				// Удаляем старый контейнер, если он есть (для другой ссылки)
+				if (currentLinksContainer) {
+					currentLinksContainer.remove();
+				}
+
+				// Создаём контейнер для ссылок
+				const linksContainer = document.createElement('div');
+				linksContainer.className = 'camp-links-container';
+
+				// Создаём первую ссылку (домен)
+				const domainLink = document.createElement('a');
+				domainLink.href = protocol + '//' + domain + '/professions-spb/';
+				// domainLink.href = protocol + '//' + domain + pathname;
+				domainLink.textContent = 'В Санкт-Петербурге';
+				domainLink.target = '_blank';
+
+				// Создаём вторую ссылку (хвост)
+				const pathLink = document.createElement('a');
+				pathLink.href = protocol + '//' + domain + pathname;
+				// pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
+				pathLink.textContent = 'В Москве';
+				pathLink.target = '_blank';
+
+				// Добавляем ссылки в контейнер
+				linksContainer.appendChild(domainLink);
+				linksContainer.appendChild(pathLink);
+
+				// Добавляем контейнер после текущей ссылки
+				this.parentNode.insertBefore(linksContainer, this.nextSibling);
+
+				// Сохраняем текущий контейнер
+				currentLinksContainer = linksContainer;
+			}
+		});
+	});
+
+
+
 	// Функция для получения slug (первого сегмента после домена)
 	function getPageSlug() {
 		// Получаем путь после домена (например: /professions/doctor, /professions, /en/contact)
