@@ -17,10 +17,8 @@ window.addEventListener('load', function () {
 			// Разбираем URL
 			const url = new URL(originalHref);
 
-			console.log(url);
-			
-			const domain = url.host; // Получаем домен (http://localhost:8888)
-			const pathname = url.pathname; // Получаем хвост после домена (/art.loc/professions/)
+			const domain = url.host; // Получаем домен 
+			const pathname = url.pathname; // Получаем хвост после домена
 			const protocol = url.protocol;
 
 			// Проверяем, есть ли уже контейнер с ссылками для этой ссылки
@@ -44,15 +42,15 @@ window.addEventListener('load', function () {
 
 				// Создаём первую ссылку (домен)
 				const domainLink = document.createElement('a');
-				domainLink.href = protocol + '//' + domain + '/professions-spb/';
-				// domainLink.href = protocol + '//' + domain + pathname;
+				// domainLink.href = protocol + '//' + domain + '/professions/';
+				domainLink.href = protocol + '//' + domain + pathname;
 				domainLink.textContent = 'В Санкт-Петербурге';
 				domainLink.target = '_blank';
 
 				// Создаём вторую ссылку (хвост)
 				const pathLink = document.createElement('a');
-				pathLink.href = protocol + '//' + domain + pathname;
-				// pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
+				// pathLink.href = protocol + '//' + domain + pathname;
+				pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
 				pathLink.textContent = 'В Москве';
 				pathLink.target = '_blank';
 
