@@ -45,14 +45,12 @@ window.addEventListener('load', function () {
 				// domainLink.href = protocol + '//' + domain + '/professions/';
 				domainLink.href = protocol + '//' + domain + pathname;
 				domainLink.textContent = 'В Санкт-Петербурге';
-				domainLink.target = '_blank';
 
 				// Создаём вторую ссылку (хвост)
 				const pathLink = document.createElement('a');
 				// pathLink.href = protocol + '//' + domain + pathname;
 				pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
 				pathLink.textContent = 'В Москве';
-				pathLink.target = '_blank';
 
 				// Добавляем ссылки в контейнер
 				linksContainer.appendChild(domainLink);
