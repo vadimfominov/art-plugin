@@ -120,9 +120,9 @@ window.addEventListener('load', function () {
 	}
 
 	function activateCityFromUrl() {
-		const slug = getPageSlug();
+		const slug = window.location.host;
 
-		if (slug !== 'professions' && slug !== 'professions-spb') {
+		if (slug !== 'art-lichnost.ru' && slug !== 'msk.art-lichnost.ru') {
 			// Если параметра нет - активируем "Все города"
 			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
 			if (allCitiesCheckbox) {
@@ -141,7 +141,7 @@ window.addEventListener('load', function () {
 		});
 
 		// Ищем чекбокс по data-city
-		const need = (slug === 'professions') ? "Москва" : "Санкт-Петербург";
+		const need = (slug === 'msk.art-lichnost.ru') ? "Москва" : "Санкт-Петербург";
 		const targetCheckbox = Array.from(cityCheckboxes).find(checkbox => {
 			return checkbox.dataset.city === need;
 		});
