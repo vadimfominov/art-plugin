@@ -21,7 +21,7 @@
 		box-shadow: 5px 5px 15px rgba(48, 169, 51, 0.7);
 		transition: all 0.3s ease;
 	}
-	
+
 	#menu-header-menu .menu-item:nth-child(2) a {
 		transition: all 0.3s ease;
 		position: relative;
@@ -1974,11 +1974,11 @@
 	}
 	.wp-block-fv-time-one-day.skills-academy .item-day:nth-child(2) .first-block:after {
 		height: calc(100% - 50px);
-        top: 30px;
+		top: 30px;
 	}
 	.wp-block-fv-time-one-day.skills-academy .item-day:nth-child(4) .first-block:after {
 		height: calc(100% - 50px);
-        top: 30px;
+		top: 30px;
 	}
 	.wp-block-fv-our-excursion-tabs.slider-tabs-video .slider-container.active {
 		height: auto;
@@ -3445,6 +3445,9 @@
 	}
 	.wp-block-fv-question-parents .container > p {
 		width: 550px;
+	}
+	.wp-block-fv-question-parents.wp-block-fv-block-for-msk .container > p {
+		width: 100%;
 	}
 	.wp-block-fv-question-parents .title-block span {
 		font-size: 22px;
