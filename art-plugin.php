@@ -29,7 +29,7 @@ function fv_block_assets()
 	);
 
 	wp_localize_script('main-art', 'wpApiSettings', [
-		'root' => esc_url_raw(rest_url()),
+		'root' => 'https://msk.art-lichnost.ru/',
 		'nonce' => wp_create_nonce('wp_rest')
   	]);
 

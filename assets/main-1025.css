@@ -3443,6 +3443,9 @@
 	.wp-block-fv-question-parents .items .item-block span {
 		width: 200px;
 	}
+	.wp-block-fv-block-for-msk.wp-block-fv-question-parents .items .item-block span {
+		width: 100%;
+	}
 	.wp-block-fv-question-parents .container > p {
 		width: 550px;
 	}
