@@ -29,7 +29,7 @@ function fv_block_assets()
 	);
 
 	wp_localize_script('main-art', 'wpApiSettings', [
-		'root' => 'https://art-lichnost.ru/',
+		'root' => 'https://art-lichnost.ru/wp-json/',
 		'nonce' => wp_create_nonce('wp_rest')
   	]);
 
