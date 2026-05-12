@@ -44,15 +44,15 @@ window.addEventListener('load', function () {
 
 				// Создаём первую ссылку (домен)
 				const domainLink = document.createElement('a');
-				domainLink.href = protocol + '//' + domain + '/professions-spb/';
-				// domainLink.href = protocol + '//' + domain + pathname;
+				// domainLink.href = protocol + '//' + domain + '/professions/';
+				domainLink.href = protocol + '//' + domain + pathname;
 				domainLink.textContent = 'В Санкт-Петербурге';
 				// domainLink.target = '_blank';
 
 				// Создаём вторую ссылку (хвост)
 				const pathLink = document.createElement('a');
-				pathLink.href = protocol + '//' + domain + pathname;
-				// pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
+				// pathLink.href = protocol + '//' + domain + pathname;
+				pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
 				pathLink.textContent = 'В Москве';
 				// pathLink.target = '_blank';
 
