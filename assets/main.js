@@ -47,14 +47,14 @@ window.addEventListener('load', function () {
 				domainLink.href = protocol + '//' + domain + '/professions-spb/';
 				// domainLink.href = protocol + '//' + domain + pathname;
 				domainLink.textContent = 'В Санкт-Петербурге';
-				domainLink.target = '_blank';
+				// domainLink.target = '_blank';
 
 				// Создаём вторую ссылку (хвост)
 				const pathLink = document.createElement('a');
 				pathLink.href = protocol + '//' + domain + pathname;
 				// pathLink.href = protocol + '//' + 'msk.' + domain + pathname;
 				pathLink.textContent = 'В Москве';
-				pathLink.target = '_blank';
+				// pathLink.target = '_blank';
 
 				// Добавляем ссылки в контейнер
 				linksContainer.appendChild(domainLink);
@@ -1374,7 +1374,6 @@ window.addEventListener('load', function () {
 
 			const responses = await fetch(`${wpApiSettings.root}custom/v1/all-posts?${params.toString()}`, {
 				headers: {
-					'X-WP-Nonce': wpApiSettings.nonce,
 					'Content-Type': 'application/json'
 				}
 			});
@@ -2035,7 +2034,6 @@ window.addEventListener('load', function () {
 		try {
 			const response = await fetch(url, {
 				headers: {
-					'X-WP-Nonce': wpApiSettings.nonce,
 					'Content-Type': 'application/json'
 				}
 			});
@@ -3591,7 +3589,6 @@ window.addEventListener('load', function () {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
-					'X-WP-Nonce': wpApiSettings.nonce
 				},
 				body: JSON.stringify(data)
 			})

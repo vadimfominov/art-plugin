@@ -11253,6 +11253,7 @@ select {
 		line-height: 21px;
 		width: 170px;
 		height: 38px;
+		text-align: center;
 	}
 	.item-card .date-card,
 	.item-card .place-card,
