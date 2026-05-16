@@ -3262,6 +3262,10 @@ body.active-menu .mask {
 	flex-direction: column;
 	gap: 10px;
 }
+.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp button.item {
+	border: none;
+	cursor: pointer;
+}
 .wp-block-fv-link-camp .item {
 	background-color: var(--hintGray);
 	height: 100px;
@@ -3278,6 +3282,9 @@ body.active-menu .mask {
 .wp-block-fv-link-camp .item:nth-child(2) span {
 	position: relative;
 }
+.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp .first-item {
+	background-color: var(--red);
+}
 .wp-block-fv-link-camp .item:nth-child(2) span:before {
 	content: "Программа";
 	position: absolute;
@@ -3289,6 +3296,9 @@ body.active-menu .mask {
 	line-height: 15px;
 	font-family: "Montserrat";
 	font-weight: 500;
+}
+.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs .item:nth-child(2) span:before {
+	display: none;
 }
 .wp-block-fv-link-camp .item > svg {
 	position: absolute;
@@ -4443,6 +4453,7 @@ video {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+	width: 100%;
 }
 .faq-container .item {
 	background-color: var(--hintGray);
@@ -4544,10 +4555,42 @@ video {
 	flex-direction: column;
 	gap: 10px;
 }
+.faq-container .left-faq .item-camp-tab,
+.faq-container .right-faq .item-camp-tab {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
 .faq-container .right-faq {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+}
+.wp-block-fv-link-camp-tabs .faq-container {
+	margin-top: 20px;
+}
+.wp-block-fv-link-camp-tabs .faq-container {
+	display: none;
+}
+.wp-block-fv-link-camp-tabs .faq-container.active {
+	display: flex;
+}
+.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp button.item.active {
+	background-color: var(--red);
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item.active svg {
+	transform: rotate(45deg);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item.active span {
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item.active svg path {
+	fill: var(--white);
+	transition: all 0.3s ease;
 }
 .simulator-block h2 .highlight:before,
 .wp-block-fv-child-busy h2 .highlight:before,
@@ -8255,7 +8298,7 @@ video {
 	position: relative;
 }
 .wp-block-fv-question-parents .items .item-block .icon {
-	width: 8px;
+	width: 8px !important;
 	height: 8px;
 	background-color: var(--green);
 	border-radius: 50%;
@@ -8330,7 +8373,7 @@ video {
 	text-align: center;
 }
 .wp-block-fv-download-file {
-	margin-bottom: 10px;
+	margin-bottom: 120px;
 }
 .wp-block-fv-download-file .container {
 	display: flex;
@@ -13553,6 +13596,13 @@ select {
 	}
 	.wp-block-fv-link-camp .first-item {
 		padding-bottom: 20px;
+	}
+
+	.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp button.item {
+		flex: 1;
+	}
+	.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp .first-item {
+		flex: auto;
 	}
 	.wp-block-fv-interesting-profession {
 		margin-bottom: 120px;

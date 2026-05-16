@@ -1,5 +1,82 @@
 window.addEventListener('load', function () {
 
+	const linkCampItem1 = document.querySelector('.link-camp-item1');
+	const linkCampItem2 = document.querySelector('.link-camp-item2');
+	const linkCampItem3 = document.querySelector('.link-camp-item3');
+	const linkCampItem4 = document.querySelector('.link-camp-item4');
+
+	linkCampItem1?.addEventListener('click', function () {
+		const container = this.closest('.wp-block-fv-link-camp-tabs');
+		const faqContainer1 = container.querySelector('.faq-container1');
+
+		const itemTabs = container.querySelectorAll('button');
+		const containerTabs = container.querySelectorAll('.faq-container');
+
+		itemTabs.forEach(function (itemTab) {
+			itemTab.classList.remove('active');
+		});
+		containerTabs.forEach(function (container) {
+			container.classList.remove('active');
+		});
+
+		this.classList.toggle('active');
+		faqContainer1.classList.toggle('active');
+	});
+
+	linkCampItem2?.addEventListener('click', function () {
+		const container = this.closest('.wp-block-fv-link-camp-tabs');
+		const faqContainer = container.querySelector('.faq-container2');
+
+		const itemTabs = container.querySelectorAll('button');
+		const containerTabs = container.querySelectorAll('.faq-container');
+
+		itemTabs.forEach(function (itemTab) {
+			itemTab.classList.remove('active');
+		});
+		containerTabs.forEach(function (container) {
+			container.classList.remove('active');
+		});
+
+		this.classList.toggle('active');
+		faqContainer.classList.toggle('active');
+	});
+
+	linkCampItem3?.addEventListener('click', function () {
+		const container = this.closest('.wp-block-fv-link-camp-tabs');
+		const faqContainer = container.querySelector('.faq-container3');
+
+		const itemTabs = container.querySelectorAll('button');
+		const containerTabs = container.querySelectorAll('.faq-container');
+
+		itemTabs.forEach(function (itemTab) {
+			itemTab.classList.remove('active');
+		});
+		containerTabs.forEach(function (container) {
+			container.classList.remove('active');
+		});
+
+		this.classList.toggle('active');
+		faqContainer.classList.toggle('active');
+	});
+
+	linkCampItem4?.addEventListener('click', function () {
+		const container = this.closest('.wp-block-fv-link-camp-tabs');
+		const faqContainer = container.querySelector('.faq-container4');
+
+		const itemTabs = container.querySelectorAll('button');
+		const containerTabs = container.querySelectorAll('.faq-container');
+
+		itemTabs.forEach(function (itemTab) {
+			itemTab.classList.remove('active');
+		});
+		containerTabs.forEach(function (container) {
+			container.classList.remove('active');
+		});
+		
+		this.classList.toggle('active');
+		faqContainer.classList.toggle('active');
+	});
+
 	let currentLinksContainer = null; // Храним текущий контейнер с ссылками
 
 	// Находим все элементы с классом camp-click
@@ -1209,7 +1286,6 @@ window.addEventListener('load', function () {
 		testDriveOpenButtons.forEach(button => {
 			button.addEventListener('click', function (e) {
 				e.preventDefault();
-
 
 				const testDriveModal = document.querySelector('.test-drive-modal');
 

@@ -1022,6 +1022,9 @@
 		padding: 20px;
 		padding-right: 5px;
 	}
+	.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp .first-item {
+		order: 2;
+	}
 	.wp-block-fv-link-camp .first-item {
 		padding: 30px;
 	}
@@ -1046,6 +1049,30 @@
 		transition: all 0.3s ease;
 	}
 	.wp-block-fv-link-camp a.item:hover span:before {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs.wp-block-fv-link-camp button.item {
+		flex: none;
+	}
+	.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item:hover {
+		background-color: var(--red);
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item:hover svg {
+		transform: rotate(45deg);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item:hover svg path {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item:hover span {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp.wp-block-fv-link-camp-tabs button.item:hover span:before {
 		color: var(--white);
 		transition: all 0.3s ease;
 	}
