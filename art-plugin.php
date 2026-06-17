@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Plugin name: ART PLugin
  * Plugin URI: https://t.me/wordpress_by
@@ -28,10 +29,14 @@ function fv_block_assets()
 		]
 	);
 
+	$posts_per_page = get_option('posts_per_page', 10);
+
 	wp_localize_script('main-art', 'wpApiSettings', [
 		'root' => 'https://art-lichnost.ru/wp-json/',
-		'nonce' => wp_create_nonce('wp_rest')
-  	]);
+		'nonce' => wp_create_nonce('wp_rest'),
+		'restUrl' => rest_url(),
+		'postsPerPage' => (int) $posts_per_page
+	]);
 
 	wp_enqueue_style(
 		'main-art',
@@ -41,7 +46,7 @@ function fv_block_assets()
 		'screen'
 	);
 
-	if(!wp_is_mobile()) {
+	if (!wp_is_mobile()) {
 		wp_enqueue_style(
 			'main-1025',
 			plugin_dir_url(__FILE__) . 'assets/main-1025.css',
@@ -50,7 +55,7 @@ function fv_block_assets()
 			'screen'
 		);
 	}
-	
+
 	if (is_admin()) {
 		wp_enqueue_style(
 			'admin-art',
@@ -60,20 +65,21 @@ function fv_block_assets()
 			'screen'
 		);
 	}
-	
 }
 
 
-function my_block_init() {
-	register_block_type( 'fv/header-block', [
+function my_block_init()
+{
+	register_block_type('fv/header-block', [
 		'render_callback' => 'my_render_block',
 	]);
 }
-add_action( 'init', 'my_block_init' );
+add_action('init', 'my_block_init');
 
-function my_render_block( $attributes, $content ) {
-	$menu_id = isset( $attributes['selectedMenu'] ) ? (int) $attributes['selectedMenu'] : 0;
-	$menu_html = wp_nav_menu( [
+function my_render_block($attributes, $content)
+{
+	$menu_id = isset($attributes['selectedMenu']) ? (int) $attributes['selectedMenu'] : 0;
+	$menu_html = wp_nav_menu([
 		'menu' => $menu_id,
 		'echo' => false,
 	]);
@@ -84,14 +90,16 @@ function my_render_block( $attributes, $content ) {
 	return $content;
 }
 
-function my_menus_init() {
-	register_block_type( 'fv/footer-block', [
+function my_menus_init()
+{
+	register_block_type('fv/footer-block', [
 		'render_callback' => 'my_render_menus',
 	]);
 }
-add_action( 'init', 'my_menus_init' );
+add_action('init', 'my_menus_init');
 
-function my_render_menus($attributes, $content) {
+function my_render_menus($attributes, $content)
+{
 	// Обрабатываем первое меню
 	if (isset($attributes['selectedFooterMenu'])) {
 		$menu_id = (int) $attributes['selectedFooterMenu'];
@@ -100,8 +108,8 @@ function my_render_menus($attributes, $content) {
 			'echo' => false,
 		]);
 		$content = str_replace(
-			'<div data-footerplaceholder="footer-menu-placeholder"></div>', 
-			$menu_html, 
+			'<div data-footerplaceholder="footer-menu-placeholder"></div>',
+			$menu_html,
 			$content
 		);
 	}
@@ -114,8 +122,8 @@ function my_render_menus($attributes, $content) {
 			'echo' => false,
 		]);
 		$content = str_replace(
-			'<div data-directionsplaceholder="directions-menu-placeholder"></div>', 
-			$menu_html, 
+			'<div data-directionsplaceholder="directions-menu-placeholder"></div>',
+			$menu_html,
 			$content
 		);
 	}
@@ -128,14 +136,24 @@ function my_render_menus($attributes, $content) {
 			'echo' => false,
 		]);
 		$content = str_replace(
-			'<div data-documentsplaceholder="documents-menu-placeholder"></div>', 
-			$menu_html, 
+			'<div data-documentsplaceholder="documents-menu-placeholder"></div>',
+			$menu_html,
 			$content
 		);
 	}
 
 	return $content ?: '';
 }
+
+function custom_excerpt_length($length)
+{
+	return 15; // 15 слов
+}
+function custom_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'custom_excerpt_more');
+add_filter('excerpt_length', 'custom_excerpt_length');
 
 require_once __DIR__ . '/inc/rest-api.php';
 require_once __DIR__ . '/inc/send-form.php';

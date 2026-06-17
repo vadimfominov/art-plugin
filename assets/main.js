@@ -24,6 +24,7 @@ window.addEventListener('load', function () {
 	});
 
 	linkCampItem2?.addEventListener('click', function () {
+
 		const container = this.closest('.wp-block-fv-link-camp-tabs');
 		const faqContainer = container.querySelector('.faq-container2');
 
@@ -72,7 +73,7 @@ window.addEventListener('load', function () {
 		containerTabs.forEach(function (container) {
 			container.classList.remove('active');
 		});
-		
+
 		this.classList.toggle('active');
 		faqContainer.classList.toggle('active');
 	});
@@ -926,6 +927,8 @@ window.addEventListener('load', function () {
 			widthSlide = IS_MOBILE && '50%' || IS_TABLE && '33.33333%' || IS_DESKTOP && '25%';
 		} else if (countSlider === 3) {
 			widthSlide = IS_MOBILE && '100%' || IS_TABLE && '50%' || IS_DESKTOP && '33.33333%';
+		} else if (countSlider === 2) {
+			widthSlide = IS_MOBILE && '100%' || IS_TABLE && '50%' || IS_DESKTOP && '50%';
 		} else if (countSlider === 1) {
 			widthSlide = IS_MOBILE && '100%' || IS_TABLE && '100%' || IS_DESKTOP && '100%';
 		}
@@ -997,6 +1000,11 @@ window.addEventListener('load', function () {
 		if (document.querySelector('.our-reviews-modal')) {
 			initializeSlider('our-reviews-modal', 3);
 		}
+
+		[1, 2, 3].forEach(g => [1, 2, 3].forEach(n =>
+			document.querySelector(`.slider-post-${g}-${n}`) && initializeSlider(`slider-post-${g}-${n}`, g)
+		));
+
 	}, 300);
 
 	function saveScrollPosition() {
@@ -3728,6 +3736,435 @@ window.addEventListener('load', function () {
 			const modalContent = this.closest('.container-step');
 			modalContent.classList.remove('active');
 		});
+	});
+
+});
+
+// Фронтенд JS с пагинацией
+window.addEventListener('load', function () {
+	const containers = document.querySelectorAll('.blog-frontend-container');
+
+	// Добавляем уникальный ID каждому блоку
+	containers.forEach((container, index) => {
+		if (!container.dataset.blockId) {
+			container.dataset.blockId = `blog_${index}`;
+		}
+	});
+
+	containers.forEach(container => {
+		// Получаем posts_per_page из глобальных настроек WordPress
+		let postsPerPage = 10; // значение по умолчанию
+
+		// Пытаемся получить настройки из глобальной переменной
+		if (window.wpApiSettings) {
+			postsPerPage = window.wpApiSettings.postsPerPage || 10;
+		}
+
+		// Получаем параметры из URL
+		const urlParams = getParamsFromURL(container);
+
+		// Сохраняем состояние пагинации для каждого контейнера
+		container.currentPage = urlParams.page;
+		container.totalPages = 1;
+		container.postsPerPage = postsPerPage;
+		container.currentCategoryId = urlParams.categoryId;
+		container.currentSortOrder = urlParams.sortOrder;
+
+		loadCategories(container, urlParams.categoryId);
+
+		const sortButtons = container.querySelectorAll('.sort-button');
+		if (sortButtons.length) {
+			// Устанавливаем активную кнопку из URL
+			const activeSortBtn = container.querySelector(`.sort-button[data-sort="${urlParams.sortOrder}"]`);
+			if (activeSortBtn) {
+				sortButtons.forEach(btn => btn.classList.remove('active'));
+				activeSortBtn.classList.add('active');
+			}
+
+			const sortList = container.querySelector('.sort-list');
+			const sortButtonActive = sortList.querySelector('.sort-button.active');
+			const openSortButton = sortList.querySelector('.open-sort-button');
+			openSortButton.textContent = sortButtonActive.textContent;
+
+			sortButtons.forEach(btn => {
+				btn.addEventListener('click', () => {
+					sortButtons.forEach(b => b.classList.remove('active'));
+					btn.classList.add('active');
+
+					container.currentPage = 1;
+					container.currentSortOrder = btn.dataset.sort;
+					const activeCat = container.querySelector('.category-btn.active');
+					container.currentCategoryId = activeCat ? activeCat.dataset.cat : '';
+
+					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
+
+					const blogSort = btn.closest('.blog-sort');
+					blogSort.classList.remove('active');
+
+					sortList.classList.remove('active');
+					const textValue = btn.textContent;
+					openSortButton.textContent = textValue;
+
+				});
+			});
+		}
+
+		// Обработчик кнопки "Загрузить ещё"
+		const loadNextBtn = container.querySelector('.load-next-btn');
+		if (loadNextBtn) {
+			loadNextBtn.addEventListener('click', () => {
+				if (container.currentPage < container.totalPages) {
+					container.currentPage++;
+
+					// Обновляем URL
+					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+
+					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage).then(() => {
+						// Скроллим к началу контейнера с постами
+						const containerBlog = container.querySelector('.container-blog');
+						if (containerBlog) {
+							containerBlog.style.scrollMarginTop = '100px';
+							containerBlog.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start'
+							});
+						}
+					});
+				}
+			});
+		}
+
+		// Обработчик кнопки "Загрузить предыдущие"
+		const loadPrevBtn = container.querySelector('.load-prev-btn');
+		if (loadPrevBtn) {
+			loadPrevBtn.addEventListener('click', () => {
+				if (container.currentPage > 1) {
+					container.currentPage--;
+
+					// Обновляем URL
+					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
+				}
+			});
+		}
+
+		// Загружаем посты с параметрами из URL
+		loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
+	});
+});
+
+// Функция для обновления URL с параметрами
+function updateURLParams(container, page, categoryId, sortOrder) {
+	const url = new URL(window.location.href);
+
+	// Добавляем уникальный идентификатор для каждого блока (если их несколько на странице)
+	// const blockId = container.dataset.blockId || '';
+	const prefix = '_';
+
+	if (page && page > 1) {
+		url.searchParams.set(`${prefix}page`, page);
+	} else {
+		url.searchParams.delete(`${prefix}page`);
+	}
+
+	if (categoryId && categoryId !== '') {
+		url.searchParams.set(`${prefix}cat`, categoryId);
+	} else {
+		url.searchParams.delete(`${prefix}cat`);
+	}
+
+	if (sortOrder && sortOrder !== 'default') {
+		url.searchParams.set(`${prefix}sort`, sortOrder);
+	} else {
+		url.searchParams.delete(`${prefix}sort`);
+	}
+
+	// Обновляем URL без перезагрузки страницы
+	window.history.pushState({}, '', url);
+}
+
+// Функция для получения параметров из URL
+function getParamsFromURL(container) {
+	const url = new URL(window.location.href);
+	// const blockId = container.dataset.blockId || '';
+	const prefix = '_';
+
+	return {
+		page: parseInt(url.searchParams.get(`${prefix}page`)) || 1,
+		categoryId: url.searchParams.get(`${prefix}cat`) || '',
+		sortOrder: url.searchParams.get(`${prefix}sort`) || 'default'
+	};
+}
+
+async function loadCategories(container, selectedCategoryId = '') {
+	try {
+		const restUrl = container.dataset.restUrl || window.location.origin + '/wp-json';
+		const response = await fetch(`${restUrl}/wp/v2/categories?per_page=15&hide_empty=true`);
+		const categories = await response.json();
+
+		const categoriesList = container.querySelector('.categories-list');
+		if (categoriesList) {
+			categoriesList.innerHTML = `
+                <button class="open-category-list">Все записи</button>
+                <button class="category-btn ${!selectedCategoryId ? 'active' : ''}" data-cat="">Все записи</button>
+                ${categories.map(cat => `
+                    <button class="category-btn ${selectedCategoryId == cat.id ? 'active' : ''}" data-cat="${cat.id}">${escapeHtml(cat.name)}</button>
+                `).join('')}
+            `;
+
+			const categoryBtnActive = categoriesList.querySelector('.category-btn.active');
+			const openCategoryList = categoriesList.querySelector('.open-category-list');
+			openCategoryList.textContent = categoryBtnActive.textContent;
+
+			categoriesList.querySelectorAll('.category-btn').forEach(btn => {
+				btn.addEventListener('click', () => {
+					categoriesList.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+					btn.classList.add('active');
+					container.currentPage = 1;
+					container.currentCategoryId = btn.dataset.cat;
+
+					// Получаем активную кнопку сортировки вместо select
+					const activeSortBtn = container.querySelector('.sort-button.active');
+					container.currentSortOrder = activeSortBtn ? activeSortBtn.dataset.sort : 'default';
+
+					// Обновляем URL
+					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+
+					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
+
+					categoriesList.classList.remove('active');
+					const textValue = btn.textContent;
+					openCategoryList.textContent = textValue;
+
+				});
+			});
+		}
+	} catch (error) {
+		console.error('Error loading categories:', error);
+	}
+}
+
+async function loadPosts(container, categoryId = '', sortOrder = 'default', page = 1) {
+	let order = 'desc';
+	let orderby = 'date';
+
+	if (sortOrder === 'oldest') {
+		order = 'asc';
+	} else if (sortOrder === 'default' || sortOrder === 'newest') {
+		order = 'desc';
+	}
+
+	const restUrl = container.dataset.restUrl || window.location.origin + '/wp-json';
+	console.log(container.dataset.restUrl);
+
+	const postsPerPage = container.postsPerPage;
+
+	let url = `${restUrl}/wp/v2/posts?per_page=${postsPerPage}&order=${order}&orderby=${orderby}&_embed&page=${page}`;
+	if (categoryId && categoryId !== '') {
+		url += `&categories=${categoryId}`;
+	}
+
+	const postsDiv = container.querySelector('.container-blog');
+	const loadPrevBtn = container.querySelector('.load-prev-btn');
+	const loadNextBtn = container.querySelector('.load-next-btn');
+	const pageInfo = container.querySelector('.page-info');
+
+	if (!postsDiv) return;
+
+	// Показываем загрузку
+	// postsDiv.innerHTML = '<div class="posts-loading"><p>Загрузка постов...</p></div>';
+
+	// Удаляем старый прелоадер если есть
+	const oldPreloader = postsDiv.querySelector('.blog-preloader');
+	if (oldPreloader) oldPreloader.remove();
+
+	// Добавляем прелоадер поверх
+	const preloader = document.createElement('div');
+	preloader.className = 'blog-preloader';
+	preloader.innerHTML = '<p>Загрузка постов...</p>';
+	postsDiv.style.position = 'relative';
+	postsDiv.appendChild(preloader);
+
+	// Отключаем кнопки на время загрузки
+	if (loadPrevBtn) loadPrevBtn.disabled = true;
+	if (loadNextBtn) loadNextBtn.disabled = true;
+
+	try {
+		const response = await fetch(url);
+
+		// Получаем общее количество страниц из заголовка
+		const totalPages = parseInt(response.headers.get('X-WP-TotalPages'));
+		if (!isNaN(totalPages)) {
+			container.totalPages = totalPages;
+		}
+
+		const posts = await response.json();
+
+		if (posts.length === 0) {
+			postsDiv.innerHTML = '<div class="no-posts"><p>Нет записей в выбранной рубрике</p></div>';
+			if (loadPrevBtn) loadPrevBtn.style.display = 'none';
+			if (loadNextBtn) loadNextBtn.style.display = 'none';
+			if (pageInfo) pageInfo.textContent = '';
+			return;
+		}
+
+		// Показываем кнопки пагинации
+		if (loadPrevBtn) loadPrevBtn.style.display = 'flex';
+		if (loadNextBtn) loadNextBtn.style.display = 'flex';
+
+		// Обновляем информацию о странице
+		if (pageInfo) {
+			pageInfo.textContent = `Страница ${page} из ${container.totalPages}`;
+		}
+
+		// Включаем/выключаем кнопки в зависимости от текущей страницы
+		if (loadPrevBtn) {
+			loadPrevBtn.disabled = false;
+			if (page <= 1) {
+				loadPrevBtn.style.display = 'none';
+			} else {
+				loadPrevBtn.style.display = 'flex';
+			}
+		}
+
+		if (loadNextBtn) {
+			loadNextBtn.disabled = false;
+			if (page >= container.totalPages) {
+				loadNextBtn.style.display = 'none';
+			} else {
+				loadNextBtn.style.display = 'flex';
+			}
+		}
+
+		preloader.remove();
+
+		postsDiv.innerHTML = posts.map(post => `
+            <article class="blog-post">
+                ${post._embedded && post._embedded['wp:featuredmedia'] ? `
+                    <div class="post-thumbnail">
+                        <img src="${post._embedded['wp:featuredmedia'][0].source_url}" alt="${escapeHtml(post.title.rendered)}">
+                    </div>
+                ` : ''}
+                <div class="post-content">
+                    <h3><a href="${post.link}">${escapeHtml(post.title.rendered)}</a></h3>
+                    
+                    <div class="post-excerpt">${post.excerpt.rendered}</div>
+						  <div class="post-meta">
+                        <span class="post-date">${new Date(post.date).toLocaleDateString('ru-RU', {
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric'
+		})}</span>
+                    </div>
+                    <a href="${post.link}" class="read-more">Читать подробнее</a>
+                </div>
+            </article>
+        `).join('');
+	} catch (error) {
+		console.error('Error loading posts:', error);
+		postsDiv.innerHTML = '<div class="error"><p>Ошибка загрузки постов</p></div>';
+		preloader.remove();
+		if (loadPrevBtn) loadPrevBtn.disabled = false;
+		if (loadNextBtn) loadNextBtn.disabled = false;
+	}
+}
+
+// Функция для экранирования HTML
+function escapeHtml(text) {
+	const div = document.createElement('div');
+	div.textContent = text;
+	return div.innerHTML;
+}
+
+// Добавьте эту функцию после window.addEventListener
+window.addEventListener('popstate', function () {
+	const containers = document.querySelectorAll('.blog-frontend-container');
+
+	containers.forEach(container => {
+		const urlParams = getParamsFromURL(container);
+
+		container.currentPage = urlParams.page;
+		container.currentCategoryId = urlParams.categoryId;
+		container.currentSortOrder = urlParams.sortOrder;
+
+		// Обновляем активную категорию
+		const categoriesList = container.querySelector('.categories-list');
+		if (categoriesList) {
+			categoriesList.querySelectorAll('.category-btn').forEach(btn => {
+				if (btn.dataset.cat == urlParams.categoryId) {
+					btn.classList.add('active');
+				} else {
+					btn.classList.remove('active');
+				}
+			});
+		}
+
+		// Обновляем активную кнопку сортировки
+		const sortButtons = container.querySelectorAll('.sort-button');
+		if (sortButtons.length) {
+			const activeSortBtn = container.querySelector(`.sort-button[data-sort="${urlParams.sortOrder}"]`);
+			sortButtons.forEach(btn => btn.classList.remove('active'));
+			if (activeSortBtn) {
+				activeSortBtn.classList.add('active');
+			}
+		}
+
+		// Загружаем посты
+		loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
+	});
+});
+
+//open-category-list 
+window.addEventListener('load', function () {
+
+	// Функция для добавления обработчика
+	function initCategoryButton() {
+		const openCategoryList = document.querySelector('.open-category-list');
+
+		if (openCategoryList) {
+			openCategoryList.removeEventListener('click', handleClick); // Удаляем старый, если есть
+			openCategoryList.addEventListener('click', handleClick);
+		} else {
+			// Если элемент еще не появился, ждем MutationObserver
+			const observer = new MutationObserver(function (mutations) {
+				const button = document.querySelector('.open-category-list');
+				if (button) {
+					button.addEventListener('click', handleClick);
+					observer.disconnect(); // Останавливаем наблюдение
+				}
+			});
+
+			observer.observe(document.body, { childList: true, subtree: true });
+		}
+	}
+
+	function handleClick(e) {
+		const categoriesList = e.currentTarget.closest('.categories-list');
+		if (categoriesList) {
+			categoriesList.classList.add('active');
+		}
+	}
+
+	initCategoryButton();
+
+	const openSortBlock = document.querySelector('.open-sort-block');
+	openSortBlock?.addEventListener('click', function () {
+		const blogSort = this.closest('.blog-sort');
+		blogSort.classList.add('active');
+
+	});
+	const closeSortBlock = document.querySelector('.close-sort-block');
+	closeSortBlock?.addEventListener('click', function () {
+		const blogSort = this.closest('.blog-sort');
+		blogSort.classList.remove('active');
+	});
+
+	const openSortButton = document.querySelector('.open-sort-button');
+	openSortButton?.addEventListener('click', function () {
+		const sortList = this.closest('.sort-list');
+		sortList.classList.add('active');
+
 	});
 
 });
