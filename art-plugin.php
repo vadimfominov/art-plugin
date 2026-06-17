@@ -6,7 +6,7 @@
  * Description: Плагин с Gutenberg блоками только для этого сайта
  * Author: Вадим Фоминов
  * Author URI: https://t.me/vadimfominov
- * Version: 0.2.8
+ * Version: 0.3.0
  */
 
 add_action('enqueue_block_assets', 'fv_block_assets', 1);
