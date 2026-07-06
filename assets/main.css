@@ -10330,14 +10330,14 @@ select {
 	border-radius: 20px;
 }
 
-.container-blog .post-content h3 a {
+.container-blog .post-content h2 a {
 	color: #535353;
 	font-family: "Montserrat", sans-serif;
 	font-weight: 600;
 	line-height: 120%;
 	font-size: 20px;
 }
-.container-blog .post-content h3 {
+.container-blog .post-content h2 {
 	margin-bottom: 5px;
 }
 .container-blog .post-excerpt {
