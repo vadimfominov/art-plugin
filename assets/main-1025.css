@@ -4368,4 +4368,17 @@
 	.categories-list button:hover {
 		color: #30A933;
 	}
+	.wp-block-fv-blog h1 {
+		margin-bottom: 50px;
+	}
+	.wrapper .breadcrumbs {
+		margin-bottom: 20px;
+	}
+	.breadcrumbs ul {
+		display: flex;
+		align-items: center;
+	}
+	.breadcrumbs li a:hover span {
+		color: #30A933;
+	}
 }
