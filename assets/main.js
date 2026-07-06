@@ -3796,7 +3796,7 @@ window.addEventListener('load', function () {
 					const activeCat = container.querySelector('.category-btn.active');
 					container.currentCategoryId = activeCat ? activeCat.dataset.cat : '';
 
-					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+					// updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
 					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
 
 					const blogSort = btn.closest('.blog-sort');
@@ -3818,7 +3818,7 @@ window.addEventListener('load', function () {
 					container.currentPage++;
 
 					// Обновляем URL
-					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+					// updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
 
 					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage, false).then(() => {
 						// Скроллим к началу контейнера с постами
@@ -3934,7 +3934,7 @@ async function loadCategories(container, selectedCategoryId = '') {
 					container.currentSortOrder = activeSortBtn ? activeSortBtn.dataset.sort : 'default';
 
 					// Обновляем URL
-					updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
+					// updateURLParams(container, container.currentPage, container.currentCategoryId, container.currentSortOrder);
 
 					loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
 
@@ -3949,133 +3949,6 @@ async function loadCategories(container, selectedCategoryId = '') {
 		console.error('Error loading categories:', error);
 	}
 }
-
-// async function loadPosts(container, categoryId = '', sortOrder = 'default', page = 1) {
-// 	let order = 'desc';
-// 	let orderby = 'date';
-
-// 	if (sortOrder === 'oldest') {
-// 		order = 'asc';
-// 	} else if (sortOrder === 'default' || sortOrder === 'newest') {
-// 		order = 'desc';
-// 	}
-
-// 	const restUrl = container.dataset.restUrl || window.location.origin + '/wp-json';
-// 	// Проверяем, содержит ли строка 'localhost'
-// 	const finalRestUrl = restUrl.includes('localhost')
-// 		? 'http://localhost:8888/art.loc/wp-json'
-// 		: restUrl;
-
-// 	const postsPerPage = container.postsPerPage;
-
-// 	let url = `${finalRestUrl}/wp/v2/posts?per_page=${postsPerPage}&order=${order}&orderby=${orderby}&_embed&page=${page}`;
-// 	if (categoryId && categoryId !== '') {
-// 		url += `&categories=${categoryId}`;
-// 	}
-
-// 	const postsDiv = container.querySelector('.container-blog');
-// 	// const loadPrevBtn = container.querySelector('.load-prev-btn');
-// 	const loadNextBtn = container.querySelector('.load-next-btn');
-// 	const pageInfo = container.querySelector('.page-info');
-
-// 	if (!postsDiv) return;
-
-// 	// Показываем загрузку
-// 	// postsDiv.innerHTML = '<div class="posts-loading"><p>Загрузка постов...</p></div>';
-
-// 	// Удаляем старый прелоадер если есть
-// 	const oldPreloader = postsDiv.querySelector('.blog-preloader');
-// 	if (oldPreloader) oldPreloader.remove();
-
-// 	// Добавляем прелоадер поверх
-// 	const preloader = document.createElement('div');
-// 	preloader.className = 'blog-preloader';
-// 	preloader.innerHTML = '<p>Загрузка постов...</p>';
-// 	postsDiv.style.position = 'relative';
-// 	postsDiv.appendChild(preloader);
-
-// 	// Отключаем кнопки на время загрузки
-// 	// if (loadPrevBtn) loadPrevBtn.disabled = true;
-// 	if (loadNextBtn) loadNextBtn.disabled = true;
-
-// 	try {
-// 		const response = await fetch(url);
-
-// 		// Получаем общее количество страниц из заголовка
-// 		const totalPages = parseInt(response.headers.get('X-WP-TotalPages'));
-// 		if (!isNaN(totalPages)) {
-// 			container.totalPages = totalPages;
-// 		}
-
-// 		const posts = await response.json();
-
-// 		if (posts.length === 0) {
-// 			postsDiv.innerHTML = '<div class="no-posts"><p>Нет записей в выбранной рубрике</p></div>';
-// 			// if (loadPrevBtn) loadPrevBtn.style.display = 'none';
-// 			if (loadNextBtn) loadNextBtn.style.display = 'none';
-// 			if (pageInfo) pageInfo.textContent = '';
-// 			return;
-// 		}
-
-// 		// Показываем кнопки пагинации
-// 		// if (loadPrevBtn) loadPrevBtn.style.display = 'flex';
-// 		if (loadNextBtn) loadNextBtn.style.display = 'flex';
-
-// 		// Обновляем информацию о странице
-// 		if (pageInfo) {
-// 			pageInfo.textContent = `Страница ${page} из ${container.totalPages}`;
-// 		}
-
-// 		// Включаем/выключаем кнопки в зависимости от текущей страницы
-// 		// if (loadPrevBtn) {
-// 		// 	loadPrevBtn.disabled = false;
-// 		// 	if (page <= 1) {
-// 		// 		loadPrevBtn.style.display = 'none';
-// 		// 	} else {
-// 		// 		loadPrevBtn.style.display = 'flex';
-// 		// 	}
-// 		// }
-
-// 		if (loadNextBtn) {
-// 			loadNextBtn.disabled = false;
-// 			if (page >= container.totalPages) {
-// 				loadNextBtn.style.display = 'none';
-// 			} else {
-// 				loadNextBtn.style.display = 'flex';
-// 			}
-// 		}
-
-// 		preloader.remove();
-
-// 		postsDiv.innerHTML += posts.map(post => `
-//             <article class="blog-post">
-//                 ${post._embedded && post._embedded['wp:featuredmedia'] ? `
-//                     <div class="post-thumbnail">
-//                         <img src="${post._embedded['wp:featuredmedia'][0].source_url}" alt="${escapeHtml(post.title.rendered)}">
-//                     </div>
-//                 ` : ''}
-//                 <div class="post-content">
-//                     <h2><a href="${post.link}">${escapeHtml(post.title.rendered)}</a></h2>
-//                     <div class="post-excerpt">${post.excerpt.rendered}</div>
-// 						  <div class="post-meta">
-//                         <span class="post-date">${new Date(post.date).toLocaleDateString('ru-RU', {
-// 			day: 'numeric',
-// 			month: 'long',
-// 			year: 'numeric'
-// 		})}</span>
-//                     </div>
-//                     <a href="${post.link}" class="read-more">Читать подробнее</a>
-//                 </div>
-//             </article>
-//         `).join('');
-// 	} catch (error) {
-// 		console.error('Error loading posts:', error);
-// 		postsDiv.innerHTML = '<div class="error"><p>Ошибка загрузки постов</p></div>';
-// 		preloader.remove();
-// 		// if (loadPrevBtn) loadPrevBtn.disabled = false;
-// 		if (loadNextBtn) loadNextBtn.disabled = false;
-// 	}
-// }
 
 // Функция для экранирования HTML
 
