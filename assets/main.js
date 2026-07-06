@@ -4047,8 +4047,7 @@ async function loadPosts(container, categoryId = '', sortOrder = 'default', page
                     </div>
                 ` : ''}
                 <div class="post-content">
-                    <h3><a href="${post.link}">${escapeHtml(post.title.rendered)}</a></h3>
-                    
+                    <h2><a href="${post.link}">${escapeHtml(post.title.rendered)}</a></h2>
                     <div class="post-excerpt">${post.excerpt.rendered}</div>
 						  <div class="post-meta">
                         <span class="post-date">${new Date(post.date).toLocaleDateString('ru-RU', {
