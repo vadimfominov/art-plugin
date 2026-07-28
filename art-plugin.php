@@ -13,13 +13,6 @@ add_action('enqueue_block_assets', 'fv_block_assets', 1);
 function fv_block_assets()
 {
 	wp_enqueue_script(
-		'vadimfominov',
-		plugin_dir_url(__FILE__) . 'assets/block.js',
-		['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-api-fetch'],
-		filemtime(dirname(__FILE__) . '/assets/block.js')
-	);
-
-	wp_enqueue_script(
 		'main-art',
 		plugin_dir_url(__FILE__) . 'assets/main.js',
 		[],
@@ -67,6 +60,19 @@ function fv_block_assets()
 		);
 	}
 }
+
+// 1. Для админки (редактор блоков)
+add_action('enqueue_block_editor_assets', 'fv_block_editor_assets');
+function fv_block_editor_assets()
+{
+	wp_enqueue_script(
+		'vadimfominov',
+		plugin_dir_url(__FILE__) . 'assets/block.js',
+		['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-api-fetch'],
+		filemtime(dirname(__FILE__) . '/assets/block.js')
+	);
+}
+
 
 function my_block_init()
 {
