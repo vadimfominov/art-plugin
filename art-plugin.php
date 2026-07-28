@@ -9,25 +9,15 @@
  * Version: 0.3.3
  */
 
-
-
-// 1. Для админки (редактор блоков)
-add_action('enqueue_block_editor_assets', 'fv_block_editor_assets');
-function fv_block_editor_assets()
+add_action('enqueue_block_assets', 'fv_block_assets', 1);
+function fv_block_assets()
 {
 	wp_enqueue_script(
 		'vadimfominov',
 		plugin_dir_url(__FILE__) . 'assets/block.js',
 		['wp-blocks', 'wp-element', 'wp-editor', 'wp-components', 'wp-api-fetch'],
-		filemtime(dirname(__FILE__) . '/assets/block.js'),
-		true
+		filemtime(dirname(__FILE__) . '/assets/block.js')
 	);
-}
-
-
-add_action('enqueue_block_assets', 'fv_block_assets', 1);
-function fv_block_assets()
-{
 
 	wp_enqueue_script(
 		'main-art',
@@ -77,86 +67,6 @@ function fv_block_assets()
 		);
 	}
 }
-
-
-// // 2. Для фронтенда (сайт)
-// add_action('wp_enqueue_scripts', 'fv_frontend_assets');
-// function fv_frontend_assets()
-// {
-// 	// main.js - без зависимостей от React/Gutenberg
-// 	wp_enqueue_script(
-// 		'main-art',
-// 		plugin_dir_url(__FILE__) . 'assets/main.js',
-// 		[], // нет зависимостей
-// 		filemtime(dirname(__FILE__) . '/assets/main.js'),
-// 		[
-// 			'in_footer' => false,
-// 			'strategy' => 'async'
-// 		]
-// 	);
-
-// 	$posts_per_page = get_option('posts_per_page', 10);
-
-// 	wp_localize_script('main-art', 'wpApiSettings', [
-// 		'root' => 'https://art-lichnost.ru/wp-json/',
-// 		'nonce' => wp_create_nonce('wp_rest'),
-// 		'restUrl' => rest_url(),
-// 		'postsPerPage' => (int) $posts_per_page
-// 	]);
-
-// 	// Стили для фронтенда
-// 	wp_enqueue_style(
-// 		'main-art',
-// 		plugin_dir_url(__FILE__) . 'assets/main.css',
-// 		[],
-// 		filemtime(dirname(__FILE__) . '/assets/main.css'),
-// 		'screen'
-// 	);
-
-// 	if (!wp_is_mobile()) {
-// 		wp_enqueue_style(
-// 			'main-1025',
-// 			plugin_dir_url(__FILE__) . 'assets/main-1025.css',
-// 			[],
-// 			filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
-// 			'screen'
-// 		);
-// 	}
-// }
-
-// // 3. Для админки (стили)
-// add_action('admin_enqueue_scripts', 'fv_admin_assets');
-// function fv_admin_assets()
-// {
-
-// 	wp_enqueue_style(
-// 		'main-art',
-// 		plugin_dir_url(__FILE__) . 'assets/main.css',
-// 		[],
-// 		filemtime(dirname(__FILE__) . '/assets/main.css'),
-// 		'screen'
-// 	);
-
-// 	if (!wp_is_mobile()) {
-// 		wp_enqueue_style(
-// 			'main-1025',
-// 			plugin_dir_url(__FILE__) . 'assets/main-1025.css',
-// 			[],
-// 			filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
-// 			'screen'
-// 		);
-// 	}
-
-// 	wp_enqueue_style(
-// 		'admin-art',
-// 		plugin_dir_url(__FILE__) . 'assets/admin.css',
-// 		[],
-// 		filemtime(dirname(__FILE__) . '/assets/admin.css'),
-// 		'screen'
-// 	);
-
-// }
-
 
 function my_block_init()
 {
