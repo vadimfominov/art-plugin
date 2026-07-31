@@ -26,7 +26,7 @@ function fv_block_assets()
 	$posts_per_page = get_option('posts_per_page', 10);
 
 	wp_localize_script('main-art', 'wpApiSettings', [
-		'root' => 'https://art-lichnost.ru/wp-json/',
+		'root' => rest_url(),
 		'nonce' => wp_create_nonce('wp_rest'),
 		'restUrl' => rest_url(),
 		'postsPerPage' => (int) $posts_per_page

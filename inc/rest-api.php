@@ -64,134 +64,138 @@ function get_all_custom_posts($request)
 	// Параметры для каждого типа записей
 	$filter = $request->get_param('filter');
 	$sales = $request->get_param('sales');
-	$post_types = array();
+	$post_type = $request->get_param('post_type');
 
-	if ($filter === 'cources') {
-		$post_types = ['skills-courses', 'psychologist'];
-	} else if ($filter === 'camp') {
-		$post_types = ['career-camp', 'skills-academy', 'art-community', 'travel-by-city'];
-	} else if ($filter === 'merch') {
-		$post_types = ['merch-camp'];
-	} else {
-		$post_types = ['proficiency-testing'];
-	}
+	// if ($filter === 'cources') {
+	// 	$post_types = ['skills-courses', 'psychologist'];
+	// } else if ($filter === 'camp') {
+	// 	$post_types = ['career-camp', 'skills-academy', 'art-community', 'travel-by-city'];
+	// } else if ($filter === 'merch') {
+	// 	$post_types = ['merch-camp'];
+	// } else {
+	// 	$post_types = ['proficiency-testing'];
+	// }
 
 	$response = array();
 
 	// Получаем данные для каждого типа записей
-	foreach ($post_types as $type) {
-		$args = array(
-			'post_type' => $type,
-			'posts_per_page' => 50,
-			'post_status' => 'publish',
-			'orderby'        => 'menu_order', // сортировка по порядку из админки
-			'order'          => 'ASC', // по возрастанию (как в плагине)
-		);
+	// foreach ($post_types as $type) {
+	$args = array(
+		'post_type' => $post_type,
+		'posts_per_page' => 50,
+		'post_status' => 'publish',
+		'orderby'        => 'menu_order', // сортировка по порядку из админки
+		'order'          => 'ASC', // по возрастанию (как в плагине)
+	);
 
-		$posts = get_posts($args);
+	$posts = get_posts($args);
 
-		// Добавляем данные в ответ
-		$response[$type] = array_map(function ($post) use ($filter, $sales) {
-			$post_id = $post->ID;
+	// Добавляем данные в ответ
+	$response[$post_type] = array_map(function ($post) use ($filter, $sales) {
+		$post_id = $post->ID;
 
-			// Ищем блок fv/item-card среди блоков контента
-			$blocks = parse_blocks($post->post_content);
-			$card_block = '';
+		// Ищем блок fv/item-card среди блоков контента
+		$blocks = parse_blocks($post->post_content);
+		$card_block = '';
 
-			if ($filter === 'cources') {
-				$card_block = array_filter(
-					$blocks,
-					fn($block) =>
-					$block['blockName'] === 'fv/item-card-skills'
-				);
-			} elseif ($filter === 'camp') {
-				$card_block = array_filter(
-					$blocks,
-					fn($block) =>
-					$block['blockName'] === 'fv/item-card'
-				);
-			} elseif ($filter === 'merch') {
-				$card_block = array_filter(
-					$blocks,
-					fn($block) =>
-					$block['blockName'] === 'fv/item-merch'
-				);
-			} else {
-				$card_block = array_filter(
-					$blocks,
-					fn($block) =>
-					$block['blockName'] === 'fv/item-card-skills'
-				);
-			}
+		if ($filter === 'cources') {
+			$card_block = array_filter(
+				$blocks,
+				fn($block) =>
+				$block['blockName'] === 'fv/item-card-skills'
+			);
+		} elseif ($filter === 'camp') {
+			$card_block = array_filter(
+				$blocks,
+				fn($block) =>
+				$block['blockName'] === 'fv/item-card'
+			);
+		} elseif ($filter === 'merch') {
+			$card_block = array_filter(
+				$blocks,
+				fn($block) =>
+				$block['blockName'] === 'fv/item-merch'
+			);
+		} else {
+			$card_block = array_filter(
+				$blocks,
+				fn($block) =>
+				$block['blockName'] === 'fv/item-card-skills'
+			);
+		}
 
-			if (empty($card_block)) {
-				return null;
-			}
-			
-			// Получаем атрибуты первого найденного блока
-			$attrs = current($card_block)['attrs'];
-			$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
-			$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+		if (empty($card_block)) {
+			return null;
+		}
 
-			if (!$inActive) {
-				return null;
-			}
+		// Получаем атрибуты первого найденного блока
+		$attrs = current($card_block)['attrs'];
+		$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+		$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
 
-			$bgImage = '';
-			$rendermerch = '';
-			if ($filter === 'merch') {
-				$bgImage = isset($attrs['gallery']) ? $attrs['gallery'] : '';
-				$rendermerch = rendermerch($bgImage, clearText($attrs['title']), $attrs['price'], $post_id);
-			}
+		if (!$inActive) {
+			return null;
+		}
 
-			$update_selected_place = [];
-			// $filter === 'cources' ? formatSchedule($attrs['selectedShift'] ?? '', $attrs['selectedTime'] ?? '') : (isset($attrs['newPlace']) ? $attrs['newPlace'] : (!empty($attrs['place']) ? $attrs['place'] : '')),
+		$bgImage = '';
+		$rendermerch = '';
+		if ($filter === 'merch') {
+			$bgImage = isset($attrs['gallery']) ? $attrs['gallery'] : '';
+			$rendermerch = rendermerch($bgImage, clearText($attrs['title']), $attrs['price'], $post_id);
+		}
 
-			if ($filter === 'cources') {
-				$update_selected_place = formatSchedule($attrs['selectedShift'] ?? '', $attrs['selectedTime'] ?? '');
-			} else if ($filter === 'camp') {
-				// $update_selected_place = (isset($attrs['newPlace']) ? $attrs['newPlace'] : (isset($attrs['place']) ? $attrs['place'] : 'Не указан PLACE'));
-				$update_selected_place = ($attrs['place']    ?? null) ?: 'Не указан PLACE';
-			} else {
-				$update_selected_place = [];
-			}
+		$update_selected_place = [];
+		// $filter === 'cources' ? formatSchedule($attrs['selectedShift'] ?? '', $attrs['selectedTime'] ?? '') : (isset($attrs['newPlace']) ? $attrs['newPlace'] : (!empty($attrs['place']) ? $attrs['place'] : '')),
 
-			$data = [
-				'id' => $post_id,
-				'content' => [
-					'postTypeName' => isset($attrs['postTypeName']) ? $attrs['postTypeName'] : '',
-					'dateRange' => $filter === 'cources' ? 'Старт — ' . formatDateRange($attrs['startDate']) : ($attrs['dateRange'] ?? ''),
-					'selectedAges' => formatAgeRange($attrs['selectedAges'] ?? []),
-					'daysCount' => $attrs['daysCount'] ?? '',
-					'price' => !empty($attrs['price']) ? clearText($attrs['price']) : '',
-					'rendered' => current($card_block)['innerHTML'],
-					'rendermerch' => $rendermerch,
-				],
-				'title' => !empty($attrs['newTitle']) ? clearText($attrs['newTitle']) : clearText($attrs['title']),
-				'search' => clearText($attrs['title']) . ' ' . clearText(isset($attrs['postTypeName']) ? $attrs['postTypeName'] : ''),
-				'inPlace' => $attrs['inPlace'] ?? false,
-				'inCard' => $filter === 'cources' && $attrs['postTypeName'] === 'Курсы навыков',
-				'placeTitle' => $attrs['placeTitle'] ?? '',
-				'type' => $post->post_type,
-				'selected_ages' => $attrs['selectedAges'] ?? [],
-				'selected_city' => $attrs['city'] ?? [],
-				'selected_place' => $update_selected_place,
-				'selected_season' => $filter === 'camp' ? get_season_from_date($attrs['startDate'] ?? '') : '',
-				'selected_days' => $filter === 'camp' ? diffDays($attrs['startDate'] ?? '', $attrs['endDate'] ?? '') : '',
-				'selected_shift' => $filter === 'camp' ? ($attrs['selectedShift'] ?? '') : '',
-				'selected_certificate' => $filter === 'camp' ? (isset($attrs['inSertific']) ? 'Да' : 'Нет') : '',
-				'titleCount' => $attrs['titleCount'] ?? '',
-				'filter' => $filter,
-				'sales' => $sales,
-				'bgImage' => $bgImage,
-			];
+		if ($filter === 'cources') {
+			$update_selected_place = formatSchedule($attrs['selectedShift'] ?? '', $attrs['selectedTime'] ?? '');
+		} else if ($filter === 'camp') {
+			// $update_selected_place = (isset($attrs['newPlace']) ? $attrs['newPlace'] : (isset($attrs['place']) ? $attrs['place'] : 'Не указан PLACE'));
+			$update_selected_place = ($attrs['place']    ?? null) ?: 'Не указан PLACE';
+		} else {
+			$update_selected_place = ($attrs['teacherTitle']    ?? null) ?: '';
+		}
 
-			return $data;
-		}, $posts);
+		$data = [
+			'id' => $post_id,
+			'content' => [
+				'postTypeName' => isset($attrs['postTypeName']) ? $attrs['postTypeName'] : '',
+				'dateRange' => $filter === 'cources' ? 'Старт — ' . formatDateRange($attrs['startDate']) : ($attrs['dateRange'] ?? ''),
+				'selectedAges' => formatAgeRange($attrs['selectedAges'] ?? []),
+				'daysCount' => $attrs['daysCount'] ?? '',
+				'price' => !empty($attrs['price']) ? clearText($attrs['price']) : '',
+				'rendered' => current($card_block)['innerHTML'],
+				'rendermerch' => $rendermerch,
+			],
+			'title' => !empty($attrs['newTitle']) ? clearText($attrs['newTitle']) : clearText($attrs['title']),
+			'search' => clearText($attrs['title']) . ' ' . clearText(isset($attrs['postTypeName']) ? $attrs['postTypeName'] : ''),
+			'inPlace' => $attrs['inPlace'] ?? false,
+			'inCard' => $filter === 'cources' && $attrs['postTypeName'] === 'Курсы навыков',
+			'placeTitle' => $attrs['placeTitle'] ?? '',
+			'type' => $post->post_type,
+			'selected_ages' => $attrs['selectedAges'] ?? [],
+			'selected_city' => $attrs['city'] ?? [],
+			'selected_place' => $update_selected_place,
+			'selected_season' => $filter === 'camp' ? get_season_from_date($attrs['startDate'] ?? '') : '',
+			'selected_days' => $filter === 'camp' 
+				? diffDays($attrs['startDate'] ?? '', $attrs['endDate'] ?? '') 
+				: (!empty($attrs['teacherDateTitle']) ? $attrs['teacherDateTitle'] : ''),
+			'selected_shift' => $filter === 'camp' 
+				? ($attrs['selectedShift'] ?? '') 
+				: (!empty($attrs['newDescription']) ? clearText($attrs['newDescription']) : ''),
+			'selected_certificate' => $filter === 'camp' ? (isset($attrs['inSertific']) ? 'Да' : 'Нет') : '',
+			'titleCount' => $attrs['titleCount'] ?? '',
+			'filter' => $filter,
+			'sales' => $sales,
+			'bgImage' => $bgImage,
+		];
 
-		// Удаляем null значения из массива
-		$response[$type] = array_values(array_filter($response[$type]));
-	}
+		return $data;
+	}, $posts);
+
+	// Удаляем null значения из массива
+	$response[$post_type] = array_values(array_filter($response[$post_type]));
+	// }
 
 	return rest_ensure_response($response);
 }
@@ -219,6 +223,7 @@ function get_filtered_programs($request)
 	try {
 
 		$post_types = $request->get_param('post_types');
+
 		$valid_post_types = [];
 		if (is_string($post_types)) {
 			$valid_post_types = array_filter(array_map('trim', explode(',', $post_types)));
@@ -254,6 +259,8 @@ function get_filtered_programs($request)
 			// Ищем блок fv/item-card среди блоков контента
 			$blocks = parse_blocks(get_post_field('post_content', $post_id));
 			$card_block = '';
+
+			$inActive = false;
 
 			if ($filter === 'cources') {
 				// Ищем блок fv/item-card-skills среди блоков контента
@@ -346,8 +353,38 @@ function get_filtered_programs($request)
 					$selected_shift = isset($attrs['selectedShift']) ? $attrs['selectedShift'] : '';
 				}
 			} else {
-				$posts = [];
+
+				// Это для профтеста, единственный случай, когда не передаю filter
+				$card_block = array_filter(
+					$blocks,
+					fn($block) =>
+					$block['blockName'] === 'fv/item-card-skills'
+				);
+				// Получаем атрибуты первого найденного блока
+				$attrs = current($card_block)['attrs'];
+
+				$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
+				$inActive = $sales === 'access2026' && !$inActiveOld || $attrs['inActive'] || $sales === 'email' && $inActiveOld;
+				$selected_season = isset($attrs['selectedShift']) ? $attrs['selectedShift'] : '';
+				$selectedTime = isset($attrs['selectedTime']) ? $attrs['selectedTime'] : '';
+				$daysCount = isset($attrs['titleCount']) ? $attrs['titleCount'] : '';
+				$selected_place = 'test';
+				$selected_size = '';
+				$dateRange = '';
+				$startDate = isset($attrs['startDate']) ? $attrs['startDate'] : '';
+				$price =  isset($attrs['price']) ? clearText($attrs['price']) : '';
+				$titleCount =  isset($attrs['titleCount']) ? $attrs['titleCount'] : '';
+				$placeTitle =  isset($attrs['placeTitle']) ? $attrs['placeTitle'] : '';
+				$inPlace =  isset($attrs['inPlace']) ? $attrs['inPlace'] : '';
+				$inCard =  $attrs['postTypeName'] === 'Курсы навыков';
+				$selected_days = isset($attrs['teacherDateTitle']) ? $attrs['teacherDateTitle'] : 'test';
+				$selected_shift = !empty($attrs['newDescription']) ? clearText($attrs['newDescription']) : '';
+				$selected_certificate = '';
+				$selected_city = '';
+				$innerHTML = current($card_block)['innerHTML'];
 			}
+
+			// error_log(print_r($selected_days, true));
 
 			// error_log(print_r(clearText($attrs['title']) . ' - ' . $attrs['inActiveOld'], true));
 			// error_log(print_r(clearText($attrs['title']) . ' - ' . is_user_logged_in(), true));
@@ -388,8 +425,8 @@ function get_filtered_programs($request)
 
 		$ages = $request->get_param('ages');
 
-		error_log(print_r($request->get_param('place'), true));
-		error_log(print_r($posts, true));
+		// error_log(print_r($request->get_param('place'), true));
+		// error_log(print_r($posts, true));
 
 		// Применяем фильтр по возрастам
 		if ($request->get_param('ages')) {

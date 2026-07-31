@@ -95,8 +95,6 @@ window.addEventListener('load', function () {
 			// Разбираем URL
 			const url = new URL(originalHref);
 
-			console.log(url);
-
 			const domain = url.host; // Получаем домен (http://localhost:8888)
 			const pathname = url.pathname; // Получаем хвост после домена (/art.loc/professions/)
 			const protocol = url.protocol;
@@ -197,62 +195,6 @@ window.addEventListener('load', function () {
 		}
 	}
 
-	function activateCityFromUrl() {
-		const slug = window.location.host;
-
-		if (slug !== 'art-lichnost.ru' && slug !== 'msk.art-lichnost.ru') {
-			// Если параметра нет - активируем "Все города"
-			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
-			if (allCitiesCheckbox) {
-				allCitiesCheckbox.checked = true;
-				allCitiesCheckbox.closest('.checkbox').classList.add('active');
-			}
-			return;
-		}
-
-		const cityCheckboxes = document.querySelectorAll('input[name="city"][data-city]');
-
-		// Сбрасываем все
-		cityCheckboxes.forEach(checkbox => {
-			checkbox.checked = false;
-			checkbox.closest('.checkbox').classList.remove('active');
-		});
-
-		// Ищем чекбокс по data-city
-		const need = (slug === 'msk.art-lichnost.ru') ? "Москва" : "Санкт-Петербург";
-		const targetCheckbox = Array.from(cityCheckboxes).find(checkbox => {
-			return checkbox.dataset.city === need;
-		});
-
-		if (targetCheckbox) {
-			targetCheckbox.checked = true;
-			targetCheckbox.closest('.checkbox').classList.add('active');
-		} else {
-			// Если город не найден - активируем "Все города"
-			const allCitiesCheckbox = document.querySelector('input[name="city"][data-city="all"]');
-			if (allCitiesCheckbox) {
-				allCitiesCheckbox.checked = true;
-				allCitiesCheckbox.closest('.checkbox').classList.add('active');
-			}
-		}
-	}
-
-	// Запускаем после полной загрузки DOM
-	checkProfessionsAndClick();
-	activateCityFromUrl();
-
-	// Также запускаем checkProfessionsAndClick при динамической загрузке контента
-	if (typeof MutationObserver !== 'undefined') {
-		const observer = new MutationObserver(function (mutations) {
-			checkProfessionsAndClick();
-		});
-
-		observer.observe(document.body, {
-			childList: true,
-			subtree: true
-		});
-	}
-
 	const IS_MOBILE = window.innerWidth < 767;
 	const IS_TABLE = window.innerWidth > 767 && window.innerWidth < 1025;
 	const IS_DESKTOP = window.innerWidth > 1025;
@@ -260,6 +202,7 @@ window.addEventListener('load', function () {
 	const PAGE_TEMPLATE_DEFAULT = document.querySelector('.page-template-default');
 	const CURRENT_URL = window.location.href;
 	const CURRENT_PAGE = PAGE_TEMPLATE_DEFAULT && wpData?.page_id;
+
 
 	const eventsTemplates = document.querySelectorAll('.events-template');
 
@@ -619,6 +562,7 @@ window.addEventListener('load', function () {
 	});
 
 	document.body.addEventListener('click', (e) => {
+
 		if (e.target.matches('.modal-form-merch')) {
 			const cardId = e.target.closest('.item-card').classList[1].replace('card-', '');
 			const post = allPosts.find(p => p.id === parseInt(cardId));
@@ -1132,41 +1076,6 @@ window.addEventListener('load', function () {
 		});
 	}
 
-
-
-	// menuItemsMobile.forEach(function(menuItem) {
-	// 	let timeoutId;
-
-	// 	function showMenu() {
-	// 		clearTimeout(timeoutId);
-	// 		menuItem.classList.add('no-active');
-	// 		const subMenu = menuItem.querySelector('.sub-menu');
-	// 		if (subMenu) {
-	// 			subMenu.classList.add('no-active');
-	// 		}
-	// 	}
-
-	// 	function hideMenu() {
-	// 		timeoutId = setTimeout(() => {
-	// 			menuItem.classList.remove('no-active');
-	// 			const subMenu = menuItem.querySelector('.sub-menu');
-	// 			if (subMenu) {
-	// 				subMenu.classList.remove('no-active');
-	// 			}
-	// 		}, 300); // 300 мс задержка
-	// 	}
-
-	// 	menuItem.addEventListener('mouseenter', showMenu);
-	// 	menuItem.addEventListener('mouseleave', hideMenu);
-
-	// 	// Добавляем обработчики для подменю
-	// 	const subMenu = menuItem.querySelector('.sub-menu');
-	// 	if (subMenu) {
-	// 		subMenu.addEventListener('mouseenter', showMenu);
-	// 		subMenu.addEventListener('mouseleave', hideMenu);
-	// 	}
-	// });
-
 	// Находим элемент с классом .menu-icon
 	let menuIcon = document.querySelector('.menu-icon');
 
@@ -1450,6 +1359,12 @@ window.addEventListener('load', function () {
 		if (salesValue) params.append('sales', salesValue);
 		if (filterValue) params.append('filter', filterValue);
 
+		const container_filter = this.document.querySelector('.container-filter');
+		const data_slug = container_filter.getAttribute('data-slug');
+		const post_type = [data_slug];
+
+		if (post_type) params.append('post_type', post_type);
+
 		try {
 
 			const responses = await fetch(`${wpApiSettings.root}custom/v1/all-posts?${params.toString()}`, {
@@ -1472,7 +1387,11 @@ window.addEventListener('load', function () {
 			// 788 – Узная Город
 			// 50 – Курсы
 			// 1190 – Консультация психолога
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190"];
+			// 30366 - Родительская среда (30366 для dev и 34004 для prod) 
+			// 48 - Профтестирование (48 для DEV и 2363 для prod)
+
+
+			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1493,9 +1412,9 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "32894", "44", "46", "788"], // Группа для art-community, career-camp и других
-		"group2": ["50", "1190"],           // Группа для psychologist и skills-courses
-		"group3": ["2363"]                 // Группа для proficiency-testing  "48" - для DEV
+		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других
+		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
+		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
 
 	// Находим группу для текущей страницы
@@ -1920,8 +1839,6 @@ window.addEventListener('load', function () {
 
 	const programModalWithCity = document.querySelector('.wp-block-fv-program-modal-with-city.hidden-model');
 
-
-
 	if (programModalWithCity) {
 		document.addEventListener('click', function (e) {
 			const modalWrapper = programModalWithCity?.querySelector('.modal-wrapper');
@@ -2048,11 +1965,11 @@ window.addEventListener('load', function () {
 	});
 
 	const searchInput = document.querySelector('.search-filter-wrapper input[name="s"]');
-	const programCheckboxes = document.querySelectorAll('.program-filter-item input[type="checkbox"]');
-	const cityCheckboxes = document.querySelectorAll('.city-filter-item input[type="checkbox"]');
+	// const programCheckboxes = document.querySelectorAll('.program-filter-item input[type="checkbox"]');
+	// const cityCheckboxes = document.querySelectorAll('.city-filter-item input[type="checkbox"]');
 	const ageCheckboxes = document.querySelectorAll('.age-filter-item input[type="checkbox"]');
 	const sizeCheckboxes = document.querySelectorAll('.size-filter-item input[type="checkbox"]');
-	const placeCheckboxes = document.querySelectorAll('.place-filter-item input[type="checkbox"]');
+	// const placeCheckboxes = document.querySelectorAll('.place-filter-item input[type="checkbox"]');
 	const seasonCheckboxes = document.querySelectorAll('.season-filter-item input[type="checkbox"]');
 	const daysCheckboxes = document.querySelectorAll('.days-filter-item input[type="checkbox"]');
 	const shiftCheckboxes = document.querySelectorAll('.shift-filter-item input[type="checkbox"]');
@@ -2092,14 +2009,14 @@ window.addEventListener('load', function () {
 		postsContainer && (postsContainer.style.minHeight = ''); // Сбрасываем минимальную высоту
 	}
 
-	async function fetchPosts(postTypes = null, city = null, ages = null, size = null, place = null, season = null, days = null, shift = null, certificate = null, search = null, filter = null, sales = null, user_id = 0) {
+	async function fetchPosts(postTypes = null, ages = null, size = null, season = null, days = null, shift = null, certificate = null, search = null, filter = null, sales = null, user_id = 0) {
 		const params = new URLSearchParams();
 
 		if (postTypes && postTypes.length > 0) params.append('post_types', postTypes.join(','));
-		if (city && city.length > 0) params.append('city', city.join(','));
+		// if (city && city.length > 0) params.append('city', city.join(','));
 		if (ages && ages.length > 0) params.append('ages', ages.join(','));
 		if (size && size.length > 0) params.append('size', size);
-		if (place && place.length > 0) params.append('place', place);
+		// if (place && place.length > 0) params.append('place', place);
 		if (season && season.length > 0) params.append('season', season);
 		if (days && days.length > 0) params.append('days', days);
 		if (shift && shift.length > 0) params.append('shift', shift);
@@ -2152,18 +2069,16 @@ window.addEventListener('load', function () {
 		const searchValue = searchInput?.value.trim();
 		const filterFormValue = filterForm?.value.trim();
 
-		// Получаем выбранные программы
-		const selectedPrograms = Array.from(programCheckboxes)
-			.filter(checkbox => checkbox.checked)
-			.map(checkbox => checkbox.dataset.program);
+		// // Получаем выбранные программы
+		// const selectedPrograms = Array.from(programCheckboxes)
+		// 	.filter(checkbox => checkbox.checked)
+		// 	.map(checkbox => checkbox.dataset.program);
 
-		// Получаем выбранные City
-
-		const selectedCity = [...new Set(Array.from(cityCheckboxes)
-			.filter(checkbox => checkbox.checked)
-			.map(checkbox => checkbox.dataset.city === 'all' ? 'all'
-				: checkbox.dataset.city?.split(',').map(city => city)
-			).flat())];
+		// // Получаем выбранные City
+		// const selectedCity = [...new Set(Array.from(cityCheckboxes)
+		// 	.filter(checkbox => checkbox.checked)
+		// 	.map(checkbox => checkbox.dataset.city === 'all' ? 'all' : checkbox.dataset.city?.split(',').map(city => city)
+		// 	).flat())];
 
 		// Получаем выбранные возрасты
 		const selectedAges = [...new Set(Array.from(ageCheckboxes)
@@ -2179,14 +2094,12 @@ window.addEventListener('load', function () {
 				: checkbox.dataset.size?.split(',').map(size => size)
 			).flat())];
 
-		const selectedPlace = [...new Set(Array.from(placeCheckboxes)
-			.filter(checkbox => checkbox.checked)
-			.map(checkbox => checkbox.dataset.place === 'all'
-				? 'all'
-				: checkbox.dataset.place
-			))];
+		// const selectedPlace = [...new Set(Array.from(placeCheckboxes)
+		// 	.filter(checkbox => checkbox.checked)
+		// 	.map(checkbox => checkbox.dataset.place === 'all' ? 'all' : checkbox.dataset.place
+		// 	))];
 
-		const encodedPlace = selectedPlace.map(replaceSpacesWithPlus);
+		// const encodedPlace = selectedPlace.map(replaceSpacesWithPlus);
 
 		const selectedSeason = [...new Set(Array.from(seasonCheckboxes)
 			.filter(checkbox => checkbox.checked)
@@ -2214,15 +2127,19 @@ window.addEventListener('load', function () {
 
 		const salesValue = localStorage.getItem('sales') ? localStorage.getItem('sales') : '';
 
-		try {
+		const container_filter = this.document.querySelector('.container-filter');
+		const data_slug = container_filter.getAttribute('data-slug');
+		const post_type = [data_slug];
 
+		try {
 			// Получаем посты с учетом фильтров
 			const posts = await fetchPosts(
-				selectedPrograms,
-				selectedCity,
+				post_type,
+				// selectedPrograms,
+				// selectedCity,
 				selectedAges,
 				selectedSize,
-				encodedPlace,
+				// encodedPlace,
 				selectedSeason,
 				selectedDays,
 				encodedShifts,
@@ -2344,8 +2261,8 @@ window.addEventListener('load', function () {
 			}
 			return;
 		}
-
 		currentPosts = postsIDS.map(id => allPosts.find(post => post.id === id));
+
 		updatePagination(); // Обновляем пагинацию
 		displayPosts(); // Отображаем посты для текущей страницы
 
@@ -2377,6 +2294,7 @@ window.addEventListener('load', function () {
 				selected_shift,
 				selected_place,
 				selected_city,
+				selected_days,
 				inPlace,
 				placeTitle,
 				titleCount
@@ -2421,6 +2339,39 @@ window.addEventListener('load', function () {
 					</div>`;
 
 				return card;
+			} else if (type === 'proficiency-testing') {
+
+				const placeCard = selected_days.length > 0 ? selected_days + '<br>' : '';
+
+				const card = `
+				<div class="item-card card-${id} ${type}">
+					<div class="top-item-section item-section">
+						<span class="place-card">
+						${placeCard}${selected_place}
+						</span>
+						<div class="title-card">${title}</div>
+						<p class="subtitle-card">${selected_shift}</p>
+					</div>
+					<div class="bottom-item-section item-section">
+						<div class="price-card">${price}</div>
+						<button 
+							class="modal-form green" 
+							data-titleform="${title}" 
+							data-titleproduct="${title}" 
+							data-referer="${window.location.href}" 
+							data-datestart=""
+						>Записаться</button>
+						<button 
+							class="more green" 
+							data-titleform="${title}" 
+							data-titleproduct="${title}" 
+							data-referer="${window.location.href}" 
+							data-datestart=""
+						>Подробнее ${iconArray}</button>
+					</div>
+				</div>`;
+				return card;
+
 			} else {
 
 				const classPlace = inPlace ? 'green' : 'red';
@@ -2715,11 +2666,11 @@ window.addEventListener('load', function () {
 
 	// Добавляем обработчики для всех чекбоксов
 	const allCheckboxes = [
-		...programCheckboxes,
-		...cityCheckboxes,
+		// ...programCheckboxes,
+		// ...cityCheckboxes,
 		...ageCheckboxes,
 		...sizeCheckboxes,
-		...placeCheckboxes,
+		// ...placeCheckboxes,
 		...seasonCheckboxes,
 		...daysCheckboxes,
 		...shiftCheckboxes,
@@ -4040,10 +3991,10 @@ async function loadPosts(container, categoryId = '', sortOrder = 'default', page
 							<div class="post-excerpt">${post.excerpt.rendered}</div>
 							<div class="post-meta">
 								<span class="post-date">${new Date(post.date).toLocaleDateString('ru-RU', {
-						day: 'numeric',
-						month: 'long',
-						year: 'numeric'
-					})}</span>
+			day: 'numeric',
+			month: 'long',
+			year: 'numeric'
+		})}</span>
 							</div>
 							<a href="${post.link}" class="read-more">Читать подробнее</a>
 					</div>

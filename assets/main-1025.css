@@ -3305,6 +3305,9 @@
 		width: 100%;
 		padding: 40px 240px;
 	}
+	.wp-block-fv-test-formats #filtered-posts-container {
+		justify-content: center;
+	}
 	.wp-block-fv-test-formats .container {
 		justify-content: center;
 	}

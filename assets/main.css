@@ -15046,7 +15046,6 @@ select {
 	}
 	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper .filter-items {
 		height: 100%;
-		padding-bottom: 0;
 	}
 	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper.programs-filter-wrapper .filter-items {
 		padding-top: 0;
@@ -15229,9 +15228,9 @@ select {
 	.filter-section-block.city-template h2 {
 		max-width: 800px;
 	}
-	.filter-section-block .filter-wrapper:first-child .filter-title {
+	/* .filter-section-block .filter-wrapper:first-child .filter-title {
 		display: none;
-	}
+	} */
 
 	.wp-block-fv-travel-by-cities h2 {
 		width: 735px;
