@@ -1344,6 +1344,7 @@ body.active-menu .mask {
 }
 .wp-block-fv-family-story-block .right-block .logo-image-for-block {
 	margin-bottom: 40px;
+	object-fit: contain;
 }
 .wp-block-fv-family-story-block .right-block > span {
 	margin-bottom: 20px;
