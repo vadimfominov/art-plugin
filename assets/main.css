@@ -1823,6 +1823,9 @@ body.active-menu .mask {
 	width: 50%;
 	order: 1;
 }
+.wp-block-fv-footer-block .logo img {
+	object-fit: contain;
+}
 .directions-menu {
 	width: 50%;
 	order: 3;
