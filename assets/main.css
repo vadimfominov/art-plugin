@@ -327,6 +327,7 @@ body.active-menu .mask {
 }
 .top-block .logo img {
 	display: block;
+	object-fit: contain;
 }
 .top-block {
 	display: flex;
