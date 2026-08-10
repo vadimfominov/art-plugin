@@ -12,6 +12,24 @@
 add_action('enqueue_block_assets', 'fv_block_assets', 1);
 function fv_block_assets()
 {
+
+	// Подключаем стили Swiper
+	wp_enqueue_style(
+		'swiper-style',
+		'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', // Используйте актуальную версию [citation:6]
+		array(),
+		'11.0.0'
+	);
+
+	// Подключаем скрипт Swiper
+	wp_enqueue_script(
+		'swiper-script',
+		'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+		array(), // Уберите 'jquery', если он не нужен, чтобы не создавать зависимостей [citation:6]
+		'11.0.0',
+		true // Ставим в футер, чтобы не тормозить загрузку страницы [citation:2]
+	);
+	
 	wp_enqueue_script(
 		'main-art',
 		plugin_dir_url(__FILE__) . 'assets/main.js',
@@ -23,6 +41,8 @@ function fv_block_assets()
 		]
 	);
 
+
+
 	$posts_per_page = get_option('posts_per_page', 10);
 
 	wp_localize_script('main-art', 'wpApiSettings', [
@@ -32,13 +52,61 @@ function fv_block_assets()
 		'postsPerPage' => (int) $posts_per_page
 	]);
 
-	wp_enqueue_style(
-		'main-art',
-		plugin_dir_url(__FILE__) . 'assets/main.css',
-		[],
-		filemtime(dirname(__FILE__) . '/assets/main.css'),
-		'screen'
-	);
+	if (is_admin()) {
+		wp_enqueue_style(
+			'header-admin',
+			plugin_dir_url(__FILE__) . 'assets/header-admin.css',
+			[],
+			filemtime(dirname(__FILE__) . '/assets/header-admin.css'),
+			'screen'
+		);
+	}
+
+	// Проверяем, включен ли мультисайт
+	$is_multisite = function_exists('is_multisite') && is_multisite();
+
+	if ($is_multisite) {
+		// Если мультисайт включен - получаем ID текущего сайта
+		$blog_id = get_current_blog_id();
+		$msk_id = 2;
+
+		if ($blog_id == $msk_id && is_front_page()) {
+			wp_enqueue_style(
+				'main-art',
+				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+				[],
+				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
+				'screen'
+			);
+		} else {
+			wp_enqueue_style(
+				'main-art',
+				plugin_dir_url(__FILE__) . 'assets/main.css',
+				[],
+				filemtime(dirname(__FILE__) . '/assets/main.css'),
+				'screen'
+			);
+		}
+	} else {
+
+		if (is_page('professions-msc')) {
+			wp_enqueue_style(
+				'main-art',
+				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+				[],
+				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
+				'screen'
+			);
+		} else {
+			wp_enqueue_style(
+				'main-art',
+				plugin_dir_url(__FILE__) . 'assets/main.css',
+				[],
+				filemtime(dirname(__FILE__) . '/assets/main.css'),
+				'screen'
+			);
+		}
+	}
 
 	if (!wp_is_mobile()) {
 		wp_enqueue_style(

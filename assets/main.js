@@ -1,5 +1,59 @@
 window.addEventListener('load', function () {
 
+	const swiperFeedback = document.querySelectorAll('.my-swiper-feedback');
+
+	swiperFeedback.forEach(function (container) {
+
+		// Проверяем, не инициализирован ли уже
+		if (container.swiper) {
+			return;
+		}
+
+		const slider_name = container.getAttribute('data-slider');
+		const slider = container.querySelector('.' + slider_name);
+		
+		// Находим кнопки навигации внутри контейнера
+		const prevBtn = container.querySelector('.swiper-button-prev');
+		const nextBtn = container.querySelector('.swiper-button-next');
+
+		new Swiper(slider, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			slidesPerGroup: 1,       // Листаем по 1 карточке
+			navigation: {
+				nextEl: nextBtn,
+				prevEl: prevBtn,
+			},
+		});
+	});
+
+	const swiperContainers = document.querySelectorAll('.my-swiper-container');
+
+	swiperContainers.forEach(function (container) {
+
+		// Проверяем, не инициализирован ли уже
+		if (container.swiper) {
+			return;
+		}
+
+		const slider_name = container.getAttribute('data-slider');
+		const slider = container.querySelector('.' + slider_name);
+		
+		// Находим кнопки навигации внутри контейнера
+		const prevBtn = container.querySelector('.swiper-button-prev');
+		const nextBtn = container.querySelector('.swiper-button-next');
+
+		new Swiper(slider, {
+			slidesPerView: 1,
+			spaceBetween: 20,
+			slidesPerGroup: 1,       // Листаем по 1 карточке
+			navigation: {
+				nextEl: nextBtn,
+				prevEl: prevBtn,
+			},
+		});
+	});
+
 	const linkCampItem1 = document.querySelector('.link-camp-item1');
 	const linkCampItem2 = document.querySelector('.link-camp-item2');
 	const linkCampItem3 = document.querySelector('.link-camp-item3');
@@ -202,7 +256,6 @@ window.addEventListener('load', function () {
 	const PAGE_TEMPLATE_DEFAULT = document.querySelector('.page-template-default');
 	const CURRENT_URL = window.location.href;
 	const CURRENT_PAGE = PAGE_TEMPLATE_DEFAULT && wpData?.page_id;
-
 
 	const eventsTemplates = document.querySelectorAll('.events-template');
 
@@ -1380,7 +1433,7 @@ window.addEventListener('load', function () {
 
 			// Инициализация с выбранным первым фильтром
 			// Список ID страниц, на которых должен выполняться запрос
-			// 42 – Лагерь профессий. Москва
+			// 30376 – Лагерь профессий. Москва (для dev 30376 и для прод 42)
 			// 32894 – Лагерь профессий. Санкт-Петербург
 			// 44 – АРТ Комьюнити
 			// 46 – Академия навыков
@@ -1412,7 +1465,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других
+		"group1": ["30376", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
