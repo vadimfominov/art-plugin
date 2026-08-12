@@ -1505,7 +1505,7 @@ window.addEventListener('load', function () {
 
 			// Инициализация с выбранным первым фильтром
 			// Список ID страниц, на которых должен выполняться запрос
-			// 30376 – Лагерь профессий. Москва (для dev 30376 и для прод 42)
+			// 30376 – Лагерь профессий. Москва (для dev 30376 и для прод 42 for test page 33080)
 			// 32894 – Лагерь профессий. Санкт-Петербург
 			// 44 – АРТ Комьюнити
 			// 46 – Академия навыков
@@ -1516,7 +1516,7 @@ window.addEventListener('load', function () {
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
 
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["33080", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1537,7 +1537,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
+		"group1": ["33080", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
