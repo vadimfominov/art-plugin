@@ -1516,7 +1516,7 @@ window.addEventListener('load', function () {
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
 
-			const allowedPagesFilter = ["30376", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1537,7 +1537,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["30376", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
+		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
@@ -2936,7 +2936,7 @@ window.addEventListener('load', function () {
 						});
 					}
 				}
-				
+
 			});
 		});
 	});
