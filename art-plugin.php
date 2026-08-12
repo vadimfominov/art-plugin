@@ -29,7 +29,7 @@ function fv_block_assets()
 		'11.0.0',
 		true // Ставим в футер, чтобы не тормозить загрузку страницы [citation:2]
 	);
-	
+
 	wp_enqueue_script(
 		'main-art',
 		plugin_dir_url(__FILE__) . 'assets/main.js',
@@ -74,7 +74,7 @@ function fv_block_assets()
 
 		if (is_page('test-page')) {
 			wp_enqueue_style(
-				'main-art',
+				'main-msk',
 				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
 				[],
 				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
@@ -90,10 +90,9 @@ function fv_block_assets()
 			);
 		}
 	} else {
-
 		if (is_page('professions-msc')) {
 			wp_enqueue_style(
-				'main-art',
+				'main-msk',
 				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
 				[],
 				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
@@ -126,6 +125,13 @@ function fv_block_assets()
 			plugin_dir_url(__FILE__) . 'assets/admin.css',
 			[],
 			filemtime(dirname(__FILE__) . '/assets/admin.css'),
+			'screen'
+		);
+		wp_enqueue_style(
+			'main-msk',
+			plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+			[],
+			filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
 			'screen'
 		);
 	}

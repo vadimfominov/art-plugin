@@ -872,7 +872,8 @@ a:-webkit-any-link {
 		width: max-content;
 		box-sizing: border-box;
 	}
-	.remove-img {
+	.remove-img,
+	.remove-video {
 		width: max-content;
 	}
 	.wp-block-fv-time-one-day .item-day .second-block .remove-img {
@@ -1116,13 +1117,15 @@ a:-webkit-any-link {
 	.slider-block .slide:before {
 		display: none;
 	}
-	.remove-img {
+	.remove-img,
+	.remove-video {
 		color: #fff;
 		background-color: #e94e4e;
 		border-radius: 10px;
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		z-index: 999;
 	}
 	.wp-block-fv-download-file .container .item {
 		position: relative;
@@ -1432,5 +1435,53 @@ a:-webkit-any-link {
 	}
 	.post-type-post .wp-block-gallery figure {
 		margin: 0 !important;
+	}
+	.wp-block-fv-key-focus .block-list .item {
+		display: block !important;
+	}
+	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text,
+	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text span {
+		margin-bottom: 0;
+		display: flex;
+	}
+	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text::placeholder,
+	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text span::placeholder {
+		text-align: center;
+		font-size: 16px;
+		line-height: 100%;
+		font-family: "Montserrat";
+		font-weight: 600;
+		color: #535353;
+		display: block;
+	}
+	.wp-block-fv-key-focus .block-list .item .list-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 10px;
+		align-items: center;
+	}
+	.wp-block-fv-key-focus .block-list .item .list-wrapper button {
+		margin: 0 auto;
+		padding: 5px 10px;
+		border-radius: 30px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block .item span.rich-text {
+		width: 100%;
+		display: flex;
+        flex-direction: column;
+        align-items: center;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-1 .item span.rich-text {
+		align-items: flex-start;
+	}
+	.wp-block-fv-day-and-shift .select-block .select-ul {
+		background-color: transparent;
+	}
+	.my-swiper-feedback .remove-video {
+		bottom: 40px;
+	}
+	.faq-container .answer-item {
+		max-height: 100% !important;
 	}
 }

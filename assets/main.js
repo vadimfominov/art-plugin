@@ -1,5 +1,19 @@
 window.addEventListener('load', function () {
 
+	const load_more_list = document.querySelector('.load-more-list');
+
+	load_more_list?.addEventListener('click', function () {
+
+		const blockСontainer = this.closest('.block-container');
+		const isActive = blockСontainer.classList.contains('active');
+
+		// Переключаем класс active
+		blockСontainer.classList.toggle('active');
+
+		this.textContent = blockСontainer.classList.contains('active') ? 'Свернуть' : 'Показать еще';
+
+	});
+
 	const swiperFeedback = document.querySelectorAll('.my-swiper-feedback');
 
 	swiperFeedback.forEach(function (container) {
@@ -11,7 +25,7 @@ window.addEventListener('load', function () {
 
 		const slider_name = container.getAttribute('data-slider');
 		const slider = container.querySelector('.' + slider_name);
-		
+
 		// Находим кнопки навигации внутри контейнера
 		const prevBtn = container.querySelector('.swiper-button-prev');
 		const nextBtn = container.querySelector('.swiper-button-next');
@@ -38,20 +52,78 @@ window.addEventListener('load', function () {
 
 		const slider_name = container.getAttribute('data-slider');
 		const slider = container.querySelector('.' + slider_name);
-		
+
 		// Находим кнопки навигации внутри контейнера
 		const prevBtn = container.querySelector('.swiper-button-prev');
 		const nextBtn = container.querySelector('.swiper-button-next');
 
 		new Swiper(slider, {
-			slidesPerView: 1,
-			spaceBetween: 20,
-			slidesPerGroup: 1,       // Листаем по 1 карточке
-			navigation: {
-				nextEl: nextBtn,
-				prevEl: prevBtn,
+			initialSlide: 1,
+			slidesPerView: 'auto',
+			spaceBetween: 0,
+			slidesPerGroup: 1,
+			centeredSlides: true,
+			watchSlidesProgress: true,
+			watchSlidesVisibility: true,
+			loop: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 0,
+				},
+				768: {
+					spaceBetween: 0,
+				},
+				1024: {
+					spaceBetween: 0,
+					navigation: {
+						nextEl: nextBtn,
+						prevEl: prevBtn,
+					},
+				}
 			},
+			on: {
+				progress: function (swiper) {
+					const isFirstSlide = swiper.activeIndex === 0;
+
+					for (let i = 0; i < swiper.slides.length; i++) {
+						const slide = swiper.slides[i];
+						const progress = swiper.slides[i].progress;
+
+						// Проверяем, является ли слайд первым
+						const isFirst = i === 0;
+
+						if (isFirst && isFirstSlide) {
+							// Первый слайд - увеличен на 10%
+							slide.style.transform = 'scale(1.1)';
+							// slide.style.opacity = '1';
+							slide.style.zIndex = '3';
+						} else if (Math.abs(progress) < 0.1) {
+							// Центральный слайд - 100%
+							slide.style.transform = 'scale(1)';
+							// slide.style.opacity = '1';
+							slide.style.zIndex = '2';
+						} else if (Math.abs(progress) < 0.5) {
+							// Соседние слайды - уменьшаются
+							const scale = 0.9 - Math.abs(progress) * 0.2;
+							slide.style.transform = `scale(${Math.max(0.9, scale)})`;
+							// slide.style.opacity = 1 - Math.abs(progress) * 0.5;
+							slide.style.zIndex = '1';
+						} else {
+							// Дальние слайды
+							slide.style.transform = 'scale(0.9)';
+							// slide.style.opacity = '0.5';
+							slide.style.zIndex = '0';
+						}
+					}
+				},
+
+				// Обновляем при смене слайда
+				slideChangeTransitionEnd: function (swiper) {
+					swiper.update();
+				}
+			}
 		});
+
 	});
 
 	const linkCampItem1 = document.querySelector('.link-camp-item1');
@@ -1342,7 +1414,7 @@ window.addEventListener('load', function () {
 				// Если текущий элемент не был активен, открываем его
 				if (!isActive) {
 					this.classList.add('active');
-					answer.style.maxHeight = answer.scrollHeight + 'px';
+					answer.style.maxHeight = answer.scrollHeight + 15 + 'px';
 				}
 			});
 		});
@@ -1444,7 +1516,7 @@ window.addEventListener('load', function () {
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
 
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["30376", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1465,7 +1537,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
+		"group1": ["30376", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
@@ -2847,7 +2919,9 @@ window.addEventListener('load', function () {
 
 					const slug = this.getAttribute('data-slug');
 
-					const contentTab = selectBlock.nextElementSibling;
+					const wrapper = selectBlock.closest('.wrapper');
+					const contentTab = wrapper.querySelector('.content-tab');
+
 					if (contentTab && contentTab.classList.contains('content-tab')) {
 						const itemTabs = contentTab.querySelectorAll('.item-tab');
 
@@ -2862,6 +2936,7 @@ window.addEventListener('load', function () {
 						});
 					}
 				}
+				
 			});
 		});
 	});

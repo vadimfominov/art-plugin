@@ -1,6 +1,3 @@
-img {
-	width: 100%;
-}
 .item-card {
 	width: calc(50% - 5px);
 	border-radius: 15px;
@@ -22,7 +19,7 @@ img {
 .item-card .ages-card,
 .item-card .days-card {
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 110%;
 	color: rgba(83, 83, 83, 0.8);
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -58,7 +55,7 @@ img {
 	margin-bottom: 10px;
 }
 .item-card .label-card {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 18px;
 	color: var(--green);
 	font-family: "Montserrat";
@@ -121,16 +118,16 @@ img {
 .item-card button.modal-form.green,
 .item-card button.modal-form-merch.green {
 	font-size: 12px;
-	line-height: 13.2px;
+	line-height: 110%;
 	background-color: var(--green);
 }
 .item-card button.modal-form.red {
 	font-size: 10px;
-	line-height: 11px;
+	line-height: 110%;
 	background-color: var(--red);
 }
 .item-card button.more {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 13.2px;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -244,7 +241,7 @@ img {
 }
 
 .wp-block-fv-first-block-for-moscow .content p {
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 110%;
 }
 
@@ -263,7 +260,7 @@ img {
 }
 .wrapper > p {
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 130%;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -299,11 +296,15 @@ img {
 }
 .wp-block-fv-childs-strengths .list-block li p {
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 130%;
 	font-family: "Montserrat";
 	font-weight: 500;
 	color: rgba(83, 83, 83, 0.8);
+}
+
+.wp-block-fv-childs-strengths .list-block li .icn {
+	display: none;
 }
 
 .wp-block-fv-childs-strengths .list-block li picture {
@@ -403,7 +404,7 @@ img {
 }
 .camps-main-principle .item p {
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 130%;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -420,12 +421,13 @@ img {
 }
 .wp-block-fv-camps-main-principle .view-services {
 	background-color: #ffffff;
-	width: 197px;
+	width: 220px;
 	height: 51px;
+	position: relative;
 }
 .wp-block-fv-camps-main-principle .view-services a {
 	color: #30a933;
-	font-size: 12px;
+	font-size: 14px;
 	font-family: "Montserrat";
 	font-weight: 500;
 	line-height: 110%;
@@ -487,7 +489,7 @@ img {
 	display: block;
 }
 .path-children .item p {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -519,6 +521,8 @@ img {
 	position: absolute;
 	top: 0;
 	left: 0;
+	width: 100%;
+	height: 100%;
 }
 .container-path-children .bottom-block picture img {
 	display: block;
@@ -637,7 +641,7 @@ video {
 .container-path-children .bottom-block p {
 	position: relative;
 	text-align: center;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 110%;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -681,7 +685,7 @@ video {
 	padding-left: 20px;
 	padding-right: 13px;
 	font-size: 14px;
-	line-height: 16.8px;
+	line-height: 110%;
 	color: var(--dark);
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -894,7 +898,7 @@ video {
 	padding: 0;
 	margin: 0;
 	font-size: 14px;
-	line-height: 19px;
+	line-height: 110%;
 	font-weight: 500;
 	font-family: "Montserrat";
 	color: var(--green);
@@ -912,7 +916,7 @@ video {
 	padding: 0;
 	margin: 0;
 	font-size: 14px;
-	line-height: 19px;
+	line-height: 110%;
 	font-weight: 500;
 	font-family: "Montserrat";
 	color: var(--green);
@@ -980,7 +984,7 @@ video {
 	box-sizing: border-box;
 	padding-left: 20px;
 	font-size: 14px;
-	line-height: 16.8px;
+	line-height: 110%;
 	color: rgba(132, 132, 132, 0.8);
 	font-family: "Montserrat";
 	font-weight: 400;
@@ -1018,7 +1022,15 @@ video {
 	border-radius: 20px;
 	box-sizing: border-box;
 	background-color: #f5f5f7;
+	display: none;
 }
+.wp-block-fv-key-focus .block-list .item.item-1,
+.wp-block-fv-key-focus .block-list .item.item-2,
+.wp-block-fv-key-focus .block-list .item.item-3,
+.wp-block-fv-key-focus .active .block-list .item {
+	display: block;
+}
+
 .wp-block-fv-key-focus .block-list .item ul {
 	display: flex;
 	flex-wrap: wrap;
@@ -1034,7 +1046,7 @@ video {
 	border-radius: 30px;
 	box-sizing: border-box;
 	color: #535353;
-	font-size: 12px;
+	font-size: 14px;
 	line-height: 100%;
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -1062,7 +1074,7 @@ video {
 	display: block;
 }
 .wp-block-fv-key-focus .block-list .item p {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1077,7 +1089,7 @@ video {
 	background-color: #30a933;
 	padding: 16px 20px;
 	border-radius: 30px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1110,12 +1122,51 @@ video {
 	padding: 0px 40px;
 }
 
-.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs {
+.wp-block-fv-day-and-shift .select-block {
+	margin-bottom: 20px;
+}
+.wp-block-fv-day-and-shift .select-ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.wp-block-fv-day-and-shift .select-ul li {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 6px 12px 6px 22px;
+	position: relative;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: #ffffff;
+}
+.wp-block-fv-day-and-shift .select-ul li.active {
+	background-color: #ffffff;
+	color: #535353;
+}
+.wp-block-fv-day-and-shift .select-ul li::before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+}
+.wp-block-fv-day-and-shift .select-ul li.active::before {
+	background-color: #30a933;
+}
+
+/* .wp-block-fv-day-and-shift .block-container .left-block .btn-tabs {
 	display: flex;
 	justify-content: center;
 	gap: 5px;
 	margin-bottom: 30px;
-}
+} */
 
 .wp-block-fv-day-and-shift .block-container .left-block .title2 {
 	text-align: center;
@@ -1130,7 +1181,7 @@ video {
 }
 
 .wp-block-fv-day-and-shift .block-container .left-block .descr2 {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1141,9 +1192,13 @@ video {
 
 .wp-block-fv-day-and-shift .block-container .right-block {
 	border-radius: 30px;
-	background-color: #F5F5F7;
-	padding: 20px;
+	background-color: #f5f5f7;
+	padding: 0px 20px;
 	box-sizing: border-box;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block.active {
+	padding: 20px;
 }
 
 .wp-block-fv-day-and-shift .block-container .right-block .items {
@@ -1166,7 +1221,7 @@ video {
 .wp-block-fv-day-and-shift .block-container .right-block .item span {
 	display: block;
 	width: 90px;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1175,7 +1230,7 @@ video {
 }
 .wp-block-fv-day-and-shift .block-container .right-block .item p {
 	text-align: right;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1186,13 +1241,16 @@ video {
 	margin-bottom: 75px;
 }
 .wp-block-fv-day-and-shift .block-container .right-block.tab-2 {
+	padding: 0px 10px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.active.tab-2 {
 	padding: 20px 10px;
 }
 .wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
 	line-height: 110%;
@@ -1213,4 +1271,1648 @@ video {
 }
 .wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item:last-child {
 	margin-bottom: 0;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 130%;
+	padding: 6px 12px 6px 22px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	position: relative;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab:before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+	background-color: #fff;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab.active {
+	background-color: #fff;
+	color: #535353;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab.active:before {
+	background-color: #30a933;
+}
+
+.wp-block-fv-new-slider {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block {
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.active {
+	height: auto;
+}
+
+.wp-block-fv-new-slider .swiper-slide {
+	width: 250px;
+	height: 330px;
+	transition: transform 0.3s ease;
+	transform-origin: center center;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.wp-block-fv-new-slider .swiper-slide:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.3);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-new-slider .swiper-slide.swiper-slide-active:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-new-slider .swiper-slide span {
+	background-color: #30a933;
+	border-radius: 30px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.12px;
+	padding: 10px 15px;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.wp-block-fv-new-slider .swiper-slide p {
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.12px;
+	text-align: center;
+	width: calc(100% - 30px);
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.wp-block-fv-new-slider .swiper-slide img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-new-slider .slider-container {
+	position: relative;
+}
+.wp-block-fv-new-slider .icons-for-slider {
+	position: absolute;
+	width: 250px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 10px;
+	z-index: 10;
+}
+.wp-block-fv-new-slider .icons-for-slider .icon-1 {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+.wp-block-fv-new-slider .icons-for-slider .icon-2 {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	animation: moveLeftRight 1s infinite alternate ease-in-out;
+}
+
+@keyframes moveLeftRight {
+	0% {
+		transform: translateX(0); /* Начальная позиция */
+	}
+	100% {
+		transform: translateX(20px); /* Конечная позиция - сдвиг на 10px вправо */
+	}
+}
+
+.wp-block-fv-new-slider .slider-pagination {
+	display: none;
+}
+
+.wp-block-fv-new-slider .wrapper {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.wp-block-fv-new-slider p,
+.wp-block-fv-new-slider h2 {
+	padding-left: 5%;
+	padding-right: 5%;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-with-child {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-with-child .image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.wp-block-fv-with-child .container-img {
+	border-radius: 30px;
+	overflow: hidden;
+	position: relative;
+}
+.container-with-child {
+	position: relative;
+	z-index: 10;
+	color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-with-child .image-bg picture {
+	display: block;
+	height: 100%;
+}
+.wp-block-fv-with-child .image-bg img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+}
+.left-with-child {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.left-with-child h2 {
+	font-size: 22px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.22px;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.left-with-child .label {
+	background-color: #30a933;
+	border-radius: 30px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 90%;
+	letter-spacing: -0.42px;
+	width: max-content;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.left-with-child p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 130%;
+	letter-spacing: 0px;
+	text-align: center;
+}
+
+.right-with-child .items {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.right-with-child .item {
+	background-color: rgba(245, 245, 247, 0.2);
+	backdrop-filter: blur(34px);
+	border-radius: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.right-with-child .item span {
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.14px;
+	text-align: center;
+	display: block;
+	margin-bottom: 5px;
+}
+.right-with-child .item p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	letter-spacing: 0px;
+	text-align: center;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.right-with-child .item:nth-child(3) {
+	background-color: #30a933;
+}
+
+.wp-block-fv-suitable-child {
+	margin-bottom: 75px;
+}
+
+.wrapper > p a {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	border-bottom: 1px solid rgba(83, 83, 83, 0.8);
+}
+
+.container-suitable-child {
+	position: relative;
+	padding: 20px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+.container-suitable-child::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 10;
+}
+.container-suitable-child .image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+}
+.container-suitable-child .image-bg picture {
+	display: block;
+	height: 100%;
+}
+.container-suitable-child .image-bg img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+}
+
+.left-suitable-child p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: -0.14px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+
+.left-suitable-child,
+.right-suitable-child {
+	position: relative;
+	z-index: 10;
+}
+
+.wp-block-fv-program-modal.modal-steps-form {
+	margin-bottom: 0px;
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-wrapper {
+	opacity: 1;
+	position: initial;
+	background-color: var(--white);
+	padding: 0;
+	box-sizing: border-box;
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-wrapper .close-modal {
+	display: none;
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-content {
+	box-shadow: none;
+	border-radius: 0px;
+	max-width: 100%;
+	padding: 0;
+}
+.wp-block-fv-program-modal.modal-steps-form .container-step {
+	background-color: #f5f5f7;
+	border-radius: 30px;
+	overflow: hidden;
+	padding: 20px;
+	box-sizing: border-box;
+	border: 1px solid #f4f4f4;
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-content input[type="text"],
+.wp-block-fv-program-modal.modal-steps-form .modal-content input[type="email"],
+.wp-block-fv-program-modal.modal-steps-form .modal-content input[type="tel"] {
+	background-color: var(--white);
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-content .back {
+	background-color: rgba(255, 255, 255, 0.5);
+}
+/* .wp-block-fv-program-modal.modal-steps-form .modal-content .back.back-step {
+	background-color: rgba(255, 255, 255, 1);
+} */
+.wp-block-fv-program-modal.modal-steps-form .modal-content .fronted .btn-block {
+	margin-top: 10px;
+}
+.wp-block-fv-program-modal.modal-steps-form .modal-content .label-class {
+	margin-bottom: 11px;
+}
+
+.modal-content {
+	background-color: var(--white);
+	border-radius: 20px;
+	position: relative;
+	max-width: 90%;
+	width: 100%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	padding-bottom: 50px;
+	padding-top: 100px;
+}
+
+.modal-content .next {
+	background-color: var(--green);
+	border: none;
+	outline: none;
+	width: 190px;
+	height: 46px;
+	font-size: 14px;
+	line-height: 110%;
+	letter-spacing: -0.36px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	padding-left: 17px;
+	position: relative;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+.modal-content .step-2 .next {
+	padding-left: 25px;
+}
+.modal-content .next span {
+	position: absolute;
+	top: 50%;
+	right: 11px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	background-color: var(--white);
+}
+.modal-content .next span svg path {
+	transition: all 0.3s ease;
+}
+.modal-content .next:active {
+	background-color: var(--red);
+	transition: all 0.3s ease;
+}
+.modal-content .next:active span svg path {
+	fill: var(--red);
+	transition: all 0.3s ease;
+}
+.modal-content .title-modal {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+	max-width: 280px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.close-modal,
+.close-response,
+.close-modal-video,
+.close-slider-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border-radius: 6px;
+	background-color: var(--hintGray);
+	width: 38px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+.close-modal-video,
+.close-slider-modal {
+	z-index: 99999;
+}
+.close-modal:before,
+.close-response:before,
+.close-modal-video:before,
+.close-slider-modal:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.close-modal:after,
+.close-response:after,
+.close-modal-video:after,
+.close-slider-modal:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.modal-content input[type="text"],
+.modal-content input[type="email"],
+.modal-content input[type="tel"] {
+	width: 100%;
+	height: 58px;
+	padding-left: 10px;
+	border-radius: 10px;
+	background-color: var(--hintGray);
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+.modal-content input[type="text"]:focus-visible,
+.modal-content input[type="email"]:focus-visible,
+.modal-content input[type="tel"]:focus-visible {
+	border: 1px solid var(--green);
+	transition: all 0.3s ease;
+}
+.modal-content input[type="text"].error,
+.modal-content input[type="email"].error,
+.modal-content input[type="tel"].error {
+	border: 1px solid var(--red);
+	transition: all 0.3s ease;
+}
+.modal-content .subtitle-step {
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 150%;
+	display: block;
+	margin-bottom: 5px;
+	width: 100%;
+	text-align: center;
+}
+.modal-content .title-step {
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 120%;
+	display: block;
+	margin-bottom: 20px;
+	width: 100%;
+	text-align: center;
+}
+.btn-block {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.modal-content .back {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--hintGray);
+	border-radius: 30px;
+	transition: all 0.3s ease;
+}
+.modal-content .back.back-step:active {
+	background-color: var(--red);
+	transition: all 0.3s ease;
+}
+.modal-content .back.back-step:active svg path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+.modal-content .back svg {
+	transform: rotate(-180deg);
+}
+.modal-content .back svg path {
+	fill: var(--red);
+	transition: all 0.3s ease;
+}
+.modal-content .back.disabled svg {
+	opacity: 0.5;
+}
+.modal-content .checkbox {
+	margin-bottom: 5px;
+}
+.modal-content .checkbox .title {
+	flex: 1;
+}
+.modal-content .checkbox .title,
+.modal-content .label-class,
+.modal-content .checkbox .title a {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 14px;
+	color: var(--darkGray);
+}
+.modal-content .label-class {
+	font-size: 10px;
+	line-height: 12px;
+	display: block;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.modal-content .checkbox .title a {
+	text-decoration: underline solid;
+	text-decoration-skip-ink: none;
+}
+.modal-content .checkbox input[type="checkbox"] {
+	width: 14px;
+	height: 14px;
+	/* margin-top: 3px; */
+}
+.modal-steps-form .modal-content .checkbox input[type="checkbox"] {
+	margin-top: 0px;
+}
+.modal-content .checkbox {
+	gap: 6px;
+}
+.modal-content .checkbox input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 4px;
+	top: 1px;
+	width: 3px;
+	height: 6px;
+	border: solid var(--white);
+	border-width: 0 1px 1px 0;
+	transform: rotate(45deg);
+}
+.container-step {
+	width: 100%;
+	box-sizing: border-box;
+}
+.modal-content .step {
+	display: flex;
+	flex-wrap: wrap;
+	/* padding-left: 20px;
+	padding-right: 20px; */
+	box-sizing: border-box;
+	/* position: absolute; */
+	width: 100%;
+	/* top: 0;
+	left: 0;
+	transition: 1s;
+	backface-visibility: hidden; */
+}
+.wp-block-fv-suitable-child .modal-content .step {
+	padding-left: 0;
+	padding-right: 0;
+}
+.wp-block-fv-suitable-child .wp-block-fv-program-modal.modal-steps-form .modal-wrapper {
+	background-color: transparent;
+}
+.wp-block-fv-suitable-child .modal-content {
+	background-color: transparent;
+}
+.city-checkbox {
+	display: flex;
+	align-items: center;
+}
+.container-step .step.backend {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease;
+}
+.container-step .step.fronted {
+	opacity: 1;
+	height: auto;
+	overflow: initial;
+	transition: opacity 0.3s ease;
+}
+.container-step.active .step.fronted {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease;
+}
+.container-step.active .step.backend {
+	opacity: 1;
+	height: auto;
+	overflow: initial;
+	transition: opacity 0.3s ease;
+}
+.modal-content input[type="email"] {
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+.modal-content input[type="tel"] {
+	width: calc(50% - 5px);
+}
+.modal-content input[name="parentName2"] {
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+.modal-content input[name="parentName3"] {
+	width: calc(50% - 5px);
+}
+
+.wp-block-fv-test-drive-updated {
+	margin-bottom: 75px;
+}
+
+.test-drive-section h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.test-drive-section .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 30px;
+}
+.test-drive-section.test-template .wrapper > p {
+	margin-bottom: 20px;
+}
+.test-drive-section .container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.test-drive-section .container .item-block {
+	padding: 30px 20px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	background-color: var(--hintGray);
+}
+.test-drive-section .container .item-block > span {
+	font-size: 16px;
+	line-height: 120%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--green);
+	margin-bottom: 20px;
+	display: block;
+}
+.test-drive-section .container .item-block .item {
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 10px;
+	padding-left: 14px;
+	position: relative;
+}
+.test-drive-section .container .item-block .item:last-child {
+	margin-bottom: 0;
+}
+.test-drive-section .container .item-block .item:before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--green);
+	position: absolute;
+	top: 8px;
+	left: 0;
+}
+.test-drive-section .container .item-block.last-item-block {
+	background-color: transparent;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+.test-drive-section .container .item-block.last-item-block .text-block > p:before {
+	display: none;
+}
+.test-drive-section .map-block > span {
+	height: 30px;
+	padding: 0 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--green);
+	border-radius: 15px;
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--white);
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	z-index: 20;
+}
+.test-drive-section .map-block {
+	background-color: var(--hintGray);
+	border-radius: 20px;
+	overflow: hidden;
+	width: 100%;
+	height: 364px;
+	position: relative;
+}
+.test-drive-section .container .item-block.last-item-block .text-block {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #f5f5f7;
+	border-radius: 20px;
+	padding: 20px 8px 10px 8px;
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: calc(100% - 20px);
+	box-sizing: border-box;
+}
+.test-drive-section .container .item-block.last-item-block .text-block > p {
+	order: 2;
+	padding-left: 0;
+	margin-bottom: 20px;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	text-align: center;
+}
+.test-drive-section .container .item-block.last-item-block .text-block .test-drive-open {
+	order: 4;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	width: 160px;
+	height: 46px;
+	border-radius: 30px;
+	background-color: var(--green);
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--white);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	transition: all 0.3s ease;
+}
+.test-drive-section .container .item-block.last-item-block .text-block > span {
+	order: 3;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 130%;
+	text-align: center;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--green);
+	width: 240px;
+}
+.test-drive-section {
+	margin-bottom: 75px;
+}
+.test-drive-section .container .item-block.last-item-block .text-block .test-drive-open > span {
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 31px;
+	height: 31px;
+	background-color: var(--white);
+	border-radius: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+.test-drive-section .container .item-block.last-item-block .text-block .test-drive-open:active {
+	background-color: var(--red);
+}
+.test-drive-section .top-item-block {
+	gap: 10px;
+	display: flex;
+	flex-direction: column;
+}
+#testDriveMap {
+	width: 100%;
+	height: 100%;
+}
+#testDriveMap-2 {
+	width: 100%;
+	height: 100%;
+}
+.ymaps-2-1-79-map {
+	height: 100%;
+	width: 100%;
+}
+.ymaps-2-1-79-balloon__content {
+	padding: 0 !important;
+	border: none;
+}
+.ymaps-2-1-79-placemark-overlay {
+	position: relative;
+}
+.map-text {
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.85);
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.map-text p {
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--darkGray);
+}
+.modal-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2); /* Полупрозрачный фон */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(6px);
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: -999;
+}
+
+.wp-block-fv-our-feedback-updated {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-our-feedback-updated .select-ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+}
+
+.wp-block-fv-our-feedback-updated .select-ul li {
+	background-color: #f5f5f7;
+	border-radius: 30px;
+	padding: 6px 12px 6px 22px;
+	position: relative;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: #535353;
+}
+.wp-block-fv-our-feedback-updated .select-ul li.active {
+	background-color: #30a933;
+	color: #ffffff;
+}
+.wp-block-fv-our-feedback-updated .select-ul li::before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #30a933;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+}
+.wp-block-fv-our-feedback-updated .select-ul li.active::before {
+	background-color: #fff;
+}
+
+.wp-block-fv-our-feedback-updated .select-block {
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-our-feedback-updated .swiper-slide {
+	background-color: #f5f5f7;
+	padding: 20px 10px;
+	border-radius: 20px;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-our-feedback-updated .slide-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.wp-block-fv-our-feedback-updated .title-slide {
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: -0.16px;
+	color: #535353;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.wp-block-fv-our-feedback-updated .description-slide {
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: 0px;
+	color: rgba(83, 83, 83, 0.8);
+	margin-bottom: 20px;
+	text-align: center;
+}
+
+.wp-block-fv-our-feedback-updated .label-slide {
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: -0.14px;
+	color: #535353;
+	text-align: center;
+}
+
+.wp-block-fv-our-feedback-updated .top-container {
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+}
+
+.wp-block-fv-our-feedback-updated .top-container img {
+	width: 145px;
+	height: 200px;
+	object-fit: cover;
+	object-position: center;
+	border-radius: 14px;
+	overflow: hidden;
+}
+.my-swiper-feedback {
+	position: relative;
+}
+.wp-block-fv-our-feedback-updated .icons-for-slider {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 10;
+}
+
+.wp-block-fv-our-feedback-updated .icons-for-slider .icon-1 {
+	position: absolute;
+	top: 0;
+	right: 10px;
+}
+.wp-block-fv-our-feedback-updated .icons-for-slider .icon-2 {
+	position: absolute;
+	top: 0;
+	right: 20px;
+	animation: moveLeftRight 1s infinite alternate ease-in-out;
+}
+
+.wp-block-fv-our-feedback-updated .slider-pagination {
+	display: none;
+}
+
+.wp-block-fv-our-feedback-updated .item-tab {
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-our-feedback-updated .item-tab.active {
+	height: auto;
+}
+
+.faq-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+.faq-container .item {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.faq-container .question-item {
+	font-size: 16px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	padding: 20px;
+	padding-right: 58px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	position: relative;
+	transition: all 0.3s ease;
+}
+.faq-container .question-item > .faq-icon {
+	display: block;
+	width: 38px;
+	height: 38px;
+	border-radius: 6px;
+	background-color: var(--white);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+.faq-container .question-item > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(0deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.faq-container .question-item > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-90deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.faq-container .question-item.active > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.faq-container .question-item.active > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-45deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.faq-container .answer-item {
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--darkGray);
+	padding: 0px 20px;
+	box-sizing: border-box;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+.question-item.active + .answer-item {
+	padding-bottom: 20px;
+}
+.faq-container .left {
+	width: 100%;
+}
+.faq-container .right {
+	width: 100%;
+}
+.faq-container .left-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.faq-container .left-faq .item-camp-tab,
+.faq-container .right-faq .item-camp-tab {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.faq-container .right-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.wp-block-fv-faq-section {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-program-modal-visible .img-visible {
+	display: none;
+}
+
+.wp-block-fv-program-modal-visible {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-download-file {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-faq-section-updated {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-download-file h2 {
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-download-file .item {
+	border-radius: 15px;
+	background-color: #f5f5f7;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.wp-block-fv-download-file .container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.wp-block-fv-download-file .item p {
+	color: #535353;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 0px;
+}
+.wp-block-fv-download-file .item a {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	color: #535353;
+	font-size: 14px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 0px;
+}
+.wp-block-fv-download-file .item path {
+	stroke: #535353;
+}
+
+.wp-block-fv-faq-section-updated .items {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+
+.wp-block-fv-faq-section-updated .items .item {
+	border-radius: 15px;
+	background-color: #f5f5f7;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-faq-section-updated .items .item span {
+	color: #535353;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: -0.16px;
+	display: block;
+	margin-bottom: 5px;
+	text-align: center;
+}
+
+.wp-block-fv-faq-section-updated .items .item p {
+	color: #535353;
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: 0px;
+	text-align: center;
+}
+
+.wp-block-fv-footer-block .menu .menu-title {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.wp-block-fv-footer-block .menu .menu-item a {
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	opacity: 0.8;
+	margin-bottom: 2px;
+}
+.wp-block-fv-footer-block .menu .menu-item a:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-footer-block .menu-title {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.wp-block-fv-footer-block .menu {
+	flex-direction: column;
+	align-items: flex-start;
+}
+.footer-menu,
+.directions-menu,
+.documents-menu {
+	margin-bottom: 20px;
+}
+
+.design-website {
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	opacity: 0.5;
+}
+
+.wp-block-fv-footer-block .wrapper:first-child {
+	border-radius: 30px 30px 0px 0px;
+	background-color: var(--hintGray);
+	padding-top: 35px;
+	padding-bottom: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.wp-block-fv-footer-block .wrapper:last-child {
+	background-color: var(--hintGray);
+	padding-bottom: 20px;
+}
+.wp-block-fv-footer-block .right-info {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	order: 2;
+	margin-bottom: 27px;
+}
+.phone-link,
+.email-link {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.time-work {
+	font-size: 12px;
+	line-height: 18px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	opacity: 0.8;
+	margin-bottom: 10px;
+	display: block;
+}
+.wp-block-fv-footer-block .logo {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 50%;
+	order: 1;
+}
+.wp-block-fv-footer-block .logo img {
+	object-fit: contain;
+}
+.directions-menu {
+	width: 50%;
+	order: 3;
+}
+.footer-menu {
+	width: 50%;
+	order: 4;
+}
+.documents-menu {
+	width: 100%;
+	order: 5;
+	margin-bottom: 0;
+}
+
+.wp-block-fv-item-card .bg-image {
+	display: none;
+}
+
+.wp-block-fv-item-card .bg-image-mobile {
+	display: block;
+}
+
+.wp-block-fv-item-card .go-back-btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 38px;
+	height: 38px;
+	background-color: var(--hintGray);
+	border-radius: 6px;
+	outline: none;
+	border: none;
+	overflow: hidden;
+	position: relative;
+	color: transparent;
+}
+
+.wp-block-fv-item-card .go-back-btn svg {
+	display: none;
+}
+
+.leave-application.red {
+	background-color: var(--red);
+	font-size: 14px;
+	line-height: 110%;
+	width: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.wp-block-fv-item-card {
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: var(--white);
+}
+.wp-block-fv-item-card .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-bottom: 50px;
+}
+.wp-block-fv-item-card .left-img {
+	margin-bottom: 20px;
+}
+.wp-block-fv-item-card .left-img .img-for-block {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
+	position: initial;
+}
+.wp-block-fv-item-card .city-label,
+.wp-block-fv-item-card .count-days,
+.wp-block-fv-item-card .camp-section {
+	display: none;
+}
+
+.wp-block-fv-item-card .left-img p {
+	font-size: 14px;
+	line-height: 110%;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--mediumGray);
+	margin-top: 20px;
+}
+
+.wp-block-fv-item-card .age-checkboxes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-bottom: 40px;
+}
+
+.wp-block-fv-item-card .right-content > .title span {
+	font-size: 22px;
+	line-height: 110%;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+}
+.wp-block-fv-item-card .right-content .info-date {
+	font-size: 16px;
+	line-height: 110%;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.wp-block-fv-item-card .right-content > span {
+	font-size: 16px;
+	line-height: 110%;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 20px;
+}
+.wp-block-fv-item-card .right-content p {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+.wp-block-fv-item-card .price-card span {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--green);
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: baseline;
+}
+
+.wp-block-fv-item-card .right-content p {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+
+.wp-block-fv-item-card .age-checkbox {
+	font-size: 14px;
+	line-height: 110%;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	width: 74px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--hintGray);
+	border-radius: 30px;
+}
+
+.leave-application {
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 34px;
+	border-radius: 34px;
+	border: none;
+	outline: none;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+	letter-spacing: -0.5px;
+	padding: 0;
+}
+.leave-application.green {
+	background-color: var(--green);
+	font-size: 12px;
+	line-height: 13.2px;
+}
+.random-posts-container {
+	width: 100%;
+}
+.random-posts-container h3 {
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 18px;
+	line-height: 21.6px;
+	color: var(--darkGray);
+	margin-bottom: 40px;
+}
+.random-posts-container .random-posts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 10px;
+}
+
+.wp-block-fv-item-card .go-back-btn:before,
+.wp-block-fv-item-card .go-back-btn:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.wp-block-fv-item-card .go-back-btn:after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+/* Для ПК */
+@media (min-width: 1024px) {
+	.wp-block-fv-new-slider .swiper-slide {
+		width: 414px;
+	}
+
+	/* .wp-block-fv-new-slider .swiper-slide-active {
+		transform: scale(1) !important;
+		opacity: 1 !important;
+		z-index: 2;
+	}
+
+	.wp-block-fv-new-slider .swiper-slide-next,
+	.wp-block-fv-new-slider .swiper-slide-prev {
+		transform: scale(0.8) !important;
+		opacity: 0.7 !important;
+	} */
 }
