@@ -1439,6 +1439,7 @@ a:-webkit-any-link {
 	}
 	.wp-block-fv-key-focus .block-list .item {
 		display: flex !important;
+		position: relative;
 	}
 	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text,
 	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text span {
@@ -1484,5 +1485,8 @@ a:-webkit-any-link {
 	}
 	.faq-container .answer-item {
 		max-height: 100% !important;
+	}
+	.path-children .item .item-img {
+		position: relative;
 	}
 }

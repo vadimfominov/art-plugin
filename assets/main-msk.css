@@ -1,5 +1,5 @@
 .play-video {
-	display: none;
+	display: none !important;
 }
 .item-card {
 	width: calc(50% - 5px);
