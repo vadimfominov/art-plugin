@@ -30,13 +30,31 @@ window.addEventListener('load', function () {
 		const prevBtn = container.querySelector('.swiper-button-prev');
 		const nextBtn = container.querySelector('.swiper-button-next');
 
+
 		new Swiper(slider, {
 			slidesPerView: 1,
 			spaceBetween: 20,
-			slidesPerGroup: 1,       // Листаем по 1 карточке
-			navigation: {
-				nextEl: nextBtn,
-				prevEl: prevBtn,
+			slidesPerGroup: 1,
+			loop: true,
+			breakpoints: {
+				0: {
+					spaceBetween: 20,
+				},
+				768: {
+					initialSlide: 1,
+					spaceBetween: 150,
+					slidesPerView: 'auto',
+					centeredSlides: true,
+					navigation: {
+						nextEl: nextBtn,
+						prevEl: prevBtn,
+					},
+				},
+				1024: {
+					spaceBetween: 0,
+					slidesPerView: 2,      // ← 2 слайда
+					spaceBetween: 20,      // ← расстояние между ними
+				}
 			},
 		});
 	});
@@ -57,6 +75,9 @@ window.addEventListener('load', function () {
 		const prevBtn = container.querySelector('.swiper-button-prev');
 		const nextBtn = container.querySelector('.swiper-button-next');
 
+		console.log(nextBtn);
+
+
 		new Swiper(slider, {
 			initialSlide: 1,
 			slidesPerView: 'auto',
@@ -72,6 +93,10 @@ window.addEventListener('load', function () {
 				},
 				768: {
 					spaceBetween: 0,
+					navigation: {
+						nextEl: nextBtn,
+						prevEl: prevBtn,
+					},
 				},
 				1024: {
 					spaceBetween: 0,
@@ -1293,7 +1318,7 @@ window.addEventListener('load', function () {
 
 	}
 
-	const testDrive = document.querySelector('.wp-block-fv-test-drive');
+	const testDrive = document.querySelector('.test-drive-section');
 
 	if (testDrive) {
 		const testDriveOpen = testDrive.querySelector('.test-drive-open');
@@ -1515,8 +1540,7 @@ window.addEventListener('load', function () {
 			// 30366 - Родительская среда (30366 для dev и 34004 для prod) 
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
-
-			const allowedPagesFilter = ["33080", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["30376", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1537,7 +1561,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["33080", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
+		"group1": ["30376", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};

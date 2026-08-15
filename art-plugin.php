@@ -88,6 +88,15 @@ function fv_block_assets()
 				filemtime(dirname(__FILE__) . '/assets/main.css'),
 				'screen'
 			);
+			if (!wp_is_mobile()) {
+				wp_enqueue_style(
+					'main-1025',
+					plugin_dir_url(__FILE__) . 'assets/main-1025.css',
+					[],
+					filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
+					'screen'
+				);
+			}
 		}
 	} else {
 		if (is_page('professions-msc')) {
@@ -106,27 +115,19 @@ function fv_block_assets()
 				filemtime(dirname(__FILE__) . '/assets/main.css'),
 				'screen'
 			);
+			if (!wp_is_mobile()) {
+				wp_enqueue_style(
+					'main-1025',
+					plugin_dir_url(__FILE__) . 'assets/main-1025.css',
+					[],
+					filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
+					'screen'
+				);
+			}
 		}
 	}
 
-	if (!wp_is_mobile()) {
-		wp_enqueue_style(
-			'main-1025',
-			plugin_dir_url(__FILE__) . 'assets/main-1025.css',
-			[],
-			filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
-			'screen'
-		);
-	}
-
 	if (is_admin()) {
-		wp_enqueue_style(
-			'admin-art',
-			plugin_dir_url(__FILE__) . 'assets/admin.css',
-			[],
-			filemtime(dirname(__FILE__) . '/assets/admin.css'),
-			'screen'
-		);
 		wp_enqueue_style(
 			'main-msk',
 			plugin_dir_url(__FILE__) . 'assets/main-msk.css',
@@ -134,6 +135,14 @@ function fv_block_assets()
 			filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
 			'screen'
 		);
+		wp_enqueue_style(
+			'admin-art',
+			plugin_dir_url(__FILE__) . 'assets/admin.css',
+			[],
+			filemtime(dirname(__FILE__) . '/assets/admin.css'),
+			'screen'
+		);
+		
 	}
 }
 

@@ -590,6 +590,7 @@ a:-webkit-any-link {
 	height: 1000px;
 	position: initial;
 	opacity: 1;
+	z-index: 99999;
 }
 @media (min-width: 1025px) {
 	.wp-block-fv-footer-block .right-info a {
@@ -1437,7 +1438,7 @@ a:-webkit-any-link {
 		margin: 0 !important;
 	}
 	.wp-block-fv-key-focus .block-list .item {
-		display: block !important;
+		display: flex !important;
 	}
 	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text,
 	.wp-block-fv-key-focus .block-list .item .list-wrapper span.rich-text span {
