@@ -1282,7 +1282,7 @@ video {
 	margin-top: 20px;
 }
 .wp-block-fv-text .wrapper p {
-	width: 100%;
+	max-width: 100%;
 }
 .wp-block-fv-day-and-shift {
 	margin-bottom: 75px;
