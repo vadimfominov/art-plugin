@@ -1323,7 +1323,7 @@ window.addEventListener('load', function () {
 	if (testDrive) {
 		const testDriveOpen = testDrive.querySelector('.test-drive-open');
 
-		testDriveOpen.addEventListener('click', function (e) {
+		testDriveOpen?.addEventListener('click', function (e) {
 			e.preventDefault();
 
 			const formTestDriveModal = testDrive.querySelector('.modal-wrapper');

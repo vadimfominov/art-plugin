@@ -1471,8 +1471,8 @@ a:-webkit-any-link {
 	.wp-block-fv-day-and-shift .block-container .right-block .item span.rich-text {
 		width: 100%;
 		display: flex;
-        flex-direction: column;
-        align-items: center;
+		flex-direction: column;
+		align-items: center;
 	}
 	.wp-block-fv-day-and-shift .block-container .right-block.tab-1 .item span.rich-text {
 		align-items: flex-start;
@@ -1488,5 +1488,13 @@ a:-webkit-any-link {
 	}
 	.path-children .item .item-img {
 		position: relative;
+	}
+	.crawl-line .slick-ul .item-img {
+		flex-shrink: 0;
+		width: 300px;
+	}
+	.crawl-line .slick-ul {
+		display: flex;
+		overflow-x: scroll;
 	}
 }

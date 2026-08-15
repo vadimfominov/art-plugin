@@ -1017,7 +1017,7 @@
 		height: 48px;
 		padding-left: 40px;
 		padding-right: 40px;
-		width: auto;
+		width: auto !important;
 	}
 	.wp-block-fv-link-camp .first-item ul {
 		gap: 16px 40px;
