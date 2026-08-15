@@ -1,3 +1,6 @@
+.play-video {
+	display: none;
+}
 .item-card {
 	width: calc(50% - 5px);
 	border-radius: 15px;
@@ -1246,7 +1249,7 @@ video {
 }
 .wp-block-fv-day-and-shift .block-container .right-block .item span {
 	display: block;
-	width: 90px;
+	width: 120px;
 	font-size: 14px;
 	font-weight: 500;
 	font-family: "Montserrat";
@@ -1275,6 +1278,12 @@ video {
 	color: rgba(83, 83, 83, 0.8);
 }
 
+.wp-block-fv-text {
+	margin-top: 20px;
+}
+.wp-block-fv-text .wrapper p {
+	width: 100%;
+}
 .wp-block-fv-day-and-shift {
 	margin-bottom: 75px;
 }
