@@ -2398,6 +2398,8 @@
 	.wp-block-fv-photo-and-5steps .item-6 img {
 		width: 414px;
 		height: 350px;
+		object-fit: cover;
+		object-position: center;
 	}
 	.wp-block-fv-photo-and-5steps .list-block {
 		max-width: 100%;

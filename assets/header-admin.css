@@ -355,7 +355,6 @@ body.active-menu .mask {
 	z-index: 0;
 	width: 100%;
 	height: 100vh;
-	min-height: 715px;
 	object-fit: cover;
 	object-position: center;
 }
