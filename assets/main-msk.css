@@ -3023,6 +3023,24 @@ video {
 	width: 100%;
 }
 
+#filtered-posts-container .no-content {
+    background-color: var(--hintGray);
+    border-radius: 15px;
+    padding: 0px 15px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+    line-height: 21px;
+    color: var(--mediumGray);
+    font-family: "Montserrat";
+    font-weight: 500;
+    flex-direction: column;
+    width: 100%;
+}
+
 @media (min-width: 767px) {
 	.wp-block-fv-program-modal-with-city.hidden-model .modal-content .step,
 	.test-drive-modal .modal-content .step {
@@ -3455,6 +3473,10 @@ video {
 }
 
 @media (min-width: 820px) {
+	    #filtered-posts-container .no-content {
+        height: 400px;
+        padding: 0 200px;
+    }
 	.wp-block-fv-childs-strengths .list-block li:not(:last-child) {
 		position: absolute;
 		display: flex;
