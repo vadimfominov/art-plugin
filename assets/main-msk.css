@@ -158,6 +158,7 @@
 	margin-right: 5px;
 	text-align: center;
 }
+
 .item-card button.more:before {
 	content: "";
 	width: 100%;
@@ -1124,6 +1125,11 @@ video {
 	line-height: 110%;
 	color: #fff;
 	text-align: center;
+	transition: all 0.3s ease;
+}
+.load-more-list:hover {
+	transition: all 0.3s ease;
+	background-color: #e94e4e;
 }
 
 .wp-block-fv-day-and-shift .block-container {
@@ -1749,9 +1755,23 @@ video {
 	box-sizing: border-box;
 }
 
-.modal-content .step-2 .next {
-	padding-left: 25px;
+.modal-content .next:disabled {
+	opacity: 0.5;
+	cursor: no-drop;
+	pointer-events: none;
 }
+
+.modal-content .next:hover {
+	transition: all 0.3s ease;
+	background-color: #e94e4e;
+	padding-left: 55px;
+}
+
+.modal-content .next:hover span {
+	right: calc(100% - 43px);
+	transition: all 0.3s ease;
+}
+
 .modal-content .next span {
 	position: absolute;
 	top: 50%;
@@ -1768,6 +1788,10 @@ video {
 }
 .modal-content .next span svg path {
 	transition: all 0.3s ease;
+}
+.modal-content .next:hover span svg path {
+	transition: all 0.3s ease;
+	fill: #e94e4e;
 }
 .modal-content .next:active {
 	background-color: var(--red);
@@ -2200,10 +2224,10 @@ video {
 	align-items: center;
 	justify-content: flex-start;
 	transition: all 0.3s ease;
+	cursor: pointer;
 }
 .test-drive-section .container .item-block.last-item-block .text-block .text-box span {
 	order: 1;
-	margin-bottom: 10px;
 	font-size: 14px;
 	line-height: 130%;
 	text-align: center;
@@ -2215,7 +2239,7 @@ video {
 .test-drive-section {
 	margin-bottom: 75px;
 }
-.test-drive-section .container .item-block.last-item-block .text-block .test-drive-open > span {
+.test-drive-section .container .item-block.last-item-block .text-block .text-box .test-drive-open > span {
 	position: absolute;
 	top: 50%;
 	right: 10px;
@@ -2229,8 +2253,20 @@ video {
 	transform: translateY(-50%);
 	transition: all 0.3s ease;
 }
-.test-drive-section .container .item-block.last-item-block .text-block .test-drive-open:active {
+.test-drive-section .container .item-block.last-item-block .text-block .text-box .test-drive-open:active {
 	background-color: var(--red);
+}
+.test-drive-section .container .item-block.last-item-block .text-block .text-box .test-drive-open:hover {
+	background-color: #e94e4e;
+	padding-left: 55px;
+	transition: all 0.3s ease;
+}
+.test-drive-section .container .item-block.last-item-block .text-block .text-box .test-drive-open:hover > span {
+	right: calc(100% - 43px);
+	transition: all 0.3s ease;
+}
+.test-drive-section .container .item-block.last-item-block .text-block .text-box .test-drive-open:hover > span path {
+	fill: #e94e4e;
 }
 .test-drive-section .top-item-block {
 	gap: 10px;
@@ -2306,6 +2342,7 @@ video {
 	font-family: "Montserrat";
 	font-weight: 500;
 	color: #535353;
+	cursor: pointer;
 }
 .wp-block-fv-our-feedback-updated .select-ul li.active {
 	background-color: #30a933;
@@ -2490,10 +2527,21 @@ video {
 	left: 50%;
 	transition: all 0.3s ease;
 }
+.faq-container .question-item > .faq-icon:hover {
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+.faq-container .question-item > .faq-icon:hover:before {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+.faq-container .question-item > .faq-icon:hover:after {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
 .faq-container .question-item.active > .faq-icon:before {
 	content: "";
 	transform: translate(-50%, -50%) rotate(45deg);
-	background-color: var(--green);
 	height: 1.5px;
 	width: 14px;
 	position: absolute;
@@ -2504,7 +2552,6 @@ video {
 .faq-container .question-item.active > .faq-icon:after {
 	content: "";
 	transform: translate(-50%, -50%) rotate(-45deg);
-	background-color: var(--green);
 	height: 1.5px;
 	width: 14px;
 	position: absolute;
@@ -2612,9 +2659,21 @@ video {
 	font-family: "Montserrat";
 	font-weight: 600;
 	letter-spacing: 0px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-download-file .item a:hover {
+	color: var(--green);
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-download-file .item a:hover path {
+	stroke: var(--green);
+	transition: all 0.3s ease;
 }
 .wp-block-fv-download-file .item path {
 	stroke: #535353;
+	transition: all 0.3s ease;
 }
 
 .wp-block-fv-faq-section-updated .items {
@@ -2669,6 +2728,11 @@ video {
 	font-weight: 500;
 	opacity: 0.8;
 	margin-bottom: 2px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-footer-block .menu .menu-item a:hover {
+	color: var(--green);
+	transition: all 0.3s ease;
 }
 .wp-block-fv-footer-block .menu .menu-item a:last-child {
 	margin-bottom: 0;
@@ -3301,7 +3365,7 @@ video {
 		flex-direction: row;
 	}
 	.test-drive-section .map-block {
-		height: 460px;
+		height: 100%;
 	}
 	.test-drive-section .container .item-block.last-item-block .text-block {
 		max-width: 500px;
@@ -3461,7 +3525,8 @@ video {
 	}
 	.swiper-button-next svg path,
 	.swiper-button-prev svg path {
-		stroke: #30a933;
+		stroke: #fff;
+		transition: all 0.3s ease;
 	}
 	.wp-block-fv-new-slider .icons-for-slider {
 		display: none;
@@ -3474,10 +3539,22 @@ video {
 		width: 45px;
 		height: 45px;
 		border-radius: 50%;
-		background-color: #f5f5f7;
+		background-color: var(--green);
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		transition: all 0.3s ease;
+	}
+
+	.wp-block-fv-new-slider .slider-pagination .left-btn:hover,
+	.wp-block-fv-new-slider .slider-pagination .right-btn:hover {
+		background-color: var(--hintGray);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-new-slider .slider-pagination .left-btn:hover svg path,
+	.wp-block-fv-new-slider .slider-pagination .right-btn:hover svg path {
+		stroke: #535353;
+		transition: all 0.3s ease;
 	}
 }
 
@@ -4486,8 +4563,17 @@ video {
 	}
 	.wp-block-fv-header-block.active .menu > .menu-item > a {
 		color: var(--darkGray);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .menu > .menu-item > a:hover {
+		color: var(--green);
+		transition: all 0.3s ease;
 	}
 	.wp-block-fv-header-block.active .right .btn-title {
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .right .btn-title:hover {
+		background-color: var(--green);
 		transition: all 0.3s ease;
 	}
 	.wp-block-fv-header-block.active .right .phone-number {
@@ -4503,6 +4589,10 @@ video {
 		display: block;
 		transition: all 0.3s ease;
 	}
+	.right .phone-number:hover {
+		color: var(--green);
+		transition: all 0.3s ease;
+	}
 	.menu > .menu-item {
 		margin-right: 33px;
 		margin-bottom: 0;
@@ -4512,5 +4602,26 @@ video {
 	}
 	.wp-block-fv-header-block.active .menu > .menu-item.menu-item-has-children > a:before {
 		border-top: 4px solid var(--darkGray);
+	}
+	#menu-header-menu > .menu-item:nth-child(2) a {
+		position: relative;
+	}
+	#menu-header-menu > .menu-item:nth-child(2) a:before {
+		content: "new";
+		width: auto;
+		height: auto;
+		border-radius: 8px;
+		/* background-color: #30A933; */
+		background-color: var(--artRed);
+		position: absolute;
+		top: -13px;
+		right: -25px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 2px 5px;
+		font-size: 12px;
+		line-height: 14px;
+		color: #fff;
 	}
 }

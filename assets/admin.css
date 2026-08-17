@@ -1497,4 +1497,38 @@ a:-webkit-any-link {
 		display: flex;
 		overflow-x: scroll;
 	}
+	.wrapper.block-disabled {
+		position: relative;
+		border: 2px solid red;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.wrapper.block-disabled:before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		background-color: rgba(255, 255, 255, 0.8);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 99999;
+	}
+	.wrapper.block-disabled:after {
+		content: "Добавьте блок на сайт";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 42px;
+		line-height: 130%;
+		color: var(--darkGray);
+		font-family: "Montserrat";
+		font-weight: 600;
+		z-index: 99999;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }
