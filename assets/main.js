@@ -2401,11 +2401,6 @@ window.addEventListener('load', function () {
 
 	function updatePostsDisplay(postsIDS, filter, data_slug = null) {
 
-		console.log(data_slug);
-
-
-
-
 		const pagination = document.getElementById('pagination');
 
 		if (!postsIDS.length) {
