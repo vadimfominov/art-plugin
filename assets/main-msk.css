@@ -3559,6 +3559,18 @@ video {
 }
 
 @media (min-width: 820px) {
+	.highlight::before {
+		content: "Программа";
+		position: absolute;
+		top: -12px;
+		left: 0px;
+		color: var(--dark);
+		opacity: 0.5;
+		font-size: 10px;
+		line-height: 15px;
+		font-family: Montserrat;
+		font-weight: 500;
+	}
 	#filtered-posts-container .no-content {
 		height: 400px;
 		padding: 0 200px;

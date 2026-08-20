@@ -2300,7 +2300,7 @@ window.addEventListener('load', function () {
 
 			currentPage = 1;
 
-			updatePostsDisplay(posts, filterFormValue);
+			updatePostsDisplay(posts, filterFormValue, data_slug);
 
 		} catch (error) {
 			console.error('Error filtering posts:', error);
@@ -2399,12 +2399,33 @@ window.addEventListener('load', function () {
 	let currentPosts = []; // Текущие отфильтрованные посты
 	let currentPostsFilter = [];
 
-	function updatePostsDisplay(postsIDS, filter) {
+	function updatePostsDisplay(postsIDS, filter, data_slug = null) {
+
+		console.log(data_slug);
+
+
+
 
 		const pagination = document.getElementById('pagination');
 
 		if (!postsIDS.length) {
-			postsContainer && (postsContainer.innerHTML = '<div class="no-content"><p>По заданным фильтрам ничего не найдено. <br>Попробуйте изменить критерий поиска.</p></div>');
+			if (data_slug === 'art-community') {
+				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
+					<p>По заданным фильтрам ничего не найдено. 
+					<br>Попробуйте изменить критерий поиска.</p>
+					<br>
+					<p>Осенние выезды находятся здесь: <a href="https://kids.art-lichnost.ru/#filter" 
+					style="color: var(--darkGray);
+								text-decoration: underline;
+								text-decoration-skip-ink: none;">
+								Лагерь профессий</a></p>
+				</div>`);
+			} else {
+				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
+					<p>По заданным фильтрам ничего не найдено. <br>Попробуйте изменить критерий поиска.</p>
+				</div>`);
+			}
+
 			if (pagination) {
 				pagination.innerHTML = ''
 			}
