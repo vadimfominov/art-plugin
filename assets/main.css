@@ -6851,6 +6851,11 @@ video {
 	box-sizing: border-box;
 	width: 100%;
 }
+.wp-block-fv-test-formats .wrapper .description-sale a {
+	color: #fff;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+}
 .wp-block-fv-test-formats .container .item-card .subtitle-card {
 	font-size: 12px;
 	line-height: 18px;
