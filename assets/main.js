@@ -2409,11 +2409,11 @@ window.addEventListener('load', function () {
 					<p>По заданным фильтрам ничего не найдено. 
 					<br>Попробуйте изменить критерий поиска.</p>
 					<br>
-					<p>Осенние выезды находятся здесь: <a href="https://kids.art-lichnost.ru/#filter" 
+					<p>Осенняя программа находится здесь <a href="https://kids.art-lichnost.ru/#filter" 
 					style="color: var(--darkGray);
 								text-decoration: underline;
 								text-decoration-skip-ink: none;">
-								Лагерь профессий</a></p>
+								"Коммуникация 360"</a></p>
 				</div>`);
 			} else {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
