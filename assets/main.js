@@ -75,9 +75,6 @@ window.addEventListener('load', function () {
 		const prevBtn = container.querySelector('.swiper-button-prev');
 		const nextBtn = container.querySelector('.swiper-button-next');
 
-		console.log(nextBtn);
-
-
 		new Swiper(slider, {
 			initialSlide: 1,
 			slidesPerView: 'auto',
@@ -1531,7 +1528,7 @@ window.addEventListener('load', function () {
 			// Инициализация с выбранным первым фильтром
 			// Список ID страниц, на которых должен выполняться запрос
 			// 30376 – Лагерь профессий. Москва (для dev 30376 и для прод 42 for test page 33080)
-			// 32894 – Лагерь профессий. Санкт-Петербург
+			// 32894 – Лагерь профессий. Санкт-Петербург ( для dev 42, для прод 32894 )
 			// 44 – АРТ Комьюнити
 			// 46 – Академия навыков
 			// 788 – Узная Город
@@ -1540,7 +1537,7 @@ window.addEventListener('load', function () {
 			// 30366 - Родительская среда (30366 для dev и 34004 для prod) 
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
-			const allowedPagesFilter = ["33080", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["33080", "42", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1561,7 +1558,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["33080", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
+		"group1": ["33080", "42", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
@@ -1640,11 +1637,24 @@ window.addEventListener('load', function () {
 		const currentPostId = container.dataset.currentPostId;
 
 		// Фильтруем посты, исключая текущий
+		console.log("allPosts");
+		console.log(allPosts);
+		
 		const filteredPosts = allPosts.filter(post => post.id !== parseInt(currentPostId));
+
+		console.log("filteredPosts");
+		console.log(filteredPosts);
+
 		const resultFilteredPosts = filteredPosts.filter(post => post.inPlace);
+
+		console.log("resultFilteredPosts");
+		console.log(resultFilteredPosts);
 
 		// Выбираем 4 случайных поста
 		const randomPosts = getRandomElements(resultFilteredPosts, 4);
+
+		console.log("randomPosts");
+		console.log(randomPosts);
 
 		let html = '';
 		const filter = randomPosts[0]?.filter;
@@ -1787,7 +1797,10 @@ window.addEventListener('load', function () {
 				return card;
 			}).join('');
 		} else {
+
+
 			html = randomPosts.map(post => {
+
 				const {
 					content: {
 						postTypeName,
@@ -1802,7 +1815,8 @@ window.addEventListener('load', function () {
 					selected_shift,
 					selected_place,
 					selected_city,
-					inPlace
+					inPlace,
+					inMask
 				} = post;
 
 				const classPlace = inPlace ? 'green' : 'red';
@@ -1820,10 +1834,13 @@ window.addEventListener('load', function () {
 
 				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
 
+				const updateType = inMask ? 'art-community' : type;
+				const updatePostTypeName = inMask ? 'Сообщество подростков' : postTypeName;
+
 				const card = `
-					<div class="item-card card-${id} ${type}">
+					<div class="item-card card-${id} ${updateType}">
 						<div class="top-item-section item-section">
-								<span class="label-card">${postTypeName}</span>
+								<span class="label-card">${updatePostTypeName}</span>
 								${typeIndex
 						? `<span class="place-card">${dateRange}</span>`
 						: `<span class="date-card">${dateRange} ${shift}</span>
@@ -2443,6 +2460,9 @@ window.addEventListener('load', function () {
 
 		html = postsToShow.map(post => {
 
+			console.log(post);
+
+
 			const {
 				content: {
 					postTypeName,
@@ -2462,7 +2482,8 @@ window.addEventListener('load', function () {
 				selected_days,
 				inPlace,
 				placeTitle,
-				titleCount
+				titleCount,
+				inMask
 			} = post;
 
 			if (type === 'merch-camp') {
@@ -2562,11 +2583,14 @@ window.addEventListener('load', function () {
 
 				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
 
+				const updateType = inMask ? 'art-community' : type;
+				const updatePostTypeName = inMask ? 'Сообщество подростков' : postTypeName;
+
 				const card = `
-					<div class="item-card card-${id} ${type}">
+					<div class="item-card card-${id} ${updateType}">
 
 							<div class="top-item-section item-section">
-								${type === 'psychologist' ? '' : `<span class="label-card">${postTypeName}</span>`}
+								${type === 'psychologist' ? '' : `<span class="label-card">${updatePostTypeName}</span>`}
 								${type === 'travel-by-city'
 						? `<span class="place-card">${dateRange}</span>`
 						: type === 'skills-courses'

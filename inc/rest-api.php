@@ -156,6 +156,8 @@ function get_all_custom_posts($request)
 			$update_selected_place = ($attrs['teacherTitle']    ?? null) ?: '';
 		}
 
+		$inMask = isset($attrs['inMask']) ? $attrs['inMask'] : false;
+
 		$data = [
 			'id' => $post_id,
 			'content' => [
@@ -177,17 +179,18 @@ function get_all_custom_posts($request)
 			'selected_city' => $attrs['city'] ?? [],
 			'selected_place' => $update_selected_place,
 			'selected_season' => $filter === 'camp' ? get_season_from_date($attrs['startDate'] ?? '') : '',
-			'selected_days' => $filter === 'camp' 
-				? diffDays($attrs['startDate'] ?? '', $attrs['endDate'] ?? '') 
+			'selected_days' => $filter === 'camp'
+				? diffDays($attrs['startDate'] ?? '', $attrs['endDate'] ?? '')
 				: (!empty($attrs['teacherDateTitle']) ? $attrs['teacherDateTitle'] : ''),
-			'selected_shift' => $filter === 'camp' 
-				? ($attrs['selectedShift'] ?? '') 
+			'selected_shift' => $filter === 'camp'
+				? ($attrs['selectedShift'] ?? '')
 				: (!empty($attrs['newDescription']) ? clearText($attrs['newDescription']) : ''),
 			'selected_certificate' => $filter === 'camp' ? (isset($attrs['inSertific']) ? 'Да' : 'Нет') : '',
 			'titleCount' => $attrs['titleCount'] ?? '',
 			'filter' => $filter,
 			'sales' => $sales,
 			'bgImage' => $bgImage,
+			'inMask' => $inMask,
 		];
 
 		return $data;

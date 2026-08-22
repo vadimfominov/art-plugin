@@ -1964,7 +1964,7 @@
 }
 .item-card .label-card {
 	font-size: 12px;
-	line-height: 18px;
+	line-height: 120%;
 	color: var(--green);
 	font-family: "Montserrat";
 	font-weight: 500;
@@ -10954,7 +10954,6 @@ select {
 	}
 	.item-card .label-card {
 		font-size: 14px;
-		line-height: 21px;
 		width: 170px;
 		height: 38px;
 		text-align: center;
