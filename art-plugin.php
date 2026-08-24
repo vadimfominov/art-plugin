@@ -70,9 +70,7 @@ function fv_block_assets()
 		$blog_id = get_current_blog_id();
 		$msk_id = 2;
 
-		// ($blog_id == $msk_id && is_front_page()) ||
-
-		if (is_page('test-page')) {
+		if ($blog_id == $msk_id && is_front_page()) {
 			wp_enqueue_style(
 				'main-msk',
 				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
