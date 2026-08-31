@@ -1639,7 +1639,7 @@ window.addEventListener('load', function () {
 		// Фильтруем посты, исключая текущий
 		console.log("allPosts");
 		console.log(allPosts);
-		
+
 		const filteredPosts = allPosts.filter(post => post.id !== parseInt(currentPostId));
 
 		console.log("filteredPosts");
@@ -2430,6 +2430,10 @@ window.addEventListener('load', function () {
 								text-decoration: underline;
 								text-decoration-skip-ink: none;">
 								"Коммуникация 360"</a></p>
+				</div>`);
+			} else if (data_slug === 'career-camp') {
+				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
+					<p>Скоро тут появятся зимние смены</p>
 				</div>`);
 			} else {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
