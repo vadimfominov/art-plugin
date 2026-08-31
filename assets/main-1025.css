@@ -30,12 +30,11 @@
 		background-color: transparent;
 		transition: all 0.3s ease;
 	}
-	#menu-header-menu > .menu-item:nth-child(2) a:before {
+	/* #menu-header-menu > .menu-item:nth-child(2) a:before {
 		content: "new";
 		width: auto;
 		height: auto;
 		border-radius: 8px;
-		/* background-color: #30A933; */
 		background-color: var(--artRed);
 		position: absolute;
 		top: -13px;
@@ -47,7 +46,7 @@
 		font-size: 12px;
 		line-height: 14px;
 		color: #fff;
-	}
+	} */
 	.simulator-block .first-item-block .icon svg {
 		width: 31px;
 		height: 31px;
