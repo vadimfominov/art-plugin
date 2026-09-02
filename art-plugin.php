@@ -62,68 +62,71 @@ function fv_block_assets()
 		);
 	}
 
-	// Проверяем, включен ли мультисайт
-	$is_multisite = function_exists('is_multisite') && is_multisite();
+	wp_enqueue_style(
+		'main-msk',
+		plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+		[],
+		filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
+		'screen'
+	);
 
-	if ($is_multisite) {
-		// Если мультисайт включен - получаем ID текущего сайта
-		$blog_id = get_current_blog_id();
-		$msk_id = 2;
-
-		if ($blog_id == $msk_id && is_front_page()) {
-			wp_enqueue_style(
-				'main-msk',
-				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
-				[],
-				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
-				'screen'
-			);
-		} else {
-			wp_enqueue_style(
-				'main-art',
-				plugin_dir_url(__FILE__) . 'assets/main.css',
-				[],
-				filemtime(dirname(__FILE__) . '/assets/main.css'),
-				'screen'
-			);
-			if (!wp_is_mobile()) {
-				wp_enqueue_style(
-					'main-1025',
-					plugin_dir_url(__FILE__) . 'assets/main-1025.css',
-					[],
-					filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
-					'screen'
-				);
-			}
-		}
-	} else {
-		if (is_page('professions-msc')) {
-			wp_enqueue_style(
-				'main-msk',
-				plugin_dir_url(__FILE__) . 'assets/main-msk.css',
-				[],
-				filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
-				'screen'
-			);
-		} else {
-			wp_enqueue_style(
-				'main-art',
-				plugin_dir_url(__FILE__) . 'assets/main.css',
-				[],
-				filemtime(dirname(__FILE__) . '/assets/main.css'),
-				'screen'
-			);
-			if (!wp_is_mobile()) {
-				wp_enqueue_style(
-					'main-1025',
-					plugin_dir_url(__FILE__) . 'assets/main-1025.css',
-					[],
-					filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
-					'screen'
-				);
-			}
-		}
+	wp_enqueue_style(
+		'main-art',
+		plugin_dir_url(__FILE__) . 'assets/main.css',
+		[],
+		filemtime(dirname(__FILE__) . '/assets/main.css'),
+		'screen'
+	);
+	if (!wp_is_mobile()) {
+		wp_enqueue_style(
+			'main-1025',
+			plugin_dir_url(__FILE__) . 'assets/main-1025.css',
+			[],
+			filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
+			'screen'
+		);
 	}
+
+
+	// // Проверяем, включен ли мультисайт
+	// $is_multisite = function_exists('is_multisite') && is_multisite();
+
+	// if ($is_multisite) {
+	// 	// Если мультисайт включен - получаем ID текущего сайта
+	// 	$blog_id = get_current_blog_id();
+	// 	$msk_id = 2;
+
+	// 	if ($blog_id == $msk_id && is_front_page()) {
+	// 	} else {
+	// 	}
+	// } else {
+	// 	if (is_page('professions-msc')) {
+	// 		wp_enqueue_style(
+	// 			'main-msk',
+	// 			plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+	// 			[],
+	// 			filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
+	// 			'screen'
+	// 		);
+	// 	} else {
+	// 		wp_enqueue_style(
+	// 			'main-art',
+	// 			plugin_dir_url(__FILE__) . 'assets/main.css',
+	// 			[],
+	// 			filemtime(dirname(__FILE__) . '/assets/main.css'),
+	// 			'screen'
+	// 		);
+	// 		if (!wp_is_mobile()) {
+	// 			wp_enqueue_style(
+	// 				'main-1025',
+	// 				plugin_dir_url(__FILE__) . 'assets/main-1025.css',
+	// 				[],
+	// 				filemtime(dirname(__FILE__) . '/assets/main-1025.css'),
+	// 				'screen'
+	// 			);
+	// 		}
+	// 	}
+	// }
 
 	if (is_admin()) {
 		wp_enqueue_style(
@@ -140,7 +143,6 @@ function fv_block_assets()
 			filemtime(dirname(__FILE__) . '/assets/admin.css'),
 			'screen'
 		);
-		
 	}
 }
 
