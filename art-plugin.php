@@ -62,7 +62,13 @@ function fv_block_assets()
 		);
 	}
 
-	
+	wp_enqueue_style(
+		'main-msk',
+		plugin_dir_url(__FILE__) . 'assets/main-msk.css',
+		[],
+		filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
+		'screen'
+	);
 
 	wp_enqueue_style(
 		'main-art',
@@ -80,14 +86,6 @@ function fv_block_assets()
 			'screen'
 		);
 	}
-
-	wp_enqueue_style(
-		'main-msk',
-		plugin_dir_url(__FILE__) . 'assets/main-msk.css',
-		[],
-		filemtime(dirname(__FILE__) . '/assets/main-msk.css'),
-		'screen'
-	);
 
 
 	// // Проверяем, включен ли мультисайт
