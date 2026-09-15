@@ -2530,10 +2530,7 @@ window.addEventListener('load', function () {
 						? currentSkillsDate
 						: currentDate;
 
-				// const active_class = selected_place.trim() === 'Москва' ? 'active' : '';
 				const active_class = '';
-
-				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
 
 				const updateType = inMask ? 'art-community' : type;
 				const updatePostTypeName = inMask ? 'Сообщество подростков' : postTypeName;

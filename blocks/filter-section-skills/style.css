@@ -733,6 +733,8 @@
 	height: auto;
 	object-fit: cover;
 	object-position: center;
+	border-radius: 20px;
+	overflow: hidden;
 }
 .wp-block-fv-item-card-skills .left-img .img-for-block {
 	width: 100%;
