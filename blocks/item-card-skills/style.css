@@ -1,0 +1,742 @@
+.wp-block-fv-item-card-skills,
+.wp-block-fv-item-card,
+.wp-block-fv-item-merch {
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: var(--white);
+}
+.wp-block-fv-item-card-skills.active,
+.wp-block-fv-item-card.active,
+.wp-block-fv-item-merch.active {
+	display: block;
+}
+.wp-block-fv-item-card-skills .go-back-btn,
+.wp-block-fv-modal-cart .go-back-btn-merch,
+.wp-block-fv-item-card .go-back-btn,
+.wp-block-fv-item-merch .go-back-btn {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	width: 38px;
+	height: 38px;
+	background-color: var(--hintGray);
+	border-radius: 6px;
+	outline: none;
+	border: none;
+	overflow: hidden;
+	position: relative;
+	color: transparent;
+}
+.wp-block-fv-item-card-skills .go-back-btn:active,
+.wp-block-fv-modal-cart .go-back-btn-merch:active,
+.wp-block-fv-item-card .go-back-btn:active,
+.wp-block-fv-item-merch .go-back-btn:active {
+	text-decoration: none;
+}
+.wp-block-fv-item-card-skills .go-back-btn:before,
+.wp-block-fv-modal-cart .go-back-btn-merch:before,
+.wp-block-fv-item-card-skills .go-back-btn:after,
+.wp-block-fv-modal-cart .go-back-btn-merch:after,
+.wp-block-fv-item-card .go-back-btn:before,
+.wp-block-fv-item-card .go-back-btn:after,
+.wp-block-fv-item-merch .go-back-btn:before,
+.wp-block-fv-item-merch .go-back-btn:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.wp-block-fv-item-card-skills .go-back-btn:after,
+.wp-block-fv-modal-cart .go-back-btn-merch:after,
+.wp-block-fv-item-card .go-back-btn:after,
+.wp-block-fv-item-merch .go-back-btn:after {
+	transform: translate(-50%, -50%) rotate(-45deg);
+}
+/* .wp-block-fv-item-card-skills .left-img .bg-image-mobile,
+.wp-block-fv-item-card .left-img .bg-image-mobile,
+.wp-block-fv-item-merch .left-img .bg-image-mobile {
+	display: block;
+} */
+.wp-block-fv-item-card-skills .left-img .img-for-block,
+.wp-block-fv-item-card .left-img .img-for-block,
+.wp-block-fv-item-merch .left-img .img-for-block {
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
+	overflow: hidden;
+	object-fit: cover;
+	object-position: center;
+	position: initial;
+}
+.wp-block-fv-item-card-skills .wrapper,
+.wp-block-fv-item-card .wrapper,
+.wp-block-fv-item-merch .wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	margin-bottom: 50px;
+}
+
+.wp-block-fv-item-card .city-label,
+.wp-block-fv-item-card .count-days,
+.wp-block-fv-item-card .camp-section,
+.wp-block-fv-item-merch .count-days,
+.wp-block-fv-item-merch .camp-section {
+	display: none;
+}
+.wp-block-fv-item-card-skills .count-days,
+.wp-block-fv-item-card-skills .camp-section {
+	display: none;
+}
+.wp-block-fv-item-card-skills .age-checkboxes,
+.wp-block-fv-item-card .age-checkboxes,
+.wp-block-fv-item-merch .age-checkboxes {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	margin-bottom: 40px;
+}
+.wp-block-fv-item-card-skills .age-checkbox,
+.wp-block-fv-item-card .age-checkbox,
+.wp-block-fv-item-merch .age-checkbox {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	width: 74px;
+	height: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--hintGray);
+	border-radius: 30px;
+}
+.wp-block-fv-item-card-skills .left-img,
+.wp-block-fv-item-card .left-img,
+.wp-block-fv-item-merch .left-img {
+	margin-bottom: 20px;
+}
+.wp-block-fv-item-card-skills .right-content > .title span,
+.wp-block-fv-item-card .right-content > .title span,
+.wp-block-fv-item-merch .right-content > .title span {
+	font-size: 22px;
+	line-height: 26px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+}
+.wp-block-fv-item-card-skills .right-content .info-date,
+.wp-block-fv-item-card .right-content .info-date,
+.wp-block-fv-item-merch .right-content .info-date {
+	font-size: 16px;
+	line-height: 19.2px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.wp-block-fv-item-card-skills .right-content > span,
+.wp-block-fv-item-card .right-content > span,
+.wp-block-fv-item-merch .right-content > span {
+	font-size: 16px;
+	line-height: 19.2px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 20px;
+}
+.wp-block-fv-item-card-skills .right-content p,
+.wp-block-fv-item-card .right-content p,
+.wp-block-fv-item-merch .right-content p {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin-bottom: 30px;
+}
+.wp-block-fv-item-card-skills .price-card span,
+.wp-block-fv-item-card .price-card span,
+.wp-block-fv-item-merch .price-card span {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--green);
+	font-family: "Montserrat", sans-serif;
+	font-weight: 600;
+	display: block;
+	margin-bottom: 15px;
+	display: flex;
+	align-items: baseline;
+}
+.wp-block-fv-item-card-skills .go-back-btn svg,
+.wp-block-fv-modal-cart .go-back-btn-merch svg,
+.wp-block-fv-item-card .go-back-btn svg,
+.wp-block-fv-item-merch .go-back-btn svg {
+	display: none;
+}
+.wp-block-fv-item-card-skills .price-card span svg,
+.wp-block-fv-item-card .price-card span svg,
+.wp-block-fv-item-merch .price-card span svg {
+	display: inline-block;
+	vertical-align: middle;
+	margin-left: 0px;
+}
+.skills-academy .wp-block-fv-item-card-skills .right-content > .title span,
+.skills-academy .wp-block-fv-item-card .right-content > .title span {
+	color: var(--blue);
+}
+.skills-academy .wp-block-fv-item-card-skills .age-checkbox,
+.skills-academy .wp-block-fv-item-card .age-checkbox {
+	color: var(--blue);
+}
+.skills-academy .wp-block-fv-item-card-skills .price-card span,
+.skills-academy .wp-block-fv-item-card .price-card span {
+	color: var(--blue);
+}
+.art-community .wp-block-fv-item-card-skills .right-content > .title span,
+.art-community .wp-block-fv-item-card .right-content > .title span {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .age-checkbox,
+.art-community .wp-block-fv-item-card .age-checkbox {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .price-card span,
+.art-community .wp-block-fv-item-card .price-card span {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .count-days,
+.art-community .wp-block-fv-item-card-skills .camp-section,
+.art-community .wp-block-fv-item-card .city-label,
+.art-community .wp-block-fv-item-card .count-days,
+.art-community .wp-block-fv-item-card .camp-section {
+	color: var(--artRed);
+}
+
+.wp-block-fv-item-card-skills .age-checkbox.parents,
+.wp-block-fv-item-card .age-checkbox.parents,
+.wp-block-fv-item-merch .size-checkbox.parents,
+.wp-block-fv-item-merch .color-checkbox.parents {
+	width: 104px;
+}
+.wp-block-fv-item-card-skills .list-section-skills {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-bottom: 30px;
+}
+.wp-block-fv-item-card-skills .list-section-skills .list-block > span {
+	display: block;
+	margin-bottom: 10px;
+	color: var(--green);
+	font-size: 16px;
+	line-height: 20.8px;
+	font-family: "Montserrat";
+	font-weight: 600;
+}
+.wp-block-fv-item-card-skills .list-section-skills .list-block ul {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	box-sizing: border-box;
+}
+.wp-block-fv-item-card-skills .list-section-skills .list-block li {
+	margin-bottom: 3px;
+	position: relative;
+	padding-left: 10px;
+}
+/* .wp-block-fv-item-card-skills .list-section-skills .list-block li:before {
+	content: '';
+	width: 3px;
+	height: 3px;
+	background-color: var(--mediumGray);
+	border-radius: 50%;
+	position: absolute;
+	top: 9px;
+	left: 0;
+} */
+.wp-block-fv-item-card-skills .list-section-skills .list-block li:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-item-card-skills .list-section-skills .last-list-block li {
+	padding-left: 0px;
+}
+.wp-block-fv-item-card-skills .list-section-skills .last-list-block li:before {
+	display: none;
+}
+.wp-block-fv-item-card-skills .bottom-block {
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-fv-item-card-skills .bottom-block p {
+	order: 1;
+	margin-bottom: 10px;
+}
+.wp-block-fv-item-card-skills .bottom-block .price-card {
+	order: 2;
+}
+.wp-block-fv-item-card-skills .bottom-block button {
+	order: 3;
+	margin-bottom: 0;
+}
+.wp-block-fv-item-card-skills .container {
+	margin-bottom: 50px;
+}
+.wp-block-fv-item-card-skills .random-posts-container h3 {
+	margin-bottom: 0;
+}
+.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing span {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+}
+.wp-block-fv-item-card .left-img p,
+.wp-block-fv-item-merch .left-img p {
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--mediumGray);
+	margin-top: 20px;
+}
+
+@media (min-width: 767px) {
+	/* .wp-block-fv-item-card-skills .left-img .bg-image,
+	.wp-block-fv-item-card .left-img .bg-image {
+		display: none;
+	}
+	.wp-block-fv-item-card-skills .left-img .bg-image-tablet,
+	.wp-block-fv-item-card .left-img .bg-image-tablet {
+		display: block;
+	} */
+	.wp-block-fv-item-card-skills .container .left-img {
+		width: 410px;
+		margin-bottom: 0;
+		position: relative;
+	}
+	.wp-block-fv-item-card-skills .container,
+	.wp-block-fv-item-card .container,
+	.wp-block-fv-item-merch .container {
+		display: flex;
+		gap: 20px;
+		align-items: flex-start;
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-item-card .container .left-img,
+	.wp-block-fv-item-merch .container .left-img {
+		width: 50%;
+		margin-bottom: 0;
+		position: relative;
+	}
+	.wp-block-fv-item-card .container .left-img .left-container,
+	.wp-block-fv-item-merch .container .left-img .left-container {
+		position: relative;
+		margin-bottom: 20px;
+	}
+
+	.wp-block-fv-item-card .container .left-img p,
+	.wp-block-fv-item-merch .container .left-img p {
+		font-size: 14px;
+		line-height: 21px;
+		color: var(--mediumGray);
+		font-family: "Montserrat";
+		font-weight: 600;
+		margin-bottom: 20px;
+		padding-right: 50px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-item-card-skills .container .right-content,
+	.wp-block-fv-item-card .container .right-content,
+	.wp-block-fv-item-merch .container .right-content {
+		width: 50%;
+	}
+	.wp-block-fv-item-card-skills .count-days,
+	.wp-block-fv-item-card-skills .camp-section,
+	.wp-block-fv-item-card .city-label,
+	.wp-block-fv-item-card .count-days,
+	.wp-block-fv-item-card .camp-section,
+	.wp-block-fv-item-merch .count-days,
+	.wp-block-fv-item-merch .camp-section {
+		display: block;
+		font-size: 14px;
+		line-height: 21px;
+		color: var(--green);
+		background-color: var(--white);
+		font-family: "Montserrat";
+		font-weight: 500;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 34px;
+		border-radius: 38px;
+	}
+	.wp-block-fv-item-card-skills .count-days,
+	.wp-block-fv-item-card .count-days,
+	.wp-block-fv-item-merch .count-days {
+		padding: 0 30px;
+		position: absolute;
+		right: 20px;
+		top: 68px;
+	}
+	.wp-block-fv-item-card .city-label {
+		padding: 0 30px;
+		position: absolute;
+		right: 20px;
+		top: 116px;
+	}
+	.wp-block-fv-item-card-skills .camp-section,
+	.wp-block-fv-item-card .camp-section,
+	.wp-block-fv-item-merch .camp-section {
+		padding: 0 16px;
+		position: absolute;
+		right: 20px;
+		top: 20px;
+	}
+	.wp-block-fv-item-card-skills .age-checkboxes,
+	.wp-block-fv-item-card .age-checkboxes {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-item-card-skills .right-content p,
+	.wp-block-fv-item-card .right-content p,
+	.wp-block-fv-item-merch .right-content p {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-item-card-skills .price-card span,
+	.wp-block-fv-item-card .price-card span,
+	.wp-block-fv-item-merch .price-card span {
+		margin-bottom: 10px;
+	}
+	.leave-application {
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-item-card-skills .right-content > .title span,
+	.wp-block-fv-item-card .right-content > .title span,
+	.wp-block-fv-item-merch .right-content > .title span {
+		margin-bottom: 20px;
+	}
+	
+	.skills-academy .wp-block-fv-item-card-skills .count-days,
+	.skills-academy .wp-block-fv-item-card .city-label,
+	.skills-academy .wp-block-fv-item-card .count-days {
+		color: var(--blue);
+	}
+	.skills-academy .wp-block-fv-item-card-skills .camp-section,
+	.skills-academy .wp-block-fv-item-card .camp-section {
+		color: var(--blue);
+	}
+		.wp-block-fv-item-card-skills .age-checkbox.parents,
+	.wp-block-fv-item-card .age-checkbox.parents {
+		width: 94px;
+	}
+}
+
+@media (min-width: 820px) {
+	
+	.wp-block-fv-item-card-skills .age-checkbox,
+	.wp-block-fv-item-card .age-checkbox {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-item-card-skills .right-content > .title span,
+	.wp-block-fv-item-card .right-content > .title span,
+	.wp-block-fv-item-merch .right-content > .title span {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-item-card-skills .right-content .info-date,
+	.wp-block-fv-item-card .right-content .info-date,
+	.wp-block-fv-item-merch .right-content .info-date {
+		font-size: 18px;
+		line-height: 21.6px;
+	}
+	.wp-block-fv-item-card-skills .right-content > span,
+	.wp-block-fv-item-card .right-content > span,
+	.wp-block-fv-item-merch .right-content > span {
+		font-size: 18px;
+		line-height: 21.6px;
+	}
+	.wp-block-fv-item-card-skills .price-card span,
+	.wp-block-fv-item-card .price-card span,
+	.wp-block-fv-item-merch .price-card span {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn,
+	.wp-block-fv-modal-cart .go-back-btn-merch,
+	.wp-block-fv-item-card .go-back-btn,
+	.wp-block-fv-item-merch .go-back-btn {
+		width: auto;
+		height: auto;
+		color: var(--mediumGray);
+		padding: 0;
+		margin-bottom: 55px;
+		background-color: transparent;
+		font-size: 14px;
+		line-height: 21px;
+		position: relative;
+		display: flex;
+		align-items: baseline;
+	}
+
+	.wp-block-fv-item-card-skills .go-back-btn svg,
+	.wp-block-fv-modal-cart .go-back-btn-merch svg,
+	.wp-block-fv-item-card .go-back-btn svg,
+	.wp-block-fv-item-merch .go-back-btn svg {
+		margin-right: 2px;
+		display: block;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:before,
+	.wp-block-fv-item-card-skills .go-back-btn:after,
+	.wp-block-fv-modal-cart .go-back-btn-merch:before,
+	.wp-block-fv-modal-cart .go-back-btn-merch:after,
+	.wp-block-fv-item-card .go-back-btn:before,
+	.wp-block-fv-item-card .go-back-btn:after,
+	.wp-block-fv-item-merch .go-back-btn:before,
+	.wp-block-fv-item-merch .go-back-btn:after {
+		display: none;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:before,
+	.wp-block-fv-modal-cart .go-back-btn-merch:before,
+	.wp-block-fv-item-card .go-back-btn:before,
+	.wp-block-fv-item-merch .go-back-btn:before {
+		content: "";
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		bottom: 2px;
+		left: 0;
+		top: auto;
+		transform: translate(0, 0) rotate(0deg);
+		display: block;
+		background-color: var(--mediumGray);
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:active:before,
+	.wp-block-fv-modal-cart .go-back-btn-merch:active:before,
+	.wp-block-fv-item-card .go-back-btn:active:before,
+	.wp-block-fv-item-merch .go-back-btn:active:before {
+		background-color: transparent;
+	}
+	.wp-block-fv-item-card-skills .wrapper,
+	.wp-block-fv-item-card .wrapper,
+	.wp-block-fv-item-merch .wrapper {
+		align-items: flex-start;
+	}
+	.wp-block-fv-item-card-skills .video-open,
+	.wp-block-fv-item-card .video-open,
+	.wp-block-fv-item-merch .video-open {
+		max-width: 300px;
+	}
+		.wp-block-fv-item-card-skills .bottom-block {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-item-card-skills .bottom-block .price-card {
+		order: 1;
+		margin-right: 30px;
+	}
+	.wp-block-fv-item-card-skills .bottom-block .price-card span {
+		margin-bottom: 0;
+	}
+	.wp-block-fv-item-card-skills .container .right-content {
+		width: auto;
+		flex: 1;
+	}
+}
+
+@media (min-width: 1025px) {
+		.wp-block-fv-item-card-skills .go-back-btn,
+	.wp-block-fv-modal-cart .go-back-btn-merch,
+	.wp-block-fv-item-card .go-back-btn,
+	.wp-block-fv-item-merch .go-back-btn {
+		margin-top: 80px;
+		margin-bottom: 40px;
+		font-size: 16px;
+		line-height: 24px;
+		transition: all 0.3s ease;
+		cursor: pointer;
+	}
+	.wp-block-fv-item-card-skills .right-content > .title span,
+	.wp-block-fv-item-card .right-content > .title span,
+	.wp-block-fv-item-merch .right-content > .title span {
+		font-size: 42px;
+		line-height: 50.4px;
+		margin-bottom: 10px;
+		position: relative;
+	}
+	.wp-block-fv-item-card-skills .right-content .info-date,
+	.wp-block-fv-item-card .right-content .info-date,
+	.wp-block-fv-item-merch .right-content .info-date {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+	.wp-block-fv-item-card-skills .right-content > span,
+	.wp-block-fv-item-card .right-content > span,
+	.wp-block-fv-item-merch .right-content > span {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+	.wp-block-fv-item-card-skills .right-content p,
+	.wp-block-fv-item-card .right-content p,
+	.wp-block-fv-item-merch .right-content p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-item-card-skills .price-card span,
+	.wp-block-fv-item-card .price-card span,
+	.wp-block-fv-item-merch .price-card span {
+		font-size: 42px;
+		line-height: 50.4px;
+		margin-bottom: 20px;
+	}
+	.leave-application {
+		height: 50px;
+		cursor: pointer;
+		margin-bottom: 20px;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-item-card-skills .video-open,
+	.wp-block-fv-item-card .video-open,
+	.wp-block-fv-item-merch .video-open {
+		max-width: 390px;
+	}
+	.video-open p:hover {
+		transition: all 0.3s ease;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	.wp-block-fv-item-card-skills .camp-section,
+	.wp-block-fv-item-card .camp-section,
+	.wp-block-fv-item-merch .camp-section {
+		right: 30px;
+		top: 30px;
+	}
+	.wp-block-fv-item-card-skills .count-days,
+	.wp-block-fv-item-card .count-days,
+	.wp-block-fv-item-merch .count-days {
+		right: 30px;
+		top: 78px;
+	}
+	.wp-block-fv-item-card .city-label {
+		right: 30px;
+		top: 124px;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:hover:before,
+	.wp-block-fv-modal-cart .go-back-btn-merch:hover:before,
+	.wp-block-fv-item-card .go-back-btn:hover:before,
+	.wp-block-fv-item-merch .go-back-btn:hover:before {
+		background-color: transparent;
+		transition: all 0.3s ease;
+	}
+	/* .wp-block-fv-item-card-skills .left-img .bg-image,
+	.wp-block-fv-item-card .left-img .bg-image {
+		display: none;
+	}
+	.wp-block-fv-item-card-skills .left-img .bg-image-desktop,
+	.wp-block-fv-item-card .left-img .bg-image-desktop {
+		display: block;
+	} */
+	.wp-block-fv-item-card-skills .left-img .bg-image-desktop.mask,
+	.wp-block-fv-item-card .left-img .bg-image-desktop.mask,
+	.wp-block-fv-item-merch .left-img .bg-image-desktop.mask {
+		height: 506px;
+		background-color: var(--hintGray);
+	}
+	
+	.wp-block-fv-item-card-skills .container,
+	.wp-block-fv-item-card .container,
+	.wp-block-fv-item-merch .container {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-item-card-skills .age-checkbox.parents,
+	.wp-block-fv-item-card .age-checkbox.parents {
+		width: 104px;
+	}
+		.wp-block-fv-item-card-skills .container .left-img {
+		width: 500px;
+	}
+	.wp-block-fv-item-card-skills .age-checkboxes {
+		margin-bottom: 6px;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .list-block ul {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	/* .wp-block-fv-item-card-skills .list-section-skills .list-block li:before {
+	top: 12px;
+} */
+	.wp-block-fv-item-card-skills .list-section-skills {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .list-block {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .list-block.width-block {
+		width: 100%;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .last-list-block {
+		width: 100%;
+	}
+	.wp-block-fv-item-card-skills .right-content > p {
+		margin-bottom: 30px;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .list-block > span {
+		font-size: 18px;
+		line-height: 23px;
+	}
+	.wp-block-fv-item-card-skills .bottom-block button {
+		order: 2;
+		margin-right: 20px;
+	}
+	.wp-block-fv-item-card-skills .bottom-block p {
+		order: 3;
+	}
+	.wp-block-fv-item-card-skills .bottom-block .price-card {
+		order: 1;
+		margin-right: 0;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing {
+		flex-direction: column;
+		width: 600px;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing .list-block {
+		width: 100%;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills .list-block > span {
+		width: 540px;
+	}
+	.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing > p {
+		margin-bottom: 0;
+	}
+	.wp-block-fv-item-card-skills .container .right-content > p {
+		width: 600px;
+	}
+	.wp-block-fv-item-card-skills .age-checkbox.proficiency-testing {
+		width: 90px;
+	}
+		.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing span {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}

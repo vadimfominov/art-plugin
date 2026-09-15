@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/camps-main-principle",
+    "title": "Camps Main Principle",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a camps-main-principle",
+    "keywords": [
+        "camps-main-principle"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

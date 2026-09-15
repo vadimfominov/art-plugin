@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/item-merch",
+    "title": "Item Merch",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a item-merch",
+    "keywords": [
+        "item-merch"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

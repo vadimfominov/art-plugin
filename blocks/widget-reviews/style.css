@@ -1,0 +1,45 @@
+.wp-block-fv-widget-reviews h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-widget-reviews .widget-block.loading {
+	border-radius: 30px;
+	min-height: 300px;
+}
+.wp-block-fv-widget-reviews {
+	margin-bottom: 75px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-widget-reviews h2 {
+		width: 400px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-widget-reviews h2 {
+		width: 580px;
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-widget-reviews {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 820px) {
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-widget-reviews .widget-block.loading {
+		border-radius: 30px;
+		min-height: 425px;
+	}
+	.wp-block-fv-widget-reviews h2 {
+		width: 650px;
+		font-size: 42px;
+		line-height: 50.4px;
+	}
+}

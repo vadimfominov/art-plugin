@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/our-feedback-updated",
+    "title": "Our Feedback Updated",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a our-feedback-updated",
+    "keywords": [
+        "our-feedback-updated"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

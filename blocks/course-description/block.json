@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/course-description",
+    "title": "Course Description",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a course-description",
+    "keywords": [
+        "course-description"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

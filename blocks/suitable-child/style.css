@@ -1,0 +1,165 @@
+.wp-block-fv-suitable-child {
+	margin-bottom: 75px;
+}
+.wp-block-fv-suitable-child h2 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 10px;
+	letter-spacing: -0.22px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-suitable-child .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	margin-bottom: 20px;
+}
+.wp-block-fv-suitable-child .wrapper > p a {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	border-bottom: 1px solid rgba(83, 83, 83, 0.8);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-suitable-child .wrapper > p a:hover {
+	border-bottom: 1px solid rgba(83, 83, 83, 0);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-suitable-child .modal-content .step {
+	padding-left: 0;
+	padding-right: 0;
+}
+.wp-block-fv-suitable-child .wp-block-fv-program-modal.modal-steps-form .modal-wrapper {
+	background-color: transparent;
+}
+.wp-block-fv-suitable-child .modal-content {
+	background-color: transparent;
+}
+.wp-block-fv-suitable-child .container-suitable-child {
+	position: relative;
+	padding: 20px;
+	border-radius: 30px;
+	overflow: hidden;
+}
+.wp-block-fv-suitable-child .container-suitable-child::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 10;
+}
+.wp-block-fv-suitable-child .container-suitable-child .image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+}
+.wp-block-fv-suitable-child .container-suitable-child .image-bg picture {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.wp-block-fv-suitable-child .container-suitable-child .image-bg img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	width: 100%;
+}
+.wp-block-fv-suitable-child .left-suitable-child p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: -0.14px;
+	margin-bottom: 20px;
+	color: #ffffff;
+}
+.wp-block-fv-suitable-child .left-suitable-child,
+.wp-block-fv-suitable-child .right-suitable-child {
+	position: relative;
+	z-index: 10;
+}
+.wp-block-fv-suitable-child .wp-block-fv-program-modal.modal-steps-form .modal-content {
+	height: auto;
+}
+@media (min-width: 767px) {
+	.wp-block-fv-suitable-child h2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-suitable-child .container-suitable-child {
+		display: flex;
+		gap: 20px;
+		padding: 30px;
+	}
+	.wp-block-fv-suitable-child .left-suitable-child p {
+		text-align: left;
+	}
+	.wp-block-fv-suitable-child .right-suitable-child {
+		max-width: 410px;
+		width: 100%;
+	}
+	.wp-block-fv-suitable-child .left-suitable-child {
+		width: calc(100% - 430px);
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-suitable-child h2 {
+		font-size: 32px;
+		max-width: 670px;
+	}
+	.wp-block-fv-suitable-child .wrapper > p {
+		max-width: 670px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-suitable-child {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-suitable-child .left-suitable-child p {
+		font-size: 16px;
+		margin-bottom: 0;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-suitable-child .wp-block-fv-program-modal.modal-steps-form .container-step {
+		padding: 30px 40px;
+		height: auto;
+	}
+	.wp-block-fv-suitable-child .wp-block-fv-program-modal.modal-steps-form .modal-wrapper {
+		height: auto;
+	}
+	.wp-block-fv-suitable-child h2 {
+		font-size: 42px;
+		max-width: 870px;
+	}
+	.wp-block-fv-suitable-child .container-suitable-child {
+		justify-content: space-between;
+	}
+	.wp-block-fv-suitable-child .left-suitable-child {
+		max-width: 470px;
+	}
+	.wp-block-fv-suitable-child .left-suitable-child p {
+		font-size: 18px;
+	}
+	.wp-block-fv-suitable-child .right-suitable-child {
+		max-width: 500px;
+	}
+}

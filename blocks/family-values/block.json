@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/family-values",
+    "title": "Family Values",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a family-values",
+    "keywords": [
+        "family-values"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

@@ -1,0 +1,293 @@
+.wp-block-fv-faq-section {
+	margin-bottom: 75px;
+}
+.wp-block-fv-faq-section h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+}
+.wp-block-fv-faq-section .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 20px;
+}
+.wp-block-fv-faq-section .wrapper > p a {
+	color: var(--mediumGray);
+	text-decoration: underline;
+	font-weight: 700;
+}
+
+.wp-block-fv-faq-section.skills-academy h2 {
+	width: 320px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.wp-block-fv-faq-section.skills-academy .wrapper > p {
+	width: 320px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-faq-section .faq-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+.wp-block-fv-faq-section .faq-container .item {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.wp-block-fv-faq-section .faq-container .question-item {
+	font-size: 16px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	padding: 20px;
+	padding-right: 58px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	position: relative;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon {
+	display: block;
+	width: 38px;
+	height: 38px;
+	border-radius: 6px;
+	background-color: var(--white);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(0deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-90deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:hover {
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:hover:before {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:hover:after {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+.wp-block-fv-faq-section .faq-container .question-item.active > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .question-item.active > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-45deg);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .faq-container .answer-item {
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--darkGray);
+	padding: 0px 20px;
+	box-sizing: border-box;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-faq-section .question-item.active + .answer-item {
+	padding-bottom: 20px;
+}
+.wp-block-fv-faq-section .faq-container .left {
+	width: 100%;
+}
+.wp-block-fv-faq-section .faq-container .right {
+	width: 100%;
+}
+.wp-block-fv-faq-section .faq-container .left-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-faq-section .faq-container .left-faq .item-camp-tab,
+.wp-block-fv-faq-section .faq-container .right-faq .item-camp-tab {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.wp-block-fv-faq-section .faq-container .right-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.skills-academy.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:before,
+.skills-academy.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:after {
+	background-color: var(--blue);
+}
+.art-community.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:before,
+.art-community.wp-block-fv-faq-section .faq-container .question-item > .faq-icon:after {
+	background-color: var(--artRed);
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-faq-section .faq-container {
+		gap: 10px 20px;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-faq-section .faq-container .left-faq {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-faq-section .faq-container .right-faq {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-faq-section {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-faq-section h2 {
+		width: 450px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-faq-section .wrapper > p {
+		width: 430px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-faq-section.skills-academy h2 {
+		width: 420px;
+	}
+	.wp-block-fv-faq-section.skills-academy .wrapper > p {
+		width: 420px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-faq-section.art-community .wrapper > p {
+		width: 420px;
+	}
+	.wp-block-fv-faq-section.skills-template .wrapper > p {
+		width: 360px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-faq-section .faq-container .question-item {
+		font-size: 20px;
+		line-height: 24px;
+		height: auto;
+		min-height: 88px;
+		padding: 20px 20px;
+		padding-right: 58px;
+	}
+	.wp-block-fv-faq-section h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 650px;
+	}
+	.wp-block-fv-faq-section.skills-academy h2 {
+		width: 620px;
+	}
+	.wp-block-fv-faq-section.skills-academy .wrapper > p {
+		width: 420px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-faq-section .faq-container {
+		flex-direction: row;
+		gap: 20px;
+	}
+	.wp-block-fv-faq-section .faq-container .left-faq {
+		gap: 20px;
+	}
+	.wp-block-fv-faq-section .faq-container .right-faq {
+		gap: 20px;
+	}
+	.wp-block-fv-faq-section .faq-container .question-item {
+		font-size: 22px;
+		line-height: 26px;
+		cursor: pointer;
+		padding-right: 105px;
+	}
+	.wp-block-fv-faq-section .faq-container .answer-item {
+		font-size: 16px;
+		line-height: 130%;
+	}
+	.wp-block-fv-faq-section .faq-container .left-faq {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-faq-section .faq-container .right-faq {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-faq-section .question-item.active + .answer-item {
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-faq-section h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 700px;
+	}
+	.wp-block-fv-faq-section .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+		width: 480px;
+	}
+	.wp-block-fv-faq-section.skills-academy h2 {
+		width: 700px;
+	}
+	.wp-block-fv-faq-section.skills-academy .wrapper > p {
+		width: 460px;
+	}
+	.wp-block-fv-faq-section.art-community .wrapper > p {
+		width: 470px;
+	}
+	.wp-block-fv-faq-section.skills-template .wrapper > p {
+		width: 470px;
+	}
+	.wp-block-fv-faq-section.merch-template h2 {
+		width: 800px;
+	}
+}

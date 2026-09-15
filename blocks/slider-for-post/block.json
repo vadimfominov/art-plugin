@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/slider-for-post",
+    "title": "Slider For Post",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a slider-for-post",
+    "keywords": [
+        "slider-for-post"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

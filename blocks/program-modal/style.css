@@ -1,0 +1,519 @@
+/* Для модалки использую hidden-model */
+.wp-block-fv-program-modal.hidden-model .modal-wrapper {
+	opacity: 0;
+	transition: opacity 0.3s ease;
+	z-index: -999;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	backdrop-filter: blur(6px);
+}
+.wp-block-fv-program-modal.hidden-model .modal-content {
+	background-color: var(--white);
+	border-radius: 20px;
+	position: relative;
+	max-width: 90%;
+	width: 100%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+	padding-bottom: 50px;
+	padding-top: 100px;
+}
+.wp-block-fv-program-modal.hidden-model .modal-wrapper .close-modal {
+	display: block;
+}
+.wp-block-fv-program-modal.hidden-model .container-step {
+	background-color: #fff;
+}
+.wp-block-fv-program-modal.hidden-model .modal-content input[type="text"],
+.wp-block-fv-program-modal.hidden-model .modal-content input[type="email"],
+.wp-block-fv-program-modal.hidden-model .modal-content input[type="tel"] {
+	background-color: #f5f5f7;
+}
+.wp-block-fv-program-modal.hidden-model .close-modal {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	border-radius: 6px;
+	background-color: var(--hintGray);
+	width: 38px;
+	height: 38px;
+	margin: 0;
+	padding: 0;
+	outline: none;
+	border: none;
+	cursor: pointer;
+}
+
+.wp-block-fv-program-modal.hidden-model .close-modal:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+.wp-block-fv-program-modal.hidden-model .close-modal:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-45deg);
+	background-color: var(--red);
+	height: 1px;
+	width: 20px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+.wp-block-fv-program-modal {
+	margin-bottom: 0px;
+}
+
+.wp-block-fv-program-modal .modal-wrapper {
+	opacity: 1;
+	position: initial;
+	background-color: var(--white);
+	padding: 0;
+	box-sizing: border-box;
+	height: 100%;
+}
+
+.wp-block-fv-program-modal .modal-wrapper .close-modal {
+	display: none;
+}
+
+.wp-block-fv-program-modal .container-step {
+	background-color: #f5f5f5;
+	border-radius: 30px;
+	padding: 20px;
+	box-sizing: border-box;
+	/* height: 447px; */
+}
+
+.wp-block-fv-program-modal .modal-content .subtitle-step {
+	margin-bottom: 10px;
+}
+
+.wp-block-fv-program-modal .modal-content .title-step {
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-program-modal .modal-content .fronted .btn-block {
+	margin-top: 10px;
+}
+
+.wp-block-fv-program-modal .modal-content .label-class {
+	margin-bottom: 11px;
+}
+
+.skills-academy .wp-block-fv-program-modal .modal-content .title-step {
+	color: var(--blue);
+}
+
+.wp-block-fv-program-modal .modal-content {
+	border-radius: 30px;
+	position: relative;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-program-modal .modal-wrapper.active {
+	opacity: 1;
+	z-index: 999;
+}
+
+.wp-block-fv-program-modal .modal-content .next {
+	background-color: var(--green);
+	border: none;
+	outline: none;
+	width: 218px;
+	height: 55px;
+	font-size: 16px;
+	line-height: 17.6px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	padding-left: 17px;
+	position: relative;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-program-modal .modal-content .step-2 .next {
+	padding-left: 25px;
+}
+
+.wp-block-fv-program-modal .modal-content .next span {
+	position: absolute;
+	top: 50%;
+	right: 11px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	background-color: var(--white);
+}
+
+.wp-block-fv-program-modal .modal-content .next span svg path {
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .next:active {
+	background-color: var(--red);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .next:active span svg path {
+	fill: var(--red);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .title-modal {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+	max-width: 280px;
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-program-modal .modal-content input[type="text"],
+.wp-block-fv-program-modal .modal-content input[type="email"],
+.wp-block-fv-program-modal .modal-content input[type="tel"] {
+	width: 100%;
+	height: 58px;
+	padding-left: 10px;
+	border-radius: 10px;
+	background-color: var(--white);
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 18px;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content input[type="text"]:focus-visible,
+.wp-block-fv-program-modal .modal-content input[type="email"]:focus-visible,
+.wp-block-fv-program-modal .modal-content input[type="tel"]:focus-visible {
+	border: 1px solid var(--green);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content input[type="text"].error,
+.wp-block-fv-program-modal .modal-content input[type="email"].error,
+.wp-block-fv-program-modal .modal-content input[type="tel"].error {
+	border: 1px solid var(--red);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .subtitle-step {
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 21px;
+	display: block;
+	margin-bottom: 7px;
+	width: 100%;
+	text-align: center;
+}
+
+.wp-block-fv-program-modal .modal-content .title-step {
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+
+.wp-block-fv-program-modal .btn-block {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.wp-block-fv-program-modal .modal-content .back {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 30px;
+	transition: all 0.3s ease;
+	cursor: pointer;
+}
+
+.wp-block-fv-program-modal .modal-content .back.back-step:active {
+	background-color: var(--red);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .back.back-step:active svg path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .back svg {
+	transform: rotate(-180deg);
+}
+
+.wp-block-fv-program-modal .modal-content .back svg path {
+	fill: var(--red);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content .back.disabled svg {
+	opacity: 0.5;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox {
+	margin-bottom: 5px;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox .title {
+	flex: 1;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox .title,
+.wp-block-fv-program-modal .modal-content .label-class,
+.wp-block-fv-program-modal .modal-content .checkbox .title a {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--darkGray);
+}
+
+.wp-block-fv-program-modal .modal-content .label-class {
+	font-size: 10px;
+	line-height: 12px;
+	display: block;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+.wp-block-fv-program-modal .modal-content .checkbox .title a {
+	text-decoration: underline solid;
+	text-decoration-skip-ink: none;
+}
+.wp-block-fv-program-modal .modal-content .checkbox input[type="checkbox"] {
+	width: 14px;
+	height: 14px;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox input[type="checkbox"] {
+	margin-top: 0px;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox {
+	gap: 6px;
+}
+
+.wp-block-fv-program-modal .modal-content .checkbox input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 4px;
+	top: 1px;
+	width: 3px;
+	height: 6px;
+	border: solid var(--white);
+	border-width: 0 1px 1px 0;
+	transform: rotate(45deg);
+}
+
+.wp-block-fv-program-modal .container-step {
+	width: 100%;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-program-modal .modal-content .step {
+	display: flex;
+	flex-wrap: wrap;
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.wp-block-fv-program-modal .city-checkbox {
+	display: flex;
+	align-items: center;
+}
+
+.wp-block-fv-program-modal .container-step .step.backend {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-fv-program-modal .container-step .step.fronted {
+	opacity: 1;
+	height: auto;
+	overflow: initial;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-fv-program-modal .container-step.active .step.fronted {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-fv-program-modal .container-step.active .step.backend {
+	opacity: 1;
+	height: auto;
+	overflow: initial;
+	transition: opacity 0.3s ease;
+}
+
+.wp-block-fv-program-modal .modal-content input[type="email"] {
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+
+.wp-block-fv-program-modal .modal-content input[type="tel"] {
+	width: calc(50% - 5px);
+}
+
+.wp-block-fv-program-modal .modal-content input[name="parentName2"] {
+	width: calc(50% - 5px);
+	margin-right: 10px;
+}
+
+.wp-block-fv-program-modal .modal-content input[name="parentName3"] {
+	width: calc(50% - 5px);
+}
+.skills-academy .modal-content .next span svg path {
+	fill: var(--blue);
+}
+.skills-academy .modal-content input[type="text"]:focus-visible,
+.skills-academy .modal-content input[type="email"]:focus-visible,
+.skills-academy .modal-content input[type="tel"]:focus-visible {
+	border: 1px solid var(--blue);
+	transition: all 0.3s ease;
+}
+
+.skills-academy .modal-content .title-step {
+	color: var(--blue);
+}
+.skills-academy .modal-content .back.back-step:active {
+	background-color: var(--red);
+}
+.skills-academy .modal-content .next:active {
+	background-color: var(--green);
+}
+.wp-block-fv-program-modal .modal-content .next:disabled {
+	opacity: 0.5;
+	cursor: no-drop;
+	pointer-events: none;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-program-modal .modal-content .title-modal {
+		margin: 0;
+	}
+	.wp-block-fv-program-modal .modal-content .title-step {
+		font-size: 20px;
+		line-height: 24.4px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-program-modal .modal-content .subtitle-step {
+		font-size: 14px;
+		line-height: 21px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-program-modal .modal-content .checkbox .title,
+	.wp-block-fv-program-modal .modal-content .checkbox .title a {
+		font-family: "Montserrat";
+		font-weight: 400;
+		font-size: 12px;
+		line-height: 14.5px;
+		letter-spacing: -0.5px;
+		color: var(--darkGray);
+	}
+	.wp-block-fv-program-modal .modal-content .checkbox input[type="checkbox"] {
+		width: 14px;
+		height: 14px;
+		margin-top: 0px;
+	}
+	.wp-block-fv-program-modal.hidden-model .modal-content .title-modal {
+		font-size: 32px;
+		line-height: 38.4px;
+		font-family: "Montserrat";
+		font-weight: 600;
+		max-width: 580px;
+		margin: 0 auto;
+		margin-bottom: 30px;
+	}
+	.wp-block-fv-program-modal.hidden-model .container-step {
+		padding: 0;
+		padding-left: 108px;
+		padding-right: 108px;
+	}
+	.wp-block-fv-program-modal.hidden-model .modal-content {
+		max-width: 630px;
+		padding-top: 80px;
+		padding-bottom: 80px;
+	}
+	.wp-block-fv-program-modal.hidden-model .modal-content .back {
+		background-color: #F5F5F7;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-program-modal .modal-content .subtitle-step {
+		margin-bottom: 18px;
+	}
+	.wp-block-fv-program-modal .modal-content input[type="text"],
+	.wp-block-fv-program-modal .modal-content input[type="email"],
+	.wp-block-fv-program-modal .modal-content input[type="tel"] {
+		height: 64px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.wp-block-fv-program-modal .modal-content .checkbox .title,
+	.wp-block-fv-program-modal .modal-content .checkbox .title a {
+		font-size: 13px;
+		line-height: 19.5px;
+	}
+	.wp-block-fv-program-modal .modal-content .checkbox input[type="checkbox"] {
+		margin-top: 3px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-program-modal .container-step {
+		padding-left: 110px;
+		padding-right: 110px;
+	}
+}

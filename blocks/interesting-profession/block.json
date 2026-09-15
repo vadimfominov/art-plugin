@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/interesting-profession",
+    "title": "Interesting Profession",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a interesting-profession",
+    "keywords": [
+        "interesting-profession"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

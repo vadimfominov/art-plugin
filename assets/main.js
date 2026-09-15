@@ -1,4 +1,4 @@
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
 	const load_more_list = document.querySelector('.load-more-list');
 
@@ -289,8 +289,6 @@ window.addEventListener('load', function () {
 		});
 	});
 
-
-
 	// Функция для получения slug (первого сегмента после домена)
 	function getPageSlug() {
 		// Получаем путь после домена (например: /professions/doctor, /professions, /en/contact)
@@ -382,7 +380,7 @@ window.addEventListener('load', function () {
 	});
 
 
-	document.body.addEventListener('click', (e) => {
+	document.body?.addEventListener('click', (e) => {
 
 		const button = e.target.closest('.play-audio');
 		if (button) {
@@ -457,7 +455,7 @@ window.addEventListener('load', function () {
 
 	// Обработчик кнопки "Оформить заказ"
 
-	document.body.addEventListener('click', (e) => {
+	document.body?.addEventListener('click', (e) => {
 		if (e.target.matches('.buy-order')) {
 			const button = e.target;
 			const containerMerch = button.closest('.container-merch');
@@ -708,7 +706,7 @@ window.addEventListener('load', function () {
 		}
 	});
 
-	document.body.addEventListener('click', (e) => {
+	document.body?.addEventListener('click', (e) => {
 
 		if (e.target.matches('.modal-form-merch')) {
 			const cardId = e.target.closest('.item-card').classList[1].replace('card-', '');
@@ -1161,7 +1159,6 @@ window.addEventListener('load', function () {
 		}
 	});
 
-
 	const filterForm = document.querySelector('.search-filter-wrapper input[name="filterform"]');
 	const filterFormValue = filterForm?.value.trim();
 
@@ -1307,7 +1304,6 @@ window.addEventListener('load', function () {
 		highlightText(document.body);
 	}
 
-
 	if (PAGE_TEMPLATE_DEFAULT) {
 
 		wrapTextInTag('em', 'highlight', '«лагер');
@@ -1315,17 +1311,26 @@ window.addEventListener('load', function () {
 
 	}
 
-	const testDrive = document.querySelector('.test-drive-section');
-
-	if (testDrive) {
-		const testDriveOpen = testDrive.querySelector('.test-drive-open');
-
-		testDriveOpen?.addEventListener('click', function (e) {
+	const testDriveOpenButtons = document.querySelectorAll('.test-drive-open');
+	testDriveOpenButtons.forEach(button => {
+		button.addEventListener('click', function (e) {
 			e.preventDefault();
 
-			const formTestDriveModal = testDrive.querySelector('.modal-wrapper');
+			const testDriveModal = this.closest('.test-drive-modal');
+			const formTestDriveModal = testDriveModal.querySelector('.modal-wrapper');
+
+			const titleForm = button.getAttribute('data-titleformdrive');
+			const titleProduct = button.getAttribute('data-titleproduct');
+			const referer = button.getAttribute('data-referer');
+			const dateStart = button.getAttribute('data-datestart');
 
 			if (formTestDriveModal) {
+
+				formTestDriveModal.querySelector('input[name="titleForm"]').value = titleForm || 'Тест-драйв';
+				formTestDriveModal.querySelector('input[name="titleProduct"]').value = titleProduct || '';
+				formTestDriveModal.querySelector('input[name="referer"]').value = referer || '';
+				formTestDriveModal.querySelector('input[name="dataStart"]').value = dateStart || '';
+
 				formTestDriveModal.style.opacity = '0';
 				formTestDriveModal.style.transition = 'opacity 0.3s ease';
 				formTestDriveModal.style.zIndex = '9999';
@@ -1335,45 +1340,7 @@ window.addEventListener('load', function () {
 				}, 10);
 			}
 		});
-
-	}
-
-
-	const testDriveTabs = document.querySelector('.wp-block-fv-test-drive-tabs');
-	if (testDriveTabs) {
-		const testDriveOpenButtons = testDriveTabs.querySelectorAll('.test-drive-open');
-
-		testDriveOpenButtons.forEach(button => {
-			button.addEventListener('click', function (e) {
-				e.preventDefault();
-
-				const testDriveModal = document.querySelector('.test-drive-modal');
-
-				const formTestDriveModal = testDriveModal.querySelector('.modal-wrapper');
-
-				const titleForm = button.getAttribute('data-titleformdrive');
-				const titleProduct = button.getAttribute('data-titleproduct');
-				const referer = button.getAttribute('data-referer');
-				const dateStart = button.getAttribute('data-datestart');
-
-				if (formTestDriveModal) {
-
-					formTestDriveModal.querySelector('input[name="titleForm"]').value = titleForm || '';
-					formTestDriveModal.querySelector('input[name="titleProduct"]').value = titleProduct || '';
-					formTestDriveModal.querySelector('input[name="referer"]').value = referer || '';
-					formTestDriveModal.querySelector('input[name="dataStart"]').value = dateStart || '';
-
-					formTestDriveModal.style.opacity = '0';
-					formTestDriveModal.style.transition = 'opacity 0.3s ease';
-					formTestDriveModal.style.zIndex = '9999';
-					document.querySelector('body').classList.toggle('overflow-modal');
-					setTimeout(() => {
-						formTestDriveModal.style.opacity = '1';
-					}, 10);
-				}
-			});
-		});
-	}
+	});
 
 	function createTimeline(items) {
 		const container = document.createElement('div');
@@ -1418,7 +1385,6 @@ window.addEventListener('load', function () {
 
 	}
 
-
 	const accordionItems = document.querySelectorAll('.question-item');
 
 	if (accordionItems) {
@@ -1460,7 +1426,7 @@ window.addEventListener('load', function () {
 		});
 	});
 
-	this.setTimeout(() => {
+	setTimeout(() => {
 
 		const seePosts = document.querySelector('.see-posts-container');
 		const moreBtns = seePosts?.querySelectorAll('.more');
@@ -1506,8 +1472,8 @@ window.addEventListener('load', function () {
 		if (salesValue) params.append('sales', salesValue);
 		if (filterValue) params.append('filter', filterValue);
 
-		const container_filter = this.document.querySelector('.container-filter');
-		const data_slug = container_filter.getAttribute('data-slug');
+		const container_filter = document.querySelector('.container-filter');
+		const data_slug = container_filter?.getAttribute('data-slug');
 		const post_type = [data_slug];
 
 		if (post_type) params.append('post_type', post_type);
@@ -1537,7 +1503,10 @@ window.addEventListener('load', function () {
 			// 30366 - Родительская среда (30366 для dev и 34004 для prod) 
 			// 48 - Профтестирование (48 для DEV и 2363 для prod)
 
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+
+			// !! 30556 заменить на 42 перед пушем
+
+			const allowedPagesFilter = ["30556", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1558,7 +1527,7 @@ window.addEventListener('load', function () {
 	};
 
 	const pageGroups = {
-		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
+		"group1": ["30556", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
@@ -1613,7 +1582,6 @@ window.addEventListener('load', function () {
 
 	}
 
-
 	const observer = new MutationObserver((mutations) => {
 		mutations.forEach((mutation) => {
 			if (mutation.type === 'childList') {
@@ -1636,25 +1604,12 @@ window.addEventListener('load', function () {
 		// Текущий пост
 		const currentPostId = container.dataset.currentPostId;
 
-		// Фильтруем посты, исключая текущий
-		console.log("allPosts");
-		console.log(allPosts);
-
 		const filteredPosts = allPosts.filter(post => post.id !== parseInt(currentPostId));
-
-		console.log("filteredPosts");
-		console.log(filteredPosts);
 
 		const resultFilteredPosts = filteredPosts.filter(post => post.inPlace);
 
-		console.log("resultFilteredPosts");
-		console.log(resultFilteredPosts);
-
 		// Выбираем 4 случайных поста
 		const randomPosts = getRandomElements(resultFilteredPosts, 4);
-
-		console.log("randomPosts");
-		console.log(randomPosts);
 
 		let html = '';
 		const filter = randomPosts[0]?.filter;
@@ -2001,7 +1956,6 @@ window.addEventListener('load', function () {
 		});
 	}
 
-
 	const programModalWithCity = document.querySelector('.wp-block-fv-program-modal-with-city.hidden-model');
 
 	if (programModalWithCity) {
@@ -2043,8 +1997,6 @@ window.addEventListener('load', function () {
 			}
 		});
 	}
-
-
 
 	const closeModals = document.querySelectorAll('.close-modal');
 
@@ -2292,8 +2244,8 @@ window.addEventListener('load', function () {
 
 		const salesValue = localStorage.getItem('sales') ? localStorage.getItem('sales') : '';
 
-		const container_filter = this.document.querySelector('.container-filter');
-		const data_slug = container_filter.getAttribute('data-slug');
+		const container_filter = document.querySelector('.container-filter');
+		const data_slug = container_filter?.getAttribute('data-slug');
 		const post_type = [data_slug];
 
 		try {
@@ -2463,9 +2415,6 @@ window.addEventListener('load', function () {
 
 		html = postsToShow.map(post => {
 
-			console.log(post);
-
-
 			const {
 				content: {
 					postTypeName,
@@ -2559,6 +2508,90 @@ window.addEventListener('load', function () {
 						>Подробнее ${iconArray}</button>
 					</div>
 				</div>`;
+				return card;
+
+			} else if (type === 'parent-wednesdays') {
+
+				const classPlace = inPlace ? 'green' : 'red';
+				const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
+				const activeClass = inPlace ? 'active-class' : 'no-active-class';
+
+				const shift = selected_shift ? `(${selected_shift})` : '';
+				const ages = selectedAges === 'родители - родители лет' ? 'родители' : selectedAges;
+				const currentDate = formatDateRange(dateRange);
+				const currentSkillsDate = formatDateSkills(dateRange);
+
+				let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
+				let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
+
+				const datestart = type === 'psychologist'
+					? ''
+					: type === 'skills-courses'
+						? currentSkillsDate
+						: currentDate;
+
+				// const active_class = selected_place.trim() === 'Москва' ? 'active' : '';
+				const active_class = '';
+
+				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
+
+				const updateType = inMask ? 'art-community' : type;
+				const updatePostTypeName = inMask ? 'Сообщество подростков' : postTypeName;
+
+				const card = `
+					<div class="item-card card-${id} ${updateType}">
+							<div class="top-item-section item-section">
+								<span class="label-card">${updatePostTypeName}</span>
+								<span class="place-card ${active_class}">${selected_days}</span>
+								<div class="title-card">${cleanTitle}</div>
+								<div class="ages-card">(${ages})</div>
+							</div>
+
+										<div class="bottom-item-section item-section">
+											${type === 'psychologist'
+						? ''
+						: type === 'skills-courses'
+							? `<div class="days-card">${titleCount}</div>`
+							: `<div class="days-card">${daysCount}</div>`
+					}
+								<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
+								${type !== 'skills-courses'
+						? `<button 
+											class="modal-form ${classPlace}"
+											data-titleform="${postTypeName + ': ' + cleanTitle}"
+											data-titleproduct="${cleanTitle}"
+											data-referer="${window.location.href}"
+											data-datestart="${datestart}"
+										>${titlePlace}</button>`
+						: titlePlace === 'Оставить заявку'
+							? `<button 
+											class="modal-form ${classPlace}"
+											data-titleform="${postTypeName + ': ' + cleanTitle}"
+											data-titleproduct="${cleanTitle}"
+											data-referer="${window.location.href}"
+											data-datestart="${datestart}"
+										>${titlePlace}</button>`
+							: `<button 
+											class="modal-form ${classPlace}"
+											data-titleform="${postTypeName + ': ' + cleanTitle}"
+											data-titleproduct="${cleanTitle}"
+											data-referer="${window.location.href}"
+											data-datestart="${datestart}"
+										>${titlePlace}</button>`
+					}
+								${type !== 'psychologist'
+						? `<button 
+												class="more ${classPlace}"
+												data-titleform="${postTypeName + ': ' + cleanTitle}"
+												data-titleproduct="${cleanTitle}"
+												data-referer="${window.location.href}"
+												data-datestart="${datestart}"
+											>Подробнее ${iconArray}</button>`
+						: ``
+					}
+							</div>
+
+					</div>`;
 				return card;
 
 			} else {
@@ -2771,11 +2804,24 @@ window.addEventListener('load', function () {
 				// Сохраняем текущую позицию прокрутки
 				saveScrollPosition();
 
+				const CLASS_BY_TYPE = {
+					'parent-wednesdays': 'wp-block-fv-filter-section-skills',
+					'career-camp': 'wp-block-fv-filter-section',
+					'travel-by-city': 'wp-block-fv-filter-section',
+					'art-community': '',
+					'art-community': '',
+					'art-community': '',
+					'art-community': '',
+				};
+
+				const need_class = CLASS_BY_TYPE[post.type] ?? '';
+
+
 				const modal = post.content.rendered;
 
 				// Создаем модальное окно
 				const modalWrapper = document.createElement('div');
-				modalWrapper.className = 'modal-wrapper modal-card';
+				modalWrapper.className = `modal-wrapper modal-card ${need_class}`;
 				modalWrapper.innerHTML = `<div class="modal-content ${colorClass} ${cardId}">${modal}</div>`;
 
 				const buyOrder = modalWrapper.querySelector('.buy-order');
@@ -2963,6 +3009,7 @@ window.addEventListener('load', function () {
 		// Находим все li внутри текущего select-ul
 		selectUl.querySelectorAll('li').forEach(function (listItem) {
 			listItem.addEventListener('click', function () {
+
 				// Так как мы уже внутри конкретного select-ul, можно использовать родителя
 				const currentSelectUl = this.parentElement;
 
@@ -3168,7 +3215,7 @@ window.addEventListener('load', function () {
 	const videoContainers = document.querySelectorAll('.video-section');
 
 	videoContainers.forEach(container => {
-		const videoBlocks = container.querySelectorAll('.slide');
+		const videoBlocks = container.querySelectorAll('.slide .content-video');
 		const sliderBox = container.querySelector('.slider-box');
 
 		const options = {
@@ -3205,15 +3252,17 @@ window.addEventListener('load', function () {
 			});
 		}, options);
 
+
 		videoBlocks.forEach(element => {
 
+			const parent_element = element.closest('.slide');
 			const playVideo = element.querySelector('.play-video');
 
 			if (playVideo) {
 
-				const video = element.querySelector('video');
-				const videoContent = element.querySelector('.content-video');
-				const imageForVideo = element.querySelector('.image-for-video');
+				const video = parent_element.querySelector('video');
+				const videoContent = parent_element.querySelector('.content-video');
+				const imageForVideo = parent_element.querySelector('.image-for-video');
 
 				if (video) {
 
@@ -3261,9 +3310,12 @@ window.addEventListener('load', function () {
 									imageForVideo.style.transition = 'opacity 0.3s ease';
 									imageForVideo.style.opacity = '0';
 									imageForVideo.style.height = '0px';
-									videoContent.style.height = '100%';
 
-									if (!element.querySelector('.volume-toggle')) {
+									videoContent.style.height = '100%';
+									videoContent.style.zIndex = '100';
+									videoContent.style.position = 'relative';
+
+									if (!parent_element.querySelector('.volume-toggle')) {
 										const volumeBtn = createVolumeButton();
 										videoContent.appendChild(volumeBtn);
 
@@ -3289,7 +3341,7 @@ window.addEventListener('load', function () {
 									}
 
 									// Начинаем отслеживать видео
-									observer.observe(element);
+									observer.observe(parent_element);
 									// Добавляем обработчики паузы ТОЛЬКО ПОСЛЕ воспроизведения
 									if ('ontouchstart' in window) {
 										video.addEventListener('touchstart', pauseHandler, { passive: false });
@@ -3317,7 +3369,10 @@ window.addEventListener('load', function () {
 							imageForVideo.style.transition = 'opacity 0.3s ease';
 							imageForVideo.style.opacity = '1';
 							imageForVideo.style.height = '100%';
+
 							videoContent.style.height = '0px';
+							videoContent.style.zIndex = '0';
+							videoContent.style.position = 'initial';
 							video.pause();
 						}
 
@@ -4254,7 +4309,7 @@ window.addEventListener('popstate', function () {
 });
 
 //open-category-list 
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
 
 	// Функция для добавления обработчика
 	function initCategoryButton() {

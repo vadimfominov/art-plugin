@@ -1,0 +1,117 @@
+.wp-block-fv-our-experience-block {
+	background-color: var(--white);
+	margin-bottom: 75px;
+}
+.wp-block-fv-our-experience-block .wrapper ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-our-experience-block .wrapper li {
+	border: 1px solid var(--lightGray);
+	border-radius: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.wp-block-fv-our-experience-block .svg-icon-wrapper {
+	margin-bottom: 24px;
+}
+.wp-block-fv-our-experience-block li span {
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	padding: 0;
+}
+.wp-block-fv-our-experience-block li p {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: #8f8f8f;
+}
+
+.wp-block-fv-our-experience-block li:nth-child(even) span {
+	opacity: 0.8;
+}
+.wp-block-fv-our-experience-block.art-community li:nth-child(even) span {
+	opacity: 1;
+}
+.wp-block-fv-our-experience-block h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 10px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-our-experience-block .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 20px;
+}
+.wp-block-fv-our-experience-block.test-template li:nth-child(even) span {
+	opacity: 1;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-our-experience-block .wrapper ul {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-our-experience-block .wrapper li {
+		width: calc(50% - 20px);
+	}
+	.wp-block-fv-our-experience-block h2 {
+		width: 550px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	.wp-block-fv-our-experience-block .wrapper > p {
+		width: 550px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-our-experience-block {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-our-experience-block h2 {
+		width: 750px;
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-our-experience-block .wrapper li {
+		width: calc(25% - 3 / 4 * 10px);
+	}
+	.wp-block-fv-our-experience-block li p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-our-experience-block li span {
+		font-size: 22px;
+		line-height: 33px;
+	}
+	.wp-block-fv-our-experience-block.skill-academy .wrapper li:nth-child(2) {
+		padding-right: 0;
+	}
+	.wp-block-fv-our-experience-block h2 {
+		width: 950px;
+		font-size: 42px;
+		line-height: 50.4px;
+	}
+	.wp-block-fv-our-experience-block .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+		width: 620px;
+	}
+}

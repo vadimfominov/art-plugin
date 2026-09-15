@@ -1,0 +1,608 @@
+.wp-block-fv-first-block-for-moscow .content {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-fv-first-block-for-moscow .content .top-title {
+	flex: auto;
+	padding-top: 120px;
+	box-sizing: border-box;
+}
+.wp-block-fv-first-block-for-moscow .content h1 {
+	line-height: 90%;
+	margin-bottom: 7px;
+	letter-spacing: -0.9px;
+}
+.wp-block-fv-first-block-for-moscow .content .top-title p {
+	margin-bottom: 0;
+	line-height: 110%;
+}
+.wp-block-fv-first-block-for-moscow {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow .label-first-block-msk {
+	padding: 7px 15px 9px 15px;
+	border-radius: 30px;
+	background-color: #30a933;
+	font-weight: 600;
+	color: var(--white);
+	font-family: "Montserrat";
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 90%;
+	letter-spacing: -0.42px;
+	width: max-content;
+}
+
+.wp-block-fv-first-block-for-moscow .label-card-first-block a {
+	color: var(--green);
+	text-decoration: underline;
+	font-family: "Montserrat";
+}
+
+.wp-block-fv-first-block-for-moscow .label-card-first-block a:hover {
+	text-decoration: none;
+}
+
+.wp-block-fv-first-block-for-moscow .label-card-first-block {
+	font-family: "Montserrat";
+	background: white;
+	color: #333;
+	border-bottom-left-radius: 4px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	padding: 12px 16px;
+	border-radius: 18px;
+	position: relative;
+	word-wrap: break-word;
+	line-height: 1.2;
+	width: 270px;
+	border-bottom-left-radius: 0px;
+	margin-bottom: 30px;
+}
+
+.wp-block-fv-first-block-for-moscow .label-card-first-block::after,
+.wp-block-fv-first-block-for-moscow .label-card-first-block::before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: -12px;
+	width: 0;
+	height: 0;
+	/* background-color: #000; */
+	border-right: 10px solid #fff;
+	border-left: 10px solid transparent;
+	border-bottom: 10px solid #fff;
+	border-top: 10px solid transparent;
+}
+.wp-block-fv-first-block-for-moscow {
+	height: 100vh;
+	min-height: 715px;
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-first-block-for-moscow .wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	position: relative;
+	height: 100%;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+.wp-block-fv-first-block-for-moscow .bg-image {
+	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	width: 100%;
+	height: 100vh;
+	min-height: 715px;
+	object-fit: cover;
+	object-position: center;
+}
+
+.wp-block-fv-first-block-for-moscow .bg-image {
+	display: block;
+}
+
+.bg-image-mobile {
+	display: block;
+}
+
+.wp-block-fv-first-block-for-moscow .wrapper {
+	padding-bottom: 40px;
+}
+
+.wp-block-fv-first-block-for-moscow .content h1 {
+	font-size: 30px;
+	line-height: 33px;
+	font-weight: 600;
+	color: var(--white);
+	font-family: "Montserrat";
+	margin-bottom: 10px;
+}
+
+.wp-block-fv-first-block-for-moscow .content p {
+	font-size: 14px;
+	line-height: 110%;
+	font-weight: 500;
+	color: var(--white);
+	font-family: "Montserrat";
+}
+.wp-block-fv-first-block-for-moscow .footer-links {
+	margin: -5px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links .camp-links-container {
+	position: absolute;
+	top: -75px;
+	left: 0;
+	width: 100%;
+	display: flex;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links .camp-links-container a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--green);
+	transition: all 0.3s ease;
+	opacity: 1;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links .camp-links-container a:hover {
+	opacity: 0.9;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links a {
+	font-size: 14px;
+	line-height: 21px;
+	font-weight: 500;
+	color: var(--white);
+	font-family: "Montserrat";
+	display: inline-block;
+	margin: 5px;
+	width: calc(50% - 10px);
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.3);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 40px !important;
+	text-decoration: none;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links a:hover {
+	background-color: var(--green);
+	opacity: 1;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-first-block-for-moscow .footer-links a:first-child {
+	width: 100%;
+}
+.wp-block-fv-first-block-for-moscow.skill-academy .content h1 .highlight:after {
+	content: "Программа";
+	position: absolute;
+	top: -11px;
+	left: 0px;
+	color: var(--white);
+	opacity: 0.6;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-first-block-for-moscow.skill-academy .content h1 .highlight:after {
+	left: 24px;
+}
+.wp-block-fv-first-block-for-moscow.skill-academy .content p {
+	width: 260px;
+}
+.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .view-services {
+	display: none;
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-first-block-for-moscow.consult-psiholog {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.contacts-art-lichnost {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.city-template {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.test-template .content p {
+	width: 330px;
+}
+.wp-block-fv-child-at-home.test-template {
+	padding-bottom: 0;
+}
+.wp-block-fv-first-block-for-moscow.test-template {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.test-template .view-services {
+	width: 259px;
+}
+.wp-block-fv-first-block-for-moscow.contacts-art-lichnost:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.5) 100%);
+}
+.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .wrapper {
+	z-index: 20;
+}
+.wp-block-fv-first-block-for-moscow.city-template:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: rgba(0, 0, 0, 0.2);
+}
+.wp-block-fv-first-block-for-moscow.city-template .wrapper {
+	z-index: 20;
+}
+
+.wp-block-fv-first-block-for-moscow.about-template .view-services {
+	display: none;
+	height: 0;
+	width: 0;
+	overflow: hidden;
+}
+.wp-block-fv-first-block-for-moscow.about-template .content p {
+	margin-bottom: 0;
+}
+.wp-block-fv-first-block-for-moscow.about-template .wrapper {
+	padding-bottom: 80px;
+}
+.wp-block-fv-first-block-for-moscow.about-template {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.events-template .view-services {
+	width: 207px;
+}
+.wp-block-fv-first-block-for-moscow.events-template {
+	margin-bottom: 75px;
+}
+.wp-block-fv-first-block-for-moscow.events-template .view-services:hover a {
+	color: #fbfbfb;
+	justify-content: flex-start;
+	padding-left: 65px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-first-block-for-moscow .view-services {
+	background-color: var(--red);
+	border-radius: 50px;
+	overflow: hidden;
+	position: relative;
+	width: 240px;
+	height: 55px;
+	box-sizing: border-box;
+	margin-bottom: 40px;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-first-block-for-moscow .view-services a {
+	padding-left: 25px;
+	padding-right: 25px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	color: #fbfbfb;
+	font-family: "Montserrat";
+	font-size: 14px;
+	line-height: 110%;
+	font-weight: 500;
+	text-align: left;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-first-block-for-moscow .view-services span {
+	width: 31px;
+	height: 31px;
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 40px;
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.wp-block-fv-first-block-for-moscow .view-services:hover {
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-first-block-for-moscow .view-services:hover span {
+	right: calc(100% - 43px);
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-first-block-for-moscow .view-services:hover a {
+		color: #fbfbfb;
+		justify-content: flex-start;
+		padding-left: 51px;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 7vw;
+		line-height: 7.5vw;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-first-block-for-moscow .content p {
+		font-size: 2.1vw;
+		line-height: 2.5vw;
+		max-width: 50%;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content p {
+		width: 100%;
+		max-width: 100%;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content h1 .highlight:after {
+		left: 44px;
+	}
+	.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .content p {
+		max-width: 80%;
+	}
+	.wp-block-fv-first-block-for-moscow.art-community .content p {
+		max-width: 65%;
+	}
+	.wp-block-fv-first-block-for-moscow.skills-course .content p {
+		max-width: 100%;
+		width: 500px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-first-block-for-moscow.city-template .content h1 {
+		width: 600px;
+	}
+	.wp-block-fv-first-block-for-moscow.city-template .content p {
+		max-width: 100%;
+		width: 550px;
+	}
+	.wp-block-fv-first-block-for-moscow.test-template .content p {
+		width: 550px;
+		max-width: 100%;
+	}
+	.wp-block-fv-first-block-for-moscow.test-template .view-services {
+		width: 286px;
+	}
+	.wp-block-fv-first-block-for-moscow.about-template {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-first-block-for-moscow.events-template .view-services:hover a {
+		color: #fbfbfb;
+		justify-content: flex-start;
+		padding-left: 48px;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-first-block-for-moscow.events-template .content p {
+		max-width: 60%;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 66px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-first-block-for-moscow .label-first-block-msk {
+		font-size: 18px;
+		position: absolute;
+		left: 420px;
+		top: 230px;
+		transform: rotate(1deg);
+	}
+	.wp-block-fv-first-block-for-moscow .content .top-title {
+		position: relative;
+	}
+	.wp-block-fv-first-block-for-moscow .content .top-title p {
+		font-size: 16px;
+	}
+	.wp-block-fv-first-block-for-moscow {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 66px;
+		line-height: 72.6px;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content h1 .highlight:after {
+		left: 54px;
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content p {
+		font-size: 16px;
+		line-height: 24px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-first-block-for-moscow .content p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-first-block-for-moscow.art-community .content p {
+		max-width: 48%;
+	}
+	.wp-block-fv-first-block-for-moscow.skills-course .content p {
+		width: 500px;
+		max-width: 100%;
+	}
+	.wp-block-fv-first-block-for-moscow.city-template .content p {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-first-block-for-moscow.merch-template .content p {
+		max-width: 60%;
+	}
+	.wp-block-fv-first-block-for-moscow {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 86px;
+		max-width: 80%;
+	}
+
+	.wp-block-fv-first-block-for-moscow .label-first-block-msk {
+		font-size: 20px;
+		left: 620px;
+		top: 264px;
+	}
+	.wp-block-fv-first-block-for-moscow .content p {
+		max-width: calc(100% - 260px);
+		font-size: 18px;
+		line-height: 27px;
+	}
+	.wp-block-fv-first-block-for-moscow .view-services {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.wp-block-fv-first-block-for-moscow .content {
+		position: relative;
+	}
+	.wp-block-fv-first-block-for-moscow .view-services {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin-bottom: 0;
+	}
+	.wp-block-fv-first-block-for-moscow.front-template .content h1 {
+		font-size: 66px;
+		line-height: 72.6px;
+		margin-bottom: 15px;
+		max-width: 70%;
+	}
+	.wp-block-fv-first-block-for-moscow .wrapper .content {
+		position: relative;
+	}
+	.view-services {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		margin-bottom: 0;
+	}
+	.wp-block-fv-first-block-for-moscow .wrapper .content {
+		margin-bottom: 50px;
+	}
+	.wp-block-fv-first-block-for-moscow .footer-links a:first-child {
+		width: calc(20% - 10px);
+	}
+	.wp-block-fv-first-block-for-moscow .footer-links a {
+		width: calc(20% - 10px);
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content p {
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 0px;
+		width: 70%;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content h1 {
+		font-size: 86px;
+		line-height: 94.6px;
+		margin-bottom: 20px;
+		max-width: 70%;
+	}
+	.wp-block-fv-first-block-for-moscow.skill-academy .content h1 .highlight:after {
+		left: 71px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .content h1 {
+		font-size: 86px;
+		line-height: 94.6px;
+		margin-bottom: 20px;
+		max-width: 60%;
+	}
+	.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .content p {
+		font-size: 18px;
+		line-height: 27px;
+		max-width: 55%;
+	}
+	.wp-block-fv-first-block-for-moscow.art-community .content h1 {
+		font-size: 86px;
+		line-height: 94.6px;
+	}
+	.wp-block-fv-first-block-for-moscow.art-community .content p {
+		max-width: 550px;
+		font-size: 18px;
+		line-height: 27px;
+	}
+	.wp-block-fv-first-block-for-moscow.art-community .wrapper {
+		padding-bottom: 60px;
+	}
+	.wp-block-fv-first-block-for-moscow.skills-course .content h1 {
+		font-size: 86px;
+		line-height: 94.6px;
+		margin-bottom: 20px;
+		max-width: 50%;
+	}
+	.wp-block-fv-first-block-for-moscow.skills-course .content p {
+		font-size: 18px;
+		line-height: 27px;
+		width: 600px;
+		margin-bottom: 0px;
+	}
+	.wp-block-fv-first-block-for-moscow.skills-course .wrapper {
+		padding-bottom: 60px;
+	}
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 66px;
+		line-height: 72.6px;
+		margin-bottom: 15px;
+		max-width: 70%;
+	}
+	.wp-block-fv-first-block-for-moscow .content h1 {
+		font-size: 86px;
+		line-height: 94.6px;
+		margin-bottom: 20px;
+		max-width: 80%;
+	}
+	.consult-psiholog.wp-block-fv-first-block-for-moscow .wrapper .content {
+		margin-bottom: 70px;
+	}
+	.wp-block-fv-first-block-for-moscow.contacts-art-lichnost .wrapper {
+		padding-bottom: 50px;
+	}
+	.wp-block-fv-first-block-for-moscow.city-template .content h1 {
+		width: 800px;
+	}
+	.wp-block-fv-first-block-for-moscow.city-template .content p {
+		margin-bottom: 0;
+		font-size: 18px;
+		line-height: 27px;
+		width: 600px;
+	}
+	.wp-block-fv-first-block-for-moscow.merch-template .content p {
+		max-width: 45%;
+	}
+	.wp-block-fv-first-block-for-moscow.about-template .content p {
+		font-size: 18px;
+		line-height: 27px;
+		max-width: 620px;
+	}
+	.wp-block-fv-first-block-for-moscow.events-template .content h1 {
+		max-width: 100%;
+	}
+	.wp-block-fv-first-block-for-moscow.events-template .content p {
+		max-width: 50%;
+	}
+}

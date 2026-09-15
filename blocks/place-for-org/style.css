@@ -1,0 +1,506 @@
+.wp-block-fv-place-for-org h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	max-width: 311px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 20px;
+	position: relative;
+}
+.wp-block-fv-place-for-org .item-block {
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	padding-right: 10px;
+	padding-top: 60px;
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	margin-bottom: 10px;
+}
+.wp-block-fv-place-for-org .item-block span {
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 10px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+}
+.wp-block-fv-place-for-org .item-block p {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-place-for-org .first-item-block {
+	border: none;
+	background-color: var(--green);
+	position: relative;
+	height: 204px;
+	display: flex;
+	align-items: flex-end;
+}
+.wp-block-fv-place-for-org .first-item-block span {
+	color: var(--white);
+	margin-bottom: 0;
+}
+.wp-block-fv-place-for-org .first-item-block .icon {
+	font-size: 8px;
+	line-height: 9px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 25px;
+	width: 82px;
+	height: 17px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+.wp-block-fv-place-for-org .first-item-block .icon svg {
+	position: absolute;
+	bottom: -10px;
+	left: 3px;
+}
+.wp-block-fv-place-for-org .first-item-block .icon1 {
+	position: absolute;
+	top: 10px;
+	right: 161px;
+}
+.wp-block-fv-place-for-org .first-item-block .icon2 {
+	position: absolute;
+	top: 34px;
+	right: 102px;
+}
+.wp-block-fv-place-for-org .first-item-block .icon3 {
+	position: absolute;
+	top: 58px;
+	right: 48px;
+}
+.wp-block-fv-place-for-org .first-item-block .icon4 {
+	position: absolute;
+	top: 17px;
+	right: 10px;
+}
+.wp-block-fv-place-for-org .last-item-block {
+	margin-bottom: 0;
+}
+.wp-block-fv-place-for-org {
+	margin-bottom: 10px;
+}
+.wp-block-fv-place-for-org h2 .highlight:before {
+	content: "Программа";
+	position: absolute;
+	top: -11px;
+	left: 15px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-place-for-org .first-item-block img {
+	width: 89px;
+	height: 68px;
+	position: absolute;
+	top: 4px;
+	right: 10px;
+}
+.skills-template.wp-block-fv-place-for-org .first-item-block {
+	flex-direction: column;
+	height: auto;
+	padding-top: 108px;
+}
+.wp-block-fv-place-for-org .first-item-block p {
+	color: var(--white);
+}
+.skills-template.wp-block-fv-place-for-org .first-item-block span {
+	margin-bottom: 10px;
+}
+.skills-template.wp-block-fv-place-for-org {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-place-for-org.events-template .first-item-block img {
+	width: 114px;
+	height: 98px;
+	top: 20px;
+	right: 20px;
+}
+.wp-block-fv-place-for-org.events-template .right-block .item-block {
+	background-color: var(--hintGray);
+	border: 1px solid var(--hintGray);
+}
+.wp-block-fv-place-for-org.events-template {
+	margin-bottom: 75px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 150px;
+	}
+	.wp-block-fv-place-for-org .wrapper {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block {
+		display: flex;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block .item-block:nth-child(2) span {
+		max-width: 120px;
+	}
+	.wp-block-fv-place-for-org h2 {
+		max-width: 457px;
+		width: 100%;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		position: relative;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon svg {
+		width: 30px;
+		height: 29px;
+		position: absolute;
+		bottom: -20px;
+		left: 26px;
+	}
+	.wp-block-fv-place-for-org .item-block {
+		width: calc(33.33333% - 0px);
+		margin-right: 10px;
+		margin-bottom: 0;
+		padding-top: 40px;
+	}
+	.wp-block-fv-place-for-org .last-item-block {
+		margin-right: 0;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		height: 193px;
+		width: 100%;
+		margin-top: 0;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon4 {
+		right: 10px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon3 {
+		right: 66px;
+		top: 106px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon2 {
+		right: 174px;
+		top: 58px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon1 {
+		right: 292px;
+		top: 10px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon {
+		font-size: 13px;
+		line-height: 14px;
+		width: 163px;
+		height: 35px;
+	}
+	.wp-block-fv-place-for-org .first-item-block span {
+		max-width: 360px;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block {
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block {
+		box-sizing: border-box;
+		margin: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-end;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) {
+		order: 3;
+		width: 100%;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(2) {
+		order: 2;
+		width: calc(50% - 5px);
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(3) {
+		order: 2;
+		width: calc(50% - 5px);
+	}
+	.skills-template.wp-block-fv-place-for-org .wrapper .right-block .item-block:nth-child(2) span,
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 360px;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) p {
+		max-width: 450px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block {
+		align-items: flex-start;
+		padding-top: 60px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block p {
+		width: 375px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block span {
+		max-width: 470px;
+	}
+	.wp-block-fv-place-for-org.events-template .item-block.first-item-block {
+		align-items: flex-start;
+		width: 100%;
+	}
+	.wp-block-fv-place-for-org.events-template .item-block span {
+		font-size: 20px;
+		line-height: 24px;
+		max-width: 400px;
+	}
+	.wp-block-fv-place-for-org.events-template .item-block {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-place-for-org.events-template .right-block .item-block:nth-child(1) span {
+		max-width: 100%;
+	}
+	.wp-block-fv-place-for-org.events-template .wrapper .right-block .item-block:nth-child(2) span {
+		max-width: 100%;
+	}
+	.wp-block-fv-place-for-org.events-template .right-block .item-block {
+		padding-top: 20px;
+	}
+	.wp-block-fv-place-for-org.events-template .item-block .icon {
+		margin-bottom: 35px;
+	}
+	.wp-block-fv-place-for-org.events-template .right-block .item-block {
+		margin-right: 0;
+	}
+	.wp-block-fv-place-for-org.events-template .wrapper .right-block {
+		gap: 20px;
+	}
+	.wp-block-fv-place-for-org.events-template .first-item-block {
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-place-for-org .item-block span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-place-for-org .first-item-block span {
+		max-width: 455px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon {
+		font-size: 16px;
+		line-height: 17px;
+	}
+	.wp-block-fv-place-for-org h2 {
+		font-size: 32px;
+		line-height: 38px;
+		margin-bottom: 40px;
+		max-width: 668px;
+	}
+	.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 180px;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-place-for-org .item-block {
+		width: calc(33.33333% - 0px);
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		width: 100%;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block .item-block:nth-child(2) span {
+		max-width: 130px;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-place-for-org {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-place-for-org .right-block .item-block {
+		margin-right: 20px;
+	}
+	.wp-block-fv-place-for-org .right-block .last-item-block {
+		margin-right: 0;
+	}
+	.wp-block-fv-place-for-org h2:before {
+		left: 23px;
+	}
+	.wp-block-fv-place-for-org h2 .highlight:before {
+		left: 22px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block span {
+		max-width: 590px;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 420px;
+	}
+	.skills-template.wp-block-fv-place-for-org {
+		margin-top: 120px;
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-place-for-org.events-template {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-place-for-org .first-item-block .icon svg {
+		width: 31px;
+		height: 31px;
+		position: absolute;
+		bottom: -18px;
+		left: 4px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon4 {
+		right: 4px;
+		top: 42px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon3 {
+		right: 80px;
+		top: 125px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon2 {
+		right: 187px;
+		top: 77px;
+	}
+	.wp-block-fv-place-for-org .first-item-block .icon1 {
+		right: 305px;
+		top: 29px;
+	}
+	.wp-block-fv-place-for-org .first-item-block span {
+		font-size: 26px;
+		line-height: 31px;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		padding-left: 40px;
+		padding-bottom: 40px;
+	}
+	.wp-block-fv-place-for-org .item-block p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 100%;
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block {
+		flex-direction: column;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block .item-block {
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+		padding-top: 27px;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block .last-item-block {
+		margin-bottom: 0;
+	}
+	.wp-block-fv-place-for-org h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 880px;
+	}
+	.wp-block-fv-place-for-org .right-block {
+		width: 60%;
+		padding-left: 20px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-place-for-org .first-item-block {
+		width: 40%;
+		margin: 0;
+		height: auto;
+	}
+	.wp-block-fv-place-for-org .wrapper .right-block .item-block:nth-child(2) span {
+		max-width: 100%;
+	}
+	.wp-block-fv-place-for-org h2:before {
+		left: 29px;
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.wp-block-fv-place-for-org h2 .highlight:before {
+		left: 28px;
+		font-size: 14px;
+		line-height: 21px;
+		top: -16px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block {
+		width: calc(50% - 10px);
+		justify-content: flex-end;
+	}
+	.skills-template.wp-block-fv-place-for-org .wrapper .right-block {
+		width: calc(50% - 10px);
+	}
+	.skills-template.wp-block-fv-place-for-org .wrapper .right-block .item-block {
+		margin-bottom: 0;
+		padding: 30px 20px;
+		padding-right: 10px;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(2) {
+		width: 100%;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(3) {
+		width: 100%;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) {
+		order: 1;
+	}
+	.skills-template.wp-block-fv-place-for-org .right-block .item-block:nth-child(1) span {
+		max-width: 500px;
+	}
+	.skills-template.wp-block-fv-place-for-org .first-item-block p {
+		width: 530px;
+	}
+	.wp-block-fv-place-for-org .first-item-block img {
+		width: 122px;
+		height: 123px;
+		position: absolute;
+		top: 11px;
+		right: 25px;
+	}
+	.wp-block-fv-place-for-org .item-block span {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-place-for-org.events-template .wrapper {
+		flex-direction: row;
+		gap: 20px;
+	}
+	.wp-block-fv-place-for-org.events-template .item-block.first-item-block {
+		align-items: flex-end;
+		width: 522px;
+		margin-bottom: 0;
+	}
+	.wp-block-fv-place-for-org.events-template .wrapper .right-block {
+		gap: 20px;
+		padding-left: 0;
+		width: calc(100% - 542px);
+	}
+	.wp-block-fv-place-for-org.events-template .wrapper .right-block .item-block {
+		margin-bottom: 0;
+	}
+	.wp-block-fv-place-for-org.events-template .first-item-block img {
+		width: 172px;
+		height: 148px;
+		top: 40px;
+		right: 40px;
+	}
+
+	.wp-block-fv-place-for-org.events-template .item-block.first-item-block span {
+		font-size: 26px;
+		line-height: 30px;
+	}
+}

@@ -1,0 +1,254 @@
+.wp-block-fv-child-busy {
+	margin-bottom: 75px;
+}
+.wp-block-fv-child-busy .highlight {
+	position: relative;
+}
+.wp-block-fv-child-busy h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 20px;
+}
+.wp-block-fv-child-busy .list-block {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-child-busy .list-block li {
+	border: 1px solid var(--lightGray);
+	padding: 20px;
+	padding-top: 74px;
+	border-radius: 15px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-end;
+	position: relative;
+}
+.wp-block-fv-child-busy .list-block li img {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.wp-block-fv-child-busy .list-block li > span {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	display: block;
+	margin-bottom: 10px;
+	position: relative;
+}
+.wp-block-fv-child-busy .list-block li > span .highlight:before {
+	content: "Программа";
+	position: absolute;
+	top: -11px;
+	left: 1px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-child-busy .list-block li > p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	display: block;
+}
+.wp-block-fv-child-busy .list-block li:nth-child(1) img {
+	width: 116px;
+	top: 10px;
+	right: 10px;
+}
+.wp-block-fv-child-busy .list-block li:nth-child(2) img {
+	width: 152px;
+	top: 10px;
+	right: 10px;
+}
+.wp-block-fv-child-busy .list-block li:nth-child(3) img {
+	width: 159px;
+	top: 10px;
+	right: 10px;
+}
+.wp-block-fv-child-busy .list-block li:nth-child(4) img {
+	width: 130px;
+	top: 10px;
+	right: 10px;
+}
+.wp-block-fv-child-busy .wrapper > p {
+	display: none;
+}
+.wp-block-fv-child-busy h2 .highlight:before,
+.wp-block-fv-child-busy .list-block li > span .highlight:before {
+	content: "Программа";
+	position: absolute;
+	top: -11px;
+	left: 15px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-child-busy h2 .highlight:before {
+	left: 14px;
+}
+.wp-block-fv-child-busy .list-block li > span .highlight:before {
+	left: 10px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-child-busy .list-block {
+		gap: 20px;
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.wp-block-fv-child-busy .list-block li {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-child-busy h2 {
+		width: 350px;
+		padding: 0;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-child-busy h2 {
+		width: 500px;
+		font-size: 32px;
+		line-height: 38.4px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-child-busy .list-block li > span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-child-busy {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(2) p {
+		width: 300px;
+	}
+	.wp-block-fv-child-busy .list-block li {
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(1) img {
+		width: 116px;
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(2) img {
+		width: 203px;
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(3) img {
+		width: 159px;
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(4) img {
+		width: 130px;
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(1) {
+		padding-top: 94px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(2) {
+		padding-top: 94px;
+	}
+	.wp-block-fv-child-busy h2 .highlight:before {
+		left: 21px;
+		top: -7px;
+	}
+	.wp-block-fv-child-busy .list-block li > span .highlight:before {
+		left: 12px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-child-busy h2 {
+		width: 800px;
+		font-size: 42px;
+		line-height: 50.4px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-child-busy .list-block li > span {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-child-busy .list-block li > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(1) p {
+		width: 370px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(1) img {
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(2) img {
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(3) img {
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(4) img {
+		width: 175px;
+		top: 20px;
+		right: 20px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(3) span {
+		width: 500px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(4) span {
+		width: 500px;
+	}
+	.wp-block-fv-child-busy .list-block li:nth-child(2) p {
+		width: 100%;
+	}
+	.wp-block-fv-child-busy .wrapper > p {
+		display: block;
+		border-radius: 15px;
+		background-color: var(--green);
+		padding: 36px 340px;
+		text-align: center;
+		font-size: 22px;
+		line-height: 26px;
+		font-family: "Montserrat";
+		font-weight: 600;
+		color: var(--white);
+		margin-top: 20px;
+	}
+	.wp-block-fv-child-busy h2 .highlight:before {
+		left: 27px;
+		top: -10px;
+		font-size: 14px;
+		line-height: 21px;
+	}
+
+	.wp-block-fv-child-busy .list-block li > span .highlight:before {
+		left: 13px;
+		top: -13px;
+		font-size: 12px;
+		line-height: 18px;
+	}
+}

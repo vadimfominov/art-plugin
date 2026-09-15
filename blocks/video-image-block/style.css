@@ -1,0 +1,124 @@
+.wp-block-fv-video-image-block .content-image {
+	height: 260px;
+	width: 100%;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-video-image-block .content-image img {
+	height: 100%;
+	height: 260px;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-video-image-block .wrapper > p {
+	display: none;
+}
+.wp-block-fv-video-image-block {
+	margin-bottom: 75px;
+}
+.wp-block-fv-video-image-block .wrapper {
+	position: relative;
+}
+.wp-block-fv-video-image-block .content-video {
+	width: 100%;
+	height: 0px;
+	overflow: hidden;
+}
+.wp-block-fv-video-image-block .content-video video {
+	width: 100%;
+	height: 100%;
+}
+.wp-block-fv-video-image-block .play-video {
+	width: 50px;
+	height: 50px;
+}
+.wp-block-fv-video-image-block .play-video svg {
+	width: 12px;
+	height: 16px;
+}
+
+.wp-block-fv-video-image-block .play-video {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	backdrop-filter: blur(34px);
+	z-index: 99;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+.wp-block-fv-video-image-block .play-video svg {
+	width: 11px;
+	height: 16px;
+	margin-right: -2px;
+}
+.wp-block-fv-video-image-block .play-video path {
+	fill: #ffffff;
+}
+.wp-block-fv-video-image-block .container-block-for-video {
+	height: 260px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-video-image-block .container-block-for-video {
+		height: 450px;
+	}
+	.wp-block-fv-video-image-block .wrapper,
+	.wp-block-fv-video-image-block .content-image {
+		height: 450px;
+	}
+	.wp-block-fv-video-image-block {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-video-image-block .content-image img {
+		height: 450px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-video-image-block .wrapper > p {
+		font-size: 20px;
+		line-height: 24px;
+		font-family: "Montserrat";
+		font-weight: 600;
+		color: var(--green);
+		display: block;
+		text-align: center;
+		max-width: 375px;
+		margin: 0 auto;
+		margin-top: 20px;
+	}
+	.wp-block-fv-video-image-block .wrapper {
+		height: auto;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-video-image-block .container-block-for-video {
+		height: 570px;
+	}
+	.wp-block-fv-video-image-block .content-image {
+		height: 570px;
+	}
+	.wp-block-fv-video-image-block .play-video {
+		width: 85px;
+		height: 85px;
+	}
+	.wp-block-fv-video-image-block .play-video svg {
+		width: 19px;
+		height: 27px;
+	}
+	.wp-block-fv-video-image-block .wrapper > p {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-video-image-block .content-image img {
+		height: 570px;
+	}
+}

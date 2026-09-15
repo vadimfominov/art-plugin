@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/child-at-home",
+    "title": "Child At Home",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a child-at-home",
+    "keywords": [
+        "child-at-home"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

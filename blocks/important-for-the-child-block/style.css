@@ -1,0 +1,118 @@
+.wp-block-fv-important-for-the-child-block {
+	padding-bottom: 75px;
+}
+.wp-block-fv-important-for-the-child-block .wrapper {
+	position: relative;
+}
+.wp-block-fv-important-for-the-child-block .wrapper .content {
+	position: absolute;
+	bottom: 0;
+	width: calc(100% - 10%);
+}
+.wp-block-fv-important-for-the-child-block .wrapper .content:before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: var(--white);
+	opacity: 0.8;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 96%;
+}
+.wp-block-fv-important-for-the-child-block .bg-image-important {
+	width: 100%;
+	height: auto;
+	z-index: 0;
+	display: block;
+}
+.wp-block-fv-important-for-the-child-block .image-bg {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-important-for-the-child-block .image-bg:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 10;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+}
+.wp-block-fv-important-for-the-child-block h2 {
+	font-size: 22px;
+	line-height: 26px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	color: var(--white);
+	text-align: center;
+	position: relative;
+	z-index: 20;
+	margin: 0 auto;
+	margin-bottom: 10px;
+	padding-top: 10px;
+	max-width: 330px;
+}
+.wp-block-fv-important-for-the-child-block p {
+	font-size: 14px;
+	line-height: 18.2px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--white);
+	text-align: center;
+	position: relative;
+	z-index: 20;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	max-width: 280px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-important-for-the-child-block p {
+		max-width: 390px;
+		margin-bottom: 30px;
+		font-size: 2.2vw;
+		line-height: 2.6vw;
+		max-width: 76%;
+		opacity: 0.9;
+	}
+	.wp-block-fv-important-for-the-child-block h2 {
+		max-width: 440px;
+		font-size: 4vw;
+		line-height: 4.5vw;
+		max-width: 90%;
+	}
+	.wp-block-fv-important-for-the-child-block .wrapper .content:before {
+		max-width: 80%;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-important-for-the-child-block {
+		padding-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-important-for-the-child-block p {
+		max-width: 390px;
+		margin-bottom: 30px;
+		font-size: 22px;
+		line-height: 28.6px;
+		max-width: 65%;
+		margin-bottom: 60px;
+	}
+	.wp-block-fv-important-for-the-child-block h2 {
+		max-width: 440px;
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 75%;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-important-for-the-child-block .wrapper .content:before {
+		max-width: 810px;
+	}
+}

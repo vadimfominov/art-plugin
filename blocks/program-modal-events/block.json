@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/program-modal-events",
+    "title": "Program Modal Events",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a program-modal-events",
+    "keywords": [
+        "program-modal-events"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

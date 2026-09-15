@@ -1,0 +1,24 @@
+.wp-block-fv-item-merch .bg-image {
+	display: block;
+}
+.wp-block-fv-item-merch .bg-image {
+	position: initial;
+	border-radius: 15px;
+	height: auto;
+}
+.wp-block-fv-item-merch .container.container-merch {
+	padding-left: 0;
+	padding-right: 0;
+}
+.wp-block-fv-item-merch .container.container-merch .left-img {
+	overflow: hidden;
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-item-merch .container-merch .change-item {
+		margin-bottom: 20px;
+	}
+}
+@media (min-width: 1025px) {
+
+}

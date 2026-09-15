@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/item-steps",
+    "title": "Item Steps",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a item-steps",
+    "keywords": [
+        "item-steps"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

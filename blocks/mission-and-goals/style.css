@@ -1,0 +1,120 @@
+.wp-block-fv-mission-and-goals h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-mission-and-goals .content-block {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-mission-and-goals .content-block > div {
+	border-radius: 15px;
+	border: 1px solid var(--border);
+	box-sizing: border-box;
+	padding: 40px 10px 20px 20px;
+}
+.wp-block-fv-mission-and-goals .content-block .left-block {
+	padding-top: 60px;
+}
+.wp-block-fv-mission-and-goals .content-block span {
+	font-size: 16px;
+	line-height: 19.2px;
+	margin-bottom: 10px;
+	display: block;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+}
+.wp-block-fv-mission-and-goals .content-block p {
+	font-size: 14px;
+	line-height: 21px;
+	margin-bottom: 8px;
+	display: block;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	position: relative;
+	padding-left: 14px;
+}
+.wp-block-fv-mission-and-goals .content-block .left-block p {
+	padding-left: 0;
+}
+.wp-block-fv-mission-and-goals .content-block .left-block p:before {
+	display: none;
+}
+.wp-block-fv-mission-and-goals .content-block p:before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--red);
+	position: absolute;
+	left: 0;
+	top: 7px;
+}
+.wp-block-fv-mission-and-goals .content-block p:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-mission-and-goals {
+	margin-bottom: 75px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-mission-and-goals h2 {
+		max-width: 400px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-mission-and-goals .content-block {
+		flex-direction: row;
+	}
+	.wp-block-fv-mission-and-goals .content-block .left-block {
+		box-sizing: border-box;
+		width: 50%;
+		padding-top: 40px;
+	}
+	.wp-block-fv-mission-and-goals .content-block .right-block {
+		box-sizing: border-box;
+		width: 50%;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-mission-and-goals h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		max-width: 600px;
+	}
+	.wp-block-fv-mission-and-goals .content-block span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-mission-and-goals .content-block {
+		gap: 20px;
+	}
+
+	.wp-block-fv-mission-and-goals {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-mission-and-goals h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 750px;
+	}
+	.wp-block-fv-mission-and-goals .content-block .left-block {
+		padding-top: 60px;
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-mission-and-goals .content-block .right-block {
+		padding-top: 60px;
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+}

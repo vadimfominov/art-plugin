@@ -1,0 +1,132 @@
+.wp-block-fv-for-contacts-page {
+	margin-bottom: 20px;
+}
+.wp-block-fv-for-contacts-page h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+}
+.wp-block-fv-for-contacts-page .wrapper > p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	display: block;
+	text-align: center;
+}
+.wp-block-fv-for-contacts-page ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-for-contacts-page li {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	height: 80px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.wp-block-fv-for-contacts-page li span {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin-bottom: 4px;
+}
+.wp-block-fv-for-contacts-page li a {
+	color: var(--green);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+}
+.wp-block-fv-for-contacts-page li p {
+	color: var(--green);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+}
+.wp-block-fv-for-contacts-page .descr {
+	border-radius: 10px;
+	background-color: var(--green);
+	padding: 20px;
+	margin-top: 10px;
+	color: #fff;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-for-contacts-page h2 {
+		width: 500px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+
+	.wp-block-fv-for-contacts-page .wrapper > p {
+		width: 480px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+
+	.wp-block-fv-for-contacts-page li {
+		width: 305px;
+	}
+	.wp-block-fv-for-contacts-page ul {
+		gap: 20px;
+		flex-direction: row;
+		justify-content: center;
+	}
+	.wp-block-fv-for-contacts-page {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-for-contacts-page .descr {
+		margin-top: 20px;
+		padding: 30px 100px;
+		box-sizing: border-box;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-for-contacts-page h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 720px;
+	}
+	.wp-block-fv-for-contacts-page li p,
+	.wp-block-fv-for-contacts-page li a {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-for-contacts-page h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 920px;
+	}
+	.wp-block-fv-for-contacts-page .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+		width: 540px;
+	}
+	.wp-block-fv-for-contacts-page .descr {
+		font-size: 16px;
+		line-height: 24px;
+		padding-left: 150px;
+		padding-right: 150px;
+	}
+}

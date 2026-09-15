@@ -1,0 +1,17 @@
+{
+	"apiVersion": 3,
+	"name": "fv/header-block",
+	"title": "Header Block",
+	"category": "common",
+	"icon": "smiley",
+	"description": "Блок с меню",
+	"keywords": ["header", "menu"],
+	"attributes": {
+		"selectedMenu": {
+			"type": "number",
+			"default": 0
+		}
+	},
+	"editorStyle": "file:./style.css",
+	"render": "file:./render.php"
+}

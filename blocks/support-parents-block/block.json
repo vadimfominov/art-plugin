@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/support-parents-block",
+    "title": "Support Parents Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a support-parents-block",
+    "keywords": [
+        "support-parents-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

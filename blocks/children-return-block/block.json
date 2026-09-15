@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/children-return-block",
+    "title": "Children Return Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a children-return-block",
+    "keywords": [
+        "children-return-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

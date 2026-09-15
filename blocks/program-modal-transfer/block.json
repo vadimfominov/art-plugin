@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/program-modal-transfer",
+    "title": "Program Modal Transfer",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a program-modal-transfer",
+    "keywords": [
+        "program-modal-transfer"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

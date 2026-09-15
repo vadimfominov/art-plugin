@@ -1,0 +1,190 @@
+.wp-block-fv-leave-request h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-leave-request .container {
+	display: flex;
+	flex-direction: column-reverse;
+	gap: 10px;
+}
+.wp-block-fv-leave-request .container .image-bg {
+	width: 100%;
+	height: auto;
+}
+.wp-block-fv-leave-request .container .image-bg img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-leave-request .view-services {
+	margin-bottom: 0;
+}
+.wp-block-fv-leave-request {
+	margin-bottom: 75px;
+}
+.wp-block-fv-leave-request .container ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-leave-request .container ul li > span {
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 10px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+}
+.wp-block-fv-leave-request .container ul p {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-leave-request .container ul li {
+	border: 1px solid var(--border);
+	border-radius: 15px;
+	padding: 50px 10px 20px 20px;
+	box-sizing: border-box;
+}
+.wp-block-fv-leave-request .container ul li:last-child {
+	padding: 0;
+	border: none;
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.wp-block-fv-leave-request .view-services {
+	border-radius: 50px;
+	overflow: hidden;
+	position: relative;
+	height: 55px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 0;
+	margin: 0;
+	width: 216px;
+	font-size: 14px;
+	line-height: 16px;
+	color: var(--white);
+	text-align: left;
+	padding-left: 25px;
+	background-color: var(--green);
+}
+.wp-block-fv-leave-request .view-services path {
+	fill: var(--green);
+}
+.wp-block-fv-leave-request .view-services:hover {
+	padding-left: 65px;
+}
+.wp-block-fv-leave-request .view-services span {
+	width: 31px;
+	height: 31px;
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 40px;
+	transition: all 0.3s ease;
+	position: absolute;
+	top: 12px;
+	right: 12px;
+}
+.wp-block-fv-leave-request .view-services:hover span {
+	right: calc(100% - 43px);
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-leave-request.events-template h2 {
+		width: 400px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-leave-request.events-template .container .image-bg img {
+		width: 100%;
+		height: 425px;
+		border-radius: 25px;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-leave-request.events-template .container {
+		gap: 20px;
+	}
+	.wp-block-fv-leave-request.events-template .container ul {
+		gap: 20px 20px;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-leave-request.events-template .container ul li {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-leave-request.events-template .container ul li:last-child {
+		width: 100%;
+		margin-top: 0;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-leave-request {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-leave-request.events-template h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 600px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-leave-request.events-template .container ul li > span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-leave-request.events-template .view-services {
+		font-size: 16px;
+	}
+	.wp-block-fv-leave-request .view-services:hover {
+	padding-left: 60px;
+}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-leave-request.events-template h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 700px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-leave-request.events-template .container {
+		flex-direction: row;
+	}
+	.wp-block-fv-leave-request.events-template .container ul li:last-child {
+		position: relative;
+		margin-top: 20px;
+	}
+	.wp-block-fv-leave-request.events-template .view-services {
+		position: relative;
+	}
+	.wp-block-fv-leave-request.events-template .container ul {
+		flex-direction: column;
+		width: 50%;
+	}
+	.wp-block-fv-leave-request.events-template .container ul li {
+		width: 100%;
+	}
+	.wp-block-fv-leave-request .container ul li:last-child {
+		justify-content: flex-start;
+	}
+	.wp-block-fv-leave-request .container .image-bg {
+		width: 50%;
+	}
+}

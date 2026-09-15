@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/important-people-block",
+    "title": "Important People Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a important-people-block",
+    "keywords": [
+        "important-people-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

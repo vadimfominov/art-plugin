@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/child-busy-copy",
+    "title": "Child Busy Copy",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a child-busy-copy",
+    "keywords": [
+        "child-busy-copy"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

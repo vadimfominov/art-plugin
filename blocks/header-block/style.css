@@ -1,0 +1,477 @@
+.wp-block-fv-header-block {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	z-index: 400;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block.active {
+	background-color: rgba(255, 255, 255, 0.8);
+	backdrop-filter: blur(5px);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block.active .top-block {
+	margin: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-header-block .wrapper-header {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+.right .phone-number,
+.menu-for-desktop,
+.wp-block-fv-header-block .right .btn-title {
+	display: none;
+}
+.wp-block-fv-header-block.active .social-icons a svg > path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block.active .social-icons a svg > path:first-child {
+	fill: var(--green);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block.active .social-icons a svg > g path {
+	fill: var(--green);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block.active .right .btn-title {
+	color: #fbfbfb;
+	font-size: 12px;
+	line-height: 13.2px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	height: 37px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+	border-radius: 30px;
+	background-color: var(--red);
+	margin-right: 5px;
+	text-align: center;
+}
+
+.wp-block-fv-header-block .top-block .logo {
+	display: inline-block;
+}
+
+.wp-block-fv-header-block .top-block .logo img {
+	display: block;
+	object-fit: contain;
+}
+
+.wp-block-fv-header-block .top-block {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 10px;
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-header-block .top-block .right {
+	display: flex;
+	align-items: center;
+}
+.website-mobile-menu .social-icons a svg > path {
+	fill: var(--white);
+}
+
+.website-mobile-menu .social-icons a svg > path:first-child {
+	fill: var(--green);
+}
+
+.website-mobile-menu .social-icons a svg > g path {
+	fill: var(--green);
+}
+.website-mobile-menu {
+	width: 54%;
+	height: 100vh;
+	background-color: var(--white);
+	border-radius: 30px 0px 0px 30px;
+	position: fixed;
+	top: 0;
+	right: -55%;
+	padding: 30px;
+	padding-right: 10px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+}
+
+.website-mobile-menu.active {
+	right: 0;
+	transition: all 0.3s ease;
+	position: fixed;
+}
+
+.website-mobile-menu.active::after {
+	content: "";
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.website-mobile-menu .logo {
+	display: inline-block;
+	margin-bottom: 20px;
+}
+
+.website-mobile-menu .logo img {
+	display: block;
+	object-fit: contain;
+}
+
+.menu > .menu-item {
+	margin-bottom: 15px;
+}
+
+.menu > .menu-item > a {
+	color: #3f3f3f;
+	font-family: "Montserrat";
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 500;
+	display: inline-block;
+	transition: all 0.3s ease;
+}
+
+.menu > .menu-item:hover > a,
+.menu > .menu-item > .sub-menu > .menu-item:hover > a {
+	color: var(--green);
+	transition: all 0.3s ease;
+}
+
+.menu > .menu-item > .sub-menu {
+	margin-top: 10px;
+	height: auto;
+}
+
+.menu > .menu-item > .sub-menu > .menu-item {
+	margin-bottom: 10px;
+}
+
+.menu > .menu-item > .sub-menu > .menu-item > a {
+	color: #3f3f3f;
+	font-family: "Montserrat";
+	font-size: 12px;
+	line-height: 17px;
+	font-weight: 500;
+	opacity: 0.7;
+	transition: all 0.3s ease;
+}
+
+.menu-item-has-children a {
+	position: relative;
+}
+
+.menu > .menu-item.menu-item-has-children > a:before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	right: -15px;
+	display: inline-block;
+	border: 5px solid transparent;
+	border-top: 4px solid #3f3f3f;
+}
+
+.menu > .menu-item.menu-item-has-children.no-active > a:before {
+	content: "";
+	position: absolute;
+	top: 3px;
+	right: -15px;
+	display: inline-block;
+	border: 5px solid transparent;
+	border-top: 4px solid #3f3f3f;
+	transform: rotate(-180deg);
+}
+
+.menu > .menu-item > .sub-menu.no-active {
+	height: 0;
+	overflow: hidden;
+	margin-top: 0px;
+}
+.social-icons {
+	display: flex;
+}
+
+.social-icons .in-merch {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	width: 38px;
+	height: 38px;
+	background-color: var(--green);
+	border-radius: 50%;
+	outline: none;
+	border: none;
+	margin-right: 5px;
+}
+
+.social-icons .in-merch span {
+	position: absolute;
+	right: 7px;
+	bottom: 6px;
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: "Montserrat";
+	font-size: 6px;
+	line-height: 8px;
+	font-weight: 500;
+	color: var(--green);
+}
+
+.social-icons a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons .vk {
+	margin-right: 5px;
+}
+
+.social-icons .tg {
+	margin-right: 10px;
+}
+
+.background-white .social-icons a svg > path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+
+.background-white .social-icons a svg > path:first-child {
+	fill: var(--green);
+	transition: all 0.3s ease;
+}
+
+.background-white .social-icons a svg > g path {
+	fill: var(--green);
+	transition: all 0.3s ease;
+}
+
+.social-icons a svg > path {
+	transition: all 0.3s ease;
+}
+
+.social-icons a svg > path:first-child {
+	transition: all 0.3s ease;
+}
+
+.social-icons a svg > g path {
+	transition: all 0.3s ease;
+}
+
+.menu-header-menu-container {
+	margin-bottom: 30px;
+	position: relative;
+	z-index: 500;
+}
+
+.menu-icon {
+	width: 37px;
+	height: 37px;
+	background-color: var(--green);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.menu-icon span {
+	width: 14px;
+	height: 1px;
+	background-color: var(--white);
+	position: relative;
+	border-radius: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: -4px;
+	transition: all 0.3s ease;
+}
+
+.menu-icon span:before {
+	content: "";
+	width: 17px;
+	height: 1px;
+	border-radius: 1px;
+	background-color: var(--white);
+	position: absolute;
+	top: 5px;
+	right: 0;
+	transition: all 0.3s ease;
+}
+
+.menu-icon span:after {
+	content: "";
+	width: 17px;
+	height: 1px;
+	border-radius: 1px;
+	background-color: var(--white);
+	position: absolute;
+	bottom: 5px;
+	right: 0;
+	transition: all 0.3s ease;
+}
+
+.menu-icon.active {
+	background-color: var(--white);
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.menu-icon.active span {
+	width: 0;
+}
+
+.menu-icon.active span:before {
+	transform: translate(6px, -5px) rotate(45deg);
+	background-color: var(--green);
+	height: 2px;
+	width: 14px;
+	transition: all 0.3s ease;
+}
+
+.menu-icon.active span:after {
+	transform: translate(6px, 6px) rotate(-45deg);
+	background-color: var(--green);
+	height: 2px;
+	width: 14px;
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-header-block .wrapper-header {
+		padding-left: 3%;
+		padding-right: 3%;
+	}
+	.menu-for-desktop {
+		display: block;
+	}
+	.menu-for-desktop .menu-header-menu-container {
+		margin-bottom: 0;
+	}
+	.menu {
+		display: flex;
+		align-items: center;
+	}
+	.menu > .menu-item {
+		margin-right: 33px;
+		margin-bottom: 0;
+	}
+	.menu > .menu-item > a {
+		color: var(--white);
+	}
+	.menu-icon {
+		display: none;
+	}
+	.menu > .menu-item.menu-item-has-children {
+		margin-right: 48px;
+		position: relative;
+	}
+	.menu > .menu-item > .sub-menu {
+		height: 0;
+		overflow: hidden;
+		background-color: var(--white);
+		border-radius: 15px;
+		padding: 0px;
+		position: absolute;
+		top: 30px;
+		left: 50%;
+		transform: translateX(-50%);
+		box-sizing: border-box;
+	}
+	.menu > .menu-item > .sub-menu.no-active {
+		padding: 25px 25px;
+		height: auto;
+		width: 250px;
+	}
+	.menu > .menu-item > .sub-menu > .menu-item {
+		text-align: center;
+		margin-bottom: 12px;
+	}
+	.menu > .menu-item > .sub-menu > .menu-item:last-child {
+		margin-bottom: 0;
+	}
+	.menu > .menu-item.menu-item-has-children > a:before {
+		border-top: 4px solid var(--white);
+	}
+	.menu > .menu-item.menu-item-has-children.no-active > a:before {
+		border-top: 4px solid var(--green);
+	}
+	.menu > .menu-item > .sub-menu > .menu-item > a {
+		font-size: 14px;
+		line-height: 130%;
+	}
+	.wp-block-fv-header-block.active .menu > .menu-item > a {
+		color: var(--darkGray);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .menu > .menu-item > a:hover {
+		color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .right .btn-title {
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .right .btn-title:hover {
+		background-color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-header-block.active .right .phone-number {
+		display: none;
+	}
+	.right .phone-number {
+		line-height: 19.6px;
+		font-family: "Montserrat";
+		font-size: 14px;
+		line-height: 19px;
+		font-weight: 500;
+		color: var(--white);
+		display: block;
+		transition: all 0.3s ease;
+	}
+	.right .phone-number:hover {
+		color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.menu > .menu-item {
+		margin-right: 33px;
+		margin-bottom: 0;
+	}
+
+	.wp-block-fv-header-block.active .menu > .menu-item.menu-item-has-children > a:before {
+		border-top: 4px solid var(--darkGray);
+	}
+	#menu-header-menu > .menu-item:nth-child(2) a {
+		position: relative;
+	}
+	.background-white .menu > .menu-item.menu-item-has-children > a:before {
+		border-top: 4px solid var(--darkGray);
+	}
+	.background-white .menu > .menu-item > a {
+		color: var(--darkGray);
+	}
+	.background-white .right .phone-number {
+		color: var(--darkGray);
+	}
+}

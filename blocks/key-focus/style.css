@@ -1,0 +1,214 @@
+.wp-block-fv-key-focus {
+	margin-bottom: 75px;
+}
+.wp-block-fv-key-focus h2 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 10px;
+	letter-spacing: -0.22px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-key-focus .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	margin-bottom: 20px;
+}
+.wp-block-fv-key-focus .block-container {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	align-items: center;
+}
+.wp-block-fv-key-focus .block-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.wp-block-fv-key-focus .block-list .item img {
+	display: none;
+}
+
+.wp-block-fv-key-focus .block-list .item {
+	padding: 20px 10px;
+	border-radius: 20px;
+	box-sizing: border-box;
+	background-color: #f5f5f7;
+	display: none;
+}
+.wp-block-fv-key-focus .block-list .item.item-1,
+.wp-block-fv-key-focus .block-list .item.item-2,
+.wp-block-fv-key-focus .block-list .item.item-3,
+.wp-block-fv-key-focus .active .block-list .item {
+	display: block;
+}
+
+.wp-block-fv-key-focus .block-list .item ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5px;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-key-focus .block-list .item li {
+	padding: 6px 12px;
+	padding-left: 22px;
+	background-color: #fff;
+	border-radius: 30px;
+	box-sizing: border-box;
+	color: #535353;
+	font-size: 14px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	position: relative;
+}
+
+.wp-block-fv-key-focus .block-list .item li:before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #30a933;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+}
+.wp-block-fv-key-focus .block-list .item span {
+	text-align: center;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 10px;
+	color: #535353;
+	display: block;
+}
+.wp-block-fv-key-focus .block-list .item p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: rgba(83, 83, 83, 0.8);
+	text-align: center;
+}
+.wp-block-fv-key-focus .block-list .item.item-4 {
+	background-color: #30a933;
+}
+.wp-block-fv-key-focus .block-list .item.item-4 span,
+.wp-block-fv-key-focus .block-list .item.item-4 p {
+	color: #fff;
+}
+
+.load-more-list {
+	outline: none;
+	cursor: pointer;
+	border: none;
+	background-color: #30a933;
+	padding: 16px 20px;
+	border-radius: 30px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: #fff;
+	text-align: center;
+	transition: all 0.3s ease;
+}
+.load-more-list:hover {
+	transition: all 0.3s ease;
+	background-color: #e94e4e;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-key-focus h2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-key-focus .block-list .item ul {
+		justify-content: flex-start;
+	}
+	.wp-block-fv-key-focus .block-list .item span {
+		text-align: left;
+	}
+	.wp-block-fv-key-focus .block-list .item p {
+		text-align: left;
+	}
+	.wp-block-fv-key-focus .block-list .item {
+		padding: 20px;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-key-focus h2 {
+		font-size: 32px;
+		max-width: 670px;
+	}
+	.wp-block-fv-key-focus .wrapper > p {
+		max-width: 670px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-key-focus .block-list .item li {
+		padding: 12px 16px;
+		padding-left: 22px;
+	}
+	.wp-block-fv-key-focus .block-list .item span {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-key-focus .block-list .item ul {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-key-focus {
+		margin-bottom: 120px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-key-focus h2 {
+		font-size: 42px;
+		max-width: 870px;
+	}
+	.wp-block-fv-key-focus .block-list {
+		width: 100%;
+	}
+	.wp-block-fv-key-focus .block-list .item img {
+		display: block;
+		margin-bottom: -20px;
+		max-width: 320px;
+		width: 100%;
+		height: auto;
+		object-fit: contain;
+		object-position: bottom;
+	}
+	.wp-block-fv-key-focus .block-list .item.item-1,
+	.wp-block-fv-key-focus .block-list .item.item-2,
+	.wp-block-fv-key-focus .block-list .item.item-3,
+	.wp-block-fv-key-focus .active .block-list .item {
+		display: flex;
+		gap: 20px;
+	}
+	.wp-block-fv-key-focus .block-list .item {
+		justify-content: space-between;
+	}
+	.wp-block-fv-key-focus .block-list .item .text-box {
+		max-width: 700px;
+		width: 100%;
+	}
+	.wp-block-fv-key-focus .block-list .item span {
+		font-size: 22px;
+	}
+	.wp-block-fv-key-focus .block-container {
+		gap: 40px;
+	}
+}

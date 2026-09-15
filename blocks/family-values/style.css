@@ -1,0 +1,170 @@
+.wp-block-fv-family-values h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 10px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-family-values .wrapper > p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.wp-block-fv-family-values .container-block-family picture {
+	display: none;
+}
+.wp-block-fv-family-values {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-family-values .container-family {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-family-values .container-family .item {
+	border-radius: 20px;
+	padding: 20px 10px 20px 20px;
+	background-color: var(--hintGray);
+}
+.wp-block-fv-family-values .container-family .item .svg-icon-wrapper {
+	margin-bottom: 20px;
+}
+.wp-block-fv-family-values .container-family .item p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: left;
+}
+.wp-block-fv-family-values .container-family .item span {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: left;
+	margin-top: 20px;
+	display: block;
+}
+.wp-block-fv-family-values .container-family .item span mark {
+	font-size: 18px;
+}
+
+.wp-block-fv-family-values .container-family .item .title-item {
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 20px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-family-values.events-template h2 {
+		margin: 0 auto;
+		max-width: 520px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-family-values.events-template .container-family {
+		flex-direction: row;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-family-values.events-template .container-family .item {
+		width: calc(50% - 10px);
+		box-sizing: border-box;
+		position: relative;
+	}
+	.wp-block-fv-family-values.events-template .container-family .item span {
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+	}
+	.wp-block-fv-family-values.events-template .container-family .item p {
+		padding-bottom: 40px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-family-values {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-family-values.events-template h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		max-width: 780px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-family-values.events-template .wrapper > p {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-family-values.events-template .container-family .item span {
+		bottom: 30px;
+		left: 30px;
+	}
+	.wp-block-fv-family-values .container-family .item .svg-icon-wrapper {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-family-values .container-family .item {
+		padding: 30px;
+		padding-right: 10px;
+	}
+	
+	
+
+	.wp-block-fv-family-values .container-family .item span mark {
+		font-size: 26px;
+		font-weight: 600;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-family-values .container-block-family picture {
+		display: block;
+	}
+	.wp-block-fv-family-values.events-template h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 1000px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-family-values.events-template .wrapper > p {
+		font-size: 16px;
+		line-height: 20px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-family-values.events-template .container-block-family {
+		display: flex;
+		gap: 20px;
+	}
+	.wp-block-fv-family-values.events-template .container-block-family picture {
+		width: 414px;
+		height: auto;
+		border-radius: 20px;
+		overflow: hidden;
+	}
+	.wp-block-fv-family-values.events-template .container-block-family picture img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+		display: block;
+	}
+	.wp-block-fv-family-values.events-template .container-family {
+		width: calc(100% - 434px);
+	}
+	.wp-block-fv-family-values .container-family .item p {
+		font-size: 16px;
+		line-height: 20px;
+	}
+	.wp-block-fv-family-values .container-family .item span {
+		font-size: 16px;
+	}
+}

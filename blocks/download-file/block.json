@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/download-file",
+    "title": "Download File",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a download-file",
+    "keywords": [
+        "download-file"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

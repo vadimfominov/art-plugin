@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/tests-items",
+    "title": "Tests Items",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a tests-items",
+    "keywords": [
+        "tests-items"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

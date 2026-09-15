@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/link-camp-tabs",
+    "title": "Link Camp Tabs",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a link-camp-tabs",
+    "keywords": [
+        "link-camp-tabs"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

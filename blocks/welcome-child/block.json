@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/welcome-child",
+    "title": "Welcome Child",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a welcome-child",
+    "keywords": [
+        "welcome-child"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

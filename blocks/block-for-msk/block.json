@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/block-for-msk",
+    "title": "Block For Msk",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a block-for-msk",
+    "keywords": [
+        "block-for-msk"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

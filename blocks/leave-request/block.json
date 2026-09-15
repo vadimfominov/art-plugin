@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/leave-request",
+    "title": "Leave Request",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a leave-request",
+    "keywords": [
+        "leave-request"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

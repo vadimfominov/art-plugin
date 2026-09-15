@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/filter-section-merch",
+    "title": "Filter Section Merch",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a filter-section-merch",
+    "keywords": [
+        "filter-section-merch"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

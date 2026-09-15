@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/steps-parents",
+    "title": "Steps Parents",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a steps-parents",
+    "keywords": [
+        "steps-parents"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

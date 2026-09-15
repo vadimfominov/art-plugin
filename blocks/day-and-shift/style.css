@@ -1,0 +1,347 @@
+.wp-block-fv-day-and-shift .block-container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-day-and-shift .block-container .left-block {
+	border-radius: 20px;
+	background-color: #30a933;
+	padding: 20px 0px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.wp-block-fv-day-and-shift .block-container .left-block .title1 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 10px;
+	letter-spacing: -0.22px;
+	color: #fff;
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+	padding: 0px 40px;
+}
+
+.wp-block-fv-day-and-shift .select-block {
+	margin-bottom: 20px;
+}
+.wp-block-fv-day-and-shift .select-ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	position: initial;
+	height: auto;
+	overflow: initial;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	border-radius: 0px;
+	margin: 0;
+}
+
+.wp-block-fv-day-and-shift .select-ul li {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	padding: 6px 12px 6px 22px;
+	position: relative;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: #ffffff;
+	margin-bottom: 0;
+}
+.wp-block-fv-day-and-shift .select-ul li.active {
+	background-color: #ffffff;
+	color: #535353;
+}
+.wp-block-fv-day-and-shift .select-block .select-ul li:hover {
+	color: #ffffff;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-day-and-shift .select-block .select-ul li.active:hover {
+	color: #535353;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-day-and-shift .select-ul li::before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+}
+.wp-block-fv-day-and-shift .select-ul li.active::before {
+	background-color: #30a933;
+}
+
+.wp-block-fv-day-and-shift .block-container .left-block .title2 {
+	text-align: center;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #fff;
+	display: block;
+	padding: 0px 13px;
+}
+
+.wp-block-fv-day-and-shift .block-container .left-block .descr2 {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: #fff;
+	text-align: center;
+	padding: 0px 10px;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block {
+	border-radius: 30px;
+	background-color: #f5f5f7;
+	padding: 0px 20px;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block.active {
+	padding: 20px;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block .items {
+	display: flex;
+	flex-direction: column;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block .item {
+	display: flex;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	justify-content: space-between;
+}
+.wp-block-fv-day-and-shift .block-container .right-block .item:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+.wp-block-fv-day-and-shift .block-container .right-block .item span {
+	display: block;
+	width: 120px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: #535353;
+	text-align: left;
+	padding-left: 12px;
+	position: relative;
+}
+.wp-block-fv-day-and-shift .block-container .right-block .item span:before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	background-color: #30a933;
+	position: absolute;
+	left: 0;
+	top: 7px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block .item p {
+	text-align: right;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: rgba(83, 83, 83, 0.8);
+}
+
+.wp-block-fv-day-and-shift {
+	margin-bottom: 75px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.tab-2 {
+	padding: 0px 10px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.active.tab-2 {
+	padding: 20px 10px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: #535353;
+	letter-spacing: 0px;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item strong {
+	align-items: center;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 130%;
+	color: #535353;
+	letter-spacing: 0.16px;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab {
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 30px;
+	color: #fff;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 130%;
+	padding: 6px 12px 6px 22px;
+	box-sizing: border-box;
+	border: none;
+	outline: none;
+	position: relative;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab:before {
+	content: "";
+	width: 4px;
+	height: 4px;
+	border-radius: 50%;
+	position: absolute;
+	left: 12px;
+	top: calc(50% - 2px);
+	background-color: #fff;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab.active {
+	background-color: #fff;
+	color: #535353;
+}
+.wp-block-fv-day-and-shift .block-container .left-block .btn-tabs .click-tab.active:before {
+	background-color: #30a933;
+}
+
+.wp-block-fv-day-and-shift .block-container .right-block {
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-day-and-shift .block-container .right-block.active {
+	height: auto;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-day-and-shift .block-container .left-block .title1 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-day-and-shift .select-block {
+		margin-bottom: 60px;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .title2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .descr2 {
+		max-width: 570px;
+		margin: 0 auto;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.active {
+		padding: 30px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item {
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-day-and-shift .block-container .left-block .title1 {
+		font-size: 32px;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .title2 {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block .item span {
+		font-size: 16px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block .item p {
+		font-size: 16px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item strong {
+		font-size: 20px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.active.tab-2 {
+		padding: 30px;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item {
+		padding-bottom: 40px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-day-and-shift .select-ul li {
+		cursor: pointer;
+		height: auto;
+		width: auto;
+		margin: 0;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item:first-child {
+		padding-top: 40px;
+	}
+	.wp-block-fv-day-and-shift {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-day-and-shift .block-container {
+		flex-direction: row;
+		gap: 20px;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block {
+		width: 522px;
+		padding: 30px;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+	}
+	.wp-block-fv-day-and-shift .content-tab {
+		width: calc(100% - 522px - 20px);
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .title1 {
+		max-width: 100%;
+		margin: 0;
+		margin-bottom: 20px;
+		padding: 0px;
+		text-align: left;
+	}
+	.wp-block-fv-day-and-shift .select-ul {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 5px;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .title2 {
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-align: left;
+		padding: 0;
+		align-items: flex-end;
+		display: flex;
+		flex: auto;
+	}
+	.wp-block-fv-day-and-shift .block-container .left-block .descr2 {
+		max-width: 100%;
+		padding: 0;
+		text-align: left;
+	}
+	.wp-block-fv-day-and-shift .block-container .right-block.tab-2 .item {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}

@@ -1,0 +1,351 @@
+.wp-block-fv-steps-parents {
+	margin-bottom: 75px;
+}
+.wp-block-fv-steps-parents h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 40px;
+}
+.wp-block-fv-steps-parents .item {
+	text-align: left;
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	padding-right: 40px;
+	padding-left: 20px;
+	position: relative;
+}
+.wp-block-fv-steps-parents .item:nth-child(3) {
+	padding: 20px;
+	background-color: var(--green);
+	border-radius: 10px;
+	color: var(--white);
+}
+.wp-block-fv-steps-parents .container {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+.wp-block-fv-steps-parents .item:nth-child(2) {
+	padding-right: 90px;
+}
+.wp-block-fv-steps-parents .item p {
+	position: relative;
+}
+.wp-block-fv-steps-parents .item p::after {
+	content: "";
+	width: 10px;
+	height: 10px;
+	display: block;
+	background-color: var(--green);
+	position: absolute;
+	top: 4px;
+	left: -20px;
+	border-radius: 50%;
+}
+.wp-block-fv-steps-parents .item p a {
+	color: #8f8f8f;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	cursor: pointer;
+}
+.wp-block-fv-steps-parents .item:nth-child(2) p::after {
+	background-color: transparent;
+	border: 2px solid var(--green);
+	box-sizing: border-box;
+}
+.wp-block-fv-steps-parents .item:nth-child(1)::before {
+	content: "";
+	height: 55px;
+	width: 2px;
+	border-radius: 2px;
+	background-color: var(--green);
+	position: absolute;
+	top: 18px;
+	left: 4px;
+}
+
+.wp-block-fv-steps-parents .item:nth-child(2)::before {
+	content: "";
+	height: 52px;
+	width: 2px;
+	border-radius: 2px;
+	background-color: var(--green);
+	position: absolute;
+	top: 18px;
+	left: 4px;
+}
+.wp-block-fv-steps-parents .item:nth-child(4)::before {
+	content: "";
+	height: 32px;
+	width: 2px;
+	border-radius: 2px;
+	background-color: var(--green);
+	position: absolute;
+	bottom: 38px;
+	left: 4px;
+}
+.wp-block-fv-steps-parents .wrapper .block > svg {
+	margin-left: -3px;
+	margin-bottom: -4px;
+}
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(3) {
+	background-color: var(--blue);
+}
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(2)::before,
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(1)::before,
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(4)::before,
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(3)::before,
+.wp-block-fv-steps-parents.skills-academy .item p::after,
+.wp-block-fv-steps-parents.skills-academy .item p::after {
+	background-color: var(--blue);
+}
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(2) p::after,
+.wp-block-fv-steps-parents.skills-academy .item:nth-child(3) p::after {
+	border: 3px solid var(--blue);
+}
+.wp-block-fv-steps-parents.skills-academy .wrapper .block > svg path {
+	fill: var(--blue);
+	stroke: var(--blue);
+}
+
+.wp-block-fv-steps-parents.art-community .item:nth-child(3) {
+	background-color: var(--artRed);
+}
+.wp-block-fv-steps-parents.art-community .item:nth-child(2)::before,
+.wp-block-fv-steps-parents.art-community .item:nth-child(1)::before,
+.wp-block-fv-steps-parents.art-community .item:nth-child(4)::before,
+.wp-block-fv-steps-parents.art-community .item:nth-child(3)::before,
+.wp-block-fv-steps-parents.art-community .item p::after,
+.wp-block-fv-steps-parents.art-community .item p::after {
+	background-color: var(--artRed);
+}
+.wp-block-fv-steps-parents.art-community .item:nth-child(2) p::after,
+.wp-block-fv-steps-parents.art-community .item:nth-child(3) p::after {
+	border: 3px solid var(--artRed);
+}
+.wp-block-fv-steps-parents.art-community .wrapper .block > svg path {
+	fill: var(--artRed);
+	stroke: var(--artRed);
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-steps-parents .wrapper {
+		display: flex;
+		align-items: flex-start;
+		gap: 20px;
+	}
+	.wp-block-fv-steps-parents h2 {
+		text-align: left;
+		margin-top: 20px;
+		width: calc(50% - 10px);
+		padding-right: 20px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-steps-parents .wrapper .block {
+		width: calc(50% - 10px);
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-steps-parents h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-steps-parents {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-steps-parents .item {
+		font-size: 20px;
+		line-height: 24px;
+		padding-left: 30px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(1) {
+		padding-right: 70px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(2) {
+		padding-right: 120px;
+	}
+	.wp-block-fv-steps-parents .item p::after {
+		content: "";
+		width: 16px;
+		height: 16px;
+		left: -28px;
+		top: 3px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(1)::before {
+		content: "";
+		height: 83px;
+		width: 2px;
+		border-radius: 2px;
+		background-color: var(--green);
+		position: absolute;
+		top: 23px;
+		left: 9px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(2)::before {
+		content: "";
+		height: 54px;
+		width: 2px;
+		border-radius: 2px;
+		background-color: var(--green);
+		position: absolute;
+		top: 23px;
+		left: 9px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(3) p::after {
+		left: -18px;
+		display: none;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(4)::before {
+		content: "";
+		height: 30px;
+		width: 2px;
+		border-radius: 2px;
+		background-color: var(--green);
+		position: absolute;
+		bottom: 49px;
+		left: 9px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(3) {
+		border-radius: 15px;
+	}
+	.wp-block-fv-steps-parents .wrapper .block > svg {
+		margin-left: -6px;
+		margin-bottom: -3px;
+		width: 31px;
+		height: 40px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-steps-parents h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		text-align: center;
+		padding: 0;
+		width: 100%;
+		margin-top: 0;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		width: 700px;
+	}
+	.wp-block-fv-steps-parents .wrapper {
+		flex-direction: column;
+		align-items: center;
+	}
+	.wp-block-fv-steps-parents .container {
+		flex-direction: row;
+	}
+	.wp-block-fv-steps-parents .wrapper .block {
+		width: 100%;
+	}
+	.wp-block-fv-steps-parents .wrapper {
+		gap: 0px;
+	}
+	.wp-block-fv-steps-parents .item {
+		font-size: 22px;
+		line-height: 26px;
+		padding-top: 38px;
+		padding-bottom: 38px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(2) {
+		padding-right: 20px;
+		padding-left: 20px;
+	}
+
+	.wp-block-fv-steps-parents .container {
+		gap: 0px;
+	}
+	.wp-block-fv-steps-parents .item {
+		width: 25%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(3) {
+		padding-top: 38px;
+		padding-left: 20px;
+		padding-right: 0px;
+		box-sizing: border-box;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-steps-parents .item p::after {
+		content: "";
+		width: 20px;
+		height: 20px;
+		left: 6px;
+		top: -26px;
+	}
+	.wp-block-fv-steps-parents .wrapper .block > svg {
+		margin-left: 0px;
+		margin-bottom: -10px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(4) {
+		padding-left: 20px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(1) {
+		padding-right: 0;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(1) {
+		padding-right: 20px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(1)::before {
+		height: 3px;
+		width: 296px;
+		top: 21px;
+		left: 34px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(2)::before {
+		height: 3px;
+		width: 261px;
+		top: 21px;
+		left: 48px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(2) p::after {
+		background-color: transparent;
+		border: 3px solid var(--green);
+		box-sizing: border-box;
+		left: -1px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(3) p::after {
+		left: auto;
+		right: -39px;
+		background-color: transparent;
+		border: 3px solid var(--green);
+		box-sizing: border-box;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(4) p::after {
+		left: auto;
+		right: 0;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(3)::before {
+		content: "";
+		height: 3px;
+		width: 20px;
+		border-radius: 2px;
+		background-color: var(--green);
+		position: absolute;
+		bottom: auto;
+		left: auto;
+		top: 21px;
+		right: -9px;
+	}
+	.wp-block-fv-steps-parents .item:nth-child(4)::before {
+		content: "";
+		height: 3px;
+		width: 254px;
+		border-radius: 2px;
+		background-color: var(--green);
+		position: absolute;
+		bottom: auto;
+		left: auto;
+		top: 21px;
+		right: 17px;
+	}
+}

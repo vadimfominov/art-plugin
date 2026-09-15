@@ -1,0 +1,305 @@
+.wp-block-fv-childs-strengths {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-childs-strengths h2 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 10px;
+	letter-spacing: -0.22px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-childs-strengths p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-childs-strengths .list-block {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.wp-block-fv-childs-strengths .list-block li {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+}
+.wp-block-fv-childs-strengths .list-block li span {
+	background-color: #30a933;
+	border-radius: 10px;
+	max-width: 250px;
+	width: 100%;
+	padding: 10px 20px;
+	color: #ffffff;
+	text-align: center;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+	box-sizing: border-box;
+}
+.wp-block-fv-childs-strengths .list-block li p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+}
+
+.wp-block-fv-childs-strengths .list-block li .icn {
+	display: none;
+}
+
+.wp-block-fv-childs-strengths .list-block li picture {
+	border-radius: 30px;
+	overflow: hidden;
+	max-height: 335px;
+	width: 100%;
+}
+.wp-block-fv-childs-strengths .list-block li picture img {
+	display: block;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	max-height: 335px;
+}
+
+.wp-block-fv-childs-strengths .list-block .item-1,
+.wp-block-fv-childs-strengths .list-block .item-2,
+.wp-block-fv-childs-strengths .list-block .item-3 {
+	order: 1;
+}
+.wp-block-fv-childs-strengths .list-block .item-4,
+.wp-block-fv-childs-strengths .list-block .item-5,
+.wp-block-fv-childs-strengths .list-block .item-6 {
+	order: 3;
+}
+
+.wp-block-fv-childs-strengths .list-block .item-7 {
+	order: 2;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-childs-strengths h2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-childs-strengths .list-block li picture {
+		max-height: 400px;
+		width: 300px;
+	}
+	.wp-block-fv-childs-strengths .list-block li picture img {
+		max-height: 400px;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-childs-strengths h2 {
+		font-size: 32px;
+		max-width: 670px;
+	}
+	.wp-block-fv-childs-strengths p {
+		max-width: 670px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-childs-strengths {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-childs-strengths .list-block li:not(:last-child) {
+		position: absolute;
+		display: flex;
+		gap: 64px;
+	}
+	.wp-block-fv-childs-strengths .list-block li span {
+		text-align: right;
+	}
+	.wp-block-fv-childs-strengths .list-block li .icn {
+		position: absolute;
+		right: 50px;
+		top: 50px;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-1 {
+		top: 0px;
+		left: 0;
+		align-items: flex-end;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-1 span {
+		margin-right: 4px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-1 p {
+		margin-right: 40px;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-5 {
+		bottom: -50px;
+		left: 120px;
+		width: 300px;
+		align-items: flex-end;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-5 span {
+		width: 300px;
+		max-width: 100%;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-5 p {
+		margin-right: 40px;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-3 {
+		top: 290px;
+		left: 0;
+		align-items: flex-end;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-4 {
+		top: 0px;
+		right: 0;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-4 span,
+	.wp-block-fv-childs-strengths .list-block li.item-2 span,
+	.wp-block-fv-childs-strengths .list-block li.item-6 span {
+		text-align: left;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-4 .icn,
+	.wp-block-fv-childs-strengths .list-block li.item-2 .icn,
+	.wp-block-fv-childs-strengths .list-block li.item-6 .icn {
+		transform: rotate(180deg);
+		right: auto;
+		left: 0;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-6 p {
+		margin-left: -40px;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-2 {
+		top: 210px;
+		right: 0;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-6 {
+		bottom: 0px;
+		right: 0;
+	}
+	.wp-block-fv-childs-strengths .list-block li .icn {
+		display: block;
+	}
+	.wp-block-fv-childs-strengths .list-block li span {
+		font-size: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li p {
+		max-width: 300px;
+		width: 100%;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-1 p,
+	.wp-block-fv-childs-strengths .list-block .item-5 p,
+	.wp-block-fv-childs-strengths .list-block .item-3 p {
+		text-align: right;
+	}
+	.wp-block-fv-childs-strengths .list-block .item-4 p,
+	.wp-block-fv-childs-strengths .list-block .item-2 p,
+	.wp-block-fv-childs-strengths .list-block .item-6 p {
+		text-align: left;
+	}
+	.wp-block-fv-childs-strengths .list-block {
+		position: relative;
+		padding: 150px 0;
+	}
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-childs-strengths h2 {
+		font-size: 42px;
+		max-width: 870px;
+	}
+	.wp-block-fv-childs-strengths .list-block li:not(:last-child) {
+		gap: 40px;
+	}
+	.wp-block-fv-childs-strengths .list-block li:not(:last-child) {
+		width: 50%;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-1 {
+		padding-right: 180px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-1 p {
+		margin-right: 13px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-1 .icn {
+		right: 170px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-5 {
+		padding-right: 170px;
+		left: 0;
+		bottom: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-5 p {
+		margin-right: 13px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-5 .icn {
+		right: 160px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-3 {
+		padding-right: 250px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-3 p {
+		margin-right: 23px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-3 .icn {
+		right: 240px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-2 {
+		top: 290px;
+		padding-left: 250px;
+		align-items: flex-start;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-2 p {
+		margin-left: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-2 .icn {
+		left: 240px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-4 {
+		padding-left: 180px;
+		align-items: flex-start;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-4 p {
+		margin-left: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-4 .icn {
+		left: 170px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-6 {
+		align-items: flex-start;
+		padding-left: 170px;
+		bottom: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-6 p {
+		margin-left: 20px;
+	}
+	.wp-block-fv-childs-strengths .list-block li.item-6 .icn {
+		left: 160px;
+		top: 30px;
+	}
+	.wp-block-fv-childs-strengths .list-block li picture {
+		height: 550px;
+		width: 415px;
+		max-height: 100%;
+	}
+	.wp-block-fv-childs-strengths .list-block li picture img {
+		max-height: 100%;
+	}
+}

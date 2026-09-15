@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/child-history",
+    "title": "Child History",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a child-history",
+    "keywords": [
+        "child-history"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

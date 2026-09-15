@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/program-modal-visible",
+    "title": "Program Modal Visible",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a program-modal-visible",
+    "keywords": [
+        "program-modal-visible"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/key-focus",
+    "title": "Key Focus",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a key-focus",
+    "keywords": [
+        "key-focus"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

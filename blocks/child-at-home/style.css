@@ -1,0 +1,140 @@
+.wp-block-fv-child-at-home {
+	margin-bottom: 75px;
+}
+.wp-block-fv-child-at-home .wrapper {
+	position: relative;
+}
+.wp-block-fv-child-at-home .wrapper .content {
+	position: absolute;
+	bottom: 20px;
+	width: calc(100% - 10%);
+	margin: 0 auto;
+}
+.wp-block-fv-child-at-home p {
+	font-size: 14px;
+	line-height: 18px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	max-width: 95%;
+	width: 100%;
+	margin: 0 auto;
+}
+.wp-block-fv-child-at-home .image-bg {
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-child-at-home .image-bg:before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.59));
+}
+.wp-block-fv-child-at-home.skill-academy p {
+	opacity: 0.9;
+}
+.wp-block-fv-child-at-home.red-template .image-bg:before {
+	background: rgba(0, 0, 0, 0.2);
+}
+.wp-block-fv-child-at-home.red-template p {
+	opacity: 0.9;
+}
+
+.wp-block-fv-child-at-home.skills-template .image-bg:before {
+	background: rgba(0, 0, 0, 0.3);
+}
+.wp-block-fv-child-at-home.skills-template {
+	margin-top: 0;
+}
+.wp-block-fv-child-at-home.skills-template .image-bg::after {
+	content: "Группа 10-20 человек";
+	border-radius: 30px;
+	border: 1px solid var(--green);
+	color: var(--green);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	padding: 8px 23px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: var(--white);
+	display: block;
+	width: max-content;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-child-at-home p {
+		max-width: 470px;
+	}
+	.wp-block-fv-child-at-home .wrapper .content {
+		width: calc(100% - 6%);
+	}
+	.wp-block-fv-child-at-home.skill-academy p {
+		opacity: 1;
+	}
+	.wp-block-fv-child-at-home.red-template p {
+		max-width: 420px;
+	}
+	.wp-block-fv-child-at-home.skills-template p {
+		max-width: 410px;
+	}
+	.wp-block-fv-child-at-home .bg-image-important {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		display: block;
+		object-position: center;
+	}
+	.wp-block-fv-child-at-home .image-bg {
+		height: 450px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-child-at-home p {
+		max-width: 540px;
+		font-size: 18px;
+		line-height: 23.4px;
+	}
+	.wp-block-fv-child-at-home .wrapper .content {
+		bottom: 30px;
+	}
+	.wp-block-fv-child-at-home {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-child-at-home.red-template .image-bg {
+		height: 450px;
+	}
+	.wp-block-fv-child-at-home.skills-template p {
+		max-width: 510px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-child-at-home .wrapper .content {
+		left: 50%;
+		bottom: 45px;
+		transform: translateX(-50%);
+	}
+	.wp-block-fv-child-at-home p {
+		font-size: 22px;
+		line-height: 28.6px;
+		max-width: 660px;
+	}
+	.wp-block-fv-child-at-home.skills-template p {
+		max-width: 610px;
+	}
+	.wp-block-fv-child-at-home.red-template p {
+		max-width: 620px;
+	}
+	.wp-block-fv-child-at-home .image-bg {
+		height: 515px;
+	}
+}

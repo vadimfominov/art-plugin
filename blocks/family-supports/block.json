@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/family-supports",
+    "title": "Family Supports",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a family-supports",
+    "keywords": [
+        "family-supports"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

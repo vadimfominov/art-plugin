@@ -1,0 +1,155 @@
+.wp-block-fv-two-block-text h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+}
+.wp-block-fv-two-block-text .wrapper > p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	display: block;
+	text-align: center;
+}
+.wp-block-fv-two-block-text {
+	margin-bottom: 75px;
+}
+.wp-block-fv-two-block-text ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-two-block-text li {
+	border-radius: 15px;
+	padding: 20px;
+	padding-top: 87px;
+	box-sizing: border-box;
+	position: relative;
+}
+.wp-block-fv-two-block-text li:first-child {
+	background-color: var(--hintGray);
+}
+.wp-block-fv-two-block-text li:first-child span {
+	color: var(--green);
+}
+.wp-block-fv-two-block-text li:first-child p {
+	color: var(--mediumGray);
+}
+.wp-block-fv-two-block-text li:last-child {
+	background-color: var(--green);
+}
+.wp-block-fv-two-block-text li p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--white);
+	margin-bottom: 5px;
+	text-indent: 14px;
+	position: relative;
+}
+.wp-block-fv-two-block-text li p:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-two-block-text li p:before {
+	content: "";
+	left: 0;
+	top: 8px;
+	width: 6px;
+	height: 6px;
+	background-color: var(--green);
+	position: absolute;
+	border-radius: 50%;
+}
+.wp-block-fv-two-block-text li:last-child p:before {
+	background-color: var(--white);
+}
+.wp-block-fv-two-block-text li span {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--white);
+	display: block;
+	margin-bottom: 10px;
+}
+.wp-block-fv-two-block-text .svg-icon-wrapper {
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-two-block-text h2 {
+		width: 490px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-two-block-text .wrapper > p {
+		width: 400px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-two-block-text ul {
+		flex-direction: row;
+		gap: 20px;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-two-block-text h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 720px;
+	}
+	.wp-block-fv-two-block-text li span {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-two-block-text li {
+		padding-left: 30px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-two-block-text .svg-icon-wrapper {
+		top: 30px;
+		left: 30px;
+	}
+	.wp-block-fv-two-block-text {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-two-block-text h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 970px;
+	}
+
+	.wp-block-fv-two-block-text .wrapper > p {
+		width: 430px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-two-block-text li span {
+		font-size: 22px;
+		line-height: 26.4px;
+		margin-bottom: 20px;
+		padding-right: 130px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-two-block-text li p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-two-block-text li {
+		padding-right: 50px;
+	}
+}

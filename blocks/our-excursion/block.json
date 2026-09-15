@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/our-excursion",
+    "title": "Our Excursion",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a our-excursion",
+    "keywords": [
+        "our-excursion"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

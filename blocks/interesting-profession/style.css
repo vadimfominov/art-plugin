@@ -1,0 +1,85 @@
+.wp-block-fv-interesting-profession h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+	text-align: center;
+}
+.wp-block-fv-interesting-profession p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 20px;
+	text-align: center;
+}
+.wp-block-fv-interesting-profession .title h2:first-child {
+	display: none;
+}
+.wp-block-fv-interesting-profession .image-bg {
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-interesting-profession .image-bg img {
+	height: auto;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-interesting-profession .title {
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.wp-block-fv-interesting-profession {
+	margin-bottom: 75px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-interesting-profession .title {
+		padding-left: 0px;
+		padding-right: 0px;
+		width: 350px;
+		margin: 0 auto;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-interesting-profession {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-interesting-profession .title h2:first-child {
+		display: block;
+	}
+	.wp-block-fv-interesting-profession .title h2:nth-child(2) {
+		display: none;
+	}
+	.wp-block-fv-interesting-profession .title h2 {
+		font-size: 32px;
+		line-height: 32.4px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-interesting-profession .title p {
+		display: none;
+	}
+	.wp-block-fv-interesting-profession .title {
+		width: 780px;
+	}
+	.wp-block-fv-interesting-profession .image-bg {
+		border-radius: 30px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-interesting-profession .title {
+		width: 100%;
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.wp-block-fv-interesting-profession .title h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		margin-bottom: 40px;
+	}
+}

@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/day-steps",
+    "title": "Day Steps",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a day-steps",
+    "keywords": [
+        "day-steps"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

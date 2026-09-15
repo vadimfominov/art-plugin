@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/photo-and-5steps",
+    "title": "Photo And 5steps",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a photo-and-5steps",
+    "keywords": [
+        "photo-and-5steps"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

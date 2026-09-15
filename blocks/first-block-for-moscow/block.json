@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/first-block-for-moscow",
+    "title": "First Block For Moscow",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a first-block-for-moscow",
+    "keywords": [
+        "first-block-for-moscow"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

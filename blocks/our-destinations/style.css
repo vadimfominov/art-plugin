@@ -1,0 +1,480 @@
+.wp-block-fv-our-destinations {
+	padding-bottom: 75px;
+}
+.wp-block-fv-our-destinations h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-our-destinations .item-tab {
+	display: none;
+}
+.wp-block-fv-our-destinations .container-span {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.wp-block-fv-our-destinations .item-tab.active {
+	display: block;
+}
+.wp-block-fv-our-destinations .item {
+	border-radius: 20px;
+	border: 1px solid var(--lightGray);
+	padding: 20px;
+	padding-top: 59px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+	position: relative;
+}
+.wp-block-fv-our-destinations .proftest .item,
+.wp-block-fv-our-destinations .consult .item {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.wp-block-fv-our-destinations .cource .item {
+	padding-bottom: 40px;
+}
+.wp-block-fv-our-destinations .old-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--hintGray);
+	border-radius: 0 0 10px 10px;
+	position: absolute;
+	top: 0;
+	right: 20px;
+	width: 120px;
+	height: 35px;
+}
+.wp-block-fv-our-destinations .old-item svg {
+	margin-right: 5px;
+}
+.wp-block-fv-our-destinations .old-item p {
+	line-height: 21px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--darkGray);
+}
+.wp-block-fv-our-destinations .item > h3 {
+	line-height: 24px;
+	font-size: 20px;
+	margin-bottom: 10px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	color: var(--green);
+	display: block;
+}
+.wp-block-fv-our-destinations .item > h3 a {
+	color: var(--green);
+}
+.wp-block-fv-our-destinations .item > p {
+	line-height: 21px;
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--mediumGray);
+	margin-bottom: 20px;
+}
+.wp-block-fv-our-destinations .proftest .item > p,
+.wp-block-fv-our-destinations .cource .item > p,
+.wp-block-fv-our-destinations .consult .item > p {
+	margin-bottom: 0px;
+	position: relative;
+	padding-left: 13px;
+}
+.wp-block-fv-our-destinations .proftest .item > p:before,
+.wp-block-fv-our-destinations .cource .item > p:before,
+.wp-block-fv-our-destinations .consult .item > p:before {
+	content: "";
+	width: 3px;
+	height: 3px;
+	border-radius: 2px;
+	position: absolute;
+	left: 0;
+	top: 9px;
+	background-color: var(--mediumGray);
+}
+.wp-block-fv-our-destinations .item > .container-span a,
+.wp-block-fv-our-destinations .item > span a {
+	line-height: 21px;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: "Montserrat";
+	color: var(--green);
+	position: relative;
+	opacity: 0.8;
+}
+.wp-block-fv-our-destinations .item > .container-span a:before,
+.wp-block-fv-our-destinations .item > span a:before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: var(--green);
+	position: absolute;
+	bottom: 1px;
+	opacity: 0.8;
+}
+.wp-block-fv-our-destinations .item-tab .list-p {
+	margin-top: 10px;
+}
+.wp-block-fv-our-destinations .item-tab .list-p .btn-link {
+	margin-top: 20px;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p {
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 21px;
+	font-size: 14px;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+	position: relative;
+	display: flex;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .icons {
+	width: 18px;
+	text-align: right;
+	display: block;
+	margin-right: 5px;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .icons.icons-2 svg:nth-child(1) {
+	opacity: 0.5;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .icons.icons-3 svg:nth-child(1) {
+	opacity: 0.2;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .icons.icons-3 svg:nth-child(2) {
+	opacity: 0.5;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .icons svg {
+	margin-left: 2px;
+	margin-bottom: 3px;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p .text {
+	width: calc(100% - 23px);
+	display: block;
+}
+.wp-block-fv-our-destinations .item-tab .list-p strong {
+	font-weight: 600;
+}
+.wp-block-fv-our-destinations .item-tab .list-p p:last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-fv-our-destinations .select-block {
+	position: relative;
+}
+.wp-block-fv-our-destinations .select-block .select-title {
+	display: flex;
+	width: 100%;
+	height: 52px;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 20px;
+	border-radius: 10px;
+	background-color: var(--green);
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--white);
+	position: relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+.wp-block-fv-our-destinations .select-block .select-title:before {
+	content: "";
+	position: absolute;
+	top: calc(50% + 6px);
+	transform: translateY(-50%);
+	right: 20px;
+	display: inline-block;
+	border: 9px solid transparent;
+	border-top: 9px solid var(--white);
+}
+.wp-block-fv-our-destinations .select-block .select-title.active:before {
+	content: "";
+	top: calc(50% - 12px);
+	transform: rotate(-180deg);
+}
+
+.wp-block-fv-our-destinations .select-block .select-ul {
+	border-radius: 10px;
+	background-color: var(--white);
+	border: 1px solid var(--lightGray);
+	height: 0;
+	overflow: hidden;
+	padding: 0 20px;
+	border-top: 0;
+	border-bottom: 0;
+	position: absolute;
+	top: 62px;
+	z-index: 10;
+	box-sizing: border-box;
+}
+.wp-block-fv-our-destinations .select-block .select-ul.active {
+	padding: 20px;
+	height: auto;
+	width: 100%;
+	border: 1px solid var(--lightGray);
+}
+.wp-block-fv-our-destinations .select-block .select-ul li {
+	line-height: 19.6px;
+	font-size: 14px;
+	color: var(--darkGray);
+	margin-bottom: 12px;
+	text-align: center;
+	font-weight: 500;
+	font-family: "Montserrat";
+	transition: all 0.3s ease;
+}
+.wp-block-fv-our-destinations .select-block .select-ul li:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-our-destinations .select-block .select-ul li:hover {
+	color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-our-destinations .select-block .select-ul li.active {
+	color: var(--green);
+}
+.wp-block-fv-our-destinations .select-block .select-ul li em {
+	margin-left: 3px;
+}
+
+.wp-block-fv-our-destinations .btn-link {
+	width: 185px;
+	height: 55px;
+	display: flex;
+	align-items: center;
+}
+.wp-block-fv-our-destinations .btn-link a {
+	background-color: var(--red);
+	border-radius: 50px;
+	width: 185px;
+	height: 55px;
+	display: inline-block;
+	color: #fbfbfb;
+	font-family: "Montserrat";
+	font-size: 14px;
+	line-height: 15px;
+	padding-left: 25px;
+	box-sizing: border-box;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	position: relative;
+	z-index: 20;
+}
+.wp-block-fv-our-destinations .btn-link:hover a {
+	background-color: var(--green);
+	transition: all 0.3s ease;
+	padding-left: 70px;
+	color: #fbfbfb;
+}
+.wp-block-fv-our-destinations .btn-link .icon {
+	width: 31px;
+	height: 31px;
+	background-color: var(--white);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 40px;
+	margin-left: -49px;
+	transition: all 0.3s ease;
+	position: relative;
+	z-index: 20;
+}
+.wp-block-fv-our-destinations .btn-link:hover .icon {
+	margin-left: -170px;
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-our-destinations .select-block .select-title {
+		display: none;
+	}
+	.wp-block-fv-our-destinations .select-block .select-ul {
+		height: auto;
+		position: initial;
+		display: flex;
+		border: none;
+		padding: 0;
+		margin: 0px -10px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-our-destinations .select-block .select-ul li {
+		width: calc(25% - 20px);
+		margin: 0px 10px;
+		border-radius: 10px;
+		border: 1px solid var(--lightGray);
+		height: 70px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		color: rgba(83, 83, 83, 0.5);
+		cursor: pointer;
+	}
+	.wp-block-fv-our-destinations .select-block .select-ul li.active {
+		color: var(--white);
+		background-color: var(--green);
+		border: 1px solid var(--green);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-our-destinations {
+		padding-bottom: 120px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p {
+		display: flex;
+		flex-wrap: wrap;
+		margin: -5px -10px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p p {
+		width: calc(50% - 20px);
+		margin: 5px 10px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p .btn-link {
+		order: 3;
+		margin-top: -25px;
+		margin-left: 10px;
+	}
+	.wp-block-fv-our-destinations .item-tab.cource .list-p .btn-link {
+		margin-top: 20px;
+		margin-left: calc(50% + 10px);
+	}
+	.wp-block-fv-our-destinations .item-tab.cource .list-p {
+		display: block;
+	}
+	.wp-block-fv-our-destinations .item-tab.cource .list-p p.index-1 {
+		float: left;
+	}
+	.wp-block-fv-our-destinations .item-tab.consult .list-p {
+		display: block;
+	}
+	.wp-block-fv-our-destinations .item-tab.consult .list-p p.index-1 {
+		float: left;
+	}
+	.wp-block-fv-our-destinations .item-tab.consult .list-p .btn-link {
+		margin-left: calc(50% + 10px);
+		margin-top: 20px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p p.index-1 {
+		order: 0;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p p.index-2 {
+		order: 2;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p p.index-3 {
+		order: 1;
+	}
+	.wp-block-fv-our-destinations .item > h3 {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-our-destinations .item-tab.active {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-our-destinations .item-tab {
+		margin: -10px;
+	}
+	.wp-block-fv-our-destinations .item {
+		width: calc(50% - 20px);
+		margin: 10px;
+		padding-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+	}
+	.wp-block-fv-our-destinations .item > .container-span {
+		/* position: absolute;
+		bottom: 40px; */
+		width: calc(100% - 0px);
+		flex: 1;
+		align-items: flex-end;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-our-destinations .item > .container-span span {
+		width: 100%;
+	}
+	.wp-block-fv-our-destinations .item > p {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-our-destinations h2 {
+		margin: 0 auto;
+		width: 700px;
+		margin-bottom: 40px;
+		font-size: 32px;
+		line-height: 38px;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-our-destinations .highlight {
+		position: relative;
+	}
+	.wp-block-fv-our-destinations .highlight::before {
+		content: "Программа";
+		position: absolute;
+		top: -12px;
+		left: 0px;
+		color: var(--dark);
+		opacity: 0.5;
+		font-size: 10px;
+		line-height: 15px;
+		font-family: Montserrat;
+		font-weight: 500;
+	}
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-our-destinations .item > .container-span {
+		justify-content: space-between;
+	}
+	.wp-block-fv-our-destinations .item > .container-span span {
+		width: auto;
+	}
+	.wp-block-fv-our-destinations .proftest .item,
+	.wp-block-fv-our-destinations .consult .item,
+	.wp-block-fv-our-destinations .cource .item {
+		padding-top: 60px;
+		padding-bottom: 60px;
+	}
+	.wp-block-fv-our-destinations .proftest .item > p:before,
+	.wp-block-fv-our-destinations .cource .item > p:before,
+	.wp-block-fv-our-destinations .consult .item > p:before {
+		top: 10px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p .btn-link {
+		margin-top: 0;
+		margin: 10px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-our-destinations .item-tab .list-p {
+		margin-top: 30px;
+	}
+	.wp-block-fv-our-destinations .item > h3 {
+		font-size: 26px;
+		line-height: 31px;
+	}
+	.wp-block-fv-our-destinations .item > p,
+	.wp-block-fv-our-destinations .old-item p,
+	.wp-block-fv-our-destinations .item > .container-span a,
+	.wp-block-fv-our-destinations .item > span a {
+		line-height: 24px;
+		font-size: 16px;
+	}
+	.wp-block-fv-our-destinations .item {
+		padding: 40px;
+	}
+}

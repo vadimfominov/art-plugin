@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/for-contacts-page",
+    "title": "For Contacts Page",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a for-contacts-page",
+    "keywords": [
+        "for-contacts-page"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

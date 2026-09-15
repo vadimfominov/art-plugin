@@ -1,0 +1,10 @@
+.wp-block-fv-text p {
+	text-align: center;
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 40px;
+	width: 100%;
+}

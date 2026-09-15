@@ -1,0 +1,318 @@
+.wp-block-fv-program-modal-visibl-events .img-visible {
+	display: none;
+}
+.wp-block-fv-program-modal-visibl-events h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	max-width: 100%;
+	background-color: var(--hintGray);
+	border-radius: 20px;
+	position: relative;
+	width: 100%;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	box-sizing: border-box;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content input[name="parentName2"] {
+	width: 100%;
+	margin-right: 0;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content input[name="parentName3"] {
+	width: 100%;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content input[type="tel"] {
+	width: 100%;
+}
+.wp-block-fv-program-modal-visibl-events .container-step {
+	height: auto;
+	perspective: none;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .step {
+	position: initial;
+}
+
+.wp-block-fv-program-modal-visibl-events .modal-content .title-step {
+	margin-bottom: 20px;
+}
+.wp-block-fv-program-modal-visibl-events .btn-block {
+	justify-content: flex-end;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .checkbox input[type="checkbox"] {
+	margin-top: 0;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .step {
+	display: flex;
+	flex-wrap: wrap;
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	width: 100%;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .title-step {
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 19px;
+	display: block;
+	margin-bottom: 10px;
+	width: 100%;
+	text-align: center;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content input[type="text"],
+.wp-block-fv-program-modal-visibl-events .modal-content input[type="email"],
+.wp-block-fv-program-modal-visibl-events .modal-content input[type="tel"] {
+	width: 100%;
+	height: 58px;
+	padding-left: 10px;
+	border-radius: 10px;
+	background-color: var(--white);
+	border: 1px solid transparent;
+	box-sizing: border-box;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 130%;
+	margin-bottom: 10px;
+	padding-right: 10px;
+	outline: none;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-program-modal-visibl-events .checkbox {
+	display: flex;
+	align-items: flex-start;
+	cursor: pointer;
+	gap: 10px;
+	margin-bottom: 10px;
+}
+.wp-block-fv-program-modal-visibl-events .checkbox input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 19px;
+	height: 19px;
+	box-sizing: border-box;
+	border: 1px solid var(--dark);
+	border-radius: 3px;
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+}
+.wp-block-fv-program-modal-visibl-events .checkbox input[type="checkbox"]:checked {
+	background-color: var(--green);
+	border-color: var(--green);
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .checkbox input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 6px;
+	top: 3px;
+	width: 4px;
+	height: 7px;
+	border: solid var(--white);
+	border-width: 0 1px 1px 0;
+	transform: rotate(45deg);
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .checkbox .title,
+.wp-block-fv-program-modal-visibl-events .modal-content .label-class,
+.wp-block-fv-program-modal-visibl-events .modal-content .checkbox .title a {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--darkGray);
+	flex: 1;
+}
+.wp-block-fv-program-modal-visibl-events .btn-block {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .next {
+	background-color: var(--green);
+	border: none;
+	outline: none;
+	width: 180px;
+	height: 55px;
+	font-size: 16px;
+	line-height: 17.6px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	border-radius: 30px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	padding-left: 25px;
+	position: relative;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .next span {
+	position: absolute;
+	top: 50%;
+	right: 11px;
+	transform: translateY(-50%);
+	border-radius: 50%;
+	width: 32px;
+	height: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: all 0.3s ease;
+	background-color: var(--white);
+}
+.wp-block-fv-program-modal-visibl-events .green-container {
+	margin-top: 20px;
+	background-color: var(--green);
+	border-radius: 20px;
+	box-sizing: border-box;
+	padding: 20px;
+}
+.wp-block-fv-program-modal-visibl-events .green-container p {
+	font-size: 16px;
+	line-height: 19px;
+	margin-bottom: 10px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 400;
+	display: block;
+	text-align: center;
+}
+.wp-block-fv-program-modal-visibl-events .green-container a {
+	font-size: 16px;
+	line-height: 19px;
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	text-align: center;
+	text-decoration: underline;
+}
+.wp-block-fv-program-modal-visibl-events {
+	margin-bottom: 75px;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .checkbox .title a {
+	font-family: "Montserrat";
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+	color: var(--darkGray);
+	text-decoration: underline solid;
+	text-decoration-skip-ink: none;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content button.next:disabled {
+	opacity: 0.5;
+	cursor: no-drop;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .next:hover {
+	transition: all 0.3s ease;
+	background-color: #e94e4e;
+	padding-left: 55px;
+}
+.wp-block-fv-program-modal-visibl-events .modal-content .next:hover span {
+	right: calc(100% - 43px);
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-program-modal-visibl-events .modal-content .checkbox .title,
+	.wp-block-fv-program-modal-visibl-events .modal-content .checkbox .title a {
+		font-family: "Montserrat";
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 19.5px;
+		letter-spacing: -0.5px;
+		color: var(--darkGray);
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content .title-step {
+		font-size: 22px;
+		line-height: 26.4px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-program-modal-visibl-events {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-program-modal-visibl-events h2 {
+		margin: 0 auto;
+		max-width: 600px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-program-modal-visibl-events .img-visible {
+		display: block;
+	}
+	.wp-block-fv-program-modal-visibl-events .container {
+		display: flex;
+		gap: 20px;
+	}
+	.wp-block-fv-program-modal-visibl-events .img-visible img {
+		width: 100%;
+		height: 100%;
+		border-radius: 20px;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content {
+		width: calc(50% - 10px);
+		box-shadow: none;
+	}
+	.wp-block-fv-program-modal-visibl-events .img-visible {
+		width: calc(50% - 10px);
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-program-modal-visibl-events h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		max-width: 900px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content .step {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-program-modal-visibl-events h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 1100px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content .step {
+		padding-left: 108px;
+		padding-right: 108px;
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content {
+		padding-top: 70px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-program-modal-visibl-events .modal-content .checkbox input[type="checkbox"] {
+		margin-top: 3px;
+	}
+	.wp-block-fv-program-modal-visibl-events .green-container {
+		padding: 30px;
+	}
+	.wp-block-fv-program-modal-visibl-events .green-container p {
+		font-size: 22px;
+		line-height: 26px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-program-modal-visibl-events .green-container a {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-program-modal-visibl-events .green-container a:hover {
+		text-decoration: none;
+	}
+}

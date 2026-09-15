@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/day-steps-change",
+    "title": "Day Steps Change",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a day-steps-change",
+    "keywords": [
+        "day-steps-change"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

@@ -1,0 +1,596 @@
+.wp-block-fv-link-camp-tabs {
+	margin-bottom: 75px;
+}
+.wp-block-fv-link-camp-tabs .wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-link-camp-tabs button.item {
+	border: none;
+	cursor: pointer;
+}
+.wp-block-fv-link-camp-tabs .item {
+	background-color: var(--hintGray);
+	height: 100px;
+	box-sizing: border-box;
+	padding: 20px;
+	width: 100%;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-start;
+	position: relative;
+	border-radius: 15px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .item:nth-child(2) span {
+	position: relative;
+}
+.wp-block-fv-link-camp-tabs .item:nth-child(2) span:before {
+	content: "Программа";
+	position: absolute;
+	top: -14px;
+	left: 8px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-link-camp-tabs .item:nth-child(2) span:before {
+	display: none;
+}
+.wp-block-fv-link-camp-tabs .item > svg {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.wp-block-fv-link-camp-tabs .first-item {
+	background-color: var(--red);
+	padding: 25px 20px 30px 20px;
+	height: auto;
+	display: block;
+}
+.wp-block-fv-link-camp-tabs .first-item ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px 20px;
+	margin-bottom: 20px;
+}
+.wp-block-fv-link-camp-tabs .first-item li {
+	font-size: 9px;
+	line-height: 9.9px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(255, 255, 255, 0.8);
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.wp-block-fv-link-camp-tabs .first-item li:first-child {
+	width: 173px;
+	order: 1;
+	position: relative;
+}
+
+.wp-block-fv-link-camp-tabs .first-item li:nth-child(2) {
+	order: 3;
+	width: 173px;
+}
+.wp-block-fv-link-camp-tabs .first-item li:nth-child(4) {
+	order: 4;
+	width: 114px;
+}
+.wp-block-fv-link-camp-tabs .first-item li:nth-child(3) {
+	width: 114px;
+	order: 2;
+}
+.wp-block-fv-link-camp-tabs .first-item li svg {
+	margin-right: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wp-block-fv-link-camp-tabs .item > span {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	display: block;
+}
+.wp-block-fv-link-camp-tabs .first-item > span {
+	color: var(--white);
+	margin-bottom: 10px;
+}
+.wp-block-fv-link-camp-tabs .first-item > p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--white);
+}
+.wp-block-fv-link-camp-tabs a.item:active {
+	background-color: var(--green);
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs a.item svg {
+	transform: rotate(0deg);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs a.item:active svg {
+	transform: rotate(45deg);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs a.item svg path {
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs a.item:active svg path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs a.item span {
+	transition: all 0.3s ease;
+	position: relative;
+}
+.wp-block-fv-link-camp-tabs a.item:active span {
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container {
+	margin-top: 20px;
+}
+.wp-block-fv-link-camp-tabs .faq-container {
+	display: none;
+}
+.wp-block-fv-link-camp-tabs .faq-container.active {
+	display: flex;
+}
+.wp-block-fv-link-camp-tabs button.item.active {
+	background-color: var(--red);
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs button.item.active svg {
+	transform: rotate(45deg);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs button.item.active span {
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs button.item.active svg path {
+	fill: var(--white);
+	transition: all 0.3s ease;
+}
+
+.skills-academy.wp-block-fv-link-camp-tabs .first-item {
+	background-color: var(--blue);
+}
+.wp-block-fv-link-camp-tabs a.item:active {
+	background-color: var(--blue);
+}
+.wp-block-fv-link-camp-tabs.art-community a.item:active {
+	background-color: var(--artRed);
+}
+.wp-block-fv-link-camp-tabs.art-community .item:nth-child(3) span:before {
+	content: "Программа";
+	position: absolute;
+	top: -14px;
+	left: 8px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-link-camp-tabs.art-community .first-item {
+	background-color: var(--artRed);
+}
+.wp-block-fv-link-camp-tabs .item:nth-child(2):active span:before {
+	color: var(--white);
+	transition: all 0.3s ease;
+}
+
+.wp-block-fv-link-camp-tabs.city-template .item:nth-child(3) span:before {
+	content: "Программа";
+	position: absolute;
+	top: -14px;
+	left: 8px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-link-camp-tabs .faq-container {
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+}
+.wp-block-fv-link-camp-tabs .faq-container .item {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item {
+	font-size: 16px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	padding: 20px;
+	padding-right: 58px;
+	height: auto;
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;
+	position: relative;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon {
+	display: block;
+	width: 38px;
+	height: 38px;
+	border-radius: 6px;
+	background-color: var(--white);
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(0deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-90deg);
+	background-color: var(--green);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:hover {
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:hover:before {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:hover:after {
+	transition: all 0.3s ease;
+	background-color: #fff;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item.active > .faq-icon:before {
+	content: "";
+	transform: translate(-50%, -50%) rotate(45deg);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .question-item.active > .faq-icon:after {
+	content: "";
+	transform: translate(-50%, -50%) rotate(-45deg);
+	height: 1.5px;
+	width: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .faq-container .answer-item {
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--darkGray);
+	padding: 0px 20px;
+	box-sizing: border-box;
+	max-height: 0;
+	overflow: hidden;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-link-camp-tabs .question-item.active + .answer-item {
+	padding-bottom: 20px;
+}
+.wp-block-fv-link-camp-tabs .faq-container .left {
+	width: 100%;
+}
+.wp-block-fv-link-camp-tabs .faq-container .right {
+	width: 100%;
+}
+.wp-block-fv-link-camp-tabs .faq-container .left-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-link-camp-tabs .faq-container .left-faq .item-camp-tab,
+.wp-block-fv-link-camp-tabs .faq-container .right-faq .item-camp-tab {
+	background-color: var(--hintGray);
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+.wp-block-fv-link-camp-tabs .faq-container .right-faq {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.skills-academy.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:before,
+.skills-academy.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:after {
+	background-color: var(--blue);
+}
+.art-community.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:before,
+.art-community.wp-block-fv-link-camp-tabs .faq-container .question-item > .faq-icon:after {
+	background-color: var(--artRed);
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-link-camp-tabs .item {
+		width: calc(33.33333% - 6.7px);
+		height: 200px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		padding-left: 180px;
+		padding-right: 180px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		width: 100%;
+	}
+	.wp-block-fv-link-camp-tabs .first-item li:nth-child(3) {
+		width: 135px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item li:nth-child(4) {
+		width: 135px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item ul {
+		gap: 16px 45px;
+		margin-bottom: 30px;
+		justify-content: center;
+		margin-left: 20px;
+	}
+	.wp-block-fv-link-camp-tabs .wrapper {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		height: auto;
+	}
+	.wp-block-fv-link-camp-tabs .item > span {
+		box-sizing: border-box;
+		padding-right: 65px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item > span {
+		padding-right: 0;
+	}
+	.wp-block-fv-link-camp-tabs .item > span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-link-camp-tabs .faq-container {
+		gap: 10px 20px;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .left-faq {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .right-faq {
+		width: calc(50% - 10px);
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-link-camp-tabs .faq-container .question-item {
+		font-size: 20px;
+		line-height: 24px;
+		height: auto;
+		min-height: 88px;
+		padding: 20px 20px;
+		padding-right: 58px;
+	}
+	.wp-block-fv-link-camp-tabs .item {
+		height: 255px;
+	}
+	.wp-block-fv-link-camp-tabs .wrapper {
+		gap: 20px;
+	}
+	.wp-block-fv-link-camp-tabs .item {
+		width: calc(33.33333% - 13.4px);
+		padding: 30px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		width: 100%;
+	}
+	.wp-block-fv-link-camp-tabs .item > span {
+		width: 110px;
+		padding-right: 0;
+	}
+	.wp-block-fv-link-camp-tabs .first-item > span {
+		width: 100%;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		height: auto;
+		padding-left: 260px;
+		padding-right: 260px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item li {
+		font-size: 10px;
+		line-height: 11px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item li:first-child,
+	.wp-block-fv-link-camp-tabs .first-item li:nth-child(2) {
+		width: 190px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item li:nth-child(3),
+	.wp-block-fv-link-camp-tabs .first-item li:nth-child(4) {
+		width: 150px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item ul {
+		gap: 16px 40px;
+		margin-bottom: 30px;
+		padding-left: 20px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		padding-bottom: 20px;
+		flex: auto;
+	}
+
+	.wp-block-fv-link-camp-tabs button.item {
+		flex: 1;
+	}
+	.wp-block-fv-link-camp-tabs {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-link-camp-tabs .item {
+		width: 197px;
+		padding: 20px;
+		padding-right: 5px;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		padding: 30px;
+		flex: 1;
+		order: 2;
+	}
+	.wp-block-fv-link-camp-tabs .item > span {
+		font-size: 22px;
+		line-height: 26.4px;
+		width: auto;
+	}
+	.wp-block-fv-link-camp-tabs .first-item > p {
+		font-size: 16px;
+		line-height: 24px;
+		max-width: 360px;
+		width: 100%;
+	}
+	.wp-block-fv-link-camp-tabs .first-item {
+		align-items: flex-start;
+		text-align: left;
+	}
+	.wp-block-fv-link-camp-tabs .first-item > span {
+		max-width: 450px;
+		width: 100%;
+	}
+	.wp-block-fv-link-camp-tabs .first-item ul {
+		gap: 16px 40px;
+		margin-bottom: 44px;
+		padding-left: 0;
+		max-width: 390px;
+		width: 100%;
+		margin-left: 0;
+		justify-content: flex-start;
+	}
+	.wp-block-fv-link-camp-tabs a.item:hover {
+		background-color: var(--green);
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs a.item:hover svg {
+		transform: rotate(45deg);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs a.item:hover svg path {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs a.item:hover span {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs a.item:hover span:before {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs button.item {
+		flex: none;
+	}
+	.wp-block-fv-link-camp-tabs button.item:hover {
+		background-color: var(--red);
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs button.item:hover svg {
+		transform: rotate(45deg);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs button.item:hover svg path {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs button.item:hover span {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs button.item:hover span:before {
+		color: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs .item:nth-child(2) span:before {
+		top: -14px;
+		left: 0px;
+		font-size: 12px;
+		line-height: 18px;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs.skills-academy a.item:hover {
+		background-color: var(--blue);
+	}
+
+	.wp-block-fv-link-camp-tabs.art-community a.item:hover {
+		background-color: var(--artRed);
+	}
+	.wp-block-fv-link-camp-tabs.art-community .item:nth-child(3) span:before {
+		top: -14px;
+		left: 0px;
+		font-size: 12px;
+		line-height: 18px;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-link-camp-tabs .faq-container {
+		flex-direction: row;
+		gap: 20px;
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .left-faq {
+		gap: 20px;
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .right-faq {
+		gap: 20px;
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .question-item {
+		font-size: 22px;
+		line-height: 26px;
+		cursor: pointer;
+		padding-right: 105px;
+	}
+	.wp-block-fv-link-camp-tabs .faq-container .answer-item {
+		font-size: 16px;
+		line-height: 130%;
+	}
+	.wp-block-fv-link-camp-tabs .question-item.active + .answer-item {
+		padding-bottom: 30px;
+	}
+}

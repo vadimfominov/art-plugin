@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/day-and-shift",
+    "title": "Day And Shift",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a day-and-shift",
+    "keywords": [
+        "day-and-shift"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

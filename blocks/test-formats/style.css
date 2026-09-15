@@ -1,0 +1,259 @@
+.wp-block-fv-test-formats h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-test-formats .container {
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-fv-test-formats .container .item-card {
+	order: 1;
+	width: 100%;
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.wp-block-fv-test-formats .container .item {
+	order: 2;
+}
+.wp-block-fv-test-formats .wrapper > p {
+	background-color: var(--red);
+	border-radius: 30px;
+	font-size: 14px;
+	line-height: 18.2px;
+	color: var(--white);
+	text-align: center;
+	font-family: "Montserrat";
+	width: 100%;
+	margin: 0 auto;
+	font-weight: 500;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-top: 7px;
+	padding-bottom: 7px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+.wp-block-fv-test-formats .wrapper .description-sale {
+	display: block;
+	border-radius: 15px;
+	background-color: var(--green);
+	padding: 36px;
+	text-align: center;
+	font-size: 18px;
+	line-height: 22px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--white);
+	margin-top: 20px;
+	margin-bottom: 0;
+	box-sizing: border-box;
+	width: 100%;
+}
+.wp-block-fv-test-formats .wrapper .description-sale a {
+	color: #fff;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+}
+.wp-block-fv-test-formats .container .item-card .subtitle-card {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(83, 83, 83, 0.8);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+	text-align: center;
+	margin-bottom: 24px;
+}
+.wp-block-fv-test-formats .container .item-card .place-card {
+	margin-bottom: 43px;
+}
+.wp-block-fv-test-formats .container .item-card .title-card {
+	margin-bottom: 10px;
+}
+.wp-block-fv-test-formats .container .item-card .price-card {
+	margin-bottom: 5px;
+}
+.wp-block-fv-test-formats .container .item-card button.modal-form {
+	width: 150px;
+}
+.wp-block-fv-test-formats .container .item-card {
+	margin-top: 0;
+}
+.wp-block-fv-test-formats .container {
+	gap: 10px;
+}
+.wp-block-fv-test-formats .container .item {
+	border-radius: 15px;
+	background-color: var(--hintGray);
+	box-sizing: border-box;
+	padding: 20px;
+	padding-right: 10px;
+}
+.wp-block-fv-test-formats {
+	margin-bottom: 75px;
+}
+.wp-block-fv-test-formats .container .item svg {
+	display: block;
+	margin-bottom: 40px;
+}
+.wp-block-fv-test-formats .container .item span {
+	font-size: 18px;
+	line-height: 21.6px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.wp-block-fv-test-formats .container .item p {
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+}
+.wp-block-fv-test-formats .container .item p:last-child {
+	margin-bottom: 0;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+}
+
+.wp-block-fv-test-formats .container .item-card .top-item-section {
+	margin-bottom: 0;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-test-formats .container {
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.wp-block-fv-test-formats .container .item-card {
+		width: calc(50% - 5px);
+	}
+	.wp-block-fv-test-formats h2 {
+		width: 500px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-test-formats .container .item-card .subtitle-card {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-test-formats .container .item-card button.modal-form {
+		width: 260px;
+	}
+	.wp-block-fv-test-formats .container .item-card {
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.wp-block-fv-test-formats .container .item-card .price-card {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-test-formats .container .item span {
+		font-size: 20px;
+		line-height: 30px;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+	.wp-block-fv-test-formats .container .item {
+		width: 100%;
+	}
+	.wp-block-fv-test-formats .container .item p {
+		text-align: center;
+		width: 490px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-test-formats .container .item {
+		padding: 25px;
+	}
+	.wp-block-fv-test-formats .container .item svg {
+		margin: 0 auto;
+		margin-bottom: 5px;
+	}
+	.wp-block-fv-test-formats .container .item p:last-child {
+		font-size: 12px;
+		line-height: 18px;
+		margin-top: 20px;
+	}
+	.wp-block-fv-test-formats .container .item-card .place-card {
+		margin-bottom: 33px;
+	}
+	.wp-block-fv-test-formats .wrapper > p {
+		padding: 15px 25px;
+		width: max-content;
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-test-formats .container .item-card {
+		height: auto;
+		width: calc(32% - 1px);
+	}
+	.wp-block-fv-test-formats .container {
+		gap: 20px;
+	}
+	.wp-block-fv-test-formats h2 {
+		width: 720px;
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-test-formats {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-test-formats .container .item {
+		order: 0;
+		width: 100%;
+		padding: 40px 240px;
+	}
+	.wp-block-fv-test-formats #filtered-posts-container {
+		justify-content: center;
+	}
+	.wp-block-fv-test-formats .container {
+		justify-content: center;
+	}
+	.wp-block-fv-test-formats .container .item-card {
+		width: calc(25% - 13.5px);
+	}
+	.wp-block-fv-test-formats .container .item svg {
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-test-formats .container .item span {
+		font-size: 22px;
+		line-height: 26.4px;
+		text-align: left;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-test-formats .container .item p {
+		text-align: left;
+		font-size: 16px;
+		line-height: 24px;
+		width: 100%;
+	}
+	.wp-block-fv-test-formats .container .item p:last-child {
+		font-size: 14px;
+		line-height: 21px;
+	}
+	.wp-block-fv-test-formats h2 {
+		width: 920px;
+		font-size: 42px;
+		line-height: 50.4px;
+	}
+	.wp-block-fv-test-formats .container .item-card {
+		padding-top: 100px;
+	}
+}

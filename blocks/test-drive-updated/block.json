@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/test-drive-updated",
+    "title": "Test Drive Updated",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a test-drive-updated",
+    "keywords": [
+        "test-drive-updated"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

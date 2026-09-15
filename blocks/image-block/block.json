@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/image-block",
+    "title": "Image Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a image-block",
+    "keywords": [
+        "image-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/test-formats",
+    "title": "Test Formats",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a test-formats",
+    "keywords": [
+        "test-formats"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

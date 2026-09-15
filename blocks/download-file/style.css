@@ -1,0 +1,102 @@
+.wp-block-fv-download-file {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-download-file h2 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 20px;
+	letter-spacing: -0.22px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-download-file .item {
+	border-radius: 15px;
+	background-color: #f5f5f7;
+	padding: 20px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+.wp-block-fv-download-file .container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.wp-block-fv-download-file .item p {
+	color: #535353;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 0px;
+	text-align: center;
+}
+.wp-block-fv-download-file .item a {
+	display: flex;
+	align-items: flex-end;
+	gap: 10px;
+	color: #535353;
+	font-size: 14px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	letter-spacing: 0px;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-download-file .item a:hover {
+	color: var(--green);
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+	transition: all 0.3s ease;
+}
+.wp-block-fv-download-file .item a:hover path {
+	stroke: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-download-file .item path {
+	stroke: #535353;
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-download-file h2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-download-file .container {
+		flex-direction: row;
+	}
+	.wp-block-fv-download-file .item {
+		align-items: flex-start;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-download-file h2 {
+		font-size: 32px;
+		max-width: 670px;
+	}
+	.wp-block-fv-download-file .container {
+		gap: 20px;
+	}
+	.wp-block-fv-download-file .item {
+		width: calc(25% - 3 / 4 * 20px);
+	}
+	.wp-block-fv-download-file {
+		margin-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-download-file h2 {
+		font-size: 42px;
+		max-width: 870px;
+	}
+}

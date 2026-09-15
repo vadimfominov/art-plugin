@@ -1,0 +1,844 @@
+.wp-block-fv-travel-by-cities .item-tab {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-travel-by-cities .item-tab.active {
+	opacity: 1;
+	height: auto;
+	overflow: initial;
+}
+.wp-block-fv-travel-by-cities .item-tab.active .container-tab {
+	display: flex;
+	margin-bottom: 20px;
+}
+.wp-block-fv-travel-by-cities h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+}
+.wp-block-fv-travel-by-cities .wrapper > p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab {
+	flex-direction: column;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .right-block {
+	order: 1;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .left-block {
+	order: 2;
+	position: relative;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab {
+	border-radius: 20px;
+	background-color: var(--hintGray);
+	padding: 30px;
+	padding-right: 10px;
+	padding-top: 60px;
+	margin-bottom: 10px;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab span {
+	color: var(--green);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: flex-start;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab span svg {
+	margin-right: 10px;
+	margin-top: 2px;
+	flex: none;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab p {
+	color: var(--mediumGray);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .slider-pagination {
+	display: none;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .icons-for-slider {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	z-index: 10;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview {
+	height: 380px;
+	width: 100%;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab .label-gallery {
+	background-color: var(--red);
+	border-radius: 30px;
+	color: var(--white);
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: max-content;
+	height: 40px;
+	position: absolute;
+	padding-left: 15px;
+	padding-right: 15px;
+	top: 15px;
+	left: 50%;
+	white-space: nowrap;
+	transform: translateX(-50%);
+}
+.wp-block-fv-travel-by-cities .icons-for-slider .icon-2 path {
+	fill: var(--white);
+}
+.wp-block-fv-travel-by-cities .icons-for-slider .icon-1 path {
+	fill: var(--white);
+}
+.wp-block-fv-travel-by-cities {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-travel-by-cities .select-block .select-title:before {
+	content: "";
+	position: absolute;
+	top: calc(50% + 3px);
+	transform: translateY(-50%);
+	right: 20px;
+	display: inline-block;
+	border: 5px solid transparent;
+	border-top: 5px solid var(--white);
+}
+.wp-block-fv-travel-by-cities .select-block .select-title.active:before {
+	content: "";
+	top: calc(50% - 9px);
+	transform: rotate(-180deg);
+}
+.wp-block-fv-travel-by-cities .item-tab .container-tab.novgorod .card-tab span {
+	padding-right: 50px;
+	box-sizing: border-box;
+}
+.wp-block-fv-travel-by-cities .item-tab .step-tabs-content {
+	background-color: var(--green);
+	border-radius: 10px;
+	height: 68px;
+	width: 100%;
+	color: var(--white);
+	text-align: center;
+	padding-left: 70px;
+	padding-right: 70px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.wp-block-fv-travel-by-cities .item-tab.kazan .step-tabs-content {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+.wp-block-fv-travel-by-cities .item-tab.novgorod .step-tabs-content {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+.container-step-tabs .second-block {
+	display: none;
+}
+.wp-block-fv-travel-by-cities .item-tab .step-ul-content {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: nowrap;
+	min-width: min-content;
+	position: relative;
+}
+.wp-block-fv-travel-by-cities .item-tab .step-li-content {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	width: 175px;
+	position: relative;
+	padding-top: 22px;
+	padding-right: 20px;
+	box-sizing: border-box;
+}
+.wp-block-fv-travel-by-cities .skroll-container {
+	overflow-x: scroll;
+}
+
+.wp-block-fv-travel-by-cities .skroll-container::-webkit-scrollbar {
+	height: 0px;
+}
+
+.wp-block-fv-travel-by-cities .step-ul-content::after {
+	content: "";
+	position: absolute;
+	top: 6px;
+	left: 0px;
+	right: 173px;
+	height: 1px;
+	background: repeating-linear-gradient(to right, var(--green) 0, var(--green) 7px, transparent 7px, transparent 14px);
+	z-index: 1;
+}
+
+.wp-block-fv-travel-by-cities .first-block .icons-for-slider .icon-1 path {
+	fill: rgba(190, 190, 190, 1);
+}
+.wp-block-fv-travel-by-cities .first-block .icons-for-slider .icon-2 path {
+	fill: rgba(190, 190, 190, 1);
+}
+.wp-block-fv-travel-by-cities .first-block .icons-for-slider {
+	margin-bottom: 22px;
+}
+.wp-block-fv-travel-by-cities .item-tab .step-li-content:before {
+	content: "";
+	width: 12px;
+	height: 12px;
+	border-radius: 50%;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0px;
+	background-color: var(--green);
+}
+.wp-block-fv-travel-by-cities .item-tab.moscow .skroll-container.first-skroll-container {
+	margin-bottom: 40px;
+}
+.wp-block-fv-travel-by-cities .first-skroll-container svg.pc {
+	display: none;
+}
+.wp-block-fv-travel-by-cities .first-skroll-container svg.table {
+	display: none;
+}
+
+.wp-block-fv-travel-by-cities .select-block {
+	position: relative;
+}
+.wp-block-fv-travel-by-cities .select-block .select-title {
+	display: flex;
+	width: 100%;
+	height: 52px;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 20px;
+	border-radius: 10px;
+	background-color: var(--green);
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--white);
+	position: relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+.wp-block-fv-travel-by-cities .select-block .select-title:before {
+	content: "";
+	position: absolute;
+	top: calc(50% + 6px);
+	transform: translateY(-50%);
+	right: 20px;
+	display: inline-block;
+	border: 9px solid transparent;
+	border-top: 9px solid var(--white);
+}
+.wp-block-fv-travel-by-cities .select-block .select-title.active:before {
+	content: "";
+	top: calc(50% - 12px);
+	transform: rotate(-180deg);
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul {
+	border-radius: 10px;
+	background-color: var(--white);
+	border: 1px solid var(--lightGray);
+	height: 0;
+	overflow: hidden;
+	padding: 0 20px;
+	border-top: 0;
+	border-bottom: 0;
+	position: absolute;
+	top: 62px;
+	z-index: 10;
+	box-sizing: border-box;
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul.active {
+	padding: 20px;
+	height: auto;
+	width: 100%;
+	border: 1px solid var(--lightGray);
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul li {
+	line-height: 19.6px;
+	font-size: 14px;
+	color: var(--darkGray);
+	margin-bottom: 12px;
+	text-align: center;
+	font-weight: 500;
+	font-family: "Montserrat";
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul li em {
+	margin-left: 3px;
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul li:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul li:hover {
+	color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .select-block .select-ul li.active {
+	color: var(--green);
+}
+.wp-block-fv-travel-by-cities .slider-pagination {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	width: 100%;
+	display: none;
+	justify-content: space-between;
+	z-index: 200;
+	pointer-events: none;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .left-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: rgba(123, 123, 123, 0.1);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	pointer-events: auto;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .left-btn svg {
+	margin-left: -4px;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .left-btn svg path {
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .left-btn:hover {
+	background-color: rgba(48, 169, 51, 1);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .left-btn:hover svg path {
+	stroke: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .right-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background-color: rgba(123, 123, 123, 0.1);
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	pointer-events: auto;
+	right: 0px;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .right-btn svg {
+	margin-right: -4px;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .right-btn svg path {
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .right-btn:hover {
+	background-color: rgba(48, 169, 51, 1);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .slider-pagination .right-btn:hover svg path {
+	stroke: var(--white);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-travel-by-cities .icons-for-slider .icon-2 {
+	position: absolute;
+	top: 0;
+	right: 10px;
+	animation: moveLeftRight 1s infinite alternate ease-in-out;
+}
+@keyframes moveLeftRight {
+	0% {
+		transform: translateX(0); /* Начальная позиция */
+	}
+	100% {
+		transform: translateX(20px); /* Конечная позиция - сдвиг на 10px вправо */
+	}
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-travel-by-cities .slider-pagination {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 0%;
+		width: 100%;
+		justify-content: space-between;
+		z-index: 200;
+		display: flex;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn {
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		backdrop-filter: blur(0px);
+		background-color: rgba(48, 169, 51, 1);
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn svg {
+		margin-left: -4px;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn svg path {
+		stroke: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn:hover {
+		background-color: rgba(48, 169, 51, 1) !important;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn:hover svg path {
+		stroke: var(--white) !important;
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn {
+		width: 40px;
+		height: 40px;
+		border-radius: 20px;
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		background-color: rgba(48, 169, 51, 1);
+		backdrop-filter: blur(0px);
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn:hover {
+		background-color: rgba(48, 169, 51, 1);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn svg {
+		margin-right: -4px;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn:hover svg path {
+		stroke: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn svg path {
+		stroke: var(--white);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities h2 {
+		width: 520px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-travel-by-cities .wrapper > p {
+		margin: 0 auto;
+		width: 600px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-title {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul {
+		height: auto;
+		position: initial;
+		display: flex;
+		border: none;
+		padding: 0;
+		margin: 0px -10px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li {
+		width: calc(25% - 20px);
+		margin: 0px 10px;
+		border-radius: 10px;
+		border: 1px solid var(--lightGray);
+		height: 70px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		color: rgba(83, 83, 83, 0.5);
+		cursor: pointer;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li.active {
+		color: var(--white);
+		background-color: var(--green);
+		border: 1px solid var(--green);
+		transition: all 0.3s ease;
+	}
+	.wp-block-fv-travel-by-cities .select-block {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul {
+		flex-wrap: wrap;
+		gap: 20px;
+		margin: 0;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li {
+		height: 60px;
+		width: calc(25% - 15px);
+		margin: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab {
+		flex-direction: column-reverse;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .left-block {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li {
+		background-color: var(--hintGray);
+		border: 1px solid var(--hintGray);
+		color: rgba(83, 83, 83, 0.5);
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li.active {
+		background-color: var(--green);
+		border: 1px solid var(--green);
+		color: var(--white);
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.table {
+		display: block;
+	}
+	.wp-block-fv-travel-by-cities {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-travel-by-cities h2 {
+		width: 735px;
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview {
+		height: 470px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .icons-for-slider {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .slider-pagination {
+		display: flex;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview img {
+		object-fit: contain;
+		border-radius: 20px;
+		width: auto;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview {
+		display: flex;
+		justify-content: center;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab span svg {
+		margin-top: 4px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li {
+		font-size: 20px;
+		line-height: 24px;
+		font-weight: 600;
+	}
+	.wp-block-fv-travel-by-cities .container-step-tabs {
+		background-color: var(--hintGray);
+		border-radius: 20px;
+		box-sizing: border-box;
+		padding: 40px 30px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-tabs-content {
+		width: max-content;
+		height: 50px;
+		padding-left: 30px;
+		padding-right: 30px;
+		border-radius: 25px;
+	}
+	.wp-block-fv-travel-by-cities .first-block .icons-for-slider {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-li-content {
+		width: 215px;
+		padding-top: 25px;
+		padding-right: 50px;
+	}
+	.wp-block-fv-travel-by-cities .skroll-container {
+		overflow-x: initial;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-ul-content {
+		width: 730px;
+		flex-wrap: wrap;
+		gap: 66px 0px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-tabs-content {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-travel-by-cities .step-ul-content::after {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-li-content {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.moscow .step-ul-content {
+		width: 100%;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.moscow .skroll-container.first-skroll-container {
+		width: 730px;
+	}
+	.wp-block-fv-travel-by-cities .moscow .step-ul-content::after {
+		display: block;
+		width: 645px;
+	}
+	.wp-block-fv-travel-by-cities .moscow .first-skroll-container .step-ul-content::after {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .skroll-container {
+		position: relative;
+		margin-left: 20px;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg {
+		position: absolute;
+		top: 5px;
+		left: -20px;
+		z-index: 10;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.icon-line2 {
+		left: 0;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.icon-line3 {
+		left: -20px;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.icon-line4 {
+		left: 0;
+	}
+	.wp-block-fv-travel-by-cities .step-ul-content::after {
+		background: repeating-linear-gradient(
+			to right,
+			var(--green) 0,
+			var(--green) 14px,
+			transparent 14px,
+			transparent 28px
+		);
+	}
+	.wp-block-fv-travel-by-cities .item-tab.pskov .step-ul-content {
+		gap: 91px 0px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.kazan .step-li-content:nth-child(4) {
+		margin-left: 63px;
+		width: 370px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content {
+		width: 296px;
+		padding-right: 10px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content:nth-child(3) {
+		width: 135px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content:nth-child(6) {
+		width: 135px;
+		padding-right: 0;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-travel-by-cities h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+	}
+	.wp-block-fv-travel-by-cities h2 {
+		width: 900px;
+	}
+	.wp-block-fv-travel-by-cities .select-block .select-ul li {
+		height: 60px;
+		width: calc(16.66666% - 16.8px);
+		margin: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab {
+		flex-direction: row-reverse;
+		gap: 20px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .left-block {
+		width: calc(50% - 10px);
+		margin-bottom: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .right-block {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab span {
+		font-size: 22px;
+		line-height: 26px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .card-tab:last-child {
+		margin-bottom: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview {
+		height: 758px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .gallery-preview img {
+		width: 100%;
+		object-fit: cover;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .slider-pagination {
+		transform: translateY(-50%);
+	}
+	.wp-block-fv-travel-by-cities .item-tab .container-tab .label-gallery {
+		top: 30px;
+		padding-left: 30px;
+		padding-right: 30px;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.table {
+		display: none;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.pc {
+		display: block;
+	}
+	.wp-block-fv-travel-by-cities .container-step-tabs {
+		display: flex;
+		position: relative;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-tabs-content {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-li-content {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-ul-content {
+		width: 710px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.moscow .first-skroll-container .step-li-content:last-child {
+		width: 300px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .step-ul-content {
+		gap: 62px 0px;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.icon-line2_1 {
+		left: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .last-skroll-container .step-li-content {
+		width: 135px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .last-skroll-container .step-li-content:nth-child(2) {
+		width: 144px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .last-skroll-container .step-li-content:nth-child(3) {
+		width: 197px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab .last-skroll-container .step-li-content:nth-child(4) {
+		width: 244px;
+		padding-right: 0;
+	}
+	.wp-block-fv-travel-by-cities .moscow .step-ul-content::after {
+		display: block;
+		width: 480px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.kaliningrad .step-li-content:nth-child(4) {
+		padding-right: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.kaliningrad .container-step-tabs {
+		padding-bottom: 179px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.pskov .step-ul-content {
+		gap: 88px 0px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.pskov .container-step-tabs {
+		padding-bottom: 153px;
+	}
+	.wp-block-fv-travel-by-cities .first-skroll-container svg.icon-line4_1 {
+		left: 0;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.kazan .step-li-content:nth-child(4) {
+		margin-left: 120px;
+		width: 307px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.kazan .container-step-tabs {
+		padding-bottom: 153px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content {
+		width: 215px;
+		padding-right: 10px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-ul-content {
+		gap: 36px 0px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content:last-child {
+		width: 395px;
+	}
+	.wp-block-fv-travel-by-cities .item-tab.novgorod .step-li-content:last-child:after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		display: block;
+		position: absolute;
+		right: 170px;
+		top: 0px;
+		background-color: var(--green);
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .left-btn {
+		left: 10px;
+	}
+	.wp-block-fv-travel-by-cities .slider-pagination .right-btn {
+		right: 10px;
+	}
+	.wp-block-fv-travel-by-cities .container-step-tabs .second-block {
+		display: block;
+	}
+	.wp-block-fv-travel-by-cities .container-step-tabs .second-block .city-image {
+		width: 480px;
+		height: 458px;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 20px;
+		transform: rotate(2.2deg);
+		position: absolute;
+		top: 30px;
+		right: 30px;
+	}
+}

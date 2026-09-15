@@ -1,0 +1,1215 @@
+.filter-section-block h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	max-width: 311px;
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.filter-section-block .filter-section .title {
+	font-size: 14px;
+	line-height: 15.4px;
+	color: var(--dark);
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	flex: 1;
+}
+.filter-section-block .filter-wrapper .filter-title {
+	font-size: 16px;
+	line-height: 17.6px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	position: relative;
+}
+.filter-section-block .filter-wrapper {
+	padding: 10px;
+	box-sizing: border-box;
+	border-top: 1px solid var(--border);
+	display: flex;
+	flex-direction: column;
+}
+.filter-section-block .filter-wrapper.last-child {
+	border-bottom: 1px solid var(--border);
+}
+.filter-section-block .filter-wrapper .filter-title:before {
+	content: "";
+	width: 6px;
+	height: 1px;
+	background-color: var(--darkGray);
+	position: absolute;
+	top: calc(50% - 1.5px);
+	right: 0;
+	transform: translateY(-50%) rotate(45deg);
+	border-radius: 2px 0px 0px 2px;
+	transition: all 0.3s ease;
+}
+.filter-section-block .filter-wrapper .filter-title:after {
+	content: "";
+	width: 6px;
+	height: 1px;
+	background-color: var(--darkGray);
+	position: absolute;
+	top: calc(50% + 2px);
+	right: 0;
+	transform: translateY(-50%) rotate(-45deg);
+	border-radius: 2px 0px 0px 2px;
+	transition: all 0.3s ease;
+}
+.filter-section-block .filter-wrapper.active .filter-title:before {
+	transition: all 0.3s ease;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%) rotate(135deg);
+}
+.filter-section-block .filter-wrapper.active .filter-title:after {
+	transition: all 0.3s ease;
+	top: 50%;
+	right: 3.5px;
+	transform: translateY(-50%) rotate(45deg);
+}
+.checkbox {
+	display: flex;
+	align-items: flex-start;
+	cursor: pointer;
+	gap: 10px;
+}
+.checkbox input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	width: 19px;
+	height: 19px;
+	box-sizing: border-box;
+	border: 1px solid var(--dark);
+	border-radius: 3px;
+	margin: 0;
+	cursor: pointer;
+	position: relative;
+}
+.checkbox input[type="checkbox"]:checked {
+	background-color: var(--green);
+	border-color: var(--green);
+}
+.checkbox input[type="checkbox"]:checked::after {
+	content: "";
+	position: absolute;
+	left: 6px;
+	top: 3px;
+	width: 4px;
+	height: 8px;
+	border: solid var(--white);
+	border-width: 0 1px 1px 0;
+	transform: rotate(45deg);
+}
+.filter-section-block .filter-item {
+	margin-bottom: 13px;
+}
+.filter-section-block .filter-item:last-child {
+	margin-bottom: 0;
+}
+.filter-section-block .filter-wrapper .filter-items {
+	height: 0;
+	overflow: hidden;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	transition: all 0.3s ease;
+}
+.filter-section-block .filter-wrapper.active .filter-items {
+	transition: all 0.3s ease;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+.filter-section-block .city-filter-wrapper.active .filter-items {
+	height: 80px;
+}
+.filter-section-block .programs-filter-wrapper.active .filter-items {
+	height: 115px;
+}
+.filter-section-block .age-filter-wrapper.active .filter-items {
+	height: 147px;
+}
+.filter-section-block .places-filter-wrapper.active .filter-items {
+	height: 83px;
+}
+.filter-section-block .season-filter-wrapper.active .filter-items {
+	height: 147px;
+}
+.filter-section-block .days-filter-wrapper.active .filter-items {
+	height: 115px;
+}
+.filter-section-block .shift-filter-wrapper.active .filter-items {
+	height: 244px;
+}
+.filter-section-block .certificate-filter-wrapper.active .filter-items {
+	height: 51px;
+}
+.programs-filter-wrapper .checkbox {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+.programs-filter-wrapper .checkbox input[type="checkbox"] {
+	appearance: none;
+	-webkit-appearance: none;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	background: #c7c7c7;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	border: none;
+}
+.programs-filter-wrapper .checkbox input[type="checkbox"]:checked {
+	background: var(--green);
+}
+.programs-filter-wrapper .checkbox input[type="checkbox"]::after {
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 3px;
+	width: 16px;
+	height: 16px;
+	background: var(--white);
+	border-radius: 50%;
+	transition: all 0.3s ease;
+	border: none;
+}
+.programs-filter-wrapper .checkbox input[type="checkbox"]:checked::after {
+	transform: translateX(18px);
+}
+.filter-section-block .filter-section {
+	display: flex;
+	flex-direction: column;
+}
+.filter-section-block .filter-wrapper.btn-filter-wrapper {
+	border: none;
+	padding: 0;
+	flex-direction: row;
+}
+.filter-section-block .filter-wrapper.search-filter-wrapper {
+	border: none;
+	padding: 0;
+	margin-bottom: 0px;
+	transition: all 0.3s ease;
+}
+.btn-filter-wrapper button {
+	background-color: transparent;
+	outline: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+.btn-filter-wrapper {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 10px;
+}
+.btn-filter-wrapper .filter-search-btn {
+	border: 1px solid var(--border);
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 5px;
+}
+.btn-filter-wrapper .filter-search-btn svg g {
+	opacity: 1;
+}
+.btn-filter-wrapper .filter-search-btn svg path {
+	stroke: var(--border);
+}
+.btn-filter-wrapper .filter-title-btn {
+	display: flex;
+	flex: 1;
+	background-color: var(--hintGray);
+	border-radius: 5px;
+	height: 40px;
+	align-items: center;
+	justify-content: space-between;
+	box-sizing: border-box;
+	padding-left: 20px;
+	padding-right: 13px;
+	font-size: 14px;
+	line-height: 16.8px;
+	color: var(--dark);
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.search-filter-wrapper.filter-wrapper .filter-items {
+	padding-top: 0;
+	transition: all 0.3s ease;
+}
+.search-filter-wrapper.filter-wrapper.active .filter-items {
+	padding: 0px;
+	height: 50px;
+	padding-top: 10px;
+	transition: all 0.3s ease;
+	box-sizing: border-box;
+}
+.search-filter-wrapper .input-box {
+	position: relative;
+}
+.search-filter-wrapper .filter-items input[type="text"] {
+	width: 100%;
+	height: 40px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	font-size: 14px;
+	line-height: 16.8px;
+	color: rgba(132, 132, 132, 0.8);
+	font-family: "Montserrat";
+	font-weight: 400;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	outline: none;
+}
+.search-filter-wrapper .filter-items input[type="text"]:focus-visible {
+	border: 1px solid var(--green);
+}
+.search-filter-wrapper .filter-items svg {
+	position: absolute;
+	right: 13px;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.container-filter-items {
+	height: 0;
+	overflow: hidden;
+	padding-top: 0;
+}
+.container-filter-items.active {
+	height: 100%;
+	padding-top: 10px;
+}
+.filter-section-block .wrapper > p {
+	display: none;
+}
+.filter-section-block .filter-section .programs-filter-wrapper .title {
+	position: relative;
+}
+.filter-section-block .filter-section .programs-filter-wrapper .checkbox.career-camp .title:before,
+.filter-section-block .filter-section .programs-filter-wrapper .checkbox.skills-academy .title:before {
+	content: "Программа";
+	font-size: 8px;
+	line-height: 10px;
+	color: rgba(143, 143, 143, 0.7);
+	font-family: "Montserrat";
+	font-weight: 500;
+	position: absolute;
+	top: -10px;
+	left: 0;
+}
+.container-filter {
+	margin-bottom: 40px;
+}
+#filtered-posts-container {
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px 10px;
+}
+#filtered-posts-container .no-content {
+	background-color: var(--hintGray);
+	border-radius: 15px;
+	padding: 0px 15px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	flex-direction: column;
+	width: 100%;
+}
+
+.filter-section-block {
+	margin-bottom: 40px;
+}
+.filter-section-block.art-community h2 {
+	max-width: 330px;
+}
+.wp-block-fv-filter-section-skills.filter-section-block .programs-filter-wrapper.active .filter-items {
+	height: 54px;
+}
+.wp-block-fv-filter-section-skills.filter-section-block .season-filter-wrapper.active .filter-items {
+	height: 114px;
+}
+.result-content-filter {
+	position: relative;
+}
+
+.filter-section-block .wrapper > .back-block {
+	display: none;
+}
+.filter-section-block.wp-block-fv-filter-section-merch .age-filter-wrapper.active .filter-items {
+	height: 220px;
+}
+.item-card {
+	width: calc(50% - 5px);
+	border-radius: 15px;
+	background-color: var(--hintGray);
+	box-sizing: border-box;
+	padding-bottom: 19px;
+	padding-top: 27px;
+	padding-left: 3px;
+	padding-right: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 21px;
+	position: relative;
+	justify-content: space-between;
+}
+.item-card .date-card,
+.item-card .place-card,
+.item-card .ages-card,
+.item-card .days-card {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(83, 83, 83, 0.8);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+}
+.item-card .date-card {
+	margin-bottom: 3px;
+}
+.item-card .place-card {
+	margin-bottom: 23px;
+	text-align: center;
+}
+.item-card .days-card {
+	margin-bottom: 3px;
+}
+.item-card .title-card {
+	font-size: 18px;
+	line-height: 21.6px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.item-card .price-card {
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+}
+.item-card .label-card {
+	font-size: 12px;
+	line-height: 120%;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 500;
+	border-radius: 30px;
+	border: 1px solid var(--green);
+	height: 28px;
+	width: calc(100% - 10%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--white);
+	position: absolute;
+	top: -14px;
+	box-sizing: border-box;
+}
+.item-card.career-camp:before {
+	content: "Программа";
+	font-size: 10px;
+	line-height: 15px;
+	color: rgba(143, 143, 143, 0.7);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+	position: absolute;
+	top: -31px;
+}
+.item-card.skills-academy:before {
+	content: "Программа";
+	font-size: 10px;
+	line-height: 15px;
+	color: rgba(143, 143, 143, 0.7);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+	position: absolute;
+	top: -31px;
+}
+.item-card button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+.item-card button.modal-form,
+.item-card button.modal-form-merch {
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	border-radius: 30px;
+	width: calc(100% - 6%);
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.item-card button.modal-form.green,
+.item-card button.modal-form-merch.green {
+	font-size: 12px;
+	line-height: 13.2px;
+	background-color: var(--green);
+}
+.item-card button.modal-form.red {
+	font-size: 10px;
+	line-height: 11px;
+	background-color: var(--red);
+}
+.item-card button.more {
+	font-size: 12px;
+	line-height: 13.2px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.item-card button.more:before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	display: block;
+}
+.item-card button.more.green {
+	color: var(--green);
+}
+.item-card button.more.red {
+	color: var(--red);
+}
+.item-card button.more svg {
+	transform: rotate(-180deg);
+	margin-left: 3px;
+}
+.item-card button.more.green:before {
+	background-color: var(--green);
+}
+.item-card button.more.green svg path {
+	fill: var(--green);
+}
+.item-card button.more.red:before {
+	background-color: var(--red);
+}
+.item-card button.more.red svg path {
+	fill: var(--red);
+}
+.item-card .item-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.item-card .top-item-section {
+	margin-bottom: 5px;
+}
+.item-card button.more.red:active {
+	color: var(--green);
+}
+.item-card button.more.red:active svg path {
+	fill: var(--green);
+}
+.item-card button.more.red:active:before {
+	background-color: var(--green);
+}
+.item-card button.more.green:active {
+	color: var(--red);
+}
+.item-card button.more.green:active svg path {
+	fill: var(--red);
+}
+.item-card button.more.green:active:before {
+	background-color: var(--red);
+}
+.item-card button.modal-form.green:active,
+.item-card button.modal-form-merch.green:active {
+	background-color: var(--red);
+}
+.item-card button.modal-form.red:active {
+	background-color: var(--green);
+}
+
+.item-card.skill-academy button.modal-form.green {
+	background-color: var(--blue);
+}
+.item-card.skill-academy button.more.green {
+	color: var(--blue);
+}
+.item-card.skill-academy button.more.green:before {
+	background-color: var(--blue);
+}
+.item-card.skill-academy button.more.green svg path {
+	fill: var(--blue);
+}
+.item-card.skill-academy .title-card {
+	color: var(--blue);
+}
+.item-card.skill-academy .label-card {
+	color: var(--blue);
+	border: 1px solid var(--blue);
+}
+
+.item-card.skills-academy .title-card {
+	color: var(--blue);
+}
+.item-card.skills-academy .label-card {
+	color: var(--blue);
+	border: 1px solid var(--blue);
+}
+.item-card.art-community .title-card {
+	color: var(--artRed);
+}
+.item-card.art-community .label-card {
+	color: var(--artRed);
+	border: 1px solid var(--artRed);
+}
+.item-card.art-community button.modal-form.red {
+	background-color: var(--dark);
+}
+.item-card.skills-academy button.modal-form.green:active {
+	background-color: var(--green);
+}
+.item-card.skills-academy button.more.green:active {
+	color: var(--green);
+}
+.item-card.skills-academy button.more.green:active:before {
+	background-color: var(--green);
+}
+.item-card.skills-academy button.more.green:active svg path {
+	fill: var(--green);
+}
+#pagination > button,
+#pagination > span {
+	width: 40px;
+	height: 40px;
+}
+#pagination {
+	margin-top: 40px;
+	display: flex;
+	gap: 5px;
+	justify-content: center;
+}
+#pagination > button {
+	width: 30px;
+	height: 30px;
+	border: 1px solid var(--green);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--green);
+	box-sizing: border-box;
+}
+#pagination > span {
+	width: 30px;
+	height: 30px;
+	border: 1px solid var(--green);
+	border-radius: 8px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	line-height: 19px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--green);
+	box-sizing: border-box;
+}
+#pagination button:disabled {
+	background-color: var(--green);
+	color: var(--white);
+}
+#pagination .pagination-arrow-left {
+	transform: rotate(180deg);
+}
+
+@media (min-width: 767px) {
+	.filter-section-block h2 {
+		max-width: 650px;
+		margin-bottom: 15px;
+	}
+	.filter-section-block .wrapper > p {
+		display: block;
+		font-size: 14px;
+		line-height: 21px;
+		color: var(--mediumGray);
+		font-family: "Montserrat";
+		font-weight: 500;
+		max-width: 320px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.filter-section-block.skill-academy h2 {
+		max-width: 450px;
+		margin-bottom: 15px;
+	}
+	.filter-section-block.skill-academy .wrapper > p {
+		max-width: 420px;
+	}
+	.filter-section-block.art-community h2 {
+		max-width: 480px;
+	}
+	.psychologist.filter-section-block h2 {
+		max-width: 480px;
+		margin-bottom: 40px;
+	}
+	.filter-section-block.city-template h2 {
+		max-width: 600px;
+		margin-bottom: 15px;
+	}
+	.filter-section-block .wrapper > p {
+		max-width: 430px;
+	}
+	.item-card .label-card {
+		font-size: 14px;
+		width: 170px;
+		height: 38px;
+		text-align: center;
+	}
+	.item-card .date-card,
+	.item-card .place-card,
+	.item-card .ages-card,
+	.item-card .days-card {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	#filtered-posts-container {
+		gap: 20px;
+	}
+	.item-card {
+		width: calc(50% - 10px);
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.item-card .title-card {
+		font-size: 23px;
+		line-height: 26.2px;
+		margin-bottom: 8px;
+	}
+	.item-card .price-card {
+		font-size: 24px;
+		line-height: 36px;
+		margin-bottom: 20px;
+	}
+	.item-card .days-card {
+		margin-bottom: -3px;
+	}
+	.item-card button.modal-form.green,
+	.item-card button.modal-form-merch.green,
+	.item-card button.modal-form.red {
+		font-size: 14px;
+		line-height: 15.4px;
+		width: 260px;
+		height: 45px;
+		margin-bottom: 15px;
+	}
+	.item-card button.more {
+		font-size: 14px;
+		line-height: 15.4px;
+	}
+	.skills-courses.item-card button.more.no-active-class {
+		background-color: #c7c7c7;
+		font-size: 14px;
+		line-height: 15.4px;
+		width: 260px;
+		height: 45px;
+		color: #535353;
+		font-family: "Montserrat";
+		font-weight: 500;
+		letter-spacing: -0.5px;
+		border-radius: 30px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.skills-courses.item-card button.more.no-active-class:before {
+		display: none;
+	}
+	.skills-courses.item-card button.more.no-active-class svg {
+		display: none;
+	}
+	.item-card .top-item-section {
+		margin-bottom: 14px;
+		width: 300px;
+		padding-left: 3px;
+		padding-right: 3px;
+		box-sizing: border-box;
+	}
+	.item-card.merch-camp .top-item-section {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.item-card.merch-camp {
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: auto;
+		margin-top: 0;
+	}
+}
+@media (min-width: 820px) {
+	.container-filter {
+		display: flex;
+		gap: 20px;
+		align-items: flex-start;
+	}
+	.container-filter .filter-section {
+		width: 25%;
+		background-color: var(--hintGray);
+		border-radius: 20px;
+		padding: 20px 10px;
+		box-sizing: border-box;
+	}
+	.result-content-filter {
+		flex: 1;
+	}
+	#filtered-posts-container {
+		margin-top: 0;
+	}
+	.filter-section-block .filter-wrapper.btn-filter-wrapper {
+		display: none;
+	}
+	.filter-section-block .filter-wrapper .filter-items {
+		height: 100%;
+		padding-top: 15px;
+		padding-bottom: 10px;
+	}
+	.container-filter-items {
+		height: 100%;
+	}
+	.filter-section-block .filter-wrapper .filter-title:before,
+	.filter-section-block .filter-wrapper .filter-title:after {
+		display: none;
+	}
+	.filter-section-block .filter-wrapper.last-child {
+		border-bottom: none;
+	}
+	.filter-section-block .filter-item {
+		margin-bottom: 10px;
+	}
+	.filter-section-block .filter-wrapper {
+		border-top: 1px solid rgba(132, 132, 132, 0.2);
+	}
+	.filter-section-block .filter-wrapper.active .filter-items {
+		height: 100% !important;
+	}
+	.filter-section-block .search-filter-wrapper.filter-wrapper .filter-items {
+		height: auto;
+		padding-top: 0;
+		padding-bottom: 20px;
+	}
+	.search-filter-wrapper .filter-items input[type="text"] {
+		height: 46px;
+		padding-left: 10px;
+		border: none;
+		border-radius: 10px;
+	}
+	.filter-section-block .filter-section .title {
+		color: rgba(66, 60, 60, 0.8);
+	}
+	#filtered-posts-container .no-content {
+		height: 400px;
+		padding: 0 200px;
+	}
+	.filter-section-block .filter-section .programs-filter-wrapper .checkbox.active .title {
+		font-weight: 600;
+	}
+	.filter-section-block .programs-filter-wrapper .filter-item {
+		margin-bottom: 25px;
+	}
+	.filter-section-block .programs-filter-wrapper .filter-item:first-child {
+		margin-bottom: 30px;
+	}
+	.filter-section-block {
+		margin-bottom: 120px;
+	}
+	.filter-section-block h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.filter-section-block.skill-academy h2 {
+		max-width: 650px;
+		margin-bottom: 15px;
+	}
+	.filter-section-block.art-community h2 {
+		max-width: 680px;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .programs-filter-wrapper .filter-item:first-child {
+		margin-bottom: 13px;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper.programs-filter-wrapper {
+		padding-top: 13px;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .programs-filter-wrapper .filter-item {
+		margin-bottom: 0px;
+	}
+	.filter-section-block .programs-filter-wrapper .filter-item:last-child {
+		margin-bottom: 0;
+	}
+	.psychologist.filter-section-block h2 {
+		max-width: 700px;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper.programs-filter-wrapper .filter-title {
+		display: none;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper .filter-items {
+		height: 100%;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper.programs-filter-wrapper .filter-items {
+		padding-top: 0;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block .filter-wrapper.programs-filter-wrapper {
+		padding-top: 18px;
+		margin-top: 20px;
+	}
+	.filter-section-block.city-template h2 {
+		max-width: 800px;
+	}
+
+	.merch-template.filter-section-block .filter-wrapper:first-child .filter-title {
+		display: block;
+	}
+	.random-posts .item-card {
+		width: calc(33.33333% - 13.4px);
+	}
+	.random-posts-container .random-posts {
+		gap: 20px;
+	}
+	.random-posts .item-card:last-child {
+		display: none;
+	}
+	.random-posts-container h3 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28.8px;
+		color: var(--darkGray);
+		margin-bottom: 40px;
+	}
+	.see-posts h3 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 22px;
+		line-height: 26.4px;
+		color: var(--darkGray);
+		margin-bottom: 40px;
+	}
+	.see-posts-container .item-card:last-child {
+		display: none;
+	}
+	.see-posts-container .item-card {
+		width: calc(33.33333% - 13.4px);
+	}
+	.item-card {
+		height: 400px;
+	}
+}
+@media (min-width: 1025px) {
+	.filter-section-block .filter-wrapper .filter-title {
+		font-size: 18px;
+		line-height: 19.8px;
+	}
+	.filter-section-block .filter-wrapper {
+		border-top: none;
+		padding: 0;
+	}
+	.filter-section-block .filter-section .title {
+		font-size: 16px;
+		line-height: 17.6px;
+	}
+	.filter-section-block .filter-wrapper .filter-items {
+		padding-bottom: 0;
+	}
+	.filter-section-block .filter-wrapper {
+		margin-bottom: 30px;
+	}
+	.filter-section-block .filter-wrapper:last-child {
+		margin-bottom: 0;
+	}
+	.filter-section-block .filter-wrapper.programs-filter-wrapper {
+		border-top: 1px solid rgba(132, 132, 132, 0.2);
+		border-bottom: 1px solid rgba(132, 132, 132, 0.2);
+		padding-top: 15px;
+		padding-bottom: 18px;
+		margin-bottom: 18px;
+	}
+	.filter-section-block .filter-section .program-filter-item .title {
+		font-size: 14px;
+		line-height: 15.4px;
+	}
+	.search-filter-wrapper .filter-items input[type="text"] {
+		height: 54px;
+		padding-left: 20px;
+		padding-right: 40px;
+	}
+	.search-filter-wrapper .filter-items svg {
+		width: 17px;
+		height: 17px;
+		right: 20px;
+	}
+	.filter-section-block h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 870px;
+		margin-bottom: 10px;
+	}
+	.filter-section-block .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.filter-section-block .filter-wrapper .filter-title {
+		letter-spacing: -0.5px;
+	}
+	.filter-section-block .programs-filter-wrapper .filter-item {
+		margin-bottom: 13px;
+	}
+	.filter-section-block .filter-section .programs-filter-wrapper .checkbox.career-camp .title:before,
+	.filter-section-block .filter-section .programs-filter-wrapper .checkbox.skills-academy .title:before {
+		font-size: 12px;
+		line-height: 18px;
+		top: -17px;
+	}
+	.filter-section-block .filter-wrapper.programs-filter-wrapper .filter-title {
+		display: none;
+	}
+	.filter-section-block {
+		margin-bottom: 120px;
+	}
+	.filter-section-block.skill-academy h2 {
+		max-width: 850px;
+		margin-bottom: 10px;
+	}
+	.filter-section-block.art-community h2 {
+		max-width: 880px;
+	}
+	.psychologist.filter-section-block h2 {
+		max-width: 1000px;
+	}
+	.wp-block-fv-filter-section-skills.filter-section-block.psychologist .filter-wrapper.programs-filter-wrapper {
+		padding-top: 28px;
+		border-bottom: none;
+		margin-bottom: 0;
+		padding-bottom: 8px;
+	}
+	.city-template.filter-section-block .filter-wrapper.programs-filter-wrapper {
+		border-top: 1px solid rgba(132, 132, 132, 0.2);
+		border-bottom: none;
+		padding-top: 0px;
+		padding-bottom: 0px;
+		margin-bottom: 0px;
+	}
+	.filter-section-block.city-template h2 {
+		max-width: 1100px;
+	}
+	.filter-section-block.city-template .wrapper > p {
+		max-width: 510px;
+	}
+	.filter-section-block .wrapper > .back-block {
+		display: block;
+		background-color: var(--green);
+		padding: 30px 0px;
+		color: var(--white);
+		font-size: 22px;
+		line-height: 26.4px;
+		font-family: "Montserrat";
+		font-weight: 600;
+		text-align: center;
+		margin-bottom: 20px;
+		border-radius: 15px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.filter-section-block .wrapper > .back-block p {
+		width: 750px;
+		margin: 0 auto;
+	}
+	.filter-section-block.merch-template h2 {
+		max-width: 820px;
+	}
+	.item-card {
+		width: calc(33.33333% - 13.4px);
+		height: 400px;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+	.item-card button {
+		cursor: pointer;
+	}
+	.item-card button.more.red {
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.red svg path {
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.red:before {
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.red:hover {
+		color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.red:hover svg path {
+		fill: var(--green);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.red:hover:before {
+		background-color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green:hover {
+		color: var(--red);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green:hover svg path {
+		fill: var(--red);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green:hover:before {
+		background-color: var(--red);
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green {
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green svg path {
+		transition: all 0.3s ease;
+	}
+	.item-card button.more.green:before {
+		transition: all 0.3s ease;
+	}
+	.item-card button.modal-form.green {
+		transition: all 0.3s ease;
+	}
+	.item-card button.modal-form.red {
+		transition: all 0.3s ease;
+	}
+	.item-card button.modal-form.green:hover,
+	.item-card button.modal-form-merch.green:hover {
+		background-color: var(--red);
+		transition: all 0.3s ease;
+	}
+	.item-card button.modal-form.red:hover {
+		background-color: var(--green);
+		transition: all 0.3s ease;
+	}
+	.random-posts .item-card:last-child {
+		display: flex;
+	}
+	.random-posts .item-card {
+		width: calc(25% - 15px);
+	}
+	.see-posts-container .item-card:last-child {
+		display: flex;
+	}
+	.see-posts-container .item-card {
+		width: calc(25% - 15px);
+	}
+	.see-posts h3 {
+		font-family: "Montserrat";
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28.8px;
+		color: var(--darkGray);
+		margin-bottom: 40px;
+	}
+	.skills-academy .item-card button.modal-form.green:hover {
+		background-color: var(--green);
+	}
+	.item-card .price-card {
+		margin-bottom: 10px;
+	}
+	.skills-courses.item-card button.more.red.no-active-class:hover {
+		color: #fff;
+		background-color: var(--red);
+	}
+	.item-card.skills-academy .title-card {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.page-id-788 .item-card .title-card {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.item-card.travel-by-city .place-card {
+		margin-bottom: 47px;
+	}
+	.item-card.merch-camp {
+		margin-top: 0;
+	}
+	#pagination > button {
+		cursor: pointer;
+		transition: all 0.3s ease;
+	}
+	#pagination > button:hover {
+		background-color: var(--green);
+		transition: all 0.3s ease;
+		color: var(--white);
+	}
+	#pagination > button:hover svg path {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	#pagination > button:hover svg rect {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	#pagination > button:hover svg circle {
+		fill: var(--white);
+		transition: all 0.3s ease;
+	}
+	#pagination > button svg path {
+		transition: all 0.3s ease;
+	}
+	#pagination > button svg rect {
+		transition: all 0.3s ease;
+	}
+	#pagination > button svg circle {
+		transition: all 0.3s ease;
+	}
+	.container-filter .filter-section {
+		width: 305px;
+		padding: 20px 25px 30px 20px;
+	}
+}

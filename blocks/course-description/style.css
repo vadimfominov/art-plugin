@@ -1,0 +1,163 @@
+.wp-block-fv-course-description {
+	margin-bottom: 75px;
+}
+
+.wp-block-fv-course-description h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	width: 315px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+.wp-block-fv-course-description .wrapper > p {
+	display: none;
+}
+.wp-block-fv-course-description .container ul {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-course-description ul li {
+	background-color: var(--hintGray);
+	border-radius: 20px;
+	padding: 20px;
+	padding-top: 60px;
+	position: relative;
+	box-sizing: border-box;
+}
+.wp-block-fv-course-description .svg-icon-wrapper {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.wp-block-fv-course-description ul li > span {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	display: block;
+	margin-bottom: 10px;
+	padding-right: 90px;
+	box-sizing: border-box;
+}
+.wp-block-fv-course-description ul li > p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+}
+.wp-block-fv-course-description .bg-image-important {
+	display: none;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-course-description .container .image-bg img {
+        height: 100%;
+        width: 100%;
+        border-radius: 25px;
+        object-fit: cover;
+        object-position: center;
+    }
+	.wp-block-fv-course-description {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-course-description h2 {
+		margin-bottom: 40px;
+		width: 450px;
+	}
+	.wp-block-fv-course-description .container {
+		display: flex;
+		gap: 10px;
+	}
+	.wp-block-fv-course-description .container ul,
+	.wp-block-fv-course-description .container .image-bg {
+		width: 50%;
+	}
+	.wp-block-fv-course-description .bg-image-important {
+		display: block;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-course-description h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 700px;
+	}
+	.wp-block-fv-course-description ul li > span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-course-description .container ul {
+		gap: 20px;
+		flex: 2;
+	}
+	.wp-block-fv-course-description .container {
+		gap: 20px;
+	}
+	.wp-block-fv-course-description ul li {
+		padding: 30px;
+		padding-top: 60px;
+	}
+	.wp-block-fv-course-description .container .image-bg img {
+		height: 100%;
+		width: 100%;
+		border-radius: 25px;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-course-description h2 {
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-course-description .wrapper > p {
+		display: block;
+		font-size: 14px;
+		line-height: 21px;
+		color: var(--mediumGray);
+		font-family: "Montserrat";
+		font-weight: 500;
+		width: 500px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-course-description h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 900px;
+	}
+	.wp-block-fv-course-description .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-course-description .container .image-bg {
+		width: 50%;
+		flex: none;
+	}
+	.wp-block-fv-course-description ul li {
+		height: 231px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-left: 20px;
+	}
+	.wp-block-fv-course-description ul li > span {
+		font-size: 22px;
+		line-height: 26.4px;
+	}
+	.wp-block-fv-course-description ul li > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-course-description .svg-icon-wrapper {
+		right: auto;
+		left: 20px;
+	}
+}

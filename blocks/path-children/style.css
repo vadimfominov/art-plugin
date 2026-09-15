@@ -1,0 +1,361 @@
+.wp-block-fv-path-children {
+	margin-bottom: 75px;
+}
+.wp-block-fv-path-children h2 {
+	font-size: 22px;
+	line-height: 100%;
+	margin-bottom: 10px;
+	letter-spacing: -0.22px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-path-children .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 130%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: rgba(83, 83, 83, 0.8);
+	margin-bottom: 20px;
+}
+.wp-block-fv-path-children .container-path-children {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-path-children .container-path-children .bottom-block {
+	border-radius: 20px;
+	position: relative;
+	overflow: hidden;
+	height: 280px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding-bottom: 20px;
+	box-sizing: border-box;
+}
+.wp-block-fv-path-children .container-path-children .bottom-block picture {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.wp-block-fv-path-children .container-path-children .bottom-block picture img {
+	display: block;
+	height: 280px;
+	width: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-path-children .container-path-children .bottom-block span:not(.play-video) {
+	position: relative;
+	text-align: center;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #fff;
+	z-index: 20;
+}
+.wp-block-fv-path-children .container-path-children .bottom-block p {
+	position: relative;
+	text-align: center;
+	font-size: 14px;
+	line-height: 110%;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: #fff;
+	z-index: 20;
+}
+
+.wp-block-fv-path-children .container-path-children .bottom-block::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+	z-index: 10;
+}
+
+.wp-block-fv-path-children .path-children {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.wp-block-fv-path-children .path-children .item {
+	border-radius: 20px;
+	background-color: #f5f5f7;
+	padding: 20px 15px;
+	box-sizing: border-box;
+}
+
+.wp-block-fv-path-children .path-children .item .text-box {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.wp-block-fv-path-children .path-children .item:nth-child(2) {
+	background-color: #30a933;
+}
+.wp-block-fv-path-children .path-children .item:nth-child(2) span:not(.icon-curcle) {
+	color: #fff;
+}
+.wp-block-fv-path-children .path-children .item:nth-child(2) p {
+	color: #fff;
+}
+
+.wp-block-fv-path-children .path-children .item span:not(.icon-curcle) {
+	text-align: center;
+	font-size: 16px;
+	line-height: 100%;
+	font-family: "Montserrat";
+	font-weight: 600;
+	margin-bottom: 5px;
+	color: #535353;
+	display: block;
+}
+.wp-block-fv-path-children .path-children .item p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	color: rgba(83, 83, 83, 0.8);
+	text-align: center;
+}
+
+.wp-block-fv-path-children .path-children .item .item-img {
+	display: none;
+}
+
+.wp-block-fv-path-children .path-children .item .icon-curcle {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #30a933;
+	position: relative;
+	margin-bottom: 20px;
+}
+.wp-block-fv-path-children .path-children .item:nth-child(2) .icon-curcle {
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #ffffff;
+	position: relative;
+	margin-bottom: 20px;
+	margin-left: -6px;
+}
+
+.wp-block-fv-path-children .path-children .item:nth-child(2) .icon-curcle:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 8px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #ffffff;
+}
+
+.wp-block-fv-path-children .path-children .item:nth-child(3) .icon-curcle:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 8px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #30a933;
+}
+.wp-block-fv-path-children .path-children .item:nth-child(3) .icon-curcle:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 8px;
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #30a933;
+}
+.wp-block-fv-path-children .content-video {
+	display: none;
+	justify-content: center;
+	width: 100%;
+	height: 0px;
+	background-color: var(--lightGray);
+}
+.wp-block-fv-path-children .content-video video {
+	width: 100%;
+	height: 100%;
+}
+.wp-block-fv-path-children video {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+}
+.wp-block-fv-path-children .play-video {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 34px;
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.2);
+	border-radius: 50%;
+	backdrop-filter: blur(34px);
+	z-index: 99;
+	opacity: 1;
+	transition: opacity 0.3s ease;
+}
+.wp-block-fv-path-children .play-video svg {
+	width: 7px;
+	height: 10px;
+}
+.wp-block-fv-path-children .play-video path {
+	fill: #ffffff;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-path-children h2 {
+		max-width: 570px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-path-children .path-children .item .item-img {
+		display: block;
+		width: 283px;
+		height: 200px;
+		border-radius: 20px;
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+	.wp-block-fv-path-children .path-children .item {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 20px;
+		padding: 20px;
+	}
+	.wp-block-fv-path-children .path-children .item .item-img img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-path-children .path-children .item .text-box {
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	.wp-block-fv-path-children .path-children .item span:not(.icon-curcle) {
+		text-align: left;
+		display: flex;
+		flex: auto;
+		align-items: flex-end;
+	}
+	.wp-block-fv-path-children .path-children .item p {
+		text-align: left;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-path-children h2 {
+		font-size: 32px;
+		max-width: 670px;
+	}
+	.wp-block-fv-path-children .wrapper > p {
+		max-width: 670px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-path-children {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-path-children .container-path-children {
+		gap: 20px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block {
+		height: 410px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block picture img {
+		height: 100%;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block span:not(.play-video) {
+		font-size: 20px;
+		margin-bottom: 10px;
+		text-align: left;
+		max-width: 430px;
+		width: 100%;
+		padding-left: 20px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block p {
+		text-align: left;
+		padding-left: 20px;
+	}
+	.wp-block-fv-path-children .path-children {
+		gap: 20px;
+	}
+	.wp-block-fv-path-children .path-children .item span:not(.icon-curcle) {
+		font-size: 20px;
+		margin-bottom: 10px;
+	}
+}
+
+@media (min-width: 1025px) {
+	.wp-block-fv-path-children h2 {
+		font-size: 42px;
+		max-width: 1000px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block {
+		height: 540px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block span:not(.play-video) {
+		font-size: 22px;
+		padding-left: 30px;
+	}
+	.wp-block-fv-path-children .container-path-children .bottom-block p {
+		padding-left: 30px;
+	}
+	.wp-block-fv-path-children .path-children {
+		flex-direction: row;
+	}
+	.wp-block-fv-path-children .path-children .item {
+		flex-direction: column;
+		width: calc(33.33333% - 20px / 3);
+		justify-content: space-between;
+	}
+	.wp-block-fv-path-children .path-children .item .item-img {
+		display: block;
+		width: 100%;
+		height: 270px;
+		border-radius: 20px;
+		overflow: hidden;
+		flex-shrink: 0;
+	}
+	.wp-block-fv-path-children .path-children .item span:not(.icon-curcle) {
+		font-size: 22px;
+	}
+	.wp-block-fv-path-children .path-children .item .icon-curcle,
+	.wp-block-fv-path-children .path-children .item:nth-child(2) .icon-curcle {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-path-children .path-children .item:nth-child(2) .icon-curcle {
+		margin-left: 0;
+	}
+	.wp-block-fv-path-children .path-children .item:nth-child(3) .icon-curcle {
+		margin-left: 6px;
+	}
+}

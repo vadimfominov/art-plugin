@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/vek-block",
+    "title": "Vek Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a vek-block",
+    "keywords": [
+        "vek-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

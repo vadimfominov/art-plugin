@@ -1,0 +1,389 @@
+.wp-block-fv-psychologist-tabs {
+	margin-bottom: 75px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .select-block .select-ul li.active {
+	background-color: var(--green);
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container {
+	opacity: 0;
+	height: 0;
+	overflow: hidden;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container.active {
+	opacity: 1;
+	height: auto;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block {
+	padding: 0;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block img {
+	display: block;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block {
+	background-color: var(--white);
+	padding: 0;
+	box-sizing: border-box;
+	padding-top: 10px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.label {
+	display: none;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.name {
+	font-size: 18px;
+	line-height: 21.6px;
+	margin-bottom: 10px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.title {
+	font-size: 16px;
+	line-height: 19.2px;
+	margin-bottom: 10px;
+	color: var(--darkGray);
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p {
+	padding-left: 0;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p:before {
+	display: none;
+}
+
+.wp-block-fv-psychologist-tabs.test-drive-section.test-template h2 {
+	margin-bottom: 10px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .wrapper > p {
+	text-align: center;
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 30px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section h2 {
+	margin-bottom: 20px;
+	padding-left: 0;
+	padding-right: 0;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section h2 .highlight:before {
+	content: "Программа";
+	position: absolute;
+	top: -11px;
+	left: 15px;
+	color: var(--mediumGray);
+	opacity: 0.7;
+	font-size: 10px;
+	line-height: 15px;
+	font-family: "Montserrat";
+	font-weight: 500;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section h2 .highlight:before {
+	left: 14px;
+	top: -4px;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span {
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--green);
+	margin-bottom: 20px;
+	display: block;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	color: var(--mediumGray);
+	margin-bottom: 10px;
+	position: relative;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p:before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--green);
+	position: absolute;
+	top: 8px;
+	left: 0;
+}
+
+.wp-block-fv-psychologist-tabs .select-block {
+	position: relative;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-title {
+	display: flex;
+	width: 100%;
+	height: 52px;
+	align-items: center;
+	justify-content: flex-start;
+	padding-left: 20px;
+	border-radius: 10px;
+	background-color: var(--green);
+	line-height: 24px;
+	font-size: 16px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	color: var(--white);
+	position: relative;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-title:before {
+	content: "";
+	position: absolute;
+	top: calc(50% + 6px);
+	transform: translateY(-50%);
+	right: 20px;
+	display: inline-block;
+	border: 9px solid transparent;
+	border-top: 9px solid var(--white);
+}
+.wp-block-fv-psychologist-tabs .select-block .select-title.active:before {
+	content: "";
+	top: calc(50% - 12px);
+	transform: rotate(-180deg);
+}
+
+.wp-block-fv-psychologist-tabs .select-block .select-ul {
+	background-color: var(--white);
+	position: initial;
+	height: auto;
+	border-radius: 0;
+	padding: 0;
+	border: none;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: 20px;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul.active {
+	padding: 20px;
+	height: auto;
+	width: 100%;
+	border: 1px solid var(--lightGray);
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul li {
+	line-height: 19.6px;
+	font-size: 14px;
+	color: var(--darkGray);
+	text-align: center;
+	font-weight: 500;
+	font-family: "Montserrat";
+	transition: all 0.3s ease;
+	transition: all 0.3s ease;
+	border-radius: 10px;
+	background-color: var(--hintGray);
+	padding: 20px 0px;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul li em {
+	margin-left: 3px;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul li:last-child {
+	margin-bottom: 0;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul li:hover {
+	color: var(--white);
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+.wp-block-fv-psychologist-tabs .select-block .select-ul li.active {
+	color: var(--white);
+	background-color: var(--green);
+	transition: all 0.3s ease;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-psychologist-tabs {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container {
+		display: flex;
+		gap: 20px;
+		padding: 0px;
+		border-radius: 20px;
+		background-color: var(--hintGray);
+		box-sizing: border-box;
+		position: relative;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container.active {
+		padding: 20px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block {
+		width: calc(100% - 300px);
+		background-color: var(--hintGray);
+		padding-top: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		padding-bottom: 10px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block {
+		width: 280px;
+		height: 350px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.label {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 20px;
+		background-color: var(--green);
+		color: var(--white);
+		font-family: "Montserrat";
+		font-size: 14px;
+		line-height: 16.8px;
+		font-weight: 400;
+		width: 160px;
+		height: 32px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-radius: 0px 0px 10px 10px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-psychologist-tabs .select-block .select-title {
+		display: none;
+	}
+	.wp-block-fv-psychologist-tabs .select-block .select-ul {
+		height: auto;
+		position: initial;
+		display: flex;
+		gap: 20px;
+		border: none;
+		padding: 0;
+		margin-bottom: 20px;
+		flex-direction: row;
+	}
+	.wp-block-fv-psychologist-tabs .select-block .select-ul li {
+		width: auto;
+		border-radius: 10px;
+		border: 1px solid var(--lightGray);
+		height: 70px;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease;
+		color: rgba(83, 83, 83, 0.5);
+		cursor: pointer;
+		margin-bottom: 0;
+		flex: 1;
+		font-size: 22px;
+		line-height: 26.2px;
+	}
+	.wp-block-fv-psychologist-tabs .select-block .select-ul li.active {
+		color: var(--white);
+		background-color: var(--green);
+		border: 1px solid var(--green);
+		transition: all 0.3s ease;
+	}
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-psychologist-tabs.test-drive-section h2 {
+		width: 740px;
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+	.skills-template.wp-block-fv-psychologist-tabs.test-drive-section h2 {
+		width: 750px;
+		font-size: 32px;
+		line-height: 38.4px;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block {
+		width: 283px;
+		height: 357px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block {
+		width: calc(100% - 303px);
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.name {
+		font-size: 26px;
+		line-height: 31.2px;
+		margin-bottom: 10px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.title {
+		font-size: 20px;
+		line-height: 24px;
+		width: 400px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-psychologist-tabs.test-drive-section .wrapper > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container.active {
+		padding: 40px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block.first-item-block {
+		border-radius: 30px;
+		width: 485px;
+		height: 485px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.label {
+		font-size: 16px;
+		line-height: 19px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block {
+		width: calc(100% - 525px);
+		justify-content: center;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container {
+		gap: 40px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span.title {
+		font-size: 22px;
+		line-height: 26.4px;
+		max-width: 550px;
+		width: 100%;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p {
+		max-width: 540px;
+		width: 100%;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 1000px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > span {
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-psychologist-tabs.test-drive-section .container .item-block > p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+}

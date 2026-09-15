@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/mission-and-goals",
+    "title": "Mission And Goals",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a mission-and-goals",
+    "keywords": [
+        "mission-and-goals"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

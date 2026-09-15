@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/time-one-day",
+    "title": "Time One Day",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a time-one-day",
+    "keywords": [
+        "time-one-day"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

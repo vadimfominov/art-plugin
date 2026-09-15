@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/our-team-block",
+    "title": "Our Team Block",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a our-team-block",
+    "keywords": [
+        "our-team-block"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

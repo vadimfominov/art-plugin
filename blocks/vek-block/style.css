@@ -1,0 +1,85 @@
+.wp-block-fv-vek-block {
+	margin-bottom: 75px;
+}
+.wp-block-fv-vek-block h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-vek-block .container-vek-block {
+	display: flex;
+	flex-direction: column;
+}
+.wp-block-fv-vek-block .container-vek-block p {
+	font-size: 14px;
+	line-height: 21px;
+	font-family: "Montserrat";
+	font-weight: 400;
+	color: var(--darkGray);
+}
+.wp-block-fv-vek-block .container-vek-block p a {
+	font-weight: 600;
+	color: var(--darkGray);
+}
+.wp-block-fv-vek-block .container-vek-block p:first-child {
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.wp-block-fv-vek-block .container-vek-block p:nth-child(4) {
+	margin-top: 20px;
+	font-weight: 600;
+}
+.wp-block-fv-vek-block .container-vek-block .item {
+	margin-top: 20px;
+}
+.wp-block-fv-vek-block .container-vek-block .item p {
+	border-radius: 20px;
+	border: 1px solid var(--border);
+	padding: 20px;
+	box-sizing: border-box;
+	font-weight: 400;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-vek-block h2 {
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-vek-block .container-vek-block .item {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+	.wp-block-fv-vek-block .container-vek-block .item p {
+		width: calc(100% - 250px);
+		margin-bottom: 0;
+	}
+	.wp-block-fv-vek-block .container-vek-block .item img {
+		width: 200px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-vek-block {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-vek-block h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-vek-block h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+	}
+	.wp-block-fv-vek-block .container-vek-block p {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-vek-block .container-vek-block .item p {
+		width: calc(100% - 350px);
+	}
+}

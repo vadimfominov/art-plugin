@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/suitable-child",
+    "title": "Suitable Child",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a suitable-child",
+    "keywords": [
+        "suitable-child"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

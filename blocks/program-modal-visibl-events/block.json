@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/program-modal-visibl-events",
+    "title": "Program Modal Visibl Events",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a program-modal-visibl-events",
+    "keywords": [
+        "program-modal-visibl-events"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

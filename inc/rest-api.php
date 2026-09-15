@@ -387,7 +387,7 @@ function get_filtered_programs($request)
 				$innerHTML = current($card_block)['innerHTML'];
 			}
 
-			// error_log(print_r($selected_days, true));
+			error_log(print_r($card_block, true));
 
 			// error_log(print_r(clearText($attrs['title']) . ' - ' . $attrs['inActiveOld'], true));
 			// error_log(print_r(clearText($attrs['title']) . ' - ' . is_user_logged_in(), true));
@@ -1010,7 +1010,7 @@ add_action('rest_api_init', function () {
 // postTypeName
 add_action('rest_api_init', function () {
 	register_rest_field(
-		array('career-camp', 'skills-academy', 'art-community', 'travel-by-city'), // укажите все нужные типы постов
+		array('career-camp', 'skills-academy', 'art-community', 'travel-by-city', 'parent-wednesdays'), // укажите все нужные типы постов
 		'postTypeName',
 		array(
 			'get_callback' => function ($post) {
@@ -1288,7 +1288,7 @@ add_action('rest_api_init', function () {
 // postTypeName
 add_action('rest_api_init', function () {
 	register_rest_field(
-		array('skills-courses'), // укажите все нужные типы постов
+		array('skills-courses', 'parent-wednesdays'), // укажите все нужные типы постов
 		'postTypeName',
 		array(
 			'get_callback' => function ($post) {
@@ -1420,7 +1420,7 @@ add_action('rest_api_init', function () {
 // inCard
 add_action('rest_api_init', function () {
 	register_rest_field(
-		array('skills-courses', 'psychologist'), // укажите все нужные типы постов
+		array('skills-courses', 'psychologist', 'parent-wednesdays'), // укажите все нужные типы постов
 		'inCard',
 		array(
 			'get_callback' => function ($post) {
@@ -1574,7 +1574,7 @@ add_action('rest_api_init', function () {
 // postTypeName
 add_action('rest_api_init', function () {
 	register_rest_field(
-		array('psychologist'), // укажите все нужные типы постов
+		array('psychologist', 'parent-wednesdays'), // укажите все нужные типы постов
 		'postTypeName',
 		array(
 			'get_callback' => function ($post) {

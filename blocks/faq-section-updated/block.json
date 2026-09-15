@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/faq-section-updated",
+    "title": "Faq Section Updated",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a faq-section-updated",
+    "keywords": [
+        "faq-section-updated"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

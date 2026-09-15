@@ -1,0 +1,114 @@
+.wp-block-fv-posts-about {
+	margin-bottom: 75px;
+}
+.wp-block-fv-posts-about h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 20px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+.wp-block-fv-posts-about .container {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.wp-block-fv-posts-about .container .item {
+	background-color: var(--green);
+	border-radius: 20px;
+	padding: 20px 15px;
+	box-sizing: border-box;
+}
+.wp-block-fv-posts-about .container .item span {
+	color: var(--white);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 400;
+	margin-bottom: 10px;
+	display: block;
+}
+.wp-block-fv-posts-about .container .item span strong {
+	font-weight: 600;
+}
+.wp-block-fv-posts-about .container .item > div {
+	display: flex;
+	justify-content: flex-end;
+}
+.wp-block-fv-posts-about .container .item a {
+	color: var(--white);
+	font-size: 14px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-decoration: underline;
+	text-decoration-skip-ink: none;
+}
+.wp-block-fv-posts-about.events-template {
+	margin-bottom: 0px;
+	margin-top: 75px;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-posts-about .container {
+		flex-wrap: wrap;
+		flex-direction: row;
+	}
+	.wp-block-fv-posts-about .container .item {
+		width: calc(50% - 10px);
+		position: relative;
+	}
+	.wp-block-fv-posts-about .container .item .link-more {
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		height: 40px;
+		display: flex;
+		align-items: flex-end;
+	}
+	.wp-block-fv-posts-about h2 {
+		max-width: 550px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 820px) {
+	.wp-block-fv-posts-about {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-posts-about h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		max-width: 720px;
+	}
+	.wp-block-fv-posts-about .container .item span {
+		font-size: 20px;
+		line-height: 24px;
+		margin-bottom: 30px;
+	}
+	.wp-block-fv-posts-about.events-template {
+		margin-bottom: 0px;
+		margin-top: 120px;
+	}
+	.wp-block-fv-posts-about .container .item {
+		padding: 20px 30px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-posts-about .container {
+		gap: 20px;
+	}
+	.wp-block-fv-posts-about .container.three-columns .item {
+		width: calc(33.33333% - 14px);
+	}
+	.wp-block-fv-posts-about .container.two-columns .item {
+		width: calc(50% - 10px);
+	}
+	.wp-block-fv-posts-about h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		max-width: 950px;
+	}
+}

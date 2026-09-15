@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/simulator",
+    "title": "Simulator",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a simulator",
+    "keywords": [
+        "simulator"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

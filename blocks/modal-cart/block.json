@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/modal-cart",
+    "title": "Modal Cart",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a modal-cart",
+    "keywords": [
+        "modal-cart"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}

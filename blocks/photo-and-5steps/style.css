@@ -1,0 +1,308 @@
+.wp-block-fv-photo-and-5steps {
+	margin-bottom: 75px;
+}
+.wp-block-fv-photo-and-5steps h2 {
+	text-align: center;
+	font-size: 22px;
+	line-height: 26px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+	margin-bottom: 44px;
+}
+.wp-block-fv-photo-and-5steps .item-6 .icn {
+	display: none;
+}
+.wp-block-fv-photo-and-5steps .item-6 {
+	position: relative;
+}
+.wp-block-fv-photo-and-5steps .item-6 img {
+	position: initial;
+	width: 100%;
+	height: auto;
+	border-radius: 15px;
+}
+.wp-block-fv-photo-and-5steps .list-block {
+	display: flex;
+	flex-direction: column;
+	gap: 44px;
+}
+.wp-block-fv-photo-and-5steps .list-block li p {
+	text-align: center;
+	font-size: 16px;
+	line-height: 19px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	color: var(--darkGray);
+}
+.wp-block-fv-photo-and-5steps .list-block li {
+	width: 309px;
+	margin: 0 auto;
+	position: relative;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-1 {
+	order: 1;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-2 {
+	order: 5;
+	width: 216px;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-3 {
+	order: 4;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-4 {
+	order: 6;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-5 {
+	width: 216px;
+	order: 2;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-6 {
+	order: 3;
+}
+.wp-block-fv-photo-and-5steps .list-block li:before {
+	content: "";
+	width: 14px;
+	height: 14px;
+	border-radius: 7px;
+	border: 2px solid var(--darkGray);
+	position: absolute;
+	top: -23px;
+	left: 50%;
+	box-sizing: border-box;
+	transform: translateX(-50%);
+}
+.wp-block-fv-photo-and-5steps .list-block .item-2:before,
+.wp-block-fv-photo-and-5steps .list-block .item-5:before {
+	border: 2px solid var(--artRed);
+}
+.wp-block-fv-photo-and-5steps .list-block .item-6 {
+	width: 100%;
+	margin-top: -24px;
+}
+.wp-block-fv-photo-and-5steps .list-block .item-6:before {
+	display: none;
+}
+
+@media (min-width: 767px) {
+	.wp-block-fv-photo-and-5steps {
+		margin-bottom: 144px;
+	}
+	.wp-block-fv-photo-and-5steps h2 {
+		width: 350px;
+		margin: 0 auto;
+		margin-bottom: 44px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 img {
+		position: initial;
+		width: 350px;
+		margin: 0 auto;
+		height: auto;
+		border-radius: 15px;
+	}
+	.wp-block-fv-photo-and-5steps h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 500px;
+		margin-bottom: 76px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 img {
+		width: 195px;
+		height: 290px;
+		position: relative;
+		z-index: 40;
+	}
+	.wp-block-fv-photo-and-5steps .list-block li:before {
+		display: none;
+	}
+	.wp-block-fv-photo-and-5steps .list-block li {
+		position: absolute;
+		background-color: var(--white);
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-6 {
+		margin-top: 0;
+		width: auto;
+		position: relative;
+	}
+
+	.wp-block-fv-photo-and-5steps .list-block {
+		position: relative;
+		max-width: 840px;
+		margin: 0 auto;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-1 {
+		top: -36px;
+		left: 0;
+		width: 267px;
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-2 {
+		top: -16px;
+		right: 0;
+		width: 250px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-3 {
+		bottom: -27px;
+		right: 0;
+		width: 270px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-4 {
+		bottom: -24px;
+		left: 0;
+		width: 265px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-5 {
+		bottom: 40px;
+		left: 0;
+		width: 201px;
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn {
+		display: block;
+		position: absolute;
+	}
+	.wp-block-fv-photo-and-5steps .list-block li p {
+		text-align: left;
+		font-size: 20px;
+		line-height: 24px;
+		background-color: var(--white);
+		z-index: 20;
+		position: relative;
+		padding-left: 5px;
+		padding-right: 5px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-1 p {
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-5 p {
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-4 p {
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn:before {
+		content: "";
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
+		border: 2px solid var(--white);
+		display: block;
+		background-color: var(--green);
+		box-sizing: border-box;
+		position: absolute;
+		z-index: 45;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon1-svg {
+		top: -2px;
+		left: 0px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon2-svg {
+		top: 16px;
+		right: 7px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon3-svg {
+		bottom: 61px;
+		right: 7px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon4-svg {
+		bottom: 20px;
+		left: -7px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon5-svg {
+		bottom: 130px;
+		left: -7px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn svg {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon2-svg:before {
+		background-color: var(--artRed);
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon5-svg:before {
+		background-color: var(--artRed);
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon1-svg svg {
+		top: -21px;
+		right: -15px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon2-svg svg {
+		top: -21px;
+		left: 0;
+		right: auto;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon3-svg svg {
+		top: -10px;
+		left: -3px;
+		right: auto;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon4-svg svg {
+		top: -4px;
+		right: -13px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon5-svg svg {
+		top: 0px;
+		right: -19px;
+	}
+}
+@media (min-width: 820px) {
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-photo-and-5steps {
+		margin-bottom: 165px;
+	}
+	.wp-block-fv-photo-and-5steps h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 590px;
+		margin-bottom: 84px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 img {
+		width: 414px;
+		height: 350px;
+		object-fit: cover;
+		object-position: center;
+	}
+	.wp-block-fv-photo-and-5steps .list-block {
+		max-width: 100%;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-1 {
+		width: 393px;
+		top: -38px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-5 {
+		bottom: 75px;
+		left: 33px;
+		width: 280px;
+		text-align: right;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon4-svg {
+		bottom: 7px;
+		left: 37px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-4 {
+		bottom: -36px;
+		left: 156px;
+		width: 265px;
+	}
+	.wp-block-fv-photo-and-5steps .item-6 .icn.icon2-svg {
+		top: 89px;
+		right: 7px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-2 {
+		top: 55px;
+		right: 60px;
+		width: 270px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block .item-3 {
+		bottom: -30px;
+		right: 32px;
+		width: 350px;
+	}
+	.wp-block-fv-photo-and-5steps .list-block li p {
+		font-size: 22px;
+		line-height: 26px;
+	}
+}

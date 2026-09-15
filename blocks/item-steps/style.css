@@ -1,0 +1,242 @@
+.wp-block-fv-item-steps h2 {
+	font-size: 22px;
+	line-height: 26.4px;
+	margin-bottom: 10px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+}
+
+.wp-block-fv-item-steps .wrapper-mask > p {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	text-align: center;
+	margin-bottom: 40px;
+}
+.wp-block-fv-item-steps .container {
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+.wp-block-fv-item-steps .container .item-day {
+	display: flex;
+	flex-direction: column-reverse;
+}
+.wp-block-fv-item-steps .second-block {
+	position: relative;
+	margin-bottom: 30px;
+}
+.wp-block-fv-item-steps .second-block img {
+	border-radius: 20px;
+	height: 270px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+}
+.wp-block-fv-item-steps .second-block span {
+	color: var(--white);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	bottom: 10px;
+	transform: translate(-50%);
+	position: absolute;
+	left: 50%;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 10px;
+	background-color: rgba(255, 255, 255, 0.3);
+	backdrop-filter: blur(14px);
+	white-space: nowrap;
+}
+
+.wp-block-fv-item-steps .first-block span {
+	color: var(--green);
+	font-size: 16px;
+	line-height: 19.2px;
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	padding-left: 16px;
+	position: relative;
+	margin-bottom: 10px;
+}
+.wp-block-fv-item-steps .first-block span:before {
+	content: "";
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background-color: var(--green);
+	position: absolute;
+	top: 6px;
+	left: 0;
+	display: block;
+}
+.wp-block-fv-item-steps .first-block p {
+	font-size: 14px;
+	line-height: 21px;
+	color: var(--mediumGray);
+	font-family: "Montserrat";
+	font-weight: 500;
+	padding-left: 16px;
+}
+.wp-block-fv-item-steps {
+	margin-bottom: 75px;
+}
+
+@media (min-width: 820px) {
+	.wp-block-fv-item-steps h2 {
+		font-size: 32px;
+		line-height: 38.4px;
+		width: 620px;
+		margin: 0 auto;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-item-steps .wrapper-mask > p {
+		width: 500px;
+		margin: 0 auto;
+		margin-bottom: 40px;
+	}
+	.wp-block-fv-item-steps .container .item-day {
+		display: flex;
+		flex-direction: row;
+		gap: 20px;
+	}
+	.wp-block-fv-item-steps .container .item-day .first-block {
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.wp-block-fv-item-steps .second-block {
+		width: 50%;
+		margin-bottom: 0;
+	}
+	.wp-block-fv-item-steps .second-block img {
+		height: 220px;
+	}
+	.wp-block-fv-item-steps .first-block span {
+		font-size: 20px;
+		line-height: 30px;
+		padding-left: 40px;
+		margin-bottom: 5px;
+	}
+	.wp-block-fv-item-steps .first-block span:before {
+		top: 12px;
+		left: 20px;
+	}
+	.wp-block-fv-item-steps .first-block p {
+		padding-left: 40px;
+	}
+	.wp-block-fv-item-steps .second-block span {
+		font-size: 20px;
+		line-height: 24px;
+	}
+	.wp-block-fv-item-steps {
+		margin-bottom: 120px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) {
+		flex-direction: row-reverse;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) {
+		flex-direction: row-reverse;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block span:before,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block span:before {
+		left: 0;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block span,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block span,
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block p,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block p {
+		padding-left: 20px;
+	}
+	.wp-block-fv-item-steps .wrapper-mask {
+		border-radius: 30px;
+		background-color: var(--hintGray);
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+}
+@media (min-width: 1025px) {
+	.wp-block-fv-item-steps .container {
+		gap: 60px;
+		padding-left: 108px;
+		padding-right: 108px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(1) {
+		flex-direction: row-reverse;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(3) {
+		flex-direction: row-reverse;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(1) .first-block span:before,
+	.wp-block-fv-item-steps .container .item-day:nth-child(3) .first-block span:before {
+		left: 10px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(1) .first-block span,
+	.wp-block-fv-item-steps .container .item-day:nth-child(3) .first-block span {
+		padding-left: 27px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(1) .first-block p,
+	.wp-block-fv-item-steps .container .item-day:nth-child(3) .first-block p {
+		padding-left: 10px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) {
+		flex-direction: row;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) {
+		flex-direction: row;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block span:before,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block span:before {
+		left: 30px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block span,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block span {
+		padding-left: 47px;
+	}
+	.wp-block-fv-item-steps .container .item-day:nth-child(2) .first-block p,
+	.wp-block-fv-item-steps .container .item-day:nth-child(4) .first-block p {
+		padding-left: 30px;
+		padding-right: 30px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-item-steps .second-block img {
+		height: 300px;
+	}
+	.wp-block-fv-item-steps .first-block span {
+		font-size: 26px;
+		line-height: 31.2px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-item-steps h2 {
+		font-size: 42px;
+		line-height: 50.4px;
+		width: 820px;
+		margin-bottom: 20px;
+	}
+	.wp-block-fv-item-steps .wrapper-mask > p {
+		font-size: 16px;
+		line-height: 24px;
+		width: 620px;
+		margin-bottom: 48px;
+	}
+	.wp-block-fv-item-steps .second-block span {
+		font-size: 22px;
+		line-height: 26px;
+		transform: translate(0%);
+		left: 30px;
+		bottom: 30px;
+	}
+}

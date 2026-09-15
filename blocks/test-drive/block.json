@@ -1,0 +1,17 @@
+{
+    "apiVersion": 3,
+    "name": "fv/test-drive",
+    "title": "Test Drive",
+    "category": "common",
+    "icon": "smiley",
+    "description": "\u0411\u043b\u043e\u043a test-drive",
+    "keywords": [
+        "test-drive"
+    ],
+    "attributes": {
+        "content": {
+            "type": "string"
+        }
+    },
+    "editorStyle": "file:./style.css"
+}
