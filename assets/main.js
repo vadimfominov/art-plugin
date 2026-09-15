@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
 
 	const load_more_list = document.querySelector('.load-more-list');
 
@@ -3936,7 +3936,6 @@ window.addEventListener('load', function () {
 	});
 
 });
-
 // Фронтенд JS с пагинацией
 window.addEventListener('load', function () {
 	const containers = document.querySelectorAll('.blog-frontend-container');
@@ -4050,7 +4049,6 @@ window.addEventListener('load', function () {
 		loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
 	});
 });
-
 // Функция для обновления URL с параметрами
 function updateURLParams(container, page, categoryId, sortOrder) {
 	const url = new URL(window.location.href);
@@ -4080,7 +4078,6 @@ function updateURLParams(container, page, categoryId, sortOrder) {
 	// Обновляем URL без перезагрузки страницы
 	window.history.pushState({}, '', url);
 }
-
 // Функция для получения параметров из URL
 function getParamsFromURL(container) {
 	const url = new URL(window.location.href);
@@ -4146,9 +4143,7 @@ async function loadCategories(container, selectedCategoryId = '') {
 		console.error('Error loading categories:', error);
 	}
 }
-
 // Функция для экранирования HTML
-
 async function loadPosts(container, categoryId = '', sortOrder = 'default', page = 1, filter = true) {
 	let order = 'desc';
 	let orderby = 'date';
@@ -4262,14 +4257,11 @@ async function loadPosts(container, categoryId = '', sortOrder = 'default', page
 		if (loadNextBtn) loadNextBtn.disabled = false;
 	}
 }
-
-
 function escapeHtml(text) {
 	const div = document.createElement('div');
 	div.textContent = text;
 	return div.innerHTML;
 }
-
 // Добавьте эту функцию после window.addEventListener
 window.addEventListener('popstate', function () {
 	const containers = document.querySelectorAll('.blog-frontend-container');
@@ -4307,9 +4299,8 @@ window.addEventListener('popstate', function () {
 		loadPosts(container, container.currentCategoryId, container.currentSortOrder, container.currentPage);
 	});
 });
-
 //open-category-list 
-document.addEventListener('DOMContentLoaded', function () {
+window.addEventListener('load', function () {
 
 	// Функция для добавления обработчика
 	function initCategoryButton() {
