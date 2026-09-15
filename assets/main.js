@@ -2808,10 +2808,9 @@ window.addEventListener('load', function () {
 					'parent-wednesdays': 'wp-block-fv-filter-section-skills',
 					'career-camp': 'wp-block-fv-filter-section',
 					'travel-by-city': 'wp-block-fv-filter-section',
-					'art-community': '',
-					'art-community': '',
-					'art-community': '',
-					'art-community': '',
+					'skills-courses': 'wp-block-fv-filter-section-skills',
+					'skills-academy': 'wp-block-fv-filter-section',
+					'art-community': 'wp-block-fv-filter-section',
 				};
 
 				const need_class = CLASS_BY_TYPE[post.type] ?? '';
