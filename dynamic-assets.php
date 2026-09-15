@@ -223,34 +223,34 @@ function fv_get_dynamic_css()
 // ============================================
 
 // 3. Функция для регистрации скрипта-загрузчика JS
-function fv_register_dynamic_script()
-{
-	wp_register_script(
-		'fv-dynamic-script',
-		'',
-		[],
-		null,
-		true
-	);
+// function fv_register_dynamic_script()
+// {
+// 	wp_register_script(
+// 		'fv-dynamic-script',
+// 		'',
+// 		[],
+// 		null,
+// 		true
+// 	);
 
-	add_action('wp_footer', 'fv_inject_dynamic_js_loader', 1);
-}
-add_action('wp_enqueue_scripts', 'fv_register_dynamic_script');
+// 	add_action('wp_footer', 'fv_inject_dynamic_js_loader', 1);
+// }
+// add_action('wp_enqueue_scripts', 'fv_register_dynamic_script');
 
 // 4. Функция для внедрения загрузчика JS
-function fv_inject_dynamic_js_loader()
-{
-	$blocks_on_page = fv_get_blocks_on_page();
+// function fv_inject_dynamic_js_loader()
+// {
+// 	$blocks_on_page = fv_get_blocks_on_page();
 
-	if (empty($blocks_on_page)) {
-		return;
-	}
+// 	if (empty($blocks_on_page)) {
+// 		return;
+// 	}
 
-	$blocks_encoded = base64_encode(json_encode($blocks_on_page));
-	$dynamic_js_url = home_url('/wp-json/fv/v1/dynamic-js?blocks=' . $blocks_encoded);
+// 	$blocks_encoded = base64_encode(json_encode($blocks_on_page));
+// 	$dynamic_js_url = home_url('/wp-json/fv/v1/dynamic-js?blocks=' . $blocks_encoded);
 
-	echo '<script id="fv-dynamic-loader" data-blocks="' . esc_attr($blocks_encoded) . '" src="' . esc_url($dynamic_js_url) . '"></script>' . "\n";
-}
+// 	echo '<script id="fv-dynamic-loader" data-blocks="' . esc_attr($blocks_encoded) . '" src="' . esc_url($dynamic_js_url) . '"></script>' . "\n";
+// }
 
 // 5. Функция для внедрения загрузчика CSS
 function fv_inject_dynamic_css_loader()
