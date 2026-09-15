@@ -1506,7 +1506,7 @@ window.addEventListener('load', function () {
 
 			// !! 30556 заменить на 42 перед пушем
 
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
+			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "30366", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1528,7 +1528,7 @@ window.addEventListener('load', function () {
 
 	const pageGroups = {
 		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
-		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
+		"group2": ["50", "1190", "30366"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
 		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
 
@@ -1614,6 +1614,9 @@ window.addEventListener('load', function () {
 		let html = '';
 		const filter = randomPosts[0]?.filter;
 
+		console.log(filter);
+
+
 		if (filter === 'cources') {
 			html = randomPosts.map(post => {
 				const {
@@ -1621,12 +1624,14 @@ window.addEventListener('load', function () {
 						postTypeName,
 						dateRange,
 						selectedAges,
+						daysCount,
 						price,
 					},
 					id,
 					type,
 					title,
 					selected_place,
+					selected_days,
 					selected_city,
 					inPlace,
 					inCard,
@@ -1634,31 +1639,74 @@ window.addEventListener('load', function () {
 					titleCount
 				} = post;
 
-				const classPlace = inPlace ? 'green' : 'red';
-				const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
-				const ages = selectedAges === 'родители - родители лет' ? 'родители' : selectedAges;
+				console.log(post);
+				
 
-				const currentSkillsDate = formatDateSkills(dateRange);
-				const typeIndex = type === 'travel-by-city';
-				let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
-				let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
-				const activeClass = inPlace ? 'active-class' : 'no-active-class';
-				// const active_class = selected_place.trim() === 'Москва' ? 'active' : '';
-				const active_class = '';
+				if (type === 'parent-wednesdays') {
 
-				const placeCard = selected_city.length > 0 ? selected_city : selected_place;
+					// Карточка родительской среды в каталоге
+					const classPlace = inPlace ? 'green' : 'red';
+					const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
 
-				const card = `
+					let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
+					let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
+
+					const card = `
+					<div class="item-card card-${id} ${type}">
+						<div class="top-item-section item-section">
+							<span class="label-card">${postTypeName}</span>
+							<span class="place-card"></span>
+							<div class="title-card">${cleanTitle}</div>
+							<div class="ages-card place-card">${selected_days}</div>
+						</div>
+						<div class="bottom-item-section item-section">
+							<div class="days-card">${daysCount}</div>
+							<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
+							<button 
+								class="modal-form ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${selected_days}"
+							>${titlePlace}</button>
+							<button 
+								class="more ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${selected_days}"
+							>Подробнее ${iconArray}</button>
+						</div>
+					</div>`;
+					return card;
+
+				} else {
+
+					const classPlace = inPlace ? 'green' : 'red';
+					const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
+					const ages = selectedAges === 'родители - родители лет' ? 'родители' : selectedAges;
+
+					const currentSkillsDate = formatDateSkills(dateRange);
+					const typeIndex = type === 'travel-by-city';
+					let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
+					let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
+					const activeClass = inPlace ? 'active-class' : 'no-active-class';
+					// const active_class = selected_place.trim() === 'Москва' ? 'active' : '';
+					const active_class = '';
+
+					const placeCard = selected_city.length > 0 ? selected_city : selected_place;
+
+					const card = `
 					<div class="item-card card-${id} ${type}">
 						<div class="top-item-section item-section">
 								${postTypeName === 'Консультации психолога' ? '' : `<span class="label-card">${postTypeName}</span>`}
 								${typeIndex
-						? `<span class="place-card">${dateRange}</span>`
-						: inCard
-							? `<span class="date-card">${dateRange}</span>
+							? `<span class="place-card">${dateRange}</span>`
+							: inCard
+								? `<span class="date-card">${dateRange}</span>
 											<span class="place-card ${active_class}">${placeCard}</span>`
-							: `<span class="place-card">${placeTitle && 'Место проведения — ' + placeTitle}</span>`
-					}
+								: `<span class="place-card">${placeTitle && 'Место проведения — ' + placeTitle}</span>`
+						}
 								<div class="title-card">${cleanTitle}</div>
 								${postTypeName === 'Консультации психолога' ? '' : `<div class="ages-card">(${ages})</div>`}
 						</div>
@@ -1666,38 +1714,41 @@ window.addEventListener('load', function () {
 								${postTypeName === 'Консультации психолога' ? '' : `<div class="days-card">${titleCount}</div>`}
 								<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
 								${inCard
-						? titlePlace === 'Оставить заявку'
-							? `<button 
+							? titlePlace === 'Оставить заявку'
+								? `<button 
 												class="modal-form ${classPlace}"
 												data-titleform="${postTypeName + ': ' + cleanTitle}"
 												data-titleproduct="${cleanTitle}"
 												data-referer="${window.location.href}"
 												data-datestart="${postTypeName === 'Консультации психолога' ? '' : currentSkillsDate}"
 											>${titlePlace}</button>`
-							: ``
-						: `<button 
+								: ``
+							: `<button 
 											class="modal-form ${classPlace}"
 											data-titleform="${postTypeName + ': ' + cleanTitle}"
 											data-titleproduct="${cleanTitle}"
 											data-referer="${window.location.href}"
 											data-datestart="${postTypeName === 'Консультации психолога' ? '' : currentSkillsDate}"
 										>${titlePlace}</button>`
-					}
+						}
 								
 								${inCard
-						? `<button 
+							? `<button 
 											class="more ${classPlace} ${activeClass}"
 											data-titleform="${postTypeName + ': ' + cleanTitle}"
 											data-titleproduct="${cleanTitle}"
 											data-referer="${window.location.href}"
 											data-datestart="${currentSkillsDate}"
 										>Подробнее ${iconArray}</button>`
-						: ``
-					}
+							: ``
+						}
 							</div>
 					  </div>`;
 
-				return card;
+					return card;
+				}
+
+
 			}).join('');
 
 		} else if (filter === 'merch') {
@@ -2512,82 +2563,39 @@ window.addEventListener('load', function () {
 
 			} else if (type === 'parent-wednesdays') {
 
+				// Карточка родительской среды в каталоге
 				const classPlace = inPlace ? 'green' : 'red';
 				const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
-				const activeClass = inPlace ? 'active-class' : 'no-active-class';
-
-				const shift = selected_shift ? `(${selected_shift})` : '';
-				const ages = selectedAges === 'родители - родители лет' ? 'родители' : selectedAges;
-				const currentDate = formatDateRange(dateRange);
-				const currentSkillsDate = formatDateSkills(dateRange);
 
 				let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
 				let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
 
-				const datestart = type === 'psychologist'
-					? ''
-					: type === 'skills-courses'
-						? currentSkillsDate
-						: currentDate;
-
-				const active_class = '';
-
-				const updateType = inMask ? 'art-community' : type;
-				const updatePostTypeName = inMask ? 'Сообщество подростков' : postTypeName;
-
 				const card = `
-					<div class="item-card card-${id} ${updateType}">
-							<div class="top-item-section item-section">
-								<span class="label-card">${updatePostTypeName}</span>
-								<span class="place-card ${active_class}">${selected_days}</span>
-								<div class="title-card">${cleanTitle}</div>
-								<div class="ages-card">(${ages})</div>
-							</div>
-
-										<div class="bottom-item-section item-section">
-											${type === 'psychologist'
-						? ''
-						: type === 'skills-courses'
-							? `<div class="days-card">${titleCount}</div>`
-							: `<div class="days-card">${daysCount}</div>`
-					}
-								<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
-								${type !== 'skills-courses'
-						? `<button 
-											class="modal-form ${classPlace}"
-											data-titleform="${postTypeName + ': ' + cleanTitle}"
-											data-titleproduct="${cleanTitle}"
-											data-referer="${window.location.href}"
-											data-datestart="${datestart}"
-										>${titlePlace}</button>`
-						: titlePlace === 'Оставить заявку'
-							? `<button 
-											class="modal-form ${classPlace}"
-											data-titleform="${postTypeName + ': ' + cleanTitle}"
-											data-titleproduct="${cleanTitle}"
-											data-referer="${window.location.href}"
-											data-datestart="${datestart}"
-										>${titlePlace}</button>`
-							: `<button 
-											class="modal-form ${classPlace}"
-											data-titleform="${postTypeName + ': ' + cleanTitle}"
-											data-titleproduct="${cleanTitle}"
-											data-referer="${window.location.href}"
-											data-datestart="${datestart}"
-										>${titlePlace}</button>`
-					}
-								${type !== 'psychologist'
-						? `<button 
-												class="more ${classPlace}"
-												data-titleform="${postTypeName + ': ' + cleanTitle}"
-												data-titleproduct="${cleanTitle}"
-												data-referer="${window.location.href}"
-												data-datestart="${datestart}"
-											>Подробнее ${iconArray}</button>`
-						: ``
-					}
-							</div>
-
+					<div class="item-card card-${id} ${type}">
+						<div class="top-item-section item-section">
+							<span class="label-card">${postTypeName}</span>
+							<span class="place-card"></span>
+							<div class="title-card">${cleanTitle}</div>
+							<div class="ages-card place-card">${selected_days}</div>
+						</div>
+						<div class="bottom-item-section item-section">
+							<div class="days-card">${daysCount}</div>
+							<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
+							<button 
+								class="modal-form ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${selected_days}"
+							>${titlePlace}</button>
+							<button 
+								class="more ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${selected_days}"
+							>Подробнее ${iconArray}</button>
+						</div>
 					</div>`;
 				return card;
 

@@ -335,7 +335,7 @@
 												checked={selectedAges.includes('родители')}
 												onChange={() => handleAgeChange('родители')}
 											/>
-												<span>родители</span>
+												<span>Родители</span>
 											</label>
 										</div>
 									</PanelRow>}
@@ -465,7 +465,7 @@
 							{inCard && <div className="age-checkboxes">
 								{selectedAges.map(age => (
 									<span key={age} className={age === 'родители' ? "parents age-checkbox " + postTypeN : "age-checkbox " + postTypeN}>
-										{age === 'родители' ? age : age + ageTitleClass}
+										{age === 'родители' ? 'Родители' : age + ageTitleClass}
 									</span>
 								))}
 							</div>}
@@ -727,7 +727,7 @@
 							<div className="age-checkboxes">
 								{selectedAges.map(age => (
 									<span key={age} className={age === 'родители' ? "parents age-checkbox " + postTypeN : "age-checkbox " + postTypeN}>
-										{age === 'родители' ? age : age + ageTitleClass}
+										{age === 'родители' ? 'Родители' : age + ageTitleClass}
 									</span>
 								))}
 							</div>
