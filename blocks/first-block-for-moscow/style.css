@@ -124,12 +124,14 @@
 	margin-bottom: 10px;
 }
 
+.wp-block-fv-first-block-for-moscow .content .top-title > p,
 .wp-block-fv-first-block-for-moscow .content > p {
 	font-size: 14px;
 	line-height: 110%;
 	font-weight: 500;
 	color: var(--white);
 	font-family: "Montserrat";
+	margin-bottom: 20px;
 }
 .wp-block-fv-first-block-for-moscow .footer-links {
 	margin: -5px;
@@ -349,6 +351,7 @@
 		line-height: 7.5vw;
 		margin-bottom: 15px;
 	}
+	.wp-block-fv-first-block-for-moscow .content .top-title > p,
 	.wp-block-fv-first-block-for-moscow .content > p {
 		font-size: 2.1vw;
 		line-height: 2.5vw;
@@ -434,6 +437,7 @@
 		line-height: 24px;
 		margin-bottom: 40px;
 	}
+	.wp-block-fv-first-block-for-moscow .content .top-title > p,
 	.wp-block-fv-first-block-for-moscow .content > p {
 		font-size: 16px;
 		line-height: 24px;
@@ -466,10 +470,12 @@
 		left: 620px;
 		top: 264px;
 	}
+	.wp-block-fv-first-block-for-moscow .content .top-title > p,
 	.wp-block-fv-first-block-for-moscow .content > p {
 		max-width: calc(100% - 260px);
 		font-size: 18px;
 		line-height: 27px;
+		margin-bottom: 0;
 	}
 	.wp-block-fv-first-block-for-moscow .view-services {
 		position: absolute;
