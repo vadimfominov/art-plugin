@@ -171,7 +171,7 @@
 								value={btnTitle}
 								placeholder="Посмотреть услуги"
 							/>
-							<span>{iconRightArr}</span>
+							<span className="span">{iconRightArr}</span>
 						</div>
 					</div>
 				</div>
@@ -228,7 +228,7 @@
 							<p>{RichText.Content({ value: bannerDescription })}</p>
 						</div>
 						<p>{RichText.Content({ value: description })}</p>
-						<div className={'view-services'}>{RichText.Content({ value: btnTitle })} <span>{iconRightArr}</span></div>
+						<div className={'view-services'}>{RichText.Content({ value: btnTitle })} <span className="span">{iconRightArr}</span></div>
 					</div>
 				</div>
 			</div>
