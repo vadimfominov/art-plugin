@@ -1677,6 +1677,43 @@ window.addEventListener('load', function () {
 					</div>`;
 					return card;
 
+				} else if (type === 'skills-courses') {
+
+					const classPlace = inPlace ? 'green' : 'red';
+					const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
+					const datestart = formatDateSkills(dateRange);
+					let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
+					let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
+
+					const card = `
+						<div class="item-card card-${id} ${type}">
+							<div class="top-item-section item-section">
+								<span class="label-card">${postTypeName}</span>
+								<span class="place-card">${selected_days}</span>
+								<div class="title-card">${cleanTitle}</div>
+								<div class="ages-card">(${selectedAges})</div>
+							</div>
+							<div class="bottom-item-section item-section">
+								<div class="days-card">${titleCount}</div>
+								<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
+								<button 
+									class="modal-form ${classPlace}"
+									data-titleform="${postTypeName + ': ' + cleanTitle}"
+									data-titleproduct="${cleanTitle}"
+									data-referer="${window.location.href}"
+									data-datestart="${datestart}"
+								>${titlePlace}</button>
+								<button 
+									class="more ${classPlace}"
+									data-titleform="${postTypeName + ': ' + cleanTitle}"
+									data-titleproduct="${cleanTitle}"
+									data-referer="${window.location.href}"
+									data-datestart="${datestart}"
+								>Подробнее ${iconArray}</button>
+							</div>
+						</div>`;
+					return card;
+
 				} else {
 
 					const classPlace = inPlace ? 'green' : 'red';
@@ -2486,6 +2523,9 @@ window.addEventListener('load', function () {
 				inMask
 			} = post;
 
+
+
+
 			if (type === 'merch-camp') {
 
 				const classPlace = 'green';
@@ -2591,6 +2631,43 @@ window.addEventListener('load', function () {
 								data-titleproduct="${cleanTitle}"
 								data-referer="${window.location.href}"
 								data-datestart="${selected_days}"
+							>Подробнее ${iconArray}</button>
+						</div>
+					</div>`;
+				return card;
+
+			} else if (type === 'skills-courses') {
+
+				const classPlace = inPlace ? 'green' : 'red';
+				const titlePlace = inPlace ? 'Оставить заявку' : 'Мест нет — запись в резерв';
+				const datestart = formatDateSkills(dateRange);
+				let cleanPrice = price?.replace(/<[^>]*>/g, '').trim();
+				let cleanTitle = title?.replace(/<(?!\/?br\s*\/?>)[^>]+>/gi, '').trim();
+
+				const card = `
+					<div class="item-card card-${id} ${type}">
+						<div class="top-item-section item-section">
+							<span class="label-card">${postTypeName}</span>
+							<span class="place-card">${selected_days}</span>
+							<div class="title-card">${cleanTitle}</div>
+							<div class="ages-card">(${selectedAges})</div>
+						</div>
+						<div class="bottom-item-section item-section">
+							<div class="days-card">${titleCount}</div>
+							<div class="price-card">${cleanPrice ? cleanPrice : ''}</div>
+							<button 
+								class="modal-form ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${datestart}"
+							>${titlePlace}</button>
+							<button 
+								class="more ${classPlace}"
+								data-titleform="${postTypeName + ': ' + cleanTitle}"
+								data-titleproduct="${cleanTitle}"
+								data-referer="${window.location.href}"
+								data-datestart="${datestart}"
 							>Подробнее ${iconArray}</button>
 						</div>
 					</div>`;
