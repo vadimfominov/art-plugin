@@ -150,19 +150,19 @@
 								placeholder="Укажите заголовок..."
 							/>
 							{inActiveLabel && <div class="label-first-block-msk">в Московской области</div>}
-							<RichText
+							{(isSelected || bannerDescription) && <RichText
 								tagName="p"
 								onChange={(newValue) => setAttributes({ bannerDescription: newValue })}
 								value={bannerDescription}
 								placeholder="Укажите описание..."
-							/>
+							/>}
 						</div>
-						<RichText
+						{(isSelected || description) && <RichText
 							tagName="p"
 							onChange={(newValue) => setAttributes({ description: newValue })}
 							value={description}
 							placeholder="Укажите описание..."
-						/>
+						/>}
 						{(isSelected || btnTitle) && <div className={'view-services'}>
 							<RichText
 								tagName="p"
@@ -225,9 +225,9 @@
 						<div className="top-title">
 							<h1>{RichText.Content({ value: bannerTitle })}</h1>
 							{inActiveLabel && <div class="label-first-block-msk">в Московской области</div>}
-							<p>{RichText.Content({ value: bannerDescription })}</p>
+							{bannerDescription && <p>{RichText.Content({ value: bannerDescription })}</p>}
 						</div>
-						<p>{RichText.Content({ value: description })}</p>
+						{description && <p>{RichText.Content({ value: description })}</p>}
 						{btnTitle && <div className={'view-services'}>{RichText.Content({ value: btnTitle })} <span className="span">{iconRightArr}</span></div>}
 					</div>
 				</div>
