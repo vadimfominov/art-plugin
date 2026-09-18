@@ -82,7 +82,6 @@
 				btnTitle,
 				inActiveLabel
 			},
-			className,
 			isSelected,
 			setAttributes
 		} = props;
@@ -164,15 +163,16 @@
 							value={description}
 							placeholder="Укажите описание..."
 						/>
-						<div className={'view-services'}>
+						{(isSelected || btnTitle) && <div className={'view-services'}>
 							<RichText
 								tagName="p"
+								style={{display: "flex", alignItems: "center", padding: "0 25px"}}
 								onChange={value => setAttributes({ btnTitle: value })}
 								value={btnTitle}
 								placeholder="Посмотреть услуги"
 							/>
 							<span className="span">{iconRightArr}</span>
-						</div>
+						</div>}
 					</div>
 				</div>
 			</div>
@@ -228,7 +228,7 @@
 							<p>{RichText.Content({ value: bannerDescription })}</p>
 						</div>
 						<p>{RichText.Content({ value: description })}</p>
-						<div className={'view-services'}>{RichText.Content({ value: btnTitle })} <span className="span">{iconRightArr}</span></div>
+						{btnTitle && <div className={'view-services'}>{RichText.Content({ value: btnTitle })} <span className="span">{iconRightArr}</span></div>}
 					</div>
 				</div>
 			</div>
