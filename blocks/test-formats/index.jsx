@@ -134,7 +134,6 @@
 				inActiveCard2,
 				inActiveCard3
 			},
-			className,
 			isSelected,
 			setAttributes
 		} = props;

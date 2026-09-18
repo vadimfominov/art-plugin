@@ -133,18 +133,209 @@
 	margin-bottom: 0;
 }
 
+#filtered-posts-container {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	gap: 20px;
+}
+.wp-block-fv-test-formats .item-card {
+	max-width: 250px;
+	width: calc(50% - 5px);
+	border-radius: 15px;
+	background-color: var(--hintGray);
+	box-sizing: border-box;
+	padding-bottom: 19px;
+	padding-top: 27px;
+	padding-left: 3px;
+	padding-right: 3px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 21px;
+	position: relative;
+	justify-content: space-between;
+}
+.wp-block-fv-test-formats .item-card .date-card,
+.wp-block-fv-test-formats .item-card .place-card,
+.wp-block-fv-test-formats .item-card .ages-card,
+.wp-block-fv-test-formats .item-card .days-card {
+	font-size: 12px;
+	line-height: 18px;
+	color: rgba(83, 83, 83, 0.8);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: block;
+}
+.wp-block-fv-test-formats .item-card .date-card {
+	margin-bottom: 3px;
+}
+.wp-block-fv-test-formats .item-card .place-card {
+	margin-bottom: 23px;
+	text-align: center;
+	width: 180px;
+}
+.wp-block-fv-test-formats .item-card .days-card {
+	margin-bottom: 3px;
+}
+.wp-block-fv-test-formats .item-card .title-card {
+	font-size: 18px;
+	line-height: 21.6px;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 600;
+	text-align: center;
+	margin-bottom: 3px;
+	cursor: pointer;
+}
+.wp-block-fv-test-formats .item-card .price-card {
+	font-size: 16px;
+	line-height: 24px;
+	color: var(--darkGray);
+	font-family: "Montserrat";
+	font-weight: 600;
+	display: block;
+	margin-bottom: 10px;
+}
+.wp-block-fv-test-formats .item-card .label-card {
+	font-size: 12px;
+	line-height: 120%;
+	color: var(--green);
+	font-family: "Montserrat";
+	font-weight: 500;
+	border-radius: 30px;
+	border: 1px solid var(--green);
+	height: 28px;
+	width: calc(100% - 10%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--white);
+	position: absolute;
+	top: -14px;
+	box-sizing: border-box;
+}
+.wp-block-fv-test-formats .item-card button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+.wp-block-fv-test-formats .item-card button.modal-form,
+.wp-block-fv-test-formats .item-card button.modal-form-merch {
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	border-radius: 30px;
+	width: calc(100% - 6%);
+	height: 34px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+.wp-block-fv-test-formats .item-card button.modal-form.green,
+.wp-block-fv-test-formats .item-card button.modal-form-merch.green {
+	font-size: 12px;
+	line-height: 13.2px;
+	background-color: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.modal-form.red {
+	font-size: 10px;
+	line-height: 11px;
+	background-color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.more {
+	font-size: 12px;
+	line-height: 13.2px;
+	font-family: "Montserrat";
+	font-weight: 500;
+	letter-spacing: -0.5px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.wp-block-fv-test-formats .item-card button.more:before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	position: absolute;
+	bottom: 0;
+	display: block;
+}
+.wp-block-fv-test-formats .item-card button.more.green {
+	color: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.red {
+	color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.more svg {
+	transform: rotate(-180deg);
+	margin-left: 3px;
+}
+.wp-block-fv-test-formats .item-card button.more.green:before {
+	background-color: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.green svg path {
+	fill: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.red:before {
+	background-color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.more.red svg path {
+	fill: var(--red);
+}
+.wp-block-fv-test-formats .item-card .item-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.wp-block-fv-test-formats .item-card .top-item-section {
+	margin-bottom: 5px;
+}
+.wp-block-fv-test-formats .item-card button.more.red:active {
+	color: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.red:active svg path {
+	fill: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.red:active:before {
+	background-color: var(--green);
+}
+.wp-block-fv-test-formats .item-card button.more.green:active {
+	color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.more.green:active svg path {
+	fill: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.more.green:active:before {
+	background-color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.modal-form.green:active,
+.wp-block-fv-test-formats .item-card button.modal-form-merch.green:active {
+	background-color: var(--red);
+}
+.wp-block-fv-test-formats .item-card button.modal-form.red:active {
+	background-color: var(--green);
+}
+
 @media (min-width: 767px) {
 	.wp-block-fv-test-formats .container {
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
-	.wp-block-fv-test-formats .container .item-card {
-		width: calc(50% - 5px);
-	}
 	.wp-block-fv-test-formats h2 {
 		width: 500px;
 		margin: 0 auto;
 		margin-bottom: 20px;
+	}
+	.wp-block-fv-test-formats .container .item-card {
+		width: calc(50% - 5px);
+		padding-top: 30px;
+		padding-bottom: 30px;
 	}
 	.wp-block-fv-test-formats .container .item-card .subtitle-card {
 		font-size: 16px;
@@ -153,13 +344,71 @@
 	.wp-block-fv-test-formats .container .item-card button.modal-form {
 		width: 260px;
 	}
-	.wp-block-fv-test-formats .container .item-card {
+	.wp-block-fv-test-formats .container .item-card .place-card {
+		margin-bottom: 33px;
+	}
+
+	.wp-block-fv-test-formats .item-card .date-card,
+	.wp-block-fv-test-formats .item-card .place-card,
+	.wp-block-fv-test-formats .item-card .ages-card,
+	.wp-block-fv-test-formats .item-card .days-card {
+		font-size: 16px;
+		line-height: 24px;
+	}
+	.wp-block-fv-test-formats .item-card {
 		padding-top: 30px;
 		padding-bottom: 30px;
+		max-width: 305px;
+		min-width: calc(33.33333% - 13.4px);
 	}
-	.wp-block-fv-test-formats .container .item-card .price-card {
+	.wp-block-fv-test-formats .item-card .title-card {
+		font-size: 23px;
+		line-height: 26.2px;
+		margin-bottom: 8px;
+	}
+	.wp-block-fv-test-formats .item-card .price-card {
+		font-size: 24px;
+		line-height: 36px;
 		margin-bottom: 20px;
 	}
+	.wp-block-fv-test-formats .item-card .days-card {
+		margin-bottom: -3px;
+	}
+	.wp-block-fv-test-formats .item-card button.modal-form.green,
+	.wp-block-fv-test-formats .item-card button.modal-form-merch.green,
+	.wp-block-fv-test-formats .item-card button.modal-form.red {
+		font-size: 14px;
+		line-height: 15.4px;
+		width: 260px;
+		height: 45px;
+		margin-bottom: 15px;
+	}
+	.wp-block-fv-test-formats .item-card button.more {
+		font-size: 14px;
+		line-height: 15.4px;
+	}
+	.wp-block-fv-test-formats .item-card .top-item-section {
+		margin-bottom: 14px;
+		width: 300px;
+		padding-left: 3px;
+		padding-right: 3px;
+		box-sizing: border-box;
+	}
+	.wp-block-fv-test-formats .item-card.merch-camp .top-item-section {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.wp-block-fv-test-formats .item-card.merch-camp {
+		padding-top: 10px;
+		padding-left: 10px;
+		padding-right: 10px;
+		height: auto;
+		margin-top: 0;
+	}
+
+
+
 	.wp-block-fv-test-formats .container .item span {
 		font-size: 20px;
 		line-height: 30px;
@@ -187,20 +436,15 @@
 		line-height: 18px;
 		margin-top: 20px;
 	}
-	.wp-block-fv-test-formats .container .item-card .place-card {
-		margin-bottom: 33px;
-	}
 	.wp-block-fv-test-formats .wrapper > p {
 		padding: 15px 25px;
 		width: max-content;
 		margin-bottom: 40px;
 	}
+
+
 }
 @media (min-width: 820px) {
-	.wp-block-fv-test-formats .container .item-card {
-		height: auto;
-		width: calc(32% - 1px);
-	}
 	.wp-block-fv-test-formats .container {
 		gap: 20px;
 	}
@@ -252,8 +496,5 @@
 		width: 920px;
 		font-size: 42px;
 		line-height: 50.4px;
-	}
-	.wp-block-fv-test-formats .container .item-card {
-		padding-top: 100px;
 	}
 }
