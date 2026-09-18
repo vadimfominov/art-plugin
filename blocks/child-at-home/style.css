@@ -35,6 +35,13 @@
 	left: 0;
 	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.24), rgba(0, 0, 0, 0.59));
 }
+.wp-block-fv-child-at-home .image-bg img {
+	width: 100%;
+	display: block;
+}
+.wp-block-fv-child-at-home .image-bg picture {
+	display: block;
+}
 .wp-block-fv-child-at-home.skill-academy p {
 	opacity: 0.9;
 }
