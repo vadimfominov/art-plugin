@@ -680,7 +680,6 @@
 	transition: opacity 0.3s ease;
 	z-index: -999;
 }
-
 .wp-block-fv-item-card-skills {
 	position: fixed;
 	overflow-y: scroll;
@@ -1116,7 +1115,6 @@
 		width: 100%;
 		margin-bottom: 40px;
 	}
-
 	.wp-block-fv-item-card-skills .container .right-content {
 		width: 50%;
 	}
@@ -1159,60 +1157,21 @@
 	.wp-block-fv-item-card-skills .right-content > .title span {
 		margin-bottom: 20px;
 	}
-
-	.skills-academy .wp-block-fv-item-card-skills .count-days {
-		color: var(--blue);
-	}
-	.skills-academy .wp-block-fv-item-card-skills .camp-section {
-		color: var(--blue);
-	}
 	.wp-block-fv-item-card-skills .age-checkbox.parents {
 		width: 94px;
 	}
 	.wp-block-fv-item-card-skills .wrapper {
 		margin-bottom: 120px;
 	}
+	.skills-academy .wp-block-fv-item-card-skills .count-days {
+		color: var(--blue);
+	}
+	.skills-academy .wp-block-fv-item-card-skills .camp-section {
+		color: var(--blue);
+	}
+
 }
 @media (min-width: 820px) {
-	.wp-block-fv-item-card-skills .wrapper {
-		align-items: flex-start;
-	}
-	.wp-block-fv-item-card-skills .go-back-btn {
-		width: auto;
-		height: auto;
-		color: var(--mediumGray);
-		padding: 0;
-		margin-bottom: 55px;
-		background-color: transparent;
-		font-size: 14px;
-		line-height: 21px;
-		position: relative;
-		display: flex;
-		align-items: baseline;
-	}
-	.wp-block-fv-item-card-skills .go-back-btn svg {
-		margin-right: 2px;
-		display: block;
-	}
-	.wp-block-fv-item-card-skills .go-back-btn:before,
-	.wp-block-fv-item-card-skills .go-back-btn:after {
-		display: none;
-	}
-	.wp-block-fv-item-card-skills .go-back-btn:before {
-		content: "";
-		width: 100%;
-		height: 1px;
-		position: absolute;
-		bottom: 2px;
-		left: 0;
-		top: auto;
-		transform: translate(0, 0) rotate(0deg);
-		display: block;
-		background-color: var(--mediumGray);
-	}
-	.wp-block-fv-item-card-skills .go-back-btn:active:before {
-		background-color: transparent;
-	}
 	.wp-block-fv-filter-section-skills .container-filter {
 		display: flex;
 		gap: 20px;
@@ -1369,6 +1328,46 @@
 		max-width: 305px;
 		min-width: calc(33.33333% - 13.4px);
 		height: 400px;
+	}
+
+	.wp-block-fv-item-card-skills .wrapper {
+		align-items: flex-start;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn {
+		width: auto;
+		height: auto;
+		color: var(--mediumGray);
+		padding: 0;
+		margin-bottom: 55px;
+		background-color: transparent;
+		font-size: 14px;
+		line-height: 21px;
+		position: relative;
+		display: flex;
+		align-items: baseline;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn svg {
+		margin-right: 2px;
+		display: block;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:before,
+	.wp-block-fv-item-card-skills .go-back-btn:after {
+		display: none;
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:before {
+		content: "";
+		width: 100%;
+		height: 1px;
+		position: absolute;
+		bottom: 2px;
+		left: 0;
+		top: auto;
+		transform: translate(0, 0) rotate(0deg);
+		display: block;
+		background-color: var(--mediumGray);
+	}
+	.wp-block-fv-item-card-skills .go-back-btn:active:before {
+		background-color: transparent;
 	}
 	.wp-block-fv-item-card-skills .leave-application {
 		width: 260px;
@@ -1622,7 +1621,7 @@
 		margin-bottom: 10px;
 	}
 
-	
+
 	.wp-block-fv-filter-section-skills .skills-academy .item-card button.modal-form.green:hover {
 		background-color: var(--green);
 	}
@@ -1690,6 +1689,7 @@
 		width: 305px;
 		padding: 20px 25px 30px 20px;
 	}
+	
 	.wp-block-fv-item-card-skills .leave-application {
 		height: 50px;
 		cursor: pointer;
@@ -1730,7 +1730,7 @@
 	.wp-block-fv-item-card-skills .video-open {
 		max-width: 390px;
 	}
-	.video-open p:hover {
+	.wp-block-fv-item-card-skills .video-open p:hover {
 		transition: all 0.3s ease;
 		text-decoration: none;
 		cursor: pointer;
