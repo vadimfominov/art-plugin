@@ -1506,7 +1506,7 @@ window.addEventListener('load', function () {
 
 			// !! 30556 заменить на 42 перед пушем
 
-			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "48"];
+			const allowedPagesFilter = ["42", "32894", "44", "46", "788", "50", "1190", "34004", "2363"];
 
 			// Проверяем, находится ли текущая страница в списке разрешённых
 			if (allowedPagesFilter.includes(CURRENT_PAGE)) {
@@ -1529,7 +1529,7 @@ window.addEventListener('load', function () {
 	const pageGroups = {
 		"group1": ["42", "32894", "44", "46", "788"], 	// Группа для art-community, career-camp и других (для dev 30376 и для прод 42 на проде на test page 33080)
 		"group2": ["50", "1190", "34004"],           	// Группа для psychologist, skills-courses и parent-wednesdays (30366 для dev и 34004 для prod) 
-		"group3": ["48"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
+		"group3": ["2363"]                 					// Группа для proficiency-testing  "48" - для DEV и 2363 для prod
 	};
 
 	// Находим группу для текущей страницы
