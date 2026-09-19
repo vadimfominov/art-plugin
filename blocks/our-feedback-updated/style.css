@@ -194,7 +194,8 @@
 	fill: #ffffff;
 }
 
-.wp-block-fv-our-feedback-updated .swiper-button-lock {
+.wp-block-fv-our-feedback-updated .slider-pagination .left-btn.swiper-button-lock,
+.wp-block-fv-our-feedback-updated .slider-pagination .right-btn.swiper-button-lock {
 	display: none;
 }
 
