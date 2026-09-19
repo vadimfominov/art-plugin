@@ -194,6 +194,10 @@
 	fill: #ffffff;
 }
 
+.wp-block-fv-our-feedback-updated .swiper-button-lock {
+	display: none;
+}
+
 @media (min-width: 767px) {
 	.wp-block-fv-our-feedback-updated h2 {
 		max-width: 570px;
