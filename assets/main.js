@@ -54,6 +54,10 @@ window.addEventListener('load', function () {
 					spaceBetween: 0,
 					slidesPerView: 2,      // ← 2 слайда
 					spaceBetween: 20,      // ← расстояние между ними
+					navigation: {
+						nextEl: nextBtn,
+						prevEl: prevBtn,
+					},
 				}
 			},
 		});

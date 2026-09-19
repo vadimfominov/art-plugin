@@ -2,7 +2,7 @@
 	const { registerBlockType } = wp.blocks;
 	const { RichText } = wp.blockEditor || wp.editor;
 	const { InspectorControls, MediaUpload, useBlockProps } = wp.blockEditor;
-	const { TextControl, TextareaControl, PanelBody, PanelRow, Button, SelectControl, RangeControl, ToggleControl } = wp.components;
+	const { TextControl, PanelBody, PanelRow, Button, RangeControl } = wp.components;
 	const { useEffect, useRef } = wp.element;
 	const catIcon = (<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000" preserveAspectRatio="xMidYMid meet">
 		<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)" fill="#000000" stroke="none">
@@ -211,7 +211,7 @@
 				const description = data[index]?.description || '';
 				const label = data[index]?.label || '';
 				return (
-					<li key={index} className={'swiper-slide item-' + (index + 1)}>
+					<li key={index} className={'swiper-slide slide item-' + (index + 1)}>
 						<div className={'slide-item'}>
 							<div className="top-container">
 								{!!videoURL ? (
@@ -340,6 +340,7 @@
 			}
 		};
 		const blockProps = useBlockProps();
+		
 		return [
 			<InspectorControls>
 				<PanelBody title="Настройки блока" initialOpen={true}>
@@ -425,7 +426,7 @@
 		// Функция рендера слайдов для Save
 		const renderSlidesSave = (data) => {
 			return data.map((block, index) => (
-				<li key={index} className={'swiper-slide item-' + (index + 1)}>
+				<li key={index} className={'swiper-slide slide item-' + (index + 1)}>
 					<div className={'slide-item'}>
 						<div className="top-container">
 							{block.video?.url && videoFrame(block.video.url)}
