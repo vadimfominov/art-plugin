@@ -166,7 +166,7 @@
 						{(isSelected || btnTitle) && <div className={'view-services'}>
 							<RichText
 								tagName="p"
-								style={{display: "flex", alignItems: "center", padding: "0 25px"}}
+								style={{display: "flex", alignItems: "center"}}
 								onChange={value => setAttributes({ btnTitle: value })}
 								value={btnTitle}
 								placeholder="Посмотреть услуги"
@@ -184,7 +184,6 @@
 				bannerDescription,
 				description,
 				bannerTitle,
-				linkCategory,
 				desktopBackground,
 				tabletBackground,
 				mobileBackground,

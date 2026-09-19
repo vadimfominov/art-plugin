@@ -42,6 +42,7 @@
 		edit: Edit,
 		save: Save
 	});
+	
 	function Edit(props) {
 		const { attributes, isSelected, setAttributes } = props;
 		const { title, columns, description, blocksData, inBlock } = attributes;
