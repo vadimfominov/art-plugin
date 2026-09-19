@@ -442,7 +442,7 @@
 						</div>
 						<div className="right-text">
 							{block.title && <span className="title-slide">{block.title}</span>}
-							{block.description && <p className="description-slide">{block.description}</p>}
+							{block.description && <RichText.Content tagName="p" className="description-slide" value={block.description} />}
 							{block.label && <span className="label-slide">{block.label}</span>}
 						</div>
 					</div>
