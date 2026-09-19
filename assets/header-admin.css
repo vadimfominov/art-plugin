@@ -47,6 +47,7 @@
 	width: 305px;
 }
 
+.wp-block.wp-block-fv-program-modal-with-city.hidden-model .modal-wrapper,
 .wp-block.wp-block-fv-program-modal.hidden-model .modal-wrapper {
 	opacity: 1;
 	z-index: 999;
