@@ -687,9 +687,6 @@
 				city,
 				place,
 				inPlace,
-				inActive,
-				inMask,
-				inActiveOld,
 				postTypeN,
 				textForImage
 			},
@@ -767,14 +764,14 @@
 							{subdescription && <RichText.Content tagName="p" value={subdescription} />}
 						</div>
 					</div>
-					<div className={'random-posts-container'} >
+					{/* <div className={'random-posts-container'} >
 						<h3>Смотрите также</h3>
 						<div
 							className="random-posts"
 							id="random-posts-container"
 							data-current-post-id=""
 						></div>
-					</div>
+					</div> */}
 				</div>
 				{video && videoModal(video)}
 			</div>

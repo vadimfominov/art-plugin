@@ -128,6 +128,12 @@ function get_all_custom_posts($request)
 			return null;
 		}
 
+		$included_in_price = array_filter(
+				$blocks,
+				fn($block) =>
+				$block['blockName'] === 'fv/included-in-price'
+			);
+
 		// Получаем атрибуты первого найденного блока
 		$attrs = current($card_block)['attrs'];
 		$inActiveOld = isset($attrs['inActiveOld']) && $attrs['inActiveOld'];
@@ -166,7 +172,8 @@ function get_all_custom_posts($request)
 				'selectedAges' => formatAgeRange($attrs['selectedAges'] ?? []),
 				'daysCount' => $attrs['daysCount'] ?? '',
 				'price' => !empty($attrs['price']) ? clearText($attrs['price']) : '',
-				'rendered' => current($card_block)['innerHTML'],
+				'rendered_card' => current($card_block)['innerHTML'],
+				'rendered_price' => current($included_in_price)['innerHTML'],
 				'rendermerch' => $rendermerch,
 			],
 			'title' => !empty($attrs['newTitle']) ? clearText($attrs['newTitle']) : clearText($attrs['title']),

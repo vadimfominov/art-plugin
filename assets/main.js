@@ -2005,7 +2005,6 @@ window.addEventListener('load', function () {
 	const programModal = document.querySelector('.wp-block-fv-program-modal.hidden-model');
 
 	if (programModal) {
-
 		document.addEventListener('click', function (e) {
 			const modalWrapper = programModal?.querySelector('.modal-wrapper');
 			if (e.target.matches('.modal-form')) {
@@ -2527,9 +2526,6 @@ window.addEventListener('load', function () {
 				inMask
 			} = post;
 
-
-
-
 			if (type === 'merch-camp') {
 
 				const classPlace = 'green';
@@ -2897,14 +2893,30 @@ window.addEventListener('load', function () {
 				};
 
 				const need_class = CLASS_BY_TYPE[post.type] ?? '';
-
-
-				const modal = post.content.rendered;
+				const rendered_card = post.content.rendered_card;
+				const rendered_price = post.content.rendered_price ? post.content.rendered_price : '';
+				const rendered_more = `
+					<div class="wp-block-fv-item-more">
+						<div class="wrapper">
+							<div class="random-posts-container">
+								<h3>Смотрите также</h3>
+								<div
+									class="random-posts"
+									id="random-posts-container"
+									data-current-post-id=""
+								></div>
+							</div>
+						</div>
+					</div>`;
 
 				// Создаем модальное окно
 				const modalWrapper = document.createElement('div');
 				modalWrapper.className = `modal-wrapper modal-card ${need_class}`;
-				modalWrapper.innerHTML = `<div class="modal-content ${colorClass} ${cardId}">${modal}</div>`;
+				modalWrapper.innerHTML = `<div class="modal-content ${colorClass} ${cardId}">
+					${rendered_card}
+					${rendered_price}
+					${rendered_more}
+				</div>`;
 
 				const buyOrder = modalWrapper.querySelector('.buy-order');
 				if (buyOrder) {

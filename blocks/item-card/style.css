@@ -303,15 +303,42 @@
 	margin-top: 20px;
 }
 
+.wp-block-fv-item-card .leave-application {
+	color: var(--white);
+	font-family: "Montserrat";
+	font-weight: 500;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 150px;
+	height: 34px;
+	border-radius: 34px;
+	border: none;
+	outline: none;
+	margin-bottom: 20px;
+	transition: all 0.3s ease;
+	letter-spacing: -0.5px;
+	padding: 0;
+	font-size: 12px;
+	line-height: 13.2px;
+	cursor: pointer;
+}
+.wp-block-fv-item-card .leave-application.green {
+	background-color: var(--green);
+}
+.wp-block-fv-item-card .leave-application.red {
+	background-color: var(--red);
+	font-size: 10px;
+	line-height: 11px;
+}
+.wp-block-fv-item-card .leave-application.green:hover {
+	background-color: var(--artRed);
+}
+.wp-block-fv-item-card .leave-application:active {
+	background-color: var(--green);
+}
+
 @media (min-width: 767px) {
-	/* .wp-block-fv-item-card-skills .left-img .bg-image,
-	.wp-block-fv-item-card .left-img .bg-image {
-		display: none;
-	}
-	.wp-block-fv-item-card-skills .left-img .bg-image-tablet,
-	.wp-block-fv-item-card .left-img .bg-image-tablet {
-		display: block;
-	} */
 	.wp-block-fv-item-card-skills .container .left-img {
 		width: 410px;
 		margin-bottom: 0;
@@ -435,6 +462,12 @@
 }
 
 @media (min-width: 820px) {
+	.wp-block-fv-item-card .leave-application {
+		width: 260px;
+		height: 45px;
+		font-size: 14px;
+		line-height: 15.4px;
+	}
 	.wp-block-fv-item-card-skills .go-back-btn,
 	.wp-block-fv-modal-cart .go-back-btn-merch,
 	.wp-block-fv-item-card .go-back-btn,
@@ -711,5 +744,14 @@
 	.wp-block-fv-item-card-skills .list-section-skills.proficiency-testing span {
 		font-size: 16px;
 		line-height: 24px;
+	}
+	.wp-block-fv-item-card .left-img picture img {
+		display: block;
+		width: 100%;
+		height: auto;
+		object-fit: cover;
+		object-position: center;
+		border-radius: 20px;
+		overflow: hidden;
 	}
 }
