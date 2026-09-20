@@ -121,7 +121,7 @@
 }
 
 @media (min-width: 767px) {
-		.wp-block-fv-included-in-price .right-with-child .item span {
+	.wp-block-fv-included-in-price .right-with-child .item span {
 		margin-bottom: 30px;
 	}
 	.wp-block-fv-included-in-price .container-with-child {

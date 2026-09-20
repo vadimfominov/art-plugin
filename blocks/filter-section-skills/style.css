@@ -664,7 +664,22 @@
 .wp-block-fv-filter-section-skills #pagination .pagination-arrow-left {
 	transform: rotate(180deg);
 }
-
+.modal-card .modal-content {
+	position: fixed;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	background: var(--white);
+}
+.modal-card .wp-block-fv-item-card-skills {
+	margin-bottom: 75px;
+}
+.modal-card .wp-block-fv-item-more {
+	margin-bottom: 75px;
+}
 .modal-card.modal-wrapper {
 	position: fixed;
 	top: 0;
@@ -679,16 +694,6 @@
 	opacity: 0;
 	transition: opacity 0.3s ease;
 	z-index: -999;
-}
-.wp-block-fv-item-card-skills {
-	position: fixed;
-	overflow-y: scroll;
-	width: 100%;
-	height: 100%;
-	left: 0;
-	top: 0;
-	z-index: 9999;
-	background: var(--white);
 }
 .wp-block-fv-item-card-skills.active {
 	display: block;
@@ -889,7 +894,6 @@
 	margin-bottom: 0;
 }
 .wp-block-fv-item-card-skills .container {
-	margin-bottom: 50px;
 	width: 100%;
 }
 .wp-block-fv-item-card-skills .random-posts-container h3 {
@@ -976,7 +980,164 @@
 	gap: 20px 10px;
 }
 
+.modal-card .wp-block-fv-included-in-price {
+	margin-bottom: 75px;
+}
+.modal-card .wp-block-fv-included-in-price .image-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+	height: 100%;
+	width: 100%;
+}
+.modal-card .wp-block-fv-included-in-price .container-img {
+	border-radius: 30px;
+	overflow: hidden;
+	position: relative;
+}
+.modal-card .wp-block-fv-included-in-price .container-with-child {
+	position: relative;
+	z-index: 10;
+	color: #fff;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.modal-card .wp-block-fv-included-in-price .image-bg::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+	z-index: 0;
+}
+.modal-card .wp-block-fv-included-in-price .image-bg picture {
+	display: block;
+	height: 100%;
+}
+.modal-card .wp-block-fv-included-in-price .image-bg img {
+	object-fit: cover;
+	object-position: center;
+	height: 100%;
+	width: 100%;
+}
+.modal-card .wp-block-fv-included-in-price .left-with-child {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-bottom: 30px;
+}
+.modal-card .wp-block-fv-included-in-price .left-with-child h2 {
+	font-size: 22px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.22px;
+	text-align: center;
+	color: #fff;
+}
+.modal-card .wp-block-fv-included-in-price .left-with-child .label {
+	background-color: #30a933;
+	border-radius: 30px;
+	padding: 10px 20px;
+	display: flex;
+	justify-content: center;
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 90%;
+	letter-spacing: -0.42px;
+	width: max-content;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.modal-card .wp-block-fv-included-in-price .left-with-child p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 130%;
+	letter-spacing: 0px;
+	text-align: center;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .items {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item {
+	background-color: rgba(245, 245, 247, 0.2);
+	backdrop-filter: blur(34px);
+	border-radius: 20px;
+	padding: 20px;
+	box-sizing: border-box;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item span {
+	font-size: 14px;
+	font-weight: 600;
+	font-family: "Montserrat";
+	line-height: 100%;
+	letter-spacing: -0.14px;
+	text-align: left;
+	display: block;
+	margin-bottom: 20px;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item p {
+	font-size: 14px;
+	font-weight: 500;
+	font-family: "Montserrat";
+	line-height: 110%;
+	letter-spacing: 0px;
+	text-align: left;
+	color: rgba(255, 255, 255, 0.8);
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item:nth-child(4) {
+	background-color: #30a933;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item:nth-child(4) span path:nth-child(1) {
+	fill-opacity: 0.2;
+}
+.modal-card .wp-block-fv-included-in-price .right-with-child .item:nth-child(4) span path:nth-child(2) {
+	fill: #fff;
+}
+
 @media (min-width: 767px) {
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item span {
+		margin-bottom: 30px;
+	}
+	.modal-card .wp-block-fv-included-in-price .container-with-child {
+		display: flex;
+		flex-direction: column;
+		gap: 50px;
+		padding: 30px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		margin-bottom: 0px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child h2,
+	.modal-card .wp-block-fv-included-in-price .left-with-child p {
+		text-align: left;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child .label {
+		margin: 0;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item span,
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item p {
+		text-align: left;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .items {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item {
+		width: calc(50% - 1 / 2 * 10px);
+	}
 	.wp-block-fv-filter-section-skills h2 {
 		max-width: 650px;
 		margin-bottom: 15px;
@@ -1113,7 +1274,6 @@
 		gap: 20px;
 		align-items: flex-start;
 		width: 100%;
-		margin-bottom: 40px;
 	}
 	.wp-block-fv-item-card-skills .container .right-content {
 		width: 50%;
@@ -1172,6 +1332,32 @@
 
 }
 @media (min-width: 820px) {
+	.modal-card .wp-block-fv-included-in-price .container-with-child {
+		gap: 150px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child h2 {
+		font-size: 32px;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child {
+		width: 100%;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child {
+		width: calc(50% - 10px);
+		position: relative;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item span {
+		font-size: 16px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child .label {
+		font-size: 16px;
+		padding: 8px 20px;
+		position: absolute;
+		left: 206px;
+		top: 65px;
+	}
+	.modal-card .wp-block-fv-included-in-price {
+		margin-bottom: 120px;
+	}
 	.wp-block-fv-filter-section-skills .container-filter {
 		display: flex;
 		gap: 20px;
@@ -1318,6 +1504,9 @@
 		color: var(--darkGray);
 		margin-bottom: 40px;
 	}
+	.modal-card .wp-block-fv-item-card-skills {
+		margin-bottom: 120px;
+	}
 	.wp-block-fv-filter-section-skills .see-posts-container .item-card:last-child {
 		display: none;
 	}
@@ -1416,8 +1605,36 @@
 		width: auto;
 		flex: 1;
 	}
+	.modal-card .wp-block-fv-item-more {
+		margin-bottom: 120px;
+	}
 }
 @media (min-width: 1025px) {
+	.modal-card .wp-block-fv-included-in-price .container-with-child {
+		padding: 30px;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .items {
+		gap: 20px;
+	}
+	.modal-card .wp-block-fv-included-in-price .right-with-child .item {
+		width: calc(33.33333% - 2 / 3 * 20px);
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child h2 {
+		font-size: 42px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child {
+		max-width: 400px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child .label {
+		font-size: 16px;
+		padding: 8px 20px;
+		position: absolute;
+		left: 273px;
+		top: 92px;
+	}
+	.modal-card .wp-block-fv-included-in-price .left-with-child p {
+		max-width: 290px;
+	}
 	.wp-block-fv-filter-section-skills .filter-wrapper .filter-title {
 		font-size: 18px;
 		line-height: 19.8px;
@@ -1746,9 +1963,6 @@
 	.wp-block-fv-item-card-skills .go-back-btn:hover:before {
 		background-color: transparent;
 		transition: all 0.3s ease;
-	}
-	.wp-block-fv-item-card-skills .container {
-		margin-bottom: 40px;
 	}
 	.wp-block-fv-item-card-skills .age-checkbox.parents {
 		width: 104px;

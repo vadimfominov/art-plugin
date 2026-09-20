@@ -792,14 +792,14 @@
 							</div>}
 						</div>
 					</div>
-					{postTypeN !== 'proficiency-testing' && inCard && <div className={'random-posts-container'} >
+					{/* {postTypeN !== 'proficiency-testing' && inCard && <div className={'random-posts-container'} >
 						<h3>Смотрите также</h3>
 						<div
 							className="random-posts"
 							id="random-posts-container"
 							data-current-post-id=""
 						></div>
-					</div>}
+					</div>} */}
 				</div>
 				{video && videoModal(video)}
 			</div>
