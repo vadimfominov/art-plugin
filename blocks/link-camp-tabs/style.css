@@ -99,6 +99,7 @@
 	font-weight: 600;
 	color: var(--darkGray);
 	display: block;
+	text-align: left;
 }
 .wp-block-fv-link-camp-tabs .first-item > span {
 	color: var(--white);
