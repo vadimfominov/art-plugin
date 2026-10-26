@@ -2459,6 +2459,9 @@ window.addEventListener('load', function () {
 
 		const pagination = document.getElementById('pagination');
 
+		console.log(data_slug);
+		
+
 		if (!postsIDS.length) {
 			if (data_slug === 'art-community') {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
