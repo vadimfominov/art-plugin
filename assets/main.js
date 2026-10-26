@@ -2465,15 +2465,26 @@ window.addEventListener('load', function () {
 					<p>По заданным фильтрам ничего не найдено. 
 					<br>Попробуйте изменить критерий поиска.</p>
 					<br>
-					<p>Осенняя программа находится здесь <a href="https://kids.art-lichnost.ru/#filter" 
+					<p>Зимняя программа находится здесь <a href="https://kids.art-lichnost.ru/#filter" 
 					style="color: var(--darkGray);
 								text-decoration: underline;
 								text-decoration-skip-ink: none;">
-								"Коммуникация 360"</a></p>
+								"Рождественская вечеринка"</a></p>
 				</div>`);
 			} else if (data_slug === 'career-camp') {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
 					<p>Скоро тут появятся зимние смены</p>
+				</div>`);
+			} else if (data_slug === 'akademiya-navykov') {
+				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
+					<p>По заданным фильтрам ничего не найдено. 
+					<br>Попробуйте изменить критерий поиска.</p>
+					<br>
+					<p>Зимняя программа находится здесь <a href="https://kids.art-lichnost.ru/#filter" 
+					style="color: var(--darkGray);
+								text-decoration: underline;
+								text-decoration-skip-ink: none;">
+								"Новогодняя мастерская"</a></p>
 				</div>`);
 			} else {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
