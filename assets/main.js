@@ -2459,9 +2459,6 @@ window.addEventListener('load', function () {
 
 		const pagination = document.getElementById('pagination');
 
-		console.log(data_slug);
-		
-
 		if (!postsIDS.length) {
 			if (data_slug === 'art-community') {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
@@ -2478,7 +2475,7 @@ window.addEventListener('load', function () {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
 					<p>Скоро тут появятся зимние смены</p>
 				</div>`);
-			} else if (data_slug === 'akademiya-navykov') {
+			} else if (data_slug === 'skills-academy') {
 				postsContainer && (postsContainer.innerHTML = `<div class="no-content">
 					<p>По заданным фильтрам ничего не найдено. 
 					<br>Попробуйте изменить критерий поиска.</p>
