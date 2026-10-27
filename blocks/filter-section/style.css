@@ -842,17 +842,17 @@
 .skills-academy .modal-card .wp-block-fv-item-card .price-card span {
 	color: var(--blue);
 }
-.art-community .modal-card .wp-block-fv-item-card .right-content > .title span {
+.modal-card .art-community .wp-block-fv-item-card .right-content > .title span {
 	color: var(--artRed);
 }
-.art-community .modal-card .wp-block-fv-item-card .age-checkbox {
+.modal-card .art-community .wp-block-fv-item-card .age-checkbox {
 	color: var(--artRed);
 }
-.art-community .modal-card .wp-block-fv-item-card .price-card span {
+.modal-card .art-community .wp-block-fv-item-card .price-card span {
 	color: var(--artRed);
 }
-.art-community .modal-card .wp-block-fv-item-card .count-days,
-.art-community .modal-card .wp-block-fv-item-card .camp-section {
+.modal-card .art-community .wp-block-fv-item-card .count-days,
+.modal-card .art-community .wp-block-fv-item-card .camp-section {
 	color: var(--artRed);
 }
 
@@ -964,6 +964,14 @@
 .modal-card .wp-block-fv-item-card .leave-application.green {
 	background-color: var(--green);
 }
+.modal-card .art-community .wp-block-fv-item-card .leave-application.green {
+	background-color: var(--artRed);
+	transition: all 0.3s ease;
+}
+.modal-card .art-community .wp-block-fv-item-card .leave-application.green:hover {
+	background-color: #535353;
+	transition: all 0.3s ease;
+}
 .modal-card .wp-block-fv-item-card .leave-application.red {
 	background-color: var(--red);
 	font-size: 10px;
@@ -972,13 +980,13 @@
 .modal-card .wp-block-fv-item-card .leave-application.green:hover {
 	background-color: var(--artRed);
 }
-.skills-academy .modal-card .wp-block-fv-item-card .leave-application:active {
+.modal-card .skills-academy .wp-block-fv-item-card .leave-application:active {
 	background-color: var(--green);
 }
 .modal-card .wp-block-fv-item-card .city-label {
 	display: none;
 }
-.art-community .modal-card .wp-block-fv-item-card .city-label {
+.modal-card .art-community .wp-block-fv-item-card .city-label {
 	color: var(--artRed);
 }
 .modal-card .wp-block-fv-item-card .left-img p {
@@ -998,6 +1006,26 @@
 	object-fit: cover;
 	object-position: center;
 	position: initial;
+}
+
+.art-community .wp-block-fv-item-card-skills .right-content > .title span,
+.art-community .wp-block-fv-item-card .right-content > .title span {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .age-checkbox,
+.art-community .wp-block-fv-item-card .age-checkbox {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .price-card span,
+.art-community .wp-block-fv-item-card .price-card span {
+	color: var(--artRed);
+}
+.art-community .wp-block-fv-item-card-skills .count-days,
+.art-community .wp-block-fv-item-card-skills .camp-section,
+.art-community .wp-block-fv-item-card .city-label,
+.art-community .wp-block-fv-item-card .count-days,
+.art-community .wp-block-fv-item-card .camp-section {
+	color: var(--artRed);
 }
 
 .modal-card .wp-block-fv-included-in-price {

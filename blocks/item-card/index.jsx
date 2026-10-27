@@ -550,7 +550,7 @@
 
 								{city && <span className={'city-label'}>{city}</span>}
 								{daysCount && <span className={'count-days'}>{daysCount}</span>}
-								{postTypeName && <span className={'camp-section'}>{postTypeName}</span>}
+								{postTypeName && inMask ? <span className={'camp-section'}>Сообщество подростков</span> : <span className={'camp-section'}>{postTypeName}</span>}
 							</div>
 							<RichText
 								tagName="p"
@@ -684,6 +684,7 @@
 				desktopBackground,
 				tabletBackground,
 				mobileBackground,
+				inMask,
 				city,
 				place,
 				inPlace,
@@ -729,7 +730,8 @@
 
 								{city && <span className={'city-label'}>{city}</span>}
 								{daysCount && <span className={'count-days'}>{daysCount}</span>}
-								{postTypeName && <span className={'camp-section'}>{postTypeName}</span>}
+								{/* {postTypeName && <span className={'camp-section'}>{postTypeName}</span>} */}
+								{postTypeName && inMask ? <span className={'camp-section'}>Сообщество подростков</span> : <span className={'camp-section'}>{postTypeName}</span>}
 							</div>
 							{textForImage && <RichText.Content tagName="p" value={textForImage} />}
 							{video && <div className={'video-open'}>
